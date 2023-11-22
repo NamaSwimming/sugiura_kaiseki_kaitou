@@ -1,0 +1,1588 @@
+\documentclass[uplatex,dvipdfmx,a4paper,10pt,fleqn]{jsarticle}
+
+\input{preamble.tex}
+
+\usepackage{autobreak}
+
+\usepackage{docmute}
+%ヘッダー・フッダー
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\chead{杉浦．解析入門解答集}
+\rhead{\thepage}
+\cfoot{}
+\begin{document}
+
+\title{杉浦・解析入門解答集}
+\author{なまちゃん}
+\date{\today}
+\maketitle
+\begin{multicols*}{3}
+    \tableofcontents
+\end{multicols*}
+\addcontentsline{toc}{section}{\texorpdfstring{目次}{目次}}
+\newpage
+\section*{第1章：実数と連続}
+\addcontentsline{toc}{section}{\texorpdfstring{第1章：実数と連続}{第1章：実数と連続}}
+
+\subsection*{p2：問1}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p2：問1}{p2：問1}}
+
+\begin{itembox}[c]{(1)}
+    \begin{proof}
+$0,0' \in K$がともに加法単位元の性質を満たすとする．
+
+このとき，$0$が加法単位元の性質をもつことから，
+\[
+    0'+0=0'
+\]
+同様に，$0'$が加法単位元の性質をもつことから，
+\[
+    0+0' = 0
+\]
+交換律より，$0+0'=0'+0$なので，
+\[
+    0'=0'+0 =0+0' =0
+\]
+これからただちに加法単位元の一意性が従う．
+    \end{proof}
+    \end{itembox}
+    \begin{itembox}[c]{(2)}
+        \begin{proof}
+$a ,b \in K$とし，
+\[
+    a+b =0
+\]
+とする．このとき，
+\[
+    -a = -a+0 = -a +(a+b)=(-a+a)+b =0+b = b
+\]
+となり，加法逆元の一意性が従う．
+        \end{proof}
+    \end{itembox}
+
+    \begin{itembox}[c]{(3)}
+        \begin{proof}
+$a \in K$のとき，
+\begin{gather*}
+    a+(-a)=0 \\
+    \therefore (-a)+a =0
+\end{gather*}
+他方，$-(-a)$は$(-a)$の加法逆元であるから，
+\[
+    (-a)+(-(-a))=0
+\]
+これと逆元の一意性により，$a=-(-a)$が従う．
+\end{proof}
+\end{itembox}
+\begin{itembox}[c]{(5)}
+    \begin{proof}
+    $a \in K$に対して，
+    \[
+        a+(-1)a=(1+(-1))a =0a =0
+    \]
+    であるから，$-a$が$a$の加法逆元であることと含めて主張が従う．
+    \end{proof}
+\end{itembox}
+\newpage 
+\begin{itembox}[c]{(6)}
+    \begin{proof}
+    (4)の結果を用いる．$a=-1$とすると，
+    \[
+        (-1)(-1)=-(-1)=1
+    \]
+    これが証明すべきことであった．
+    \end{proof}
+\end{itembox}
+\begin{itembox}[c]{(7)}
+    \begin{proof}
+    $a,b \in K$に対して，
+    \begin{align*}
+     a(-b)+ab & = a((-b)+b) \\
+     & = a0 \\
+    & =0 \\
+\therefore \quad & a(-b)=-ab 
+    \end{align*}
+$(-a)b = -ab$も同様にして示される．
+\end{proof}
+\end{itembox}
+%
+\newpage
+\subsection*{p16-17：1-(i)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p16-17：1-(i)}{p16-17：1-(i)}}
+
+\begin{tleftbar}
+    $a=0$のときは明らかに$0$に収束するので，$a \ne 0$とする．$2\abs{a} \le N$となる$N \in \mathbb{N}$をとる．このとき，
+    \begin{align*}
+         0 &< \abs{ \frac{a^n}{n!} } \\
+         &\le \frac{\abs{a}^n}{n!} \\
+         &= \frac{\abs{a}^{N}}{N!} \cdot \frac{\abs{a}}{N+1} \cdot \frac{\abs{a}}{N+2} \dotsm \frac{\abs{a}}{n} \\
+         & \le  \frac{\abs{a}^{N}}{N!} \left(\frac{1}{2} \right)^{n-N}
+    \end{align*}
+    であるから，
+    \[
+        - \frac{\abs{a}^{N}}{N!} \left(\frac{1}{2} \right)^{n-N} \le  \frac{a^n}{n!} \le \frac{\abs{a}^{N}}{N!} \left(\frac{1}{2} \right)^{n-N}
+    \]
+    となり，はさみうちの原理により，
+    \[
+        \lim_{n \to \infty} \frac{a^n}{n!} =0
+    \]
+    である
+\end{tleftbar}
+
+\subsection*{p16-17：1-(ii)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p16-17：1-(ii)}{p16-17：1-(ii)}}
+
+\begin{tleftbar}
+    $a=1$のときは明らかに$1$に収束するので，まず$a>1$のときを考える．$\delta_n >0$を用いて，
+    \[
+        \sqrt[n]{a} =1+\delta_n
+    \]
+    とおくことができる．両辺を$n$乗すると
+    \begin{align*}
+        a& = 1+ n \delta_n + \frac{1}{2}n(n-1) {\delta_n}^2 + \cdots + {\delta_n}^2 \\
+        &>1+n \delta_n \\
+        & >n \delta_n
+    \end{align*}
+    となり，$0<\delta_n <\frac{a}{n}$であるから，はさみうちの原理により，
+    \[
+        \lim_{n \to \infty} \delta_n =0
+    \]
+    となる．$a<1$のときは，$a^{\frac{1}{n}}=\left(\left(\frac{1}{a}\right)^{\frac{1}{n}}\right)^{-1}$を使えば同じ結果が得られ，以上の議論により，
+    \[
+        \lim_{n \to \infty} \sqrt[n]{a} =1
+    \]
+    となる．
+\end{tleftbar}
+
+\subsection*{p16-17：1-(iii)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p16-17：1-(iii)}{p16-17：1-(iii)}}
+
+\begin{tleftbar}
+    $\frac{n}{2}$以下の最大の自然数を$m$とおく．与えられた式は，
+    \[
+       \left( 0  < \right) \frac{n!}{n^n}  = \frac{1 \cdot 2 \dotsm m \cdot (m+1) \dotsm n}{n^n}
+    \]
+    と表されるので，$\frac{(m+1) \cdot (m+2) \dotsm n}{n^{n-m}} <1$であることと，$m \le \frac{n}{2}$から$\frac{m}{n} \le \frac{1}{2}$であることを用いると，
+    \[
+        \frac{1 \cdot 2 \dotsm m \cdot (m+1) \dotsm n}{n^n} < \frac{1 \cdot 2 \dotsm m}{n^m} <\left(\frac{1}{2}\right)^m
+    \]
+    よって，
+    \[
+        0 < \frac{n!}{n^n} <\left(\frac{1}{2}\right)^m
+    \]
+    である．$n \to \infty$のとき$m \to \infty$なので，はさみうちの原理により，
+    \[
+        \lim_{n \to \infty}\frac{n!}{n^n} =0
+    \]
+    である．
+\end{tleftbar}
+\subsection*{p16-17：1-(iv)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p16-17：1-(iv)}{p16-17：1-(iv)}}
+\begin{tleftbar}
+    のちに$n \to \infty$の極限を考えることを考慮すると，
+    \begin{align*}
+        2^n &= (1+1)^n \\
+        =& 1+n +\frac{1}{2} n(n-1)+ \cdots +n+1 \\
+        & > \frac{1}{2} n(n-1)
+    \end{align*}
+    となり，この不等式から，
+    \[
+        0< \frac{n}{2^n} < \frac{2}{n-1}
+    \]
+    を得る．ここで，はさみうちの原理により，
+    \[
+        \lim_{n \to \infty} \frac{n}{2^n}=0
+    \]
+    である．
+\end{tleftbar}
+
+\subsection*{p16-17：1-(v)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p16-17：1-(v)}{p16-17：1-(v)}}
+\begin{tleftbar}
+    まず，
+    \[
+       0<\sqrt{n+1} - \sqrt{n} = \frac{1}{\sqrt{n+1} + \sqrt{n}}
+    \]
+    である．ここで，のちに$n \to \infty$の極限を考えることを考慮すると，
+    \[
+    \frac{1}{\sqrt{n+1} + \sqrt{n}} < \frac{1}{\sqrt{n}} 
+    \]
+    であり，
+    \[
+        0< \sqrt{n+1} - \sqrt{n} <\frac{1}{\sqrt{n}}
+    \]
+    を得る．ここで，はさみうちの原理を用いると，
+    \[
+        \lim_{n \to \infty} (\sqrt{n+1} - \sqrt{n} )=0
+    \]
+    である．
+\end{tleftbar}
+
+\subsection*{p16-17：2)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p16-17：2)}{p16-17：2)}}
+
+$n=1,2,\ldots$に対して，
+\[
+	f_{n} (x)=\lim_{m \to \infty} (\cos (n! \pi x)) ^{2m}
+\]
+とおく．
+ここで，$n!x \in \mathbb{Z}$のとき，
+\[
+	\cos (n! \pi x)=\pm 1
+\]
+$n!x \notin \mathbb{Z}$のときは，
+\[
+	\abs{\cos (n! \pi x)}<1
+\]
+であるから，
+\[
+	f_{n} (x)=
+	\begin{cases}
+		1 &(n!x \in \mathbb{Z}) \\
+		0 & (n!x \notin \mathbb{Z})
+	\end{cases}
+\]
+となる．
+さて，$x \in \mathbb{R} \setminus \mathbb{Q}$であるならば，どんな$n \in \mathbb{N}$に対しても，$n! x$が整数とならない．
+また，$x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とすれば，$n$が$q$より十分大きいときに$n!x$は整数となる．
+よって，
+\[
+	\lim_{n \to \infty} \left( \lim_{m \to \infty} (\cos (n! \pi x)) ^{2m} \right)=
+	\begin{cases}
+		1 &(x \in \mathbb{Q}) \\
+		0 & (x \in \mathbb{R} \setminus \mathbb{Q})
+	\end{cases}
+\]
+
+
+\subsection*{p16-17：3)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p16-17：3)}{p16-17：3)}}
+
+\kakko{補題}
+
+    任意の$a_1 , a_2 , \dots a_n \in \mathbb{R}$について，
+    \[
+        \abs{a_1+a_2+\dots+a_n} \le \abs{a_1}+\abs{a_2}+\dots+\abs{a_n}
+    \]
+    が成り立つ．
+
+
+\begin{proof}
+    $n=2$のときは三角不等式そのものであるから，
+    $n \ge 3$とし，$n-1$個の実数については補題の主張が成り立つものとする．
+
+    いま，
+    \[
+        a_1 + a_2 + \dots + a_n = (a_1+a_2+\dots+a_{n-1})+a_n
+    \]
+    であるから，これに三角不等式を適用して，
+    \[
+        \abs{a_1+a_2+\dots+a_n} \le \abs{a_1+a_2+\dots+a_{n-1}} +\abs{a_n}
+    \]
+    を得る．ここで，数学的帰納法の仮定より，
+    \[
+        \abs{a_1+a_2+\dots+a_{n-1}} \le \abs{a_1}+\abs{a_2}+\dots+\abs{a_{n-1}}
+    \]
+    がいえるので，ここまでの議論で，
+    \[
+        \abs{a_1+a_2+\dots+a_n} \le \abs{a_1}+\abs{a_2}+\dots+\abs{a_n}
+    \]
+    は$n$の場合にも成り立つことが示され．以上の議論より補題の主張が従う．
+\end{proof}
+
+\begin{tleftbar}
+    \begin{proof}
+    $\lim_{n \to \infty} a_n =a$であるから，
+    任意の$\varepsilon >0$に対して，ある$N_1 \in \mathbb{N}$が存在して，任意の$n \in \mathbb{N}$に対して，
+    \[
+        n \ge N_1 \Longrightarrow \abs{a_n -a}<\varepsilon 
+    \]
+    となる．
+
+    また，
+    \[
+        \abs{\frac{a_1+a_2+\cdots+a_n}{n}-a}= \abs{\frac{(a_1-a)+(a_2-a)+\cdots+(a_n-a)}{n}}
+    \]
+    と変形する．この右辺に補題を適用し，
+    \[
+        \abs{\frac{(a_1-a)+(a_2-a)+\cdots+(a_n-a)}{n}} \le \frac{\abs{a_1-a}+\abs{a_2-a}+\cdots+\abs{a_n-a}}{n}
+    \]
+    を得る．これにより，
+    \[
+        n \ge N_1 \Longrightarrow \frac{\abs{a_1-a}+\abs{a_2-a}+\cdots+\abs{a_{n_1-1}-a}}{n} +\left( \frac{n-n_1+1}{n} \right ) \varepsilon 
+    \]
+    となる．ここで$N_2 \coloneqq N_1 +1$とすると，$n \ge N_2$であるとき$\left( \frac{n-n_1+1}{n} \right ) \varepsilon < \varepsilon$となることに注意する．
+    
+    さて，
+    \[
+        n \ge N_3 \Longrightarrow \frac{\abs{a_1-a}+\abs{a_2-a}+\cdots+\abs{a_{n_1-1}-a}}{n}<\varepsilon
+    \]
+    となるように$N_3 \in \mathbb{N}$をとる．$N \coloneqq \max \{ N_2 , N_3 \}$とすると，
+    \[
+        n \ge N \Longrightarrow \frac{\abs{a_1-a}+\abs{a_2-a}+\cdots+\abs{a_{n_1-1}-a}}{n} +\left( \frac{n-n_1+1}{n} \right ) \varepsilon < \varepsilon + \varepsilon = 2 \varepsilon
+    \]
+    であり，これより
+    \[
+        n \ge N \Longrightarrow \abs{\frac{a_1+a_2+\cdots+a_n}{n}-a} < 2 \varepsilon
+    \]
+    となる．書き換えると．
+    \[
+        \lim_{n \to \infty} \frac{a_1+a_2+\cdots+a_n}{n}=a
+    \]
+    となり，これが証明すべきことであった．
+    \end{proof}
+\end{tleftbar}
+
+\subsection*{p31-33：1-(i)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p31-33：1-(i)}{p31-33：1-(i)}}
+
+\begin{tleftbar}
+	\begin{align*}
+		\frac{1^2+2^2+\cdots+n^2}{n^3} & = \frac{\dfrac{1}{6}n(n+1)(2n+1)}{n^3} \\
+		& =\frac{1}{6} \left(1+\frac{1}{n} \right ) \left(2+\frac{1}{n} \right)
+	\end{align*}
+	$a_n = \frac{1}{6} \left(1+\frac{1}{n} \right ),~b_n = \left(2+\frac{1}{n} \right)$とおくと，$(a_n)_{n \in \mathbb{N}},~(b_n)_{n \in \mathbb{N}}$は明らかに収束するから，定理2.5(2)より，
+	\[
+		\lim_{n \to \infty} a_n b_n = \lim_{n \to \infty} a_n \cdot  \lim_{n \to \infty} b_n 
+	\]
+	である．また，アルキメデスの原理により， 任意の$\varepsilon >0$に対して，$n_0 \in \mathbb{N}$を$n_0 >\frac{1}{\varepsilon}$となるようにとることができ，このとき，任意の$n \in \mathbb{N}$に対して，
+	\[
+		n \ge n_0 \Longrightarrow 0<\frac{1}{n} \le \frac{1}{n_0} = \varepsilon
+	\]
+	となり，$\lim_{n \to \infty} \frac{1}{n} =0$である．これより，
+	\begin{align*}
+		\lim_{n \to \infty} \frac{1^2+2^2+\cdots+n^2}{n^3} & = \lim_{n \to \infty} \frac{1}{6} \left(1+\frac{1}{n} \right ) \left(2+\frac{1}{n} \right) \\
+		& = \left \{\lim_{n \to \infty} \frac{1}{6} \left(1+\frac{1}{n} \right ) \right \} \cdot \left \{\lim_{n \to \infty} \left(2+\frac{1}{n} \right ) \right \} \\
+		& = \frac{1}{6} (1+0) \cdot (2+0) =\frac{1}{3}
+	\end{align*}
+\end{tleftbar}
+
+
+\subsection*{p31-33：1-(ii)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p31-33：1-(ii)}{p31-33：1-(ii)}}
+
+\kakko{補題}
+
+
+    正数列$(a_n)_{n \in \mathbb{N}}$に対して，$\left(\frac{a_{n+1}}{a_n} \right)_{n \in \mathbb{N}}$が収束し，
+    \[
+    \lim_{n \to \infty} \frac{a_{n+1}}{a_n} <1
+    \]
+    となるとき，$\lim_{n \to \infty} a_n =0$である．
+
+\begin{proof}
+   $ \lim_{n \to \infty} \frac{a_{n+1}}{a_n} <1$であるから，$r~(0<r<1)$に対して，ある$N_1 \in \mathbb{N}$が存在して，任意の$n \in \mathbb{N}$に対して，
+   \[
+       n \ge N_1 \Longrightarrow \frac{a_{n+1}}{a_n}<r
+   \]
+   が成り立つ．このとき，
+   \[
+       a_n = a_{N_1} \cdot \frac{a_{N_1+1}}{a_{N_1}} \cdot \frac{a_{N_1 +2}}{a_{N_1 +1}} \dotsm \frac{a_{n-1}}{a_{n-2}} \frac{a_n}{a_{n-1}}< a_{N_1} r^{n-N_1}=\frac{a_{N_1}}{r^{N_1}} r^n
+   \]
+   となる．$0<r<1$より$\lim_{n \to \infty} \frac{a_{N_1}}{r^{N_1}} r^n =0$であるから，$\lim_{n \to \infty} a_n =0$である．
+\end{proof}
+
+
+\begin{tleftbar}
+        $a_n = \frac{n^2}{a^n}$とおく．$0<a \le 1$のときは明らかに$\lim_{n \to \infty} a_n=\infty$となる．\par 
+        $a>1$のとき，$\frac{a_{n+1}}{a_n} =\frac{\left(1+\dfrac{1}{n}\right)^2}{a}$となり，
+        \[
+            \lim_{n \to \infty} \frac{\left(1+\dfrac{1}{n}\right)^2}{a} = \frac{1}{a} <1
+        \]
+        であるから，補題により，$\lim_{n \to \infty} a_n =0$となる．以上の議論により，
+        \begin{align*}
+            \lim_{n \to \infty} \frac{n^2}{a^n}
+            =
+            \begin{cases}
+                \infty & (0<a \le 1) \\
+                0 & (a>1)
+            \end{cases}
+        \end{align*}
+        となる．
+	\end{tleftbar}
+    \subsection*{p31-33：1-(iii)}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p31-33：1-(iii)}{p31-33：1-(iii)}}
+\begin{tleftbar}
+    明らかに$\sqrt[n]{n} >1$なので，$\delta_n >0$を用いて，
+    \[
+        \sqrt[n]{n} = 1+ \delta_n
+    \]
+    とかける．両辺を$n$乗して，$n \to \infty$の極限を考えることを考慮すると，
+    \begin{align*}
+        n = (1+\delta_n)^n &=1 + n \delta_n + \frac{1}{2}n(n-1) {\delta_n}^2 + \cdots + (\delta_n)^n \\
+        & > \frac{1}{2}n(n-1) {\delta_n}^2
+    \end{align*}
+    となり，この不等式から，
+    \[
+        0<\delta_n < \sqrt{\frac{2}{n-1}}
+    \]
+    を得る．ここで，はさみうちの原理により，$\lim_{n \to \infty} \delta_n =0$であるから，
+    \[
+        \lim_{n \to \infty} \sqrt[n]{n} =1
+    \]
+    である．
+\end{tleftbar}
+
+\subsection*{p31-33：1-(iv)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p31-33：1-(iv)}{p31-33：1-(iv)}}
+\begin{tleftbar}
+      $a_n= n^k e^{-n}$とおく．このとき，
+      \[
+          \lim_{n \to \infty} \frac{a_{n+1}}{a_n} =  \lim_{n \to \infty} \frac{\left(1+\dfrac{1}{n}\right)^k}{e} =\frac{1}{e} <1
+      \]
+      ゆえに，補題により，
+      \[
+        \lim_{n \to \infty} n^k e^{-n}=0
+      \]
+      である．
+\end{tleftbar}
+
+\subsection*{p31-33：1-(v)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p31-33：1-(v)}{p31-33：1-(v)}}
+\begin{tleftbar}
+      $a_n =\left (1-\frac{1}{n^2}\right)^n$とおく．
+      \begin{align*}
+        \lim_{n \to \infty} a_n & =\lim_{n \to \infty} \left (1-\frac{1}{n^2}\right)^n \\
+        & = \lim_{n \to \infty} \left (1+\frac{1}{n}\right)^n \left (1-\frac{1}{n}\right)^n \\
+        & = e \cdot \frac{1}{e} =1
+      \end{align*}
+      である．
+\end{tleftbar}
+
+\subsection*{p31-33：1-(vi)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p31-33：1-(vi)}{p31-33：1-(vi)}}
+\kakko{補題}
+
+
+    $(a_n)_{n \in \mathbb{N}}$を実数列とし，$a_n > 0$とする．もし$\lim_{n \to \infty} a_n =0$であれば$\lim_{n \to \infty} \frac{1}{a_n}=\infty$である．
+    また，もし$\lim_{n \to \infty} a_n =\infty$であるならば，$\lim_{n \to \infty} \frac{1}{a_n} =0$である，
+
+
+
+\begin{proof}
+    前半の主張のみ示せば後半の主張も同様に示せるので，前半のみ示す．与えられた条件により，任意の$\varepsilon>0$に対して，$n_0 \in \mathbb{N}$が存在して，任意の$n \in \mathbb{N}$に対して，
+    \[
+        n \ge n_0 \Longrightarrow |a_n-0|<\varepsilon
+    \]
+    が成り立つ，ここで$\frac{1}{\varepsilon}=M$とおくと，上の$n_0 \in \mathbb{N}$に対して，
+    \[
+        n \ge n_0 \Longrightarrow \frac{1}{a_n} >\frac{1}{\varepsilon}=M
+    \]
+    となり，これより$\lim_{n \to \infty} \frac{1}{a_n}=\infty$が示された．
+\end{proof}
+
+\kakko{補題}
+
+
+    $c>1$のとき，$\lim_{n \to \infty} \frac{1}{c^n} = 0$である．
+
+\begin{proof}
+    $c>1$より，$\delta >0$を用いて$c=1+\delta$とおける．このとき，のちに$n \to \infty$の極限を考えることを考慮すると，
+    \begin{align*}
+        c^n &= (1+\delta)^n \\
+        & = 1+n \delta +\frac{1}{2}n (n-1) \delta^2 + \cdots +\delta^n \\
+        & > 1+n \delta
+    \end{align*}
+    このことから，$0<\frac{1}{c^n} <\frac{1}{1+n\delta}$であるから，はさみうちの原理により，
+    \[
+        \lim_{n \to \infty} \frac{1}{c^n} = 0~(c>1)
+    \]
+    である．
+\end{proof}
+
+\begin{tleftbar}
+    $a_n = (c^n +c^{-n})^{-1}$とおく．$c=1$のときは明らかに$\lim_{n \to \infty} a_n =\frac{1}{2}$である．
+
+    $c>1$のとき，2つの補題により，
+    \[
+        \lim_{n \to \infty} (c^n + c^{-n}) = \infty
+    \]
+    であるから，補題により$\lim_{n \to \infty} a_n = \lim_{n \to \infty} (c^n +c^{-n})^{-1} =0$である．
+
+    $0<c<1$のときは$c$の逆数を考えることにより同じ結論に帰着する．以上の議論により，
+    \begin{align*}
+        \lim_{n \to \infty} (c^n +c^{-n})^{-1} =
+        \begin{cases}
+            \frac{1}{2}&(c=1)\\
+            0 & (c \ne 1)
+        \end{cases}
+    \end{align*}
+    である．
+\end{tleftbar}
+
+
+\subsection*{p31-33：2}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p31-33：2}{p31-33：2}}
+
+\begin{tleftbar}
+	\begin{proof}
+		二項定理を用いて$(a_n)_{n \in \mathbb{N}}$の一般項を展開すると，
+		\begin{align*}
+			a_n & =  1 + n \cdot \frac{1}{n} + \frac{n(n-1)}{2!} \cdot \frac{1}{n^2} + \dots + \frac{n(n-1)\cdots(n-r+1)}{r!} \cdot \frac{1}{n^r} + \cdots \frac{n!}{n!} \cdot + \frac{1}{n^n} \\
+            & = 1+ \frac{1}{1!} + \frac{1}{2!} \left(1- \frac{1}{n} \right) + \dots + \frac{1}{r!} \cdot  \left(1 - \frac{1}{n} \right) \dots \left (1-\frac{r-1}{n} \right) + \dots +  \frac{1}{n!} \left(1 - \frac{1}{n} \right) \dots \left(1- \frac{n-1}{n} \right)
+        \end{align*}
+		同様にして，$a_{n+1}$の展開式を得たとき，$ \frac{1}{n+1} < \frac{1}{n}$であることにより，$r\in \{ 1,2,\dots ,n\}$に対して，
+		\[
+			\frac{1}{r!} \cdot  \left(1 - \frac{1}{n} \right) \dots \left (1-\frac{r-1}{n} \right) < \frac{1}{r!} \cdot  \left(1 - \frac{1}{n+1} \right) \dots \left (1-\frac{r-1}{n+1} \right)
+		\]
+		が成立する．これと，$a_{n+1}$の展開式のほうが，正の項を一つ多く含むことから，任意の$n \in \mathbb{N}$に対して，
+		\[
+			a_{n} < a_{n+1}
+		\]
+		が成立し，$(a_n)_{n \in \mathbb{N}}$は単調増加数列である．また，
+		\begin{align*}
+			\label{p32 問2 2}
+			a_n &< 1 + \frac{1}{1!} + \frac{1}{2!} +\frac{1}{3!} + \dots + \frac{1}{n!} \\
+			& <  1 + \frac{1}{1!} + \frac{1}{2}+ \frac{1}{2^2} + \dots + \frac{1}{2^n} \\
+			& <  2 + \frac{1}{2} \left( \frac{ 1 - 2^{-n} }{ 1- \dfrac{1}{2} } \right)\\
+			& =  3-2^{-n} \\
+			& <  3
+		\end{align*}
+		であるから，$a_n < 3$となる．
+        
+        また，$(a_n)_{n \in \mathbb{N}}$が単調増加数列であることから，任意の$n \in \mathbb{N} \setminus \{0,1\}$に対して，
+		\[
+			a_n > a_1 = \left(1+\frac{1}{1}\right)^1 =2
+		\]
+		であるから，
+        \[
+            2<e<3
+        \]
+        を得る．また，
+		\[
+			\lim_{n \to \infty} a_n \le e
+		\]
+		である．他方，
+		\[
+			\lim_{n \to \infty} a_n \ge a_n > 1 + \frac{1}{1!} + \frac{1}{2!} + \dots + \frac{1}{r!}
+		\]
+		であるから，ここで$r \to \infty$として，
+		\[
+			\lim_{n \to \infty} a_n \ge e
+		\]
+		となり，$\lim_{n \to \infty} a_n =e$を得る．
+	\end{proof}
+\end{tleftbar}
+
+
+
+    \subsection*{p49-50：1}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p49-50：1}{p49-50：1}}
+
+\begin{tleftbar}
+	\begin{proof}
+		$\lim_{n \to \infty} \sqrt[n]{a_n} =r$であるから，$0<r<1$のとき，$r<k<1$に対して，ある$n_1 \in \mathbb{N}$が存在して，任意の$n \in \mathbb{N}$に対して，
+		\[
+			n \ge n_1 \Longrightarrow a_n<k^n
+		\]
+		となる．ここで，定理5.5(比較判定法)と$\lim_{n \to \infty} k^n =0$より，$\sum a_n$は収束する．
+
+		$r>1$のとき，$1>0$に対して，ある$n_2 \in \mathbb{N}$が存在して，任意の$n \in \mathbb{N}$に対して，
+		\[
+			n \ge n_2 \Longrightarrow a_n >1
+		\]
+		が成り立ち，$\lim_{n \to \infty} a_n \ne 0$となる．よって定理5.1~系の対偶により$\sum a_n$は発散する．
+	\end{proof}
+\end{tleftbar}
+
+
+\subsection*{p49-50：2-(i)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p49-50：2-(i)}{p49-50：2-(i)}}
+
+\begin{screen}
+	\[
+	\frac{2n^2}{n^3+1}=\frac{2/3}{n+1}+\frac{4n/3-2/3}{n^2-n+1}
+	\]
+	により
+	\begin{align*}
+	\sum \frac{2n^2}{n^3+1}&=\sum \frac{2/3}{n+1}+\sum \frac{4n/3-2/3}{n^2-n+1} \\
+	&>\sum \frac{2/3}{n+1} \rightarrow \infty
+	\end{align*}
+	となる．よってこの級数は発散する
+	\end{screen}
+	
+
+    \subsection*{p49-50：2-(ii)}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p49-50：2-(ii)}{p49-50：2-(ii)}}
+
+	\begin{screen}
+	\[
+	\sum ^{\infty}_{n=1}\frac{\sqrt{n}}{1+n^2}<\sum \frac{\sqrt{n}}{n^2}=\sum^{\infty}_{n=1}\frac{1}{n^{3/2}}~\left(<1+\int^{\infty}_{1}\frac{dx}{x^{3/2}}=3\right)
+	\]
+    であるから，この級数は収束する．
+	また
+	\[
+	\sum \frac{1}{n^\alpha}
+	\]
+	が$\alpha >1$のときに収束することを用いることもできる．
+	\end{screen}
+
+
+    \subsection*{p49-50：2-(iii)}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p49-50：2-(iii)}{p49-50：2-(iii)}}
+
+	\begin{screen}
+	$a=1$のとき，この級数は明らかに収束する．
+	$a \neq 1$のとき，$a^x$の$x=0$のまわりでのTaylor展開
+	\[
+	a^x=1+(\log a)x+\frac{(\log a)^2}{2!}x^2+O(x^3)
+	\]
+	を用いて
+	\begin{align*}
+	\sum (a^{1/n}-1)&=\sum \left\{ \frac{\log a}{n}+\frac{(\log a)^2}{2!n^2}+O\left(\frac{1}{n^3}\right)\right\}\\
+	&>\sum \frac{\log a}{n} \rightarrow \infty\\
+	\end{align*}
+	となる．よってこの級数は$a=1$のときは収束し，$a \neq 1$のときは発散する．
+	\end{screen}
+
+
+    \subsection*{p49-50：2-(v)}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p49-50：2-(v)}{p49-50：2-(v)}}
+
+
+	\begin{screen}
+        定理5.7（ダランベールの収束判定）を用いる．$a_n=n/2^n$とおくと
+        \[
+        \lim_{n \to \infty}\frac{a_{n+1}}{a_n}=\lim_{n \to \infty}\frac{n+1}{n}\frac{2^n}{2^{n+1}}=\frac{1}{2}<1
+        \]
+        となることにより，この級数は収束する
+        \end{screen}
+        
+
+    \subsection*{p49-50：2-(viii)}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p49-50：2-(viii)}{p49-50：2-(viii)}}
+
+        \begin{screen}
+        \[
+        \frac{(1+n)^n}{n^{n+1}}>\frac{n^n}{n^{n+1}}=\frac{1}{n}
+        \]
+        であることから
+        \[
+        \sum \frac{(1+n)^n}{n^{n+1}}>\sum \frac{1}{n} \rightarrow \infty
+        \]
+        となる．よってこの級数は発散する．
+        \end{screen}
+        
+
+        \subsection*{p49-50：2-(x)}
+        \addcontentsline{toc}{subsection}{\texorpdfstring{p49-50：2-(x)}{p49-50：2-(x)}}
+
+        \begin{screen}
+        定理5.7（ダランベールの収束判定）より$a_n=\left(\dfrac{n}{n+1}\right)^{n^2}$とすると
+        \begin{align*}
+        \frac{a_{n+1}}{a_n}&=\frac{(n+1)^{(n+1)^2}}{(n+2)^{(n+1)^2}}\frac{(n+1)^{n^2}}{n^{n^2}}=\frac{(n+1)^{n^2}}{n^{n^2}}\frac{(n+1)^{n^2}}{(n+2)^{n^2}}\frac{(n+1)^{2n+1}}{(n+2)^{2n+1}}\\
+        &=\left(1+\frac{1}{n}\right)^{n^2}\left(1-\frac{1}{n+2}\right)^{n^2}\left(1-\frac{1}{n+2}\right)^{2n+1}
+        \end{align*}
+        ここで
+        \[
+        \left(1+\frac{1}{n}\right)^{n^2}\left(1-\frac{1}{n+2}\right)^{n^2}=\left(1+\frac{1}{n(n+2)}\right)^{n^2}=\left(1+\frac{1}{n(n+2)}\right)^{n(n+2)}\left(1+\frac{1}{n(n+2)}\right)^{-2n}
+        \]
+        とすることにより，右辺は$e \times 1=e$に収束する．
+        
+        さらに，
+        \[
+        \left(1-\frac{1}{n+2}\right)^{2n+1}=\left\{\left(1-\frac{1}{n+2}\right)^{-(n+2)}\right\}^{-2}\left(1-\frac{1}{n+2}\right)^{-3}
+        \]
+        とすることで，右辺は$\dfrac{1}{e^2} \times 1=\dfrac{1}{e}$に収束する．よって
+        \[
+        \frac{a_{n+1}}{a_n}=e \times \frac{1}{e^2}=\frac{1}{e}<1
+        \]
+        となる．ゆえにこの級数は収束する．
+    \end{screen}
+
+
+    \subsection*{p49-50：3}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p49-50：3}{p49-50：3}}
+
+    \begin{tleftbar}
+        \begin{proof}
+            $\sum a_n $が絶対収束するので，$\sum \abs{a_n}$も収束する．
+            よって，定理5.1 系より，$\lim_{n \to \infty} \abs{a_n} =0$となる．
+            このとき，$1>0$に対して，ある$n_1 \in \mathbb{N}$が存在して，任意の$n \in \mathbb{N}$に対して，
+            \[
+                n \ge n_1 \Longrightarrow \abs{\abs{a_n} -0}<1
+            \]
+            が成り立つ．また，$\abs{a_n}<1$のとき，
+            \[
+                0 \le \abs{{a_n}^2} \le {\abs{a_n}}^2 \le \abs{a_n}
+            \]
+            が成り立つ．ここで，$\sum \abs{a_n}$が収束し，各項は正なので， 定理5.5(比較判定法)により，$\sum \abs{{a_n}^2}$も収束する．ゆえに$\sum {a_n}^2$は絶対収束する．
+        \end{proof}
+    \end{tleftbar}
+
+
+    \subsection*{p49-50：5}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p49-50：5}{p49-50：5}}
+
+    \begin{tleftbar}
+        \begin{proof}
+            与えられた条件により，$0 <r <c , r \ne \infty $をみたす$r \in \mathbb{R}$に対して，ある$N \in \mathbb{N}$が存在して，
+            任意の$n \in \mathbb{N}$に対して，
+            \[
+                n \ge N \Longrightarrow \abs{\frac{a_n}{b_n}-c}<r
+            \]
+            が成り立つ．これにより，
+            \begin{align*}
+                & 0<-r +c < \frac{a_n}{b_n} < r+c \\
+                &\therefore ~  (-r+c) b_n < a_n < (r+c) b_n
+            \end{align*}
+            となる．これと比較原理により，$\sum a_n$と$\sum b_n$は同時に収束，発散することが証明された．
+        \end{proof}
+    \end{tleftbar}
+
+    \subsection*{p49-50：6}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p49-50：6}{p49-50：6}}
+    \begin{tleftbar}
+        $\lim_{n \to \infty} \frac{1}{2n+1} =0$により，$\sum_{n=0}^{\infty} \frac{(-1)^n}{2n+1}$は収束する．ここで，
+        \[
+             1-x^2+x^4-\cdots+(-1)^n x^{2n} =\frac{1}{1+x^2} +\frac{(-1)^n x^{2n+2}}{x^2+1}
+        \]
+    の両辺を0から1まで$x$で積分すると，
+    \begin{align*}
+       \overbrace{1-\frac{1}{3}+\frac{1}{5}-\cdots+\frac{(-1)^n}{2n+1}}^{s_n} &=\int_{0}^{1} \frac{1}{1+x^2} \, dx +\int_{0}^{1}\frac{(-1)^n x^{2n+2}}{x^2+1}  \, dx \\
+    & = \frac{\pi}{4} + R_n
+    \end{align*}
+    である．ただしここで$R_n =\int_{0}^{1}\frac{(-1)^n x^{2n+2}}{x^2+1} \, dx$とおいた．この式から，
+    \begin{align*}
+      \abs{s_n -\frac{\pi}{4}  } & = \abs{\int_{0}^{1}\frac{(-1)^n x^{2n+2}}{x^2+1} \, dx } \\
+       & < \int_{0}^{1} x^{2n} \, dx \\
+       & =\frac{1}{2n+1} \to 0 ~(n \to \infty)
+    \end{align*}
+    である．よって，
+    \[
+        \sum_{n=0}^{\infty} \frac{(-1)^n}{2n+1} =\frac{\pi}{4}
+    \]
+    である．
+    \end{tleftbar}
+
+
+    \subsection*{p63-64：1-(i)}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p63-64：1-(i)}{p63-64：1-(i)}}
+
+\begin{tleftbar}
+    $f(a)$を考えるため，$a \ne 0$としてよい．$\delta \le \frac{\abs{a}}{2}$とすると，$\abs{x-a}<\delta$より
+    \[
+       \abs{x} > \abs{a}-\delta \ge \frac{\abs{a}}{2}
+    \]
+    である．これに留意すると，
+    \[
+        \abs{\frac{1}{x}-\frac{1}{a}}=\frac{\abs{a-x}}{\abs{ax}} <\frac{2 \delta}{\abs{a}^2}
+    \]
+    であるから，$\delta = \min \{ \abs{a}/2,\abs{a}^2\varepsilon/2 \}$でよい．
+\end{tleftbar}
+
+
+
+\subsection*{p63-64：1-(iii)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p63-64：1-(iii)}{p63-64：1-(iii)}}
+
+
+\begin{tleftbar}
+    $t \coloneqq \min \{x,a\}$とする．このとき，指数法則により，
+    \[
+        \abs{e^x-e^a}=e^t (e^{\abs{x-a}}-1)
+    \]
+    が成立する．また，$t \le a$であるから，
+    \begin{align*}
+       & e^t \le e^a \\
+        & \therefore ~ e^t(e^{\abs{x-a}}-1) \le e^a(e^{\abs{x-a}}-1)
+    \end{align*}
+    ゆえに，
+    \[
+        \varepsilon = e^a (e^\delta -1)
+    \]
+    となればよい．すなわち，
+    \[
+        \delta = \log (1+e^{-a}\varepsilon)
+    \]
+    である．
+\end{tleftbar}
+
+\subsection*{p63-64：2-(i)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p63-64：2-(i)}{p63-64：2-(i)}}
+
+\begin{tleftbar}
+    $\abs{\sin \frac{1}{x}} \le 1$，$\abs{\sin \frac{1}{y}} \le 1$であるから，
+    \[
+        \abs{(x+y) \sin \frac{1}{x} \sin \frac{1}{y}} \le \abs{(x+y)} \le \abs{x}+\abs{y} \to 0 \quad  \Bigl( (x,y) \to 0 \Bigl)
+    \]
+    である．よって，
+    \[
+        \lim_{(x,y)\to 0} (x+y) \sin \frac{1}{x} \sin \frac{1}{y} =0
+    \]
+    となる．
+\end{tleftbar}
+
+\subsection*{p63-64：2-(iii)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p63-64：2-(iii)}{p63-64：2-(iii)}}
+
+\begin{tleftbar}
+    まず，$\log x^x = x \log x$である．また，
+    \[
+        \lim_{x \to +0} x \log x  =\lim_{x \to +0} \frac{\log x}{1/x} 
+    \]
+    となる．ここで，$\lim_{x \to +0} \log x = -\infty$，$\lim_{x \to +0} 1/x =\infty$であるから，ロピタルの定理が適用でき，
+    \begin{align*}
+        \lim_{x \to +0} \frac{\log x}{1/x} & = \lim_{x \to +0} \frac{1/x}{-1/x^2} \\
+        & = \lim_{x \to +0} (-x) \\
+        & =0
+    \end{align*}
+    である．よって，
+    \begin{align*}
+    \lim_{x \to +0} x^x &= \lim_{x \to +0} e^{\log x^x} \\
+    & =e^0 =1
+    \end{align*}
+    となり，これが答である．
+\end{tleftbar}
+
+\subsection*{p63-64：2-(iv)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p63-64：2-(iv)}{p63-64：2-(iv)}}
+
+\begin{tleftbar}
+    $x=r \cos \theta,~y=r\sin \theta$とおくと，
+    \begin{align*}
+        \lim_{(x,y)\to 0} \frac{1-\cos (x^2+y^2)}{x^2+y^2} & = \lim_{r \to 0} \frac{1-\cos (r^2)}{r^2} \\
+        & =\lim_{r \to 0} \frac{1-(-2\sin ^2 (r^2/2)+1)}{r^2} \\
+        & =\lim_{r \to 0} \frac{\sin ^2 (r^2/2)}{(r^2/2)^2} \cdot (r^2/2) \\
+        & = 1^2 \cdot 0 =0
+    \end{align*}
+    を得て，これが答えである．
+\end{tleftbar}
+
+
+
+\subsection*{p63-64：3-(i)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p63-64：3-(i)}{p63-64：3-(i)}}
+
+\begin{tleftbar}
+    以下，$\mathbb{Q}$の閉包は$\mathbb{R}$であることを示す．
+
+    $a \in \mathbb{R}$に対して，
+    \[
+    U(a,\varepsilon) \cap \mathbb{Q} \ne \varnothing
+    \]
+    すなわち，
+    \[
+        (a-\varepsilon,a+\varepsilon) \cap \mathbb{Q} \ne \varnothing
+    \]
+    となればよい．アルキメデスの原理により，任意の$\varepsilon >0$に対して，
+    \[
+        \frac{1}{n}< 2\varepsilon 
+    \]
+    となる$n \in \mathbb{N} \setminus \{0\}$が存在する．また，$n$を分母とする有理数は数直線上に幅$\frac{1}{n}$で並んでいるから，
+    \[
+        \frac{m}{n} \in (a-\varepsilon,a+\varepsilon)
+    \]
+    となる$ m \in \mathbb{N} \setminus \{0\}$が存在する．\par 
+    したがって$a \in \mathbb{R}$と任意の$\varepsilon>0$に対して$(a-\varepsilon,a+\varepsilon) \cap \mathbb{Q} \ne \varnothing$となるため，
+    \[
+        \overline{\mathbb{Q}}=\mathbb{R}
+    \]
+    である．
+\end{tleftbar}
+
+\subsection*{p63-64：4-(i)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p63-64：4-(i)}{p63-64：4-(i)}}
+
+\begin{tleftbar}
+    \begin{proof}
+            $d(x)=0$は$\inf_{y \in A} \abs{x-y} =0$ともかける．
+            \begin{align*}
+                \inf_{y \in A} \abs{x-y} =0 & \iff (\forall \varepsilon>0) \ (\exists y \in A)\ ( \abs{x-y}<\varepsilon ) \\
+                & \iff x \in \overline{A}
+            \end{align*}
+            これにより示された．
+        \end{proof}
+    \end{tleftbar}
+
+\section*{第2章：微分法}
+\addcontentsline{toc}{section}{\texorpdfstring{第2章：微分法}{第2章：微分法}}
+
+
+\subsection*{p90-91：1-(i)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90-91：1-(i)}{p90-91：1-(i)}}
+
+
+    \begin{tikzpicture}
+    \draw[->] (-3,0) -- (3,0) node[below] {$x$};
+    \draw[->] (0,-3) -- (0,3) node[left]  {$y$};
+    \draw (0,0) node[below left] {$\mathrm{O}$} coordinate (O);
+    \draw (0,1) node [above left] {$1$};
+    \draw (0,-1) node [below left] {$-1$};
+    \draw (2,0) node [above left] { $2$};
+    \draw (-2,0) node [above left] { $-2$};
+    \draw plot[domain=0:{2*pi}, variable=\theta, smooth] ({2*cos (\theta r)},{sin (\theta r)});
+    \end{tikzpicture} 
+
+    \subsection*{p90-91：1-(ii)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90-91：1-(ii)}{p90-91：1-(ii)}}
+
+
+    \begin{tikzpicture}
+    \draw[->] (-3,0) -- (3,0) node[below] {$x$};
+    \draw[->] (0,-3) -- (0,3) node[left]  {$y$};
+    \draw (0,0) node[below left] {$\mathrm{O}$} coordinate (O);
+    \draw plot[domain=0:{2*pi}, variable=\theta, smooth] ({cos (2*\theta r)},{sin (\theta r)});
+    \end{tikzpicture} 
+
+
+    \subsection*{p90-91：1-(iii)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90-91：1-(iii)}{p90-91：1-(iii)}}
+
+
+
+    \begin{tikzpicture}
+    \draw[->] (-3,0) -- (3,0) node[below] {$x$};
+    \draw[->] (0,-3) -- (0,3) node[left]  {$y$};
+    \draw (0,0) node[below left] {$\mathrm{O}$} coordinate (O);
+    \draw plot[domain=0:{2*pi}, variable=\theta, smooth] ({cos (3*\theta r)},{sin (\theta r)});
+    \end{tikzpicture} 
+
+
+\subsection*{p90-91：9-(i)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90-91：9-(i)}{p90-91：9-(i)}}
+
+\begin{tleftbar}
+    \[
+       ( \log x )^{(1)}= 1/x , \quad (\log x)^{(2)} = - 1/x^2 , \quad (\log x)^{(3)} = 2/x^3,\quad (\log x)^{(4)} = - 6 /x^4
+    \]
+    であるから，
+    \[
+        (\log x)^{(n)} = \frac{(-1)^{n-1}  (n-1)!}{x^n}
+    \]
+    と推測できる．この推測が正しいことを数学的帰納法により証明する．
+    \begin{enumerate}
+        \item $n=1$のとき，$(\log x)^{(1)} = 1/x$であり，
+        \[
+            \frac{(-1)^{1-1}  (1-1)!}{x^1}=1/x
+        \]
+        であるから，この場合に推測は正しい．
+        \item $n=k$のときに，この推測が正しいと仮定すると，
+        \[
+            (\log x)^{(k)} = \frac{(-1)^{k-1}  (k-1)!}{x^k}
+        \]
+        である．ここで．
+        \begin{align*} 
+            (\log x)^{(k+1)} &= \left (\frac{(-1)^{k-1}  (k-1)!}{x^k} \right ) ' \\
+            & = \frac{(-1)^k  k!}{x^{k+1}}
+        \end{align*} 
+        であるから，$n=k+1$のときも推測は正しい．
+    \end{enumerate}
+    (1),(2)より，
+    \[
+        (\log x)^{(n)} = \frac{(-1)^{n-1}  (n-1)!}{x^n}
+     \]
+     である．
+\end{tleftbar}
+
+\begin{tleftbar}
+    \[
+      \left(   \frac{1}{x^2+3x+2} \right)^{(n)} = (-1)^n n! \{ (x+1)^{-n-1} - (x+2)^{-n-1} \} 
+    \]
+\end{tleftbar}
+
+
+
+\subsection*{p90-91：10}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90-91：10}{p90-91：10}}
+
+\begin{tleftbar}
+    \begin{proof}
+    $u(x)= (x^2-1)^n$とおく，このとき，
+    \[
+     U'(x)= 2x n(x^2-1)^{n-1}
+    \]
+    だから，
+    \[
+        (x^2-1) u'(x)=2nx \cdot u(x)
+    \]
+    この両辺を$(n+1)$回微分して，
+    \begin{align*}
+       & (x^2-1)u^{(n+2)}(x)+2(n+1)x u^{(n+1)} x + \frac{(n+1)n}{2} \cdot u^{(n)} (x) = 2nx u^{(n+1)}(x) + 2(n+1) n u^{(n)}(x) \\
+       & \therefore ~(x^2-1)u^{(n+2)}(x) + 2n u^{(n+1)}(x)-(n+1)n u^{(n)}(x)=0
+    \end{align*}
+    ここで，$ u^{(n)} (x)= 2^n n! P_n (x)$なので，
+    \begin{align*} 
+        & (x^2 -1) \{ 2^n n! P_n ''(x) \} +2x \{ 2^n n! P_n (x) \} -n(n+1) \{ 2^n n P_n(x) \} =0 \\
+      &   \therefore ~ (x^2-1) P_n ''(x)+2x P_n '(x) -n(n+1) P_n (x)=0
+    \end{align*}
+\end{proof}
+\end{tleftbar}
+
+
+\subsection*{p106-107：10}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p106-107：10}{p106-107：10}}
+
+
+
+\begin{tleftbar}
+    \begin{proof}
+        3つのことを証明する．
+        \begin{description}
+            \item[a)とb)が同値であること] \mbox{} \par 
+            $a < x \leqq y$または$y \leqq x <a$に対して，$0 \leqq t < 1$を用いて，
+            \[
+                x=ta+(1-t)y
+            \]
+            とおく．$a < x \leqq y$とする．このとき，
+            \begin{equation}
+                \label{eq:p107 10) 1}
+            t = \frac{x-y}{a-y}
+            \end{equation}
+            と表せることはよい．
+
+            また，$f$は$I$で凸であり，これは
+            \begin{equation}
+                \label{eq:p107 10) 2}
+                f(x)=tf(x)+(1-t)f(x) < tf(a)+(1-t)f(y)
+            \end{equation}
+            と同値である．$x<y$のとき\eqref{eq:p107 10) 2}に\eqref{eq:p107 10) 1}の$t$の値を代入すれば，
+            \begin{equation}
+                \label{eq:p107 10) 3}
+                \frac{f(x)-f(a)}{x-a} < \frac{f(y)-f(x)}{y-x}
+            \end{equation}
+            を得る．$x=y$のときは明らか．
+            \item [a)とc)が同値であること] \mbox{} \par
+            c)を仮定する．\eqref{eq:p107 10) 3}の左辺について，平均値の定理により，
+            \[
+                \frac{f(x)-f(a)}{x-a}=f'(\xi)
+            \]
+            をみたす$\xi ~(a<\xi <x)$が存在する．同様に，\eqref{eq:p107 10) 3}の右辺について，平均値の定理により，
+            \[
+                \frac{f(y)-f(x)}{y-x}=f'(\eta)
+            \]
+            をみたす$\eta~ (x<\eta < y)$が存在する．仮定により，$f'(\xi)\leqq f'(\eta)$だから，\eqref{eq:p107 10) 3}が成り立ち，a)が従う．
+
+            a)，すなわち\eqref{eq:p107 10) 3}を仮定する．
+            左辺について，$x \to + a$とすれば，これは$f'(a)$に収束し，右辺は，
+            これは$(f(y)-f(a))/(y-a)$に収束する（これを$\alpha$とおく．）．$f'(a) \leqq \alpha$となることはよい．
+            また，$x \to - y$とすれば，左辺は$\alpha$に，右辺は$f'(y)$に収束する．$\alpha \leqq f'(y)$となることもよい．
+
+            よって，a)とc)は同値である．
+
+            \item[a)とd)が同値であること] \mbox{} \par
+            d)を仮定する．これは$f'(x)$は$I$上で単調増加であることと同値である． 
+        \end{description}
+        以上の議論により，示された．
+    \end{proof}
+\end{tleftbar}
+
+
+\section*{第3章：初等函数}
+\addcontentsline{toc}{section}{\texorpdfstring{第3章：初等函数}{第3章：初等函数}}
+
+
+\subsection*{p191-193：1}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p191-193：1}{p191-193：1}}
+
+
+\begin{tleftbar}
+    \begin{proof}
+        $m，n \in \mathbb{N},~n >0$とし，$e=\frac{m}{n}$と表される，すなわち$e$が有理数だと仮定する．このとき，与えられた式を変形して，
+        \[
+            \frac{e^\theta}{(n+1)!} = e-\sum_{k=0}^{n} \frac{1}{k!} =\frac{m}{n}-\sum_{k=0}^{n} \frac{1}{k!}
+        \]
+        とする．これにより．
+        \[
+            \frac{e^{\theta}}{n+1} = m \cdot n! - \sum_{k=0}^{n} \frac{n!}{k!}
+        \]
+        であり，$m \cdot n! - \sum_{k=0}^{n} \frac{n!}{k!} \in \mathbb{Z}$であるから，$\frac{e^{\theta}}{n+1} \in \mathbb{Z}$である．
+        よって，$0< \theta <1,~2<e<3$とあわせて，
+        \[
+            1 \le \frac{e^{\theta}}{n+1} < \frac{3}{n+1}
+        \]
+        であり，$\frac{e^{\theta}}{n+1} \in \mathbb{Z}$であるから$n=1$となる．ゆえに$e=m$となり，$e$は整数である．しかし$2<e<3$であるから，これは矛盾である．よって先の仮定が誤りであり，$e$は無理数である．
+    \end{proof}
+\end{tleftbar}
+
+\section*{第4章：積分法}
+\addcontentsline{toc}{section}{\texorpdfstring{第4章：積分法}{第4章：積分法}}
+
+\subsection*{p239：1-(i)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p239：1-(i)}{p239：1-(i)}}
+
+\begin{screen}
+	 $\tan \frac{x}{2}=t$とおくと，
+	\begin{align*}
+		\int_{0}^{\frac{\pi}{2}} \cfrac{\sin x}{1+\cos x} \, dx & = \int_{0}^{1} \cfrac{\cfrac{2t}{1+t^2}}{1+\cfrac{1-t^2}{1+t^2}} \cdot \cfrac{2}{1+t^2} \, dt \\
+		& = \int_{0}^{1} \frac{2t}{1+t^2} \, dt \\
+		& = \Bigl[\log (t^2+1)\Bigl]_{0}^{1} \\
+		& = \log 2-0 = \log 2
+	\end{align*}
+\end{screen}
+
+
+\subsection*{p239：1-(ii)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p239：1-(ii)}{p239：1-(ii)}}
+
+\begin{screen}
+	  $x-a=a \sin \theta$ ($-\pi \le \theta < \pi$)とする置換を用いる．
+	\begin{align*}
+		\int_{0}^{a} \sqrt{2ax-x^2} \, dx & = \int_{0}^{a} \sqrt{-(x-a)^2+a^2} \, dx \\
+		& = \int_{-\frac{\pi}{2}}^{0} a \sqrt{1-\sin ^2 \theta } \cdot a\cos \theta \, d \theta \\
+		& = \int_{-\frac{\pi}{2}}^{0} a \abs{\cos \theta} \cdot a\cos \theta \, d \theta \\
+		& = \int_{-\frac{\pi}{2}}^{0} a^2 \cos^2 \theta \, d \theta \\
+		& = \int_{-\frac{\pi}{2}}^{0} a^2 \left (\frac{1+\cos 2 \theta }{2}\right) \, d \theta \\
+		& = \frac{1}{2} a^2 \left [\theta + \frac{1}{2}\sin 2 \theta \right ]_{-\frac{\pi}{2}}^{0} \\
+		&= \frac{\pi a^2}{4}
+	\end{align*}
+\end{screen}
+
+
+\subsection*{p239：1-(iii)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p239：1-(iii)}{p239：1-(iii)}}
+
+
+\begin{screen}
+	\begin{align*}
+		\abs{\sin 2 \theta} =
+		\begin{cases}
+			\sin 2 \theta & (0 \le \theta < \frac{\pi}{2} のとき)\\
+			- \sin 2 \theta & (\frac{\pi}{2}\le \theta \le \pi のとき)
+		\end{cases}
+	\end{align*}
+		なので，
+		\begin{align*}
+			\int_{0}^{\pi} \abs{\sin 2 \theta} \, d \theta & = \int_{0}^{\frac{\pi}{2}} \sin 2 \theta \, d \theta +\int_{\frac{\pi}{2}}^{\pi} (-\sin 2 \theta) \, d \theta \\
+			&= \left [-\frac{\cos 2 \theta}{2}\right]_{0}^{\frac{\pi}{2}} + \left [\frac{\cos 2 \theta}{2}\right]_{\frac{\pi}{2}}^{\pi} \\
+			& = -\frac{(-1-1)}{2} + \frac{1+1}{2} = 2
+		\end{align*}
+	\end{screen}
+
+
+\subsection*{p239：1-(iv)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p239：1-(iv)}{p239：1-(iv)}}
+	\begin{screen}
+		\begin{align*}
+			\int_{0}^{\pi} e^{inx} \, dx  =
+			\begin{cases}
+				2 \pi & (n=0 のとき) \\
+				0 & (n \in \mathbb{Z}\setminus \{0\} のとき)
+			\end{cases}
+		\end{align*}
+		である．$n=0$のときは
+		\begin{align*}
+			\int_{0}^{2 \pi} e^{inx} \, dx & = \int_{0}^{2\pi} \, dx \\
+			& = \Bigl[x\Bigl]_{0}^{2\pi} = 2\pi
+		\end{align*}
+		となり，$n \ne 0$のときは
+		\begin{align*}
+			\int_{0}^{2\pi} e^{inx} \, dx & = \left [\frac{e^{inx}}{in} \right ]_{0}^{2\pi} \\
+			& = \frac{1}{in} (1-1)=0
+		\end{align*}
+		となる．
+	\end{screen}
+
+
+\subsection*{p239：1-(v)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p239：1-(v)}{p239：1-(v)}}
+
+	\begin{screen}
+		$m=n$のとき，
+		\begin{align*}
+			\int_{0}^{2\pi} \cos m x \sin nx \, dx & = \int_{0}^{2\pi} \cos mx \sin mx \, dx \\
+			& = \int_{0}^{2\pi} \left (\frac{\sin 2mx + \sin 0}{2}\right ) \, dx \\
+			& = \left [-\frac{\cos 2mx}{2m}\right ]_{0}^{2\pi} =0
+		\end{align*}
+		となる．$m \ne n$のとき，
+		\begin{align*}
+			\int_{0}^{2\pi} \cos mx \sin nx \, dx & = \int_{0}^{2\pi} \left (\frac{\sin (m+n)x + \sin (n-m)x}{2}\right) \, dx \\
+			& = \frac{1}{2}\left [\frac{\sin (m+n)x}{m+n}+\frac{\sin (n-m)x}{n-m} \right]_{0}^{2\pi} =0
+		\end{align*}
+		である，ここまでの議論と，$m$と$n$の対称性により，
+			\[
+				\int_{0}^{2\pi} \cos mx \sin nx \, dx =\int_{0}^{2\pi} \sin mx \cos nx \, dx =0 ~(n,m \in \mathbb{N})
+			\]
+		となる．
+	\end{screen}
+
+
+\subsection*{p239：1-(vi)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p239：1-(vi)}{p239：1-(vi)}}
+	\begin{screen}
+		$m \ne n$のとき，
+		\begin{align*}
+			\int_{0}^{2\pi} \cos mx \cos nx \, dx & = \int_{0}^{2\pi} \left (\frac{\cos(m+n)x+\cos(n-m)x}{2}\right) \, dx\\
+			& = \frac{1}{2} \left [\frac{\sin (m+n)x}{m+n}+\frac{\sin(n-m)x}{n-m}\right]_{0}^{2\pi} \\
+			& = 0-0 =0
+		\end{align*}
+		となる．$m =n \ne 0$のとき，
+		\begin{align*}
+			\int_{0}^{2\pi} \cos mx \cos nx \, dx & = \int_{0}^{2\pi} \cos^2 mx \, dx \\
+			& = \int_{0}^{2\pi} \left (\frac{1+\cos 2mx}{2}\right) \, dx  \\
+			& = \left [\frac{x}{2}+\frac{\sin 2mx}{4m}\right]_{0}^{2\pi} = \pi
+		\end{align*}
+		となる．$m =n =0$のとき，
+		\begin{align*}
+			\int_{0}^{2\pi} \cos mx \cos nx \, dx & = \int_{0}^{2\pi} dx \\
+			& = [x]_{0}^{2\pi} = 2\pi
+		\end{align*}
+		となる，以上をまとめて，
+		\begin{align*}
+			\int_{0}^{2\pi} \cos mx \cos nx \, dx =
+			\begin{cases}
+				0 & (m \ne n のとき)\\
+				\pi & (m = n\ne 0のとき)\\
+				2 \pi & (m=n=0 のとき)
+			\end{cases}
+		\end{align*}
+		である．
+	\end{screen}
+
+    \subsection*{p239：3-(i)}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p239：3-(i)}{p239：3-(i)}}
+
+\begin{tleftbar}
+    部分積分法を用いると，
+    \begin{align*}
+        \int x^\alpha \log x \, dx & = \frac{x^{\alpha +1} \log x}{\alpha +1}　- \int \frac{x^{\alpha +1}}{\alpha+1} \cdot \frac{1}{x} \, dx \\
+        & = \frac{x^{\alpha +1} \log x}{\alpha +1}- \frac{1}{\alpha +1} \int x^{\alpha} \, dx \\
+        & = \frac{x^{\alpha+1} \log x}{\alpha +1} - \frac{x^{\alpha +1}}{(\alpha +1)^2}+ C
+    \end{align*}
+    となり，これが答えである．
+\end{tleftbar}
+
+\subsection*{p239：3-(ii)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p239：3-(ii)}{p239：3-(ii)}}
+
+\begin{tleftbar}
+    部分積分法を用いると，
+    \begin{align*}
+        \int x^n e^x \, dx & = x^n e^x - n \int x^{n-1} e^x \, dx \\
+        & = x^n e^x - n x^{n-1} e^x + (n-1)\int x^{n-2} e^x \, dx \\
+        & = \cdots = x^n e^x - n x^{n-1} e^x + \cdots + (-1)^n n! \int e^x \, dx \\
+        & = e^x (x^n -n x^{n-1}+ \cdots +(-1)^n n!) + C
+    \end{align*}
+    となる．
+\end{tleftbar}
+
+\subsection*{p239：3-(iii)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p239：3-(iii)}{p239：3-(iii)}}
+
+\begin{tleftbar}
+    部分積分法を用いると，
+    \begin{align*}
+        \int (\log x)^n \, dx & = \int (\log x)^n  (x)' \, dx \\
+        & = x (\log x)^n - n \int  \frac{(\log x)^{n-1}}{x} \cdot  x \, dx \\
+        & =  x (\log x)^n - n x(\log x)^{n-1} + (n-1) \int \frac{(\log x)^{n-2}}{x} \cdot x \, dx \\
+        & = \cdots = x (\log x)^n - n x(\log x)^{n-1} + \cdots + x(-1)^n n!+C
+    \end{align*}
+    となり，これが答えである．
+\end{tleftbar}
+
+\subsection*{p239：3-(iv)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p239：3-(iv)}{p239：3-(iv)}}
+\begin{leftbar}
+    部分積分法を用いると，
+    \begin{align*}
+        \int \arcsin x \, dx & = \int (x)' \arcsin x \, dx \\
+        & = x \arcsin x  - \int \frac{x}{\sqrt{1-x^2}} \, dx \\
+        & = x \arcsin x + \sqrt{1-x^2} + C
+    \end{align*}
+    であり，これが答えである．
+\end{leftbar}
+
+\subsection*{p239：3-(v)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p239：3-(v)}{p239：3-(v)}}
+
+\begin{tleftbar}
+    $\cos ^2 x = \frac{1+\cos 2x}{2}$なので，
+    \begin{align*}
+        \int \cos ^2 x \, dx & = \int \frac{1+\cos 2x}{2} \, dx \\
+        & = \frac{x}{2}+\frac{1}{4} \sin 2x + C
+    \end{align*}
+    である．
+\end{tleftbar}
+
+\newpage 
+
+\subsection*{p239：3-(vii)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p239：3-(vii)}{p239：3-(vii)}}
+
+\begin{tleftbar}
+    $x+1 =t$とおくと，$dt=dx$であり，
+    \begin{align*}
+        \int \frac{x^2+2}{(x+1)^3} \, dx & = \int \frac{(t-1)^2+2}{t^3} \, dt \\
+        & = \int \left (\frac{1}{t}-\frac{2}{t^2}+\frac{3}{t^3}\right) \, dt \\
+        & = \log \abs{x+1}+\frac{2}{x+1}-\frac{3}{2(x+1)^2}+C
+    \end{align*}
+    となり，これが答えである．
+\end{tleftbar}
+
+\subsection*{p239：3-(vi)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p239：3-(vi)}{p239：3-(vi)}}
+
+\begin{tleftbar}
+    $(\log x)' = \frac{1}{x}$であることを用いて，
+    \begin{align*}
+        \int \frac{(\log x)^2}{x} \, dx & = \int (\log x)^2 (\log x)' \, dx \\
+        & = \frac{(\log x)^3}{3} + C
+    \end{align*}
+    となり，これが答えである．
+\end{tleftbar}
+
+\subsection*{p239：3-(viii)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p239：3-(viii)}{p239：3-(viii)}}
+
+\begin{tleftbar}
+    $\cos ^2 x = 1- \sin ^2 x$なので，
+    \begin{align*}
+        \int \sin ^3 x \cos ^2 x \, dx & = \int \sin ^3 x (1-\sin ^2 x) \, dx = \int (\sin ^3 x - \sin ^5 x ) \, dx \\
+        & = \int (\sin ^2 x - \sin ^4 x) \sin x \, dx \\
+        & = \int \{ (1-t^2)- (1-t^2)^2 \} (-1) \, dt \quad (\cos x =t) \\
+        & = \int (t^4 -t^2) \, dt \\
+        & = \frac{\cos ^5 x}{5}-\frac{\cos ^3 x}{3}+C
+    \end{align*}
+    である．
+\end{tleftbar}
+
+\subsection*{p239：3-(ix)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p239：3-(ix)}{p239：3-(ix)}}
+
+\begin{tleftbar}
+    $\sqrt[6]{x}=t$とおくと，$x=t^6$であるから，$\frac{dx}{dt}=6t^5$である．これらを用いると，
+    \begin{align*}
+        \int \frac{1}{\sqrt{x}-\sqrt[3]{x}} \, dx & = \int \frac{1}{t^3-t^2} \cdot 6t^5 \, dt \\
+        & = \int \frac{6t^3}{t-1} \, dt \\
+        & = \int \frac{(t-1)(6t^2+6t+1)+6}{t-1} \, dt \\
+        & = \int \left (6t^2+6t+6 + \frac{6}{t-1}\right) \, dt \\
+        & = 2\sqrt{x}+3 \sqrt[3]{x} + 6 \sqrt[6]{x} + 6 \log \abs{\sqrt[6]{x}-1}+ C
+    \end{align*}
+    である
+\end{tleftbar}
+
+
+\subsection*{p239-240：4-(i)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p239-240：4-(i)}{p239-240：4-(i)}}
+
+\begin{tleftbar}
+    \begin{align*} 
+        \frac{1}{n+1}+ \frac{1}{n+2}+\dots + \frac{1}{2n} & = \sum_{k=1}^{n} \frac{1}{n+k} \\
+        & = \frac{1}{n} \sum_{k=1}^{n} \frac{1}{1+k/n} 
+    \end{align*}
+    であるから，
+    \begin{align*} 
+        \lim_{n \to \infty} a_n &= \lim_{n \to \infty} \frac{1}{n} \sum_{k=1}^{n} \frac{1}{1+k/n} \\
+        & = \int_{0}^{1} \frac{1}{1+x} \, dx \\
+        & = \Bigl [ \log (1+x) \Bigl]_{0}^{1} = \log 2
+    \end{align*}
+    である．
+\end{tleftbar}
+
+
+
+\subsection*{p239-240：4-(ii)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p239-240：4-(i)}{p239-240：4-(ii)}}
+
+\begin{tleftbar}
+    \begin{align*} 
+        \frac{1}{\sqrt{n^2+n}}+\frac{1}{\sqrt{n^2+2n}}+\dots+\frac{1}{\sqrt{n^2+n^2}}& = \sum_{k=1}^{n} \frac{1}{\sqrt{n^2+kn}} \\
+        & = \frac{1}{n} \sum_{k=1}^{n} \frac{1}{\sqrt{1+k/n}}
+    \end{align*}
+    なので，
+    \begin{align*} 
+        \lim_{n \to \infty} a_n &= \lim_{n \to \infty} \frac{1}{n} \sum_{k=1}^{n} \frac{1}{\sqrt{1+k/n}} \\
+        & =\int_{0}^{1} \frac{1}{\sqrt{1+x}} \, dx \\
+        & =\int_{1}^{\sqrt{2}} \frac{1}{t} \cdot 2t \, dt \\
+        & = \Bigl[2t \Bigl ]_{1}^{\sqrt{2}} =2(\sqrt{2}-1)
+    \end{align*}
+\end{tleftbar}
+
+
+
+\subsection*{p247：1-(i)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(i)}{p247：1-(i)}}
+
+\begin{tleftbar}
+    計算すると，
+    \begin{align*}
+        \int \frac{1}{x^3-x} \, dx & = \frac{1}{2} \int \left \{ \frac{-(x-1)+(x+1)}{(x-1)x(x+1)} \right \} \, dx \\
+        & = \frac{1}{2} \int \left \{ -\frac{1}{(x+1)x}+\frac{1}{x(x-1)} \right \} \, dx \\
+        & = \frac{1}{2} \int \left \{ \frac{-(x+1)+x}{(x+1)x} + \frac{x-(x-1)}{x(x-1)} \right \} \, dx \\
+        & = \frac{1}{2} \int \left ( -\frac{2}{x}+\frac{1}{x+1}+\frac{1}{x-1} \right) \, dx \\
+        & = -\log \abs{x} + \frac{1}{2} \log \abs{x^2-1}+ C
+    \end{align*}
+    であり，これが答えである．
+\end{tleftbar}
+
+
+\subsection*{p247：1-(ii)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(ii)}{p247：1-(ii)}}
+
+\begin{tleftbar}
+    $(x-1)(x-2)(x-3)=x^3 -6x^2+11x-6$であるから，
+    \[
+        \int \frac{x^3}{(x-1)(x-2)(x-3)} \, dx  = \int \left (1+ \frac{6x^2-11x+6}{(x-1)(x-2)(x-3)}\right) \, dx
+    \]
+    である．ここで，$A,B,C$を定数として，
+    \[
+        \frac{6x^2-11x+6}{(x-1)(x-2)(x-3)} = \frac{A}{(x-1)}+\frac{B}{(x-2)}+\frac{C}{(x-3)}
+    \]
+    とおく．これより，
+    \begin{gather*}
+        6x^2-11x+6 = A(x-2)(x-3)+B (x-1)(x-3)+C(x-1)(x-2) \\
+        \therefore ~ A = \frac{1}{2}, \quad B = -\frac{1}{8},\quad C= \frac{27}{2}
+    \end{gather*}
+    となる．これより，
+    \begin{align*}
+        \int \frac{x^3}{(x-1)(x-2)(x-3)} \, dx & = \int \left \{ 1+ \frac{1}{2(x-1)} - \frac{1}{8(x-2)}+\frac{27}{2(x-3)} \right \} \, dx  \\
+        & = x + \frac{1}{2} \log \abs{\frac{(x-1)(x-3)^{27}}{(x-2)^{16}}}+C
+    \end{align*}
+    である．
+\end{tleftbar}
+
+\subsection*{p247：1-(iii)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(iii)}{p247：1-(iii)}}
+
+\begin{tleftbar}
+    $A,B,C,D$を定数として，
+    \[
+        \frac{x^3+1}{x(x-1)^3} = \frac{A}{x}+\frac{B}{x-1}+\frac{C}{(x-1)^2}+\frac{D}{(x-1)^3}
+    \]
+    とおくと，簡単な計算により，$A=-1,~B=2,~C=1,~D=2$とわかるので，
+    \begin{align*}
+        \int \frac{x^3+1}{x(x-1)^3} \, dx & = \int \left (-\frac{1}{x}+\frac{2}{x-1}+\frac{1}{(x-1)^2}+\frac{2}{(x-1)^3} \right ) \, dx \\
+        & = \log \abs*{\frac{(x-1)^2}{x}} -\frac{1}{(x-1)}-\frac{1}{(x-1)^2}+ C
+    \end{align*}
+    を得る．
+\end{tleftbar}
+
+\subsection*{p247：1-(v)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(v)}{p247：1-(v)}}
+
+
+\begin{tleftbar}
+    $\tan \frac{x}{2}=t$とおくと，$\frac{dx}{dt}=\frac{2}{1+t^2}$，$\cos x = \frac{1-t^2}{1+t^2}$であるから，
+    \[
+        \int \frac{1}{a+b \cos x} \, dx  = \int \frac{1}{(a-b)t^2 +a+b} \, dt
+    \]
+    となる．よって，
+    \[
+        \int \frac{1}{a+b\cos x} \, dx =
+        \begin{cases}
+            \frac{1}{a} \tan \frac{x}{2}+ C &(\text{$a=b \ne 0$のとき})\\
+            -\frac{1}{a \tan \frac{x}{2}}+ C&(\text{$a=-b\ne 0$のとき})
+        \end{cases}
+    \]
+    \end{tleftbar}
+
+
+\subsection*{p247：1-(viii)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(viii)}{p247：1-(viii)}}
+
+
+
+\begin{tleftbar}
+    $\tan x = t$とおくと，$\frac{dt}{dx}= \frac{1}{\cos ^2 x}$であるから，求める不定積分は，
+    \begin{align*} 
+        \int \frac{1/\cos ^2 x}{a^2 + b^2 \tan ^2 x} \, dx & = \int \frac{1}{a^2+b^2 t^2} \, dt \\
+        & = \frac{1}{ab} \arctan \left (\frac{b}{a} \tan x \right)+ C
+    \end{align*}
+    である．
+\end{tleftbar}
+
+
+\subsection*{p247：1-(xiii)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(xiii)}{p247：1-(xiii)}}
+
+
+\begin{tleftbar}
+    $x+\frac{1}{x}=t$とおくと，$\frac{dt}{dx}=1-\frac{1}{x^2}$であり，求める不定積分は，
+    \begin{align*} 
+        \int \frac{1-x^2}{1+x^2\sqrt{1+x^4}} \, dx & = \int \frac{1-x^2}{x^2 (x+1/x)\sqrt{x^2 + 1/x^2}} \, dx \\
+        & =\int \frac{1}{t\sqrt{t^2-2}} \, dt
+    \end{align*}
+    となる．ここで，$s=\frac{1}{t}$とすると，$\frac{dt}{ds}=-\frac{1}{s^2}$であり，
+    \begin{align*} 
+        \int \frac{1}{t \sqrt{t^2-2}} \, dt & = \int \frac{1}{\sqrt{1-2s^2}} \, ds \\
+        & = \frac{1}{\sqrt{2}} \arcsin (\sqrt{2}s)+C \\
+        & = \frac{1}{\sqrt{2}} \arcsin \left (\frac{\sqrt{2}x}{x^2+1} \right)+C
+    \end{align*}
+    となる．
+\end{tleftbar}
+
+
+\subsection*{p247：1-(xi))}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(xi)}{p247：1-(xi)}}
+
+
+\begin{tleftbar}
+    $x=\frac{1}{t}$とおくと，$\frac{dx}{dt}=-\frac{1}{t^2}$である．また，$x^2+1 = \frac{1}{t^2} +1$となる．よって，
+    \begin{align*} 
+        \int \frac{1}{x\sqrt{x^2+1}} \, dx & = \int \frac{t}{\sqrt{1/t^2+1}} \cdot (-1/t^2) \, dt \\
+        & = -\int \frac{1}{\sqrt{t^2+1}} \, dt \\
+        & = \log \abs{t+\sqrt{t^2+1}}+ C \\
+        & = \log \abs{\frac{1+\sqrt{x^2+1}}{x}}+C
+    \end{align*}
+    である．
+\end{tleftbar}
+
+
+\subsection*{p247：1-(xii)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(xii)}{p247：1-(xii)}}
+
+
+\begin{tleftbar}
+    \begin{align*} 
+        \int \frac{1}{\sqrt{(x-a)(b-x)}} \, dx & = \int \frac{1}{\sqrt{\left (\dfrac{b-a}{2} \right )^2 - \left (x-\dfrac{a+b}{2} \right )^2 }} \\
+        & = \arcsin \left (\frac{2x-a-b}{b-a} \right)+C
+    \end{align*}
+\end{tleftbar}
+
+
+\section*{第5章：級数}
+\addcontentsline{toc}{section}{\texorpdfstring{第5章：級数}{第5章：級数}}
+
+\subsection*{p366：1-(i)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p366：1-(i)}{p366：1-(i)}}
+
+\begin{tleftbar}
+    \[
+        \lim_{m \to \infty} a_{2m} = 1 , \quad \lim_{m \to \infty} a_{2m-1} = -1
+    \]
+    であり，$(a_n)_{n \in \mathbb{N}}$の集積値全体の集合は$\{ -1 , 1 \}$である．
+
+    ゆえに，
+    \[
+        \varlimsup_{n \to \infty} a_n = 1 , \quad \varliminf_{n \to \infty} a_n =-1
+    \]
+    である．
+\end{tleftbar}
+
+
+\subsection*{p366：1-(ii)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p366：1-(ii)}{p366：1-(ii)}}
+
+\begin{tleftbar}
+    \[
+        \lim_{m \to \infty} a_{2m} = \infty , \quad \lim_{m \to \infty} a_{2m-1} = -\infty
+    \]
+    であり，$(a_n)_{n \in \mathbb{N}}$の集積値全体の集合は$\{ -\infty , \infty \}$である\footnote{補完数直線を考えているため，これでよい．}．
+
+    ゆえに，
+    \[
+        \varlimsup_{n \to \infty} a_n = \infty , \quad \varliminf_{n \to \infty} a_n =-\infty 
+    \]
+    である．
+\end{tleftbar}
+
+\subsection*{p366：1-(iii)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p366：1-(iii)}{p366：1-(iii)}}
+
+\begin{tleftbar}
+    $(a_n)_{n \in \mathbb{N}}$の集積値全体の集合は$\{ -\frac{\sqrt{3}}{2} , \frac{\sqrt{3}}{2} \}$である．
+    ゆえに，
+    \[
+        \varlimsup_{n \to \infty} a_n = \frac{\sqrt{3}}{2} , \quad \varliminf_{n \to \infty} a_n =-\frac{\sqrt{3}}{2}
+    \]
+    である．
+\end{tleftbar}
+
+
+\begin{thebibliography}{9}
+	\bibitem{suita} 杉浦光夫『解析入門I」，東京大学出版会，1980
+\end{thebibliography}
+
+\end{document}
