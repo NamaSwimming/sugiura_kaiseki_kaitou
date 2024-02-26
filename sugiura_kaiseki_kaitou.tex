@@ -493,6 +493,53 @@ $n!x \notin \mathbb{Z}$のときは，
 
 \newpage 
 
+\subsection*{p16-17：7)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p16-17：7)}{p16-17：7)}}
+
+\begin{tleftbar}
+	\begin{proof}
+		$n < k < n+1$となる自然数$k$が存在すると仮定する．
+        この不等式から，辺々$n$を引くと
+		\[
+        0 < k - n < 1 
+        \]
+		を得る．$n$と$k$は自然数としたから，問6により，$k-n$は自然数である．
+        
+        よって，$0<a<1$となる自然数$a$が存在しないことを示せばよい．
+		\[
+            H=\{0\} \cup \{n \in \mathbb{N} \mid n \geqq 1 \}
+        \]
+		とおくと，
+		\begin{align*}
+			&0 \in H \\
+			&0+1 \in H
+		\end{align*}
+		である．ゆえに$ 0 \in H$となる．
+
+		また，$k \geqq 1$となる$k \in \mathbb{N}$に対しては，$k +1 \geqq 1$
+        であり，
+        \[
+        k+1 \in \{n \in \mathbb{N} \mid n \geqq 1 \} 
+        \]
+        となるため，$k+1 \in H$である．
+        
+        ここまでの考察から，
+        \begin{enumerate}
+            \item $0 \in H$
+            \item $n \in H \Longrightarrow n+1 \in H$
+        \end{enumerate}
+         であるから$H$は継承的である．
+         
+         したがって，$\mathbb{N}$が最小の継承的集合であることから，
+         $\mathbb{N} \subset H$となる．
+        
+		$H$の定義により，$a \notin H$なので，$a \notin \mathbb{N}$となり，$0<a<1$となる自然数$a$は存在しない．
+        これが証明すべきことであった．
+	\end{proof}
+\end{tleftbar}
+
+\newpage 
+
 \subsection*{p31-33：1-(i)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p31-33：1-(i)}{p31-33：1-(i)}}
 
