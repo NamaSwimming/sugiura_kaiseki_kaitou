@@ -493,6 +493,93 @@ $n!x \notin \mathbb{Z}$のときは，
 
 \newpage 
 
+\subsection*{p16-17：6)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p16-17：6)}{p16-17：6)}}
+
+\kakko{$m+n$について}
+
+\begin{tleftbar}
+    \begin{proof}
+    $n \in \mathbb{N}$についての命題$p(n)$を
+    \[
+        p(n) ~{:}~ \forall m \in \mathbb{N} \colon  m+n \in \mathbb{N}
+    \]
+    とする．
+    \begin{enumerate}[(i)]
+        \item $n=0$のとき，$m+0=m$であり，$m \in \mathbb{N}$であるから，$p(0)$は真である．
+        \item 任意の$k \in \mathbb{N}$に対して，$p(k)$が真であると仮定する．このとき，$m+k \in \mathbb{N}$である．
+        ここで，
+        \[
+        m+(k+1)=(m+k)+1
+        \] であり，$m+k \in \mathbb{N}$に注意すると，$\mathbb{N}$が最小の継承的集合であることから，
+        \[
+        m+(k+1)=(m+k)+1  \in \mathbb{N}
+        \]
+        である．よって，このとき$p(k+1)$も真である．
+    \end{enumerate}
+    以上(i)，(ii)より，任意の$n \in \mathbb{N}$に対して$p(n)$が真である．これが証明すべきことであった．
+\end{proof}
+\end{tleftbar}
+
+
+\kakko{$mn$について}
+
+\begin{tleftbar}
+    \begin{proof}
+    $n \in \mathbb{N}$についての命題$q(n)$を
+    \[
+        q(n) ~{:}~ \forall m \in \mathbb{N} \colon  mn \in \mathbb{N}
+    \]
+    とする．
+    \begin{enumerate}[(i)]
+        \item $n=0$のとき，$m \cdot 0=0$であり，$0 \in \mathbb{N}$であるから，$p(0)$は真である．
+        \item 任意の$k \in \mathbb{N}$に対して，$p(k)$が真であると仮定する．このとき，$mk \in \mathbb{N}$である．
+        ここで，
+        \[
+        m(k+1)=mk + k 
+        \] であり，$mk \in \mathbb{N}$，$k \in \mathbb{N}$に注意すると，証明したことから
+        \[
+        mk + k   \in \mathbb{N}
+        \]
+        である．よって，このとき$p(k+1)$も真である．
+    \end{enumerate}
+    以上(i)，(ii)より，任意の$n \in \mathbb{N}$に対して$p(n)$が真である．これが証明すべきことであった．
+\end{proof}
+\end{tleftbar}
+
+\newpage 
+
+\kakko{$m-n$について}
+
+\begin{tleftbar}
+    \begin{proof}
+    $n \in \mathbb{N}$についての命題$r(n)$を
+    \[
+        r(n) ~{:}~ \forall m \in \mathbb{N} \colon  m<n \lor m-n  \in \mathbb{N}
+    \]
+    とする．
+    \begin{enumerate}[(i)]
+        \item $n=0$のとき，$m - 0 =m$であり，$m \in \mathbb{N}$であるから，$r(0)$は真である．
+        \item 任意の$k \in \mathbb{N}$に対して，$r(k)$が真であると仮定する．このとき，$k<n \lor k-n  \in \mathbb{N}$である．
+        \begin{enumerate}[(I)]
+        \item $m \leqq   k$のとき，$m <k+1$であり，$r(k+1)$も真である．
+        \item $m > k$のとき，まず
+        \[
+        m-(k+1)=m-k-1 
+        \] であり，$m-k \in \mathbb{N}$，$1 \in \mathbb{N}$に注意すると，証明したことから
+        \[
+        m-k-1  \in \mathbb{N}
+        \]
+        である．
+        \end{enumerate}
+        よって，このとき$r(k+1)$も真である．
+    \end{enumerate}
+    以上(i)，(ii)より，任意の$n \in \mathbb{N}$に対して$r(n)$が真である．これが証明すべきことであった．
+\end{proof}
+\end{tleftbar}
+
+\newpage 
+
 \subsection*{p16-17：7)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p16-17：7)}{p16-17：7)}}
 
