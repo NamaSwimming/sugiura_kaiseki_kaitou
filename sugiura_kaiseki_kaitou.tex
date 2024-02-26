@@ -445,6 +445,54 @@ $n!x \notin \mathbb{Z}$のときは，
     \end{proof}
 \end{tleftbar}
 
+\newpage 
+
+\subsection*{p16-17：5)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p16-17：5)}{p16-17：5)}}
+
+\begin{tleftbar}
+	\begin{proof}
+		イ)の条件により，
+		\[ 
+            A \subset \{n \in \mathbb{N} \mid n \geqq m\} 
+        \]
+		は明らかである．ここで，
+		\[
+        H=\{0,1,\dots,m-1\} \cup A
+        \]
+        とおく．このとき，$H$の定義から$0 \in H$である．
+
+        次に，$n \in H$であることを仮定する．このとき，
+        \begin{enumerate}[(i)]
+        \item  $n<m-1$であれば，$n+1 \in \{0,1,\dots,m-1\}$より，$n+1 \in H$となる
+		\item $n=m-1$であれば，$n+1=m \in A$より，$n+1 \in H$となる
+		\item $n \geqq m$であれば，ロ)より$n+1 \in A$であり，$A \subset H $により$n + 1\in H$となる
+		\end{enumerate}
+		よって，いずれの場合でも
+		\[
+			n+1 \in H
+		\]
+		したがって，$H$は継承的である．$\mathbb{N}$は最小の継承的な集合であるから，$\mathbb{N} \subset H$である．
+
+		つまり，$\mathbb{N} =  \{0,1,\dots,m-1\} \cup \{n \in \mathbb{N} \mid n \geqq m \}$であることと，
+        $H$の定義により，
+		\[
+			 \{0,1,\dots,m-1\} \cup \{n \in \mathbb{N} \mid n \geqq m \} \subset \{0,1，,\dots,m-1\} \cup A
+		\]
+		となる．よって，
+		\[
+			\{n \in \mathbb{N}\mid n \geqq m \} \subset A
+		\]
+		となる．これと$ A \subset \{n \in \mathbb{N} \mid n \geqq m\}$であることを併せると，
+		\[
+			A=\{n \in \mathbb{N} \mid n \geqq m \}
+		\]
+        となり，これが証明すべきことであった．
+	\end{proof}
+\end{tleftbar}
+
+\newpage 
+
 \subsection*{p31-33：1-(i)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p31-33：1-(i)}{p31-33：1-(i)}}
 
@@ -1687,6 +1735,40 @@ $n!x \notin \mathbb{Z}$のときは，
 
   \node at (-1.5,1.5) {$r^2 = 2a^2 \cos(2\theta)$};
   \end{tikzpicture}
+
+  \newpage 
+
+
+  \subsection*{p290：4}
+  \addcontentsline{toc}{subsection}{\texorpdfstring{p290：4}{p290：4}}
+  
+  \begin{leftbar}
+    求める面積を$S$，求める求める体積を$V$とおくと，
+    \begin{align*} 
+        S & = \frac{1}{2} \int_{0}^{2\pi} r^2 \, d \theta \\
+        & =\frac{1}{2} \int_{0}^{2\pi} a^2 (1+ 2\cos \theta + \cos ^2 \theta) \, d \theta \\
+        & = \frac{1}{2} \int_{0}^{2\pi} a^2 \left (1+ 2\cos \theta + \frac{1+\cos 2\theta}{2} \right) \, d \theta \\
+        & = a^2 \Bigl [ \frac{3}{2} x + 2\sin \theta +\frac{\sin 2 \theta}{4} \Bigl ]_{0}^{2\pi} \\
+        & = \frac{3 \pi a^2}{2}
+    \end{align*} 
+    となる．
+\end{leftbar}
+
+  \begin{tikzpicture}[scale=1.8]
+    % グレーで塗りつぶす領域の描画
+    \fill[gray!30, domain=0:2*pi, variable=\t, smooth]
+      plot ({\t r}:{1 + cos(\t r)});
+      
+    % r=1+cos(theta)の描画
+    \draw[domain=0:2*pi, variable=\t, smooth]
+      plot ({\t r}:{1 + cos(\t r)});
+    
+
+    % 軸の描画
+    \draw[->] (-1.5,0) -- (2.5,0) node[right] {$x$};
+    \draw[->] (0,-2.5) -- (0,2.5) node[above] {$y$};
+    
+    \end{tikzpicture}
 
 \newpage 
 
