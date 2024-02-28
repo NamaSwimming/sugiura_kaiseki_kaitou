@@ -1048,6 +1048,40 @@ $n!x \notin \mathbb{Z}$のときは，
     である．
     \end{tleftbar}
 
+    \newpage 
+
+    \subsection*{p49-50：8}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p49-50：8}{p49-50：8}}
+
+    \begin{tleftbar}
+        \begin{proof}
+        この級数\footnote{この級数をケンプナー級数という．}の第$n$部分和を$s_n$，分母が$n$桁である項の末尾までの和を$t_n$とする．このとき$s_n < t_n$である．
+
+        分母が$k$桁である項の和を考える．このような項は，$8 \cdot 9^{k-1}$個ある．
+        
+        また，このような項の分母の最小値は$10^{k-1}$であるから，
+        \begin{align*} 
+            t_n = \sum_{k=1}^{n} \frac{8 \cdot 9^{k-1}}{10^{k-1}} &= 8 \sum_{k=1}^{n} \left(\frac{9}{10}\right)^{k-1} \\
+            &= 8 \cdot \frac{1-\left(\dfrac{9}{10}\right)^n}{1-\dfrac{9}{10}} \\
+            & = 80 \left(1-\left(\frac{9}{10}\right)^n\right)
+        \end{align*}
+        となり，$t_n$は単調増加かつ上に有界である
+
+        よって，
+        \[
+            0 < s_n < t_n = 80 \left(1-\left(\frac{9}{10}\right)^n\right)
+        \]
+        であるから，はさみうちの原理により，
+        \[
+            \lim_{n \to \infty} s_n \leqq 80
+        \]
+        となり，これが証明すべきことであった．
+    \end{proof}
+\end{tleftbar}
+
+
+    \newpage 
+
 
     \subsection*{p63-64：1-(i)}
     \addcontentsline{toc}{subsection}{\texorpdfstring{p63-64：1-(i)}{p63-64：1-(i)}}
