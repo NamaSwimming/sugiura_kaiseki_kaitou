@@ -1337,6 +1337,44 @@ $n!x \notin \mathbb{Z}$のときは，
 \end{tleftbar}
 
 
+\subsection*{p106-107：8-(i)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p106-107：8-(i)}{p106-107：8-(i)}}
+
+\begin{tleftbar}
+    \[
+        f(x)=3x^4 -8x^3+6x^2=3x^2(x-1)^2
+    \]
+    とおくと，
+    \begin{align*}
+        & f'(x) =12x^3 -24x^2+12x = 12x(x-1)^2, \\
+        & f''(x)=36x^2-48x+12 = 12(3x-1)(x-1)
+    \end{align*}
+    であるから，増減表は以下のようになる．
+    
+    \vspace{2mm}
+    
+        \begin{tabular}{|c||ccccccc|}
+        \hline
+        $x$ & $\cdots$& $0$ & $\cdots$ & $1/3$ & $\cdots$ & $1$ & $\cdots$ \\
+        \hline
+        $f'(x)$ & $-$ & $0$& $+$ & $+$ & $+$ & $0$ & $+$ \\
+        \hline
+        $f''(x)$ & $+$& $+$ & $+$ &  $0$ &$-$ &$0$ & $+$ \\
+        \hline
+        $f(x)$ & \ser & & \ner & & \nel & & \ner \\
+        \hline
+        \end{tabular}
+        
+        \vspace{2mm}
+
+        \begin{tikzpicture}[scale = 3]
+        \draw[->,>=stealth,semithick](-0.3,0)--(1.3,0)node[above]{$x$};%x軸
+        \draw[->,>=stealth,semithick](0,-0.2)--(0,1.1)node[right]{$y$};%y軸
+        \draw(0,0)node[below right]{O};%原点
+        \draw[domain=-0.2:1.3,samples=100]plot(\x,{3*pow(\x,4)-8*pow(\x,3)+6*pow(\x,2)})node[right]{$y=3x^4-8x^3+6x^2$};
+        \end{tikzpicture}
+    \end{tleftbar}
+
 \subsection*{p106-107：10}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p106-107：10}{p106-107：10}}
 

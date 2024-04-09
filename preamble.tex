@@ -111,6 +111,31 @@
 
 \newcommand\kakko[1]{\noindent\textbf{\textgt{《#1》}}}
 
+%増減表関連
+\newcommand{\ner}{
+\begin{tikzpicture}[scale=0.3,baseline=0.3]
+\draw[->,>=stealth] (0,0) to[bend right=45] (1,1);
+\end{tikzpicture}
+}
+
+\newcommand{\nel}{
+\begin{tikzpicture}[scale=0.3,baseline=0.3]
+\draw[->,>=stealth] (0,0) to[bend left=45] (1.2,1);
+\end{tikzpicture}
+}
+
+\newcommand{\sel}{
+\begin{tikzpicture}[scale=0.3,baseline=0.3]
+\draw[->,>=stealth] (0,1) to[bend left=45] (1,0);
+\end{tikzpicture}
+}
+
+\newcommand{\ser}{
+\begin{tikzpicture}[scale=0.3,baseline=0.3]
+\draw[->,>=stealth] (0,1) to[bend right=45] (1.2,0);
+\end{tikzpicture}
+}
+
 %ハイパーリンク用
 \usepackage{url}
 \usepackage[dvipdfmx]{hyperref}
