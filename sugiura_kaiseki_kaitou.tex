@@ -1375,6 +1375,53 @@ $n!x \notin \mathbb{Z}$のときは，
         \end{tikzpicture}
     \end{tleftbar}
 
+    \newpage 
+
+    \subsection*{p106-107：8-(ii)}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p106-107：8-(ii)}{p106-107：8-(ii)}}
+    
+    \begin{tleftbar}
+        $x>0$のもとで，
+        \[
+            f(x)=x^\frac{1}{x}
+        \]
+        とおく．ここで，
+        \[
+            f(x)=\exp(\log x^{1/x}) = \exp (\log x/x)
+        \]
+        と変形できるので，
+        \begin{align*} 
+            & f'(x) = \exp (\log x /x) \left (\frac{1-\log x}{x^2} \right) , \\
+            & f''(x) = \exp (\log x /x) \left (\frac{(\log x -1)^2 -3x+2x\log x}{x^4} \right)
+        \end{align*} 
+        であり，増減表は以下のようになる．ただし$\alpha$，$\beta$は$(\log x -1)^2 -3x+2x\log x =0$の$2$解である．
+        \vspace{2mm}
+        
+        \begin{tabular}{|c||cccccccc|}
+        \hline
+        $x$ & $0$& $\cdots$ & $\alpha$& $\cdots$ &$e$ & $\cdots$ & $\beta $ & $\cdots$   \\
+        \hline
+        $f'(x)$ &  & $+$& & $+$ & $0$ &$-$ & & $-$ \\
+        \hline
+        $f''(x)$ & & $+$ &$0$ & $-$ &  &$-$ &$0$ &$+$  \\
+        \hline
+        $f(x)$ &  & \ner & & \nel & & \sel & & \ser  \\
+        \hline
+        \end{tabular}
+    
+        \vspace{2mm}
+    
+        \begin{tikzpicture}[scale = 2]
+        \draw[->,>=stealth,semithick](-0.1,0)--(3,0)node[above]{$x$};%x軸
+        \draw[->,>=stealth,semithick](0,-0.1)--(0,3)node[right]{$y$};%y軸
+        \draw(0,0)node[below right]{O};%原点
+        \draw[domain=0.1:4,samples=100]plot(\x,{pow(\x,1/\x)}) node[right]{$y=x^{1/x}$};
+        \end{tikzpicture}
+    
+    \end{tleftbar}
+
+    \newpage
+
 \subsection*{p106-107：10}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p106-107：10}{p106-107：10}}
 
