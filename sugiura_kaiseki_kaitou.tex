@@ -1247,6 +1247,255 @@ $n!x \notin \mathbb{Z}$のときは，
         \end{proof}
     \end{tleftbar}
 
+    \newpage 
+    \subsection*{p72〜74：4}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p72〜74：4}{p72〜74：4}}
+
+\kakko{補題1}
+
+ノルムに関して, $\abs{\norm{ \bm{x}  }- \norm{ \bm{y} } } \leq \norm{ \bm{x} - \bm{y} }$ が成り立つ. 
+
+
+\begin{proof} 
+	絶対値の定義 ( $\abs{a} \coloneqq \max \{ a , -a \}$ ) に立ち返ると, 
+%		
+		\[
+			\norm{ \bm{x}  }- \norm{ \bm{y} } \leq \norm{ \bm{x} - \bm{y} } ,\quad  - \norm{ \bm{x} } + \norm{ \bm{y} } \leq \norm{ \bm{x} - \bm{y} }
+		\]
+%		
+	なる二つの不等式を示せばよい. これは, 
+		
+		\[
+			\norm{ \bm{x} } = \norm{ \bm{x} - \bm{y} + \bm{y} } \leq \norm{ \bm x - \bm y } + \norm{ \bm{y} }
+		\]
+		
+	より示される.
+\end{proof}
+
+\kakko{補題2}
+
+	$\norm{ \cdot }_1 : \mathbb{R}^n \ni ( x_1 , x_2 , \cdots , x_n ) \mapsto \sum_{j=1} ^ n \abs{x_j} \in \mathbb{R}$ とすると, 
+%		
+		\[
+			\exists M \in \mathbb{R} \ \mathrm{s.t.} \ \forall \bm x \in \mathbb{R}^n \text {に対して, } \norm{ \bm{x} }_1 \leq M \abs{ \bm{x} }
+		\]
+%		
+	が成り立つ. 
+
+
+\begin{proof}
+	$M \coloneqq n$ とおく. $\bm{x} \in \mathbb{R}^n$ とする. 各 $j ( 1 \leq j \leq n )$ において,
+%		
+		\[
+			\abs{ x_j } \leq \abs{ \bm{x} }
+		\]
+%		
+	が成り立つ. そこで, $j$ について足し合わせると, 
+%		
+		\[
+			\abs{ x_1 } + \abs{ x_2 } + \cdots \abs{ x_n } \leq \abs{ \bm{x} } + \abs{ \bm{x} } + \cdots \abs{ \bm{x} } = n \abs{ \bm{x} } = M \abs{ \bm{x} }
+		\]
+%		
+	が成り立つ. 
+\end{proof}
+
+\begin{leftbar}
+\begin{proof}
+	まず, 
+%		
+		\[
+			\exists P \in \mathbb{R} \ \mathrm{s.t.} \ \forall \bm{x} \in \mathbb{R}^n \text {に対して, } \norm{ \bm{x} } \leq P \abs{ \bm{x} } \ \ \ \cdots ( \ast )
+		\]
+%		
+	となることを示す. $\mathbb{R}^n$ の正規直交基底 を $\bm{e}_1 , \bm{e}_2 , \cdots , \bm{e}_n$ とする. $T \coloneqq  \max \{ \norm{ \bm{e}_j } \mid 1 \leq j \leq n \}$ とおき, $M$ を補題のものとして, $P \coloneqq TM$ とおく. . $\bm{x} \in \mathbb{R}^n$ を, 
+%		
+		\[
+			\bm{x} = ( x_1 , x_2 , \cdots , x_n )
+		\]
+%		
+	とすると, $\bm{x} = \sum_{j=1} ^ n x_j \bm{e}_j$ とかける. これと, ノルムのi) , ii) の条件から, 
+%		
+		\[
+			\norm{ \bm{x} } = \norm{ \sum_{j=1} ^ n x_j \bm{e}_j } \leq \sum \abs{ x_j } \norm{\bm{e}_j } \leq T \sum \abs{ x_j } \leq T M \norm{ \bm{x} } = P \abs{ \bm{x} }
+		\]
+%		
+	が成り立つ. 以上より $( \ast )$ は成り立つ. これより, 函数 $\norm{ \cdot }$ が 連続函数になる事を示す. $\bm{\alpha} \in \mathbb{R}^n$ とする. $\varepsilon > 0$ とする. $\delta < \frac{\varepsilon}{P}$ を満たすようにとる. このとき, 
+	$\bm{x} \in \mathbb{R}^n$ かつ $\abs{ \bm{x} - \bm{\alpha} } < \delta$ とする. 
+%		
+		\[
+			\abs{ \norm{ \bm x } -\norm{ \bm{\alpha} } } \leq \norm{ \bm{x} - \bm{\alpha} } \leq P \abs{ \bm{x} - \bm{\alpha} } < \varepsilon
+		\] 
+%		
+	よって, 連続である.  $\mathbb{S}^{n-1} \coloneqq \{ \bm{x} \in \mathbb{R}^n \mid \abs{ \bm{x} } = 1 \}$ なるコンパクト集合上で, $\norm{ \cdot }$ を考える. ノルムが連続であったことから, コンパクト集合上で最小値をとる. これを $m$ とする. この 
+	$m$ を用いると, 
+%		
+		\[
+			\forall x \in \mathbb{R}^n \text {に対して, } m \abs{ \bm{x} } \leq \norm{ \bm{x} }
+		\]
+%		
+	が成り立つ事を示す. $\bm{x} \in \mathbb{R}^n$ とする. このとき, $\bm{x} / \abs{ \bm{x} } \in \mathbb{S}^{n-1}$ であることに注意すると, ( $\because \abs{ \bm{x} / \abs{ \bm{x} } } = \abs{ \bm{x} } / \abs{ \bm{x}} = 1 $ ) $m$ が最小値であることから, 
+%		
+		\[
+			m \leq  \norm{ \frac {\bm{x}} {\abs{ \bm{x} }}  }
+		\]
+%		
+	を満たす. 
+%		
+		\[
+			\norm{ \frac {\bm{x}} {\abs{\bm{x} }} } = \frac {1} {\abs{ \bm{x} }} \norm{ \bm{x}}
+		\]
+%		
+	に注意すると, 
+%		
+		\[
+			m \abs{ \bm{x} } \leq \norm{ \bm{x} }
+		\]
+%		
+	となる. 以上より, 示すべき題意は満たされた.	
+\end{proof}
+\end{leftbar}
+これは, なかなか背景を語るには, 奥深い問題です. まず, 注意しておくことは, この性質は有限次元の線型空間だからできる話だということです. 無限次元であれば, もう少し条件がないと無理です. ( そもそも一般にはユークリッド距離が入りません. ) 有限次元であれば, ノルムが定める位相というのが一意に定まるという事を言っています. それだけ有限次元の線型空間は「硬い」という風に定義づけることができるでしょう. 
+
+次に証明の中で用いたテクニックです.  $\mathbb{S}^{n-1}$ を用いたところ. これは, 無限次元になっても用いられる手法です. 線型性がある操作や空間の中では, 綺麗な ( 空間全体に一様に広げていけそうな？ ) 図形の上でだけ考えておいて, あとは線型に伸ばすということで全体の性質をみるということがあります. ここではそれを行なっています. 函数解析学などでは, 無限次元上に定まる理論上重要な写像( いわゆる有界線型作用素 )に対してノルムを定めますが, それらのノルムは, 無限次元の球面だけで見れば良いという性質があったりします. 
+
+最後に証明の中で出てきた $\norm{ \cdot } _ 1$ というノルムですが, これはマンハッタン距離と呼ばれる距離です. 解析などでは計算が楽に済むので利用されます. ( 他にも応用はいくつかあると思いますが, 僕は知りません笑)
+\newpage
+
+\subsection*{p72〜74：5}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p72〜74：5}{p72〜74：5}}
+皆さんには, 冗長な指摘かもしれませんが, これ, 
+	\begin{itemize}
+		\item $C ( K )$ が線型空間であること
+		\item $\max \{ \abs{ f ( x )} \mid x \in K \}$ が存在していること
+\end{itemize}
+を確認しなければそもそもノルムを定義したことにならないです. 後輩とのゼミなどでこの辺りうっかりミスが多かったのでコメントしておきました. \\
+
+\begin{leftbar}
+	\begin{proof}
+	連続函数の定数倍, 連続函数の和が再び連続函数になることから, $C ( K )$ は線型空間になる. また, $K$ がcompactであるから, $f ( K )$ はcompactである. また, $\abs{ \cdot }$ も連続函数であるから, $\abs{ f ( K ) }$ も compactである. 従って最
+	大値を持つから, $\norm{ f }$ なる値が存在していることがわかる. ノルムの条件を満たすことを示す. 
+		\begin{enumerate}
+			\item $\norm{ f } \geq 0$ であること
+				
+				\parindent=1zw 各 $x \in K$ に対して, $\abs{f ( x ) } \geq 0$ である. 従って, $\norm{ f } = \max \{ \abs{ f ( x )} \mid x \in K \} \geq 0$
+				
+			\item $\norm{ f } = 0 \iff  f = 0$ であること ( $f = 0$ は写像として定数函数 $0$ に等しいという意味です. )	
+				
+				$f = 0$ であれば, 各 $x \in K$ に対して $\abs{ f ( x ) } = 0$ であるから, $\norm{ f } = 0$ は明らか. 逆を示す. $\norm{ f } = 0$ とする. 各 $x \in K$ に対して, $\abs{ f ( x ) } = 0$ である. つまり $f ( x ) = 0$ . よって $f = 0$
+				
+			\item $\norm{ f + g } \leq \norm{ f } + \norm{ g }$ であること
+			
+				\begin{align*}
+					\norm{ f + g } & =  \max \{ \abs{ f ( x ) + g ( x )} \mid x \in K \} \\
+					& \leq  \max \{ \abs{ f ( x ) } + \abs{ g ( x ) } \mid x \in K \} \\
+					& =  \max \{ \abs{ f ( x ) }  \mid x \in K \} + \max \{ \abs{ g ( x ) }  \mid x \in K \} = \norm{ f } + \norm{ g }
+				\end{align*}
+		\end{enumerate}
+	よって, 確かにノルムである. 
+\end{proof}
+\end{leftbar}
+\newpage
+
+\subsection*{p72〜74：6}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p72〜74：6}{p72〜74：6}}
+
+\begin{leftbar}
+	\begin{proof}
+	収束先となる函数 $f$ を構成し, i) 収束先であること ii) 連続であること  を示す. 
+	
+	各 $x \in K$ において, 実数列 $( f_n ( x ) ) _ {n \in \mathbb{N}}$ はCauchy列である. 実際, 
+%		
+		\[
+			\abs{ f _n ( x ) - f _m ( x ) } \leq \max \{ \abs{ f_n ( x ) - f_m ( x ) } \mid x \in K \} = \norm{f_n - f_m} \to 0 \ ( n , m \to N )
+		\]
+%		
+	よりわかる. 実数の完備性から列 $( f_n ( x ) )$ は収束する. そこで, 
+%		
+		\[
+			f \colon K \ni x \mapsto \lim_{n \to \infty} f_n ( x ) \in \mathbb{R}
+		\]
+%		
+	と定める. この $f$ が i ) , ii ) を満たすことを示す. \\
+	i) を満たすこと. すなわち, 
+%		
+		\[
+			\forall \varepsilon > 0 \text {に対して, } \exists N \in \mathbb{N} \ \mathrm{s.t.} \ \forall n > N \text {に対して, } \norm{ f_n - f } < \varepsilon
+		\]
+%
+	を示す. ただし, $\norm{ \cdot }$ の定義から, $\norm{ f_n - f } < \varepsilon$ は, 
+%		
+		\[
+			\forall t \in K \text {に対して, } \abs{ f_n ( t ) - f ( t ) } < \varepsilon
+		\]
+%		
+	を示せばよいことに注意する. $( f_n )$ が一様ノルムに関してCauchyの収束条件を満たすことに $\varepsilon / 2 > 0$ を適用すると, ある自然数 $N_1$ が存在して, 
+%		
+		\[
+			\forall n , m > N _1 \text {に対して, } \norm{ f_n - f_m } < \varepsilon / 2
+		\]
+%		
+	を満たす. $N \coloneqq  N_1$ とおく. $n > N$ , $t \in K$ とする. 列 $( f_n ( t ) )$ は $f (t)$ に収束するから, ある自然数 $N_2$ が存在して, 
+%		
+		\[
+			\forall m > N_2 \text {に対して, }\abs{ f_{m} ( t ) - f ( t ) } < \varepsilon / 2
+		\] 
+%		
+	を満たす. そこで, $m > \max \{ N_1 , N_2 \}$ をとれば, 
+%		
+		\[
+			\abs{ f_n ( t ) - f ( t ) } \leq \abs{ f_n ( t ) - f_m ( t ) } + \abs{ f _m ( t ) - f ( t ) } \leq \norm{ f_n - f_m } + \abs{ f_m ( t ) - f ( t ) } < \varepsilon
+		\] 
+%		
+	となる. よって収束先である. 
+	
+	ii) を満たすこと. すなわち, 各 $\alpha \in K$ において
+%		
+		\[
+			\varepsilon > 0 \text {に対して, } \exists \delta > 0 \ \mathrm{s.t.} \ \forall x \in K \ \mathrm{s.t.} \ d ( \alpha , x ) < \delta \text {に対して, } \abs{ f ( x ) - f ( \alpha ) } < \varepsilon
+		\]
+%		
+	を満たすことを示す. $\alpha \in K$ とする. $\varepsilon > 0$ とする. 列 $( f_n ( \alpha ) )$ が $f ( \alpha )$ に収束することから, ある自然数 $N_1$ が存在して, 
+%		
+		\[
+			\forall n > N_1 \text {に対して, } \abs{ f_n ( \alpha ) - f ( \alpha ) } < \varepsilon / 3
+		\]
+%	
+	が成り立つ. また, $( f_n )$ がCauchyの収束条件を満たすことから, ある自然数 $N_2$ が存在して, 
+%		
+		\[
+			\forall n , m > N_2 \text {に対して, } \norm{ f_n - f_m } < \varepsilon / 3 
+		\]
+%		
+	が成り立つ. $N \coloneqq  \max \{ N_1 , N_2 \}$ とおく. $f_N$ は $K$ 上で連続であるから, $\alpha$ での連続性より, ある正数 $\delta'$ が存在して, 
+%		
+		\[
+			\forall x \in K \ \mathrm{s.t.} \ d ( \alpha , x ) < \delta' \text {に対して, } \abs{ f_N ( x ) - f_ N( \alpha ) } < \varepsilon / 3
+		\]
+%	
+	が成り立つ. $\delta \coloneqq  \delta'$ とおく. $x \in K$ かつ $d ( \alpha , x ) < \delta$ とする. 
+%		
+		\[
+			\abs{ f ( x ) - f ( \alpha ) } \leq \abs{ f ( x ) - f_N ( x ) } + \abs{ f_N ( x ) - f_N ( \alpha ) } + \abs{ f_N ( \alpha ) - f ( \alpha ) } \leq \norm{ f - f_N } + \varepsilon / 3 + \norm{ f - f_N } < \varepsilon
+		\]
+%		
+	より $f$ は連続である. つまり $f \in C ( K )$ である. 
+	
+	\end{proof}
+\end{leftbar}
+これ, Compact上の連続函数であることはほとんど本質的なことに影響しません. 定義域がCompactである条件を外す代わりに, 有界連続函数に対して適用すれば同様の議論が成り立ちます. ( ただし, その場合, 最大値ではなく上限でノルムを定義することになります. ) もしくは, 定義域上でCompact - support ( あるCompact集合上で値をもち, それ以外では恒等的に0 ) など他にも少し条件を変えて修正することでいくつかの応用が存在します. また, 詳しく調べてないのでわかりませんが ,定義域が距離空間であることもあまり影響しなかったと思います. 
+
+函数解析における函数空間の一例です. このような $C(K)$ に相当する空間として, 微分可能函数空間などもあげられます. ここは, 深入りすると, それだけで大学一年間分の解析の授業ができるぐらいですので, ここで止めておきます. 
+
+
+\kakko{参考文献}
+
+\begin{enumerate}
+\item 宮寺功 関数解析 ( ちくま学芸出版 )
+\item 洲之内治男 関数解析入門 ( 近代ライブラリ社 )
+\end{enumerate}
+
+\newpage 
+
 \section*{第2章：微分法}
 \addcontentsline{toc}{section}{\texorpdfstring{第2章：微分法}{第2章：微分法}}
 
