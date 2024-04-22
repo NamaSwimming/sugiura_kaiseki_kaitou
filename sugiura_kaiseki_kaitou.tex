@@ -905,7 +905,6 @@ $n!x \notin \mathbb{Z}$のときは，
 	\end{proof}
 \end{tleftbar}
 
-
 \subsection*{p49-50：2-(i)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p49-50：2-(i)}{p49-50：2-(i)}}
 
@@ -942,22 +941,55 @@ $n!x \notin \mathbb{Z}$のときは，
     \addcontentsline{toc}{subsection}{\texorpdfstring{p49-50：2-(iii)}{p49-50：2-(iii)}}
 
 	\begin{screen}
-	$a=1$のとき，この級数は明らかに収束する．
-	$a \neq 1$のとき，$a^x$の$x=0$のまわりでのTaylor展開
-	\[
-	a^x=1+(\log a)x+\frac{(\log a)^2}{2!}x^2+O(x^3)
-	\]
-	を用いて
-	\begin{align*}
-	\sum (a^{1/n}-1)&=\sum \left\{ \frac{\log a}{n}+\frac{(\log a)^2}{2!n^2}+O\left(\frac{1}{n^3}\right)\right\}\\
-	&>\sum \frac{\log a}{n} \rightarrow \infty\\
-	\end{align*}
-	となる．よってこの級数は$a=1$のときは収束し，$a \neq 1$のときは発散する．
+        $a=1$のときは明らかに収束する．
+  
+        $a>1$の場合を考える．$\lim_{x \to 0} \frac{a^x-1}{x} = \log a$であるから
+        \[
+        \lim_{n \to \infty} n(a^{\frac{1}{n}}-1) = \log a
+        \]
+        が成り立つ．
+      
+        よって，任意の$\varepsilon > 0$に対しある$N \in \mathbb{N}$が存在して，$n \geq N$となる全ての$n \in \mathbb{N}$に対して
+        \[
+        \log a - \varepsilon < n(a^{\frac{1}{n}}-1) < \log a + \varepsilon
+        \]
+        となる．
+      
+        ここで$\varepsilon = \frac{\log a}{2}$とする．このとき，$n \geq N$において$ n(a^{\frac{1}{n}}-1) > \log a - \frac{\log a}{2}$すなわち$ a^{\frac{1}{n}}-1 > \frac{\log a}{2n}$となるから，この級数は発散することがわかる．
+      
+        $0<a<1$の場合も同様に考えて$\varepsilon = -\frac{\log a}{2}$とすると，十分大きなnに対して$-(a^{\frac{1}{n}}-1) > -\frac{\log a}{2n}$となるから発散する（$\log a < 0$に注意）．      
 	\end{screen}
 
 
-    \subsection*{p49-50：2-(v)}
-    \addcontentsline{toc}{subsection}{\texorpdfstring{p49-50：2-(v)}{p49-50：2-(v)}}
+    \subsection*{p49-50：2-(iv)}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p49-50：2-(iv)}{p49-50：2-(iv)}}
+
+    \begin{screen}
+  $S_{n} = \sum ^{n}_{k=2} a_k$ とすると，
+  \begin{align*}
+    S_{2n} &= \sum ^{2n}_{k=2} a_{k}\\
+    &= \sum ^{n-1}_{k=1} a_{2k+1} + \sum ^{n}_{k=1} a_{2k} \\
+    &= \sum ^{n-1}_{k=1} \frac{(-1)^k}{k} + \sum ^{n}_{k=1} \frac{1}{k^2}. \\
+  \end{align*}
+  となるから，
+  \begin{align*}
+   \lim_{n \to \infty} S_{2n}&=\lim_{n \to \infty} \left (\sum ^{n-1}_{k=1} \frac{(-1)^k}{k} + \sum ^{n}_{k=1} \frac{1}{k^2} \right ) \\
+   & = -\log 2 + \frac{\pi^2}{6}.
+  \end{align*}
+  同様に，
+  \begin{align*}
+    S_{2n+1} = \sum ^{n}_{k=1} \frac{(-1)^k}{k} + \sum ^{n}_{k=1} \frac{1}{k^2}.
+  \end{align*}
+  であり，$S_{2n}=S_{2n+1}$であり，
+  \[
+    \lim_{n \to \infty} S_{2n+1} = -\log 2 + \frac{\pi^2}{6}.
+  \]
+  したがって$S_{2n}$，$S_{2n+1}$は同じ値に収束する．これは$S_{n}$が収束することを意味するため，この級数は収束する．
+\end{screen}
+
+
+  \subsection*{p49-50：2-(v)}
+  \addcontentsline{toc}{subsection}{\texorpdfstring{p49-50：2-(v)}{p49-50：2-(v)}}
 
 
 	\begin{screen}
@@ -968,6 +1000,40 @@ $n!x \notin \mathbb{Z}$のときは，
         となることにより，この級数は収束する
         \end{screen}
         
+    \subsection*{p49-50：2-(vi)}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p49-50：2-(vi)}{p49-50：2-(vi)}}
+
+    \begin{screen}
+部分和の数列を$S_{n}$として$S_{2n}$が発散することを示す． 二項ずつ括弧に入れることで，
+\[
+  S_{2n} = \sum ^{n}_{k=1} \left (\frac{1}{(2k-1)!} - \frac{1}{2k} \right )
+\]
+と変形できる．ここで
+\[
+\lim_{k \to \infty} \frac{2k}{(2k-1)!} = 0
+\]
+であるから，ある$N \in \mathbb{N}$が存在して，$k \geq N$となるすべての$k$に対し
+\[
+\frac{1}{(2k-1)!} \leq \frac{1}{4k}
+\] 
+となる．さて，
+\[
+  \lim_{n \to \infty} \sum ^{n}_{k=N} \frac{1}{4k} = \infty
+\]
+であるから，$\sum ^{\infty}_{k=N} \frac{1}{4k}$は発散する．これをふまえると，定理5.5により，
+\[
+  \sum^{\infty}_{k=N} \left (\frac{1}{2k} - \frac{1}{(2k-1)!}\right) =\infty
+\]
+であるからこの級数は発散する．
+    \end{screen}
+
+
+
+    \subsection*{p49-50：2-(vii)}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p49-50：2-(vii)}{p49-50：2-(vii)}}
+\begin{screen}
+  $\left (\frac{\log x}{\sqrt x}\right)' = \frac{2-\log x}{2x^{3/2}}$であり，右辺は十分大きな$x$に対して$0$以下となる．さらに，$\lim _{n \to \infty} \frac{\log n}{\sqrt n} = 0$であるから，定理 V. 4.1 よりこの交代級数は収束する．
+\end{screen}
 
     \subsection*{p49-50：2-(viii)}
     \addcontentsline{toc}{subsection}{\texorpdfstring{p49-50：2-(viii)}{p49-50：2-(viii)}}
@@ -983,6 +1049,13 @@ $n!x \notin \mathbb{Z}$のときは，
         となる．よってこの級数は発散する．
         \end{screen}
         
+
+        \subsection*{p49-50：2-(ix)}
+        \addcontentsline{toc}{subsection}{\texorpdfstring{p49-50：2-(ix)}{p49-50：2-(ix)}}
+
+        \begin{screen}
+            定理 5.7 (Ratio Test)より収束する．
+        \end{screen}
 
         \subsection*{p49-50：2-(x)}
         \addcontentsline{toc}{subsection}{\texorpdfstring{p49-50：2-(x)}{p49-50：2-(x)}}
@@ -1010,6 +1083,26 @@ $n!x \notin \mathbb{Z}$のときは，
         となる．ゆえにこの級数は収束する．
     \end{screen}
 
+    \kakko{(x)の別解}
+
+    \begin{screen}
+    1)で証明した命題を用いると，
+    \[
+      \lim _{n \to \infty} \cfrac{1}{\Bigg(1+\cfrac{1}{n}\Bigg)^n} = \frac{1}{e} < 1
+    \]
+    であるから収束する．
+\end{screen}
+
+
+\subsection*{p49-50：2-(xi)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p49-50：2-(xi)}{p49-50：2-(xi)}}
+
+
+\begin{screen}
+十分大きな$n$に対し$\log n \geq 2$であるから，$\frac{1}{n^2}$との比較により収束する．
+\end{screen}
+
+\newpage 
 
     \subsection*{p49-50：3}
     \addcontentsline{toc}{subsection}{\texorpdfstring{p49-50：3}{p49-50：3}}
