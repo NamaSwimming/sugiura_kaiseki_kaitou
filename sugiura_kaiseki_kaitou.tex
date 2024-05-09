@@ -2294,6 +2294,19 @@ $n!x \notin \mathbb{Z}$のときは，
     を得る．
 \end{tleftbar}
 
+
+\subsection*{p247：1-(iv)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(iv)}{p247：1-(iv)}}
+
+\begin{leftbar}
+    命題 6.2 3)と例 3の結果を用いると，
+    \begin{align*}
+      \int \frac{dx}{(x^2 + 1)^3}
+      &= \frac{x}{4(x^2 + 1)^2} + \frac{3}{8}(\frac{x}{x^2 + 1} + \arctan x) \\
+      &= \frac{3x^3 + 5x}{8(x^2+1)^2} + \frac{3}{8} \arctan x.
+    \end{align*}
+  \end{leftbar}
+
 \subsection*{p247：1-(v)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(v)}{p247：1-(v)}}
 
@@ -2313,6 +2326,36 @@ $n!x \notin \mathbb{Z}$のときは，
     \]
     \end{tleftbar}
 
+
+\subsection*{p247：1-(vi)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(vi)}{p247：1-(vi)}}
+
+
+    \begin{leftbar}
+        $\frac{1}{\cos^2 x} = (\tan x)'$と見て部分積分する．
+        \begin{align*}
+          \int \frac{dx}{\sin^3 x \cos^2 x}
+          &= \int \frac{(\tan x)'}{\sin^3 x} \,dx \\
+          &= \frac{\tan x}{\sin^3 x} - \int \tan x \left(\frac{1}{\sin^3 x}\right)' \,dx \\
+          &= \frac{1}{\sin^2 x \cos x} + 3 \int \frac{dx}{\sin^3 x} \\
+          &= \frac{1}{\sin^2 x \cos x} - \frac{3 \cos x}{2 \sin^2 x} + \frac{3}{2} \log \abs*{\tan \frac{x}{2}}.
+        \end{align*}
+      \end{leftbar}
+
+
+      \subsection*{p247：1-(vii)}
+      \addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(vii)}{p247：1-(vii)}}
+
+    \begin{leftbar}
+        分母分子に$1-(\sin x + \cos x)$を掛ける．
+        \begin{align*}
+          \int \frac{\sin x}{1 + \sin x + \cos x} \,dx
+          &= \int \frac{\sin x - \sin^2 x - \sin x\cos x}{1-(\sin x + \cos x)^2} \,dx \\
+          &= -\frac{1}{2} \int (\sec x - \tan x - 1) \,dx \\
+          &= -\frac{1}{2}(\log \abs{\sec x + \tan x} + \log \abs{\cos x} - x) \\
+          &= \frac{1}{2}(x - \log \abs{1 + \sin x}).
+        \end{align*}
+      \end{leftbar}
 
 \subsection*{p247：1-(viii)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(viii)}{p247：1-(viii)}}
@@ -2349,6 +2392,42 @@ $n!x \notin \mathbb{Z}$のときは，
 \end{tleftbar}
 
 
+\subsection*{p247：1-(ix))}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(ix)}{p247：1-(ix)}}
+\begin{leftbar}
+    $\log x = t$と変換して部分積分すると，
+    \begin{align*}
+      \int \sin \log x \,dx
+      &= \int e^t \sin t \,dt \\
+      &= e^t \sin t - \int e^t \cos t \,dt \\
+      &= e^t \sin t - e^t \cos t - \int e^t \sin t \,dt.
+    \end{align*}
+    よって，
+    \begin{align*}
+      \int \sin \log x \,dx
+      &= \frac{1}{2}(\sin t - \cos t) \\
+      &= \frac{1}{2}(\sin \log x - \cos \log x).
+    \end{align*}
+  \end{leftbar}
+
+
+\subsection*{p247：1-(x))}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(x)}{p247：1-(x)}}
+
+  \begin{leftbar}
+    $x = \sin t$と置く．
+    \begin{align*}
+      \int \sqrt {\frac{1-x}{1+x}} \,dx
+      &= \int \frac{\sqrt{1-x^2}}{1+x} \,dx \\
+      &= \int \frac{\cos^2 t}{1 + \sin t} \,dt \\
+      &= \int \frac{\cos^2 t(1 - \sin t)}{(1 + \sin t)(1 - \sin t)} \,dt \\
+      &= \int (1 - \sin t) \,dt \\
+      &= t + \cos t \\
+      &= \arcsin x  + \cos \arcsin x \\
+      &= \arcsin x + \sqrt{1-x^2}.
+    \end{align*}
+  \end{leftbar}
+
 \subsection*{p247：1-(xi))}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(xi)}{p247：1-(xi)}}
 
@@ -2375,6 +2454,20 @@ $n!x \notin \mathbb{Z}$のときは，
         & = \arcsin \left (\frac{2x-a-b}{b-a} \right)+C
     \end{align*}
 \end{tleftbar}
+
+
+\subsection*{p247：1-(xiv)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(xiv)}{p247：1-(xiv)}}
+
+
+\begin{leftbar}
+    $1 = (x)'$と見て部分積分する．
+    \begin{align*}
+      \int \arctan x \,dx
+      &= x \arctan x - \int \frac{x}{1+x^2} \,dx \\
+      &= x \arctan x - \frac{1}{2} \log (x^2+1).
+    \end{align*}
+  \end{leftbar}
 
 \newpage 
 
