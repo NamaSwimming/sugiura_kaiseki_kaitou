@@ -13,6 +13,30 @@
 \renewcommand{\headfont}{\sffamily\bfseries}
 
 
+% xcolorをロード
+\usepackage{titletoc}
+\usepackage{xcolor}
+
+% 色を定義
+\definecolor{BlueViolet}{RGB}{105,39,255}
+\definecolor{mylightgray}{HTML}{DDDDDD}
+\definecolor{mydarkgray}{HTML}{777777}
+
+% ハイパーリンク用
+\usepackage{url}
+
+% hyperrefをロード
+\usepackage[dvipdfmx,hidelinks]{hyperref}
+\usepackage[otfcid,otfmacros]{pxjahyper}
+\usepackage{bookmark}
+
+\hypersetup{
+  colorlinks=true,
+  citecolor=BlueViolet,
+  linkcolor=blue!50!black,
+  urlcolor=blue!70!black,
+}
+
 
 %数式
 \usepackage{nccmath,amsmath,amssymb}
@@ -51,11 +75,25 @@
 \newtcolorbox{hosoibox}[1]{colframe=black,colback=white,coltitle=black,colbacktitle=white,boxrule=0.5pt,arc=0mm,enhanced,attach boxed title to top left={xshift=10mm,yshift=-3mm},boxed title style={frame hidden},title=#1}
 
 %leftbar環境に注釈が入れられないことを解消する環境．名前は，tcolorboxの[t]とleftbarの組み合わせ
-\newtcolorbox{tbleftline}{blanker,left=5mm,borderline west={1.1mm}{0pt}{black}}
+\newtcolorbox{tbleftline}{blanker,left=5mm,borderline west={1.1mm}{0pt}{mydarkgray}}
 \newenvironment{tleftbar}{\begin{tbleftline}\setlength{\parindent}{1zw}}{\end{tbleftline}}
 
 
 \usepackage{framed,color}
+
+
+% leftbar環境の色を変更
+\makeatletter
+\renewenvironment{leftbar}{%
+  \def\FrameCommand{%
+    {\color{mydarkgray}\vrule width 3pt}%
+    \hspace{10pt}%
+    \fboxsep=\FrameSep\colorbox{white}}%
+  \MakeFramed{\hsize\hsize\advance\hsize-\width\FrameRestore}%
+}{%
+  \endMakeFramed%
+}
+\makeatother
 
 %題名付き四角
 \usepackage{ascmac}
@@ -136,14 +174,48 @@
 \draw[->,>=stealth] (0,1) to[bend right=45] (1.2,0);
 \end{tikzpicture}
 }
+\usepackage[pagecolor=white,nopagecolor={none}]{pagecolor} % 背景色を変更するためのパッケージ
 
-%ハイパーリンク用
-\usepackage{url}
-\usepackage[dvipdfmx]{hyperref}
-\usepackage{xcolor}
-\hypersetup{colorlinks=true,citecolor={green!40!black},linkcolor={green!40!black},urlcolor={blue!70!black},}
-\usepackage[otfcid,otfmacros]{pxjahyper}
-\usepackage{bookmark}
+\newcommand{\tituloum}[5]{\begin{titlepage} 
+    \begin{center} 
+        \pagecolor{white} % 背景色をBlueVioletに設定
+        \color{black} % テキストカラーを白に設定
+        
+        \vspace*{2\baselineskip}
+        
+        \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} 
+        \rule{\textwidth}{0.4pt} 
+        
+        \vspace{0.75\baselineskip} 
+        
+        {\huge #1} 
+        
+        \vspace{0.75\baselineskip}
+        
+        \rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+        \rule{\textwidth}{1.6pt}
+        
+        \vspace{2\baselineskip}
+        
+        #3
+        
+        \vspace*{3\baselineskip}
+        
+        
+        {\huge #2}
+        
+        \vspace{0.5\baselineskip}
+        
+        \textit{#4}
+        
+        \vfill
+        
+        \vspace{0.3\baselineskip}
+        
+        #5
+        
+    \end{center}
+\end{titlepage}}
 
 \everymath{\displaystyle}
 

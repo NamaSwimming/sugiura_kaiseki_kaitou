@@ -7,22 +7,34 @@
 \usepackage{docmute}
 %ヘッダー・フッダー
 \usepackage{fancyhdr}
-\pagestyle{fancy}
-\lhead{}
-\chead{杉浦・解析入門解答集}
-\rhead{\thepage}
-\cfoot{}
-\begin{document}
 
-\title{杉浦・解析入門解答集}
-\author{数学書解答集作成班}
-\date{\today}
-\maketitle
-\begin{multicols*}{3}
-    \tableofcontents
-\end{multicols*}
-\addcontentsline{toc}{section}{\texorpdfstring{目次}{目次}}
+\renewcommand{\headrulewidth}{0.4pt} % 線の太さ
+\renewcommand{\headrule}{\color{black}\hrule width\headwidth height\headrulewidth \vskip-\headrulewidth} % 線の色
+
+\pagestyle{fancy}
+\fancyhf{} % 既存の設定をクリア
+\fancyhead[C]{\textcolor{black}{杉浦『解析入門』解答集}} % ヘッダーの中央にテキストを挿入
+\fancyhead[R]{\textcolor{black}{\thepage}} % ヘッダーの右側にページ番号を挿入
+
+\setcounter{secnumdepth}{0}
+
+\begin{document}
+% タイトルページの呼び出し
+\tituloum{杉浦『解析入門』解答集}{数学書解答集作成班}{}{}{\today}
+
+
+\thispagestyle{empty}
+
 \newpage
+\pagenumbering{arabic}
+\pagecolor{white}
+
+\begin{multicols}{3}
+\tableofcontents
+\end{multicols}
+
+\newpage 
+
 \section*{はじめに}
 \addcontentsline{toc}{section}{\texorpdfstring{はじめに}{はじめに}}
 
