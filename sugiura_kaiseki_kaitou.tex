@@ -896,6 +896,51 @@ $n!x \notin \mathbb{Z}$のときは，
 		となり，$\lim_{n \to \infty} a_n =e$を得る．
 	\end{proof}
 \end{tleftbar}
+\newpage 
+\subsection*{p42-43：3)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p42-43：3)}{p42-43：3)}}
+
+
+\begin{tleftbar}
+\begin{proof}
+  正規性と直交性をそれぞれ証明する．
+  \begin{description}
+  \item[正規性] $(u_1, \ldots, u_n)$の各ベクトルのノルムが$1$であることを示す．
+  \[
+    u_i = \frac{y_i}{\abs{y_i}} \quad (i = 1, \ldots, n)
+  \]
+  であるから，正規性は明らかである．
+\item[直交性] $(u_1, \ldots, u_n)$の各ベクトルが互いに直交することを数学的帰納法で証明する．
+\begin{enumerate}[(i)]
+    \item $u_1$と$u_2$について，
+    \begin{align*}
+    (u_2 | u_1) &= \left(\left. \frac{x_2 - (x_2 | u_1) u_1}{\abs{ x_2 - (x_2 | u_1) u_1 }} \right|u_1 \right) \\
+    &= \frac{(x_2 | u_1) - (x_2 | u_1) \|u_1\|^2}{\abs{ x_2 - (x_2 | u_1) u_1 }} \\
+    &= \frac{(x_2 | u_1) - (x_2 | u_1) \cdot 1}{\abs{ x_2 - (x_2 | u_1) u_1 }} \\
+    &= 0.
+    \end{align*}
+    したがって．$u_1$と$u_2$は直交する．
+    
+    \item $u_1, u_2, \ldots, u_i$が互いに直交するベクトルであると仮定する．すなわち，
+    \[
+      (u_i | u_j) = 0 \quad (i \ne j)
+    \]
+    を仮定する．このとき，$u_j$と$u_{i+1}$\footnote{$u_{i+1}$は問題文で述べられている定義からわかる．}について，
+    \begin{align*}
+    (u_j | u_{i+1}) &=\left  ( u_j \left| \frac{x_{i+1} - \sum_{k=1}^{i} (x_{i+1} | u_k) u_k}{\abs{| x_{i+1} - \sum_{k=1}^{i} (x_{i+1} | u_k) u_k }} \right. \right) \\
+    &= \frac{(u_j | x_{i+1}) - \sum_{k=1}^{i} (x_{i+1} | u_k) (u_j | u_k)}{\abs{| x_{i+1} - \sum_{k=1}^{i} (x_{i+1} | u_k) u_k }} \\
+    &= \frac{(u_j | x_{i+1}) - (x_{i+1} | u_j) \abs{u_j}^2}{\abs{| x_{i+1} - \sum_{k=1}^{i} (x_{i+1} | u_k) u_k }} \\
+    &= \frac{(u_j | x_{i+1}) - (x_{i+1} | u_j) \cdot 1}{\abs{| x_{i+1} - \sum_{k=1}^{i} (x_{i+1} | u_k) u_k }} \\
+    &= 0.
+    \end{align*}
+\end{enumerate}
+(i)と(ii)より，直交性が示される．
+\end{description}
+以上の考察により，$(u_1, \ldots, u_n)$は$\mathbb{R}^n$の正規直交基底である．
+\end{proof}
+\end{tleftbar}
+
+\newpage 
 
 
     \subsection*{p49-50：1}
@@ -1257,6 +1302,21 @@ $n!x \notin \mathbb{Z}$のときは，
     である．
 \end{tleftbar}
 
+
+\subsection*{p63-64：1-(v)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p63-64：1-(v)}{p63-64：1-(v)}}
+
+
+
+\subsection*{1-(v)}
+  \begin{leftbar}
+    任意の$\varepsilon > 0$に対し$\delta = \sqrt{\varepsilon}$とすると，$\sqrt{x^2 + y^2} < \delta$において
+    \[
+      \abs{x^2-y^2} \leq \abs{x}^2 + \abs{y}^2 < \delta^2 = \varepsilon
+    \]
+    が成り立つ．
+  \end{leftbar}
+
 \subsection*{p63-64：2-(i)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p63-64：2-(i)}{p63-64：2-(i)}}
 
@@ -1271,6 +1331,22 @@ $n!x \notin \mathbb{Z}$のときは，
     \]
     となる．
 \end{tleftbar}
+
+\subsection*{p63-64：2-(ii)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p63-64：2-(ii)}{p63-64：2-(ii)}}
+
+  \begin{tleftbar}
+    $x^2,y^2 \leq x^2+y^2$であるから，
+    \[
+      1 \leq (1 + x^2 y^2)^{1/(x^2+y^2)} \leq (1 + (x^2+y^2)^2)^{1/(x^2+y^2)}
+    \]
+    が成り立つ．ここで$(x_n, y_n) \to 0 \quad (n \to \infty)$となるような点列を任意に取ると，$x_n \to 0, y_n \to 0 \quad (n \to \infty)$である．すると$\lim_{x \to 0} (1+x^2)^{1/x} = 1$であるから$\lim_{n \to \infty} (1 + (x_n^2+y_n^2)^2)^{1/(x_n^2+y_n^2)} = 1$も成り立つ．したがって，
+    \[
+      (1 + (x^2+y^2)^2)^{1/(x^2+y^2)} \to 1 \quad ((x,y) \to 0)
+    \]
+    となるから，求めるべき極限値は$1$である．
+  \end{tleftbar}
+
 
 \subsection*{p63-64：2-(iii)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p63-64：2-(iii)}{p63-64：2-(iii)}}
@@ -1353,6 +1429,24 @@ $n!x \notin \mathbb{Z}$のときは，
             これにより示された．
         \end{proof}
     \end{tleftbar}
+
+
+ \subsection*{p63-64：4-(ii)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p63-64：4-(ii)}{p63-64：4-(ii)}}
+    
+
+\subsection*{4)-(ii)}
+  \begin{leftbar}
+    $d(x)$の定義より，任意の$y \in \mathbb{R} ^n$に対して，
+    \[
+      d(x) \leq \abs{x-y} \leq \abs{x-a} + \abs{a-y}
+    \]
+    が成り立つ．右辺で$y$について下限を取ると，
+    \[
+      d(x) - d(a) \leq \abs{x-a}.
+    \]
+    同様に$d(a) - d(x) \leq \abs{x-a}$も言えるので$\abs{d(x) - d(a)} \leq \abs{x-a}$である．これで示せた．
+  \end{leftbar}
 
     \newpage 
     \subsection*{p72〜74：4}
