@@ -1878,6 +1878,35 @@ $n!x \notin \mathbb{Z}$のときは，
 
 \newpage 
 
+\subsection*{p106-107：3}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p106-107：3}{p106-107：3}}
+
+\begin{tleftbar}
+  \begin{proof}
+  まず，$f(a)=0$， $g(a)=0$と定義しておく．$0<\delta <b-a$を満たす$\delta$をとると，$f$と$g$は$[a,a+\delta]$で連続であり，
+  $(a,a+\delta)$で微分可能である．いま$g(x) \ne 0$~($ x \in (a,a+\delta)$)であるから，
+  コーシーの平均値の定理により，
+  \[
+    \frac{f(x)-f(a)}{g(x)-g(a)} = \frac{f'(c)}{g'(c)}
+  \]
+  を満たす$c \in (a,x)$が存在する．いま$f(a)=0$，$g(a)=0$と定義したので，
+  \[
+    \frac{f(x)}{g(x)} = \frac{f'(c)}{g'(c)}
+  \]
+  である．$ x \to a+0$のとき，$c \to a+0$であるから，仮定により，
+  \[
+    \lim_{x \to a+0} \frac{f(x)}{g(x)} = \lim_{c \to a+0} \frac{f'(c)}{g'(c)} =l 
+  \]
+  である．$ x \to a-0$のときは同様にすればよく，$ x \to a$の場合はこれら二つの考察により結果が従う．
+
+  $ x \to +\infty$のときは$ t=1/x$として$f(t)$と$g(t)$の極限を考えれば同じ結論に帰着する．
+
+  以上の議論により証明された．
+  \end{proof}
+\end{tleftbar}
+
+\newpage 
+
 \subsection*{p106-107：8-(i)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p106-107：8-(i)}{p106-107：8-(i)}}
 
