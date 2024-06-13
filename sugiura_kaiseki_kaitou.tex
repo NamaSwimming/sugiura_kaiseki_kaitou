@@ -2076,9 +2076,46 @@ $n!x \notin \mathbb{Z}$のときは，
         であり，$\frac{e^{\theta}}{n+1} \in \mathbb{Z}$であるから$n=1$となる．ゆえに$e=m$となり，$e$は整数である．しかし$2<e<3$であるから，これは矛盾である．よって先の仮定が誤りであり，$e$は無理数である．
     \end{proof}
 \end{tleftbar}
+\newpage 
 
 \section*{第4章：積分法}
 \addcontentsline{toc}{section}{\texorpdfstring{第4章：積分法}{第4章：積分法}}
+
+
+
+\subsection*{p211-212：1}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p211-212：1}{p211-212：1}}
+
+
+\begin{tleftbar}
+    \begin{proof}
+    $f$は区間$I$内の$m$個の点$x = a_1, a_2, \ldots, a_m$でのみ$f(x) \ne 0$であるとする．
+    この条件のもとで，
+    \[
+    M = \max_{1 \leq k \leq m} \abs{f(a_k)}
+    \]
+    と定義する．また任意の分割 $\Delta$ に対して，
+    \[
+    s(f; \Delta, \xi) = \sum_{k=1}^{n} f(\xi_k) v(I_k)
+    \]
+    であるが，$\xi_k$ が $a_1, a_2, \ldots, a_m$のいずれかである場合のみ$f(\xi_k) \ne 0$であるから，
+    リーマン和に寄与する項は高々$m$個である．ゆえに．
+    \[
+    \abs{s(f; \Delta, \xi)} = \abs{\sum_{k=1}^{n} f(\xi_k) v(I_k)} \leq m M \sum_{k=1}^{n}v(I_k).
+    \]
+    さて，$d(\Delta)$を分割$\Delta$の直径とすると，$v(I_k) \leq d(\Delta)^n$だから，
+    
+    \[
+    \abs{s(f; \Delta, \xi)} \leq m M d(\Delta)^n
+    \]
+    ここで，$d(\Delta) \to 0$ とすると，$\abs{s(f; \Delta, \xi)} \to 0$となる．
+    したがって，$f$は区間$I$上でリーマン積分可能であり，
+    
+    \[
+    \int_{I} f(x)\, dx = 0.
+    \]
+    \end{proof}
+    \end{tleftbar}
 
 \subsection*{p239：1-(i)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p239：1-(i)}{p239：1-(i)}}
