@@ -2126,6 +2126,88 @@ $n!x \notin \mathbb{Z}$のときは，
     \end{proof}
     \end{tleftbar}
 
+
+    \subsection*{p211-212：3-(i)}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p211-212：3-(i)}{p211-212：3-(i)}}
+
+    \begin{tleftbar}
+        $f$は$I$で単調に増加するので，
+        \[
+        \zeta_k = x_{k-1} \leqq \xi_k \leqq x_k=\eta_k 
+        \]
+        とすると，リーマン和に関して
+        \[
+        s(f;\Delta ; \zeta_k ) \leqq s(f;\Delta;\xi_k) \leqq s(f;\Delta;\eta_k)
+        \]
+        が成立する．
+        
+        また，$\xi_k' = (x_k+x_{k-1} )/2 $とおくと，
+        
+        \begin{align*}
+        s(f;\Delta,\xi_k' )& = \sum_{k=1}^{n} f(\xi_k ') v(I_k) \\
+        & =  \sum_{k=1}^{n} \frac{1}{2} (x_k +x_{k-1})(x_k - x_{k-1}) \\
+        & = \frac{a^2}{2}
+        \end{align*}
+        であり，これを$J$とおくと，
+        \begin{align*} 
+        0 &\leqq \abs{s(f;\Delta; \xi_k)-J }\\
+        & \leqq  s(f;\Delta;\eta_k) -s(f;\Delta ; \zeta_k ) \\
+        & = \sum_{k=1}^{n} (x_k-x_{k-1} ) v(I_k) \\
+        & = d(\Delta) \sum_{k=1}^{n} (x_k-x_{k-1} ) \\
+        & = (a-0) d(\Delta)\\
+        & =a d(\Delta)
+        \end{align*}
+        であるから，$d (\Delta) \to 0$としたときに$a d(\Delta) \to 0$となり，
+        \[
+        \lim_{d(\Delta) \to 0} s(f;\Delta; \xi_k)=J.
+        \]
+        よって$f$は$I$でリーマン積分可能となり，
+        \[
+        \int_{I} f = \frac{a^2}{2}.
+        \]
+        \end{tleftbar}
+        
+
+        \subsection*{p211-212：3-(ii)}
+        \addcontentsline{toc}{subsection}{\texorpdfstring{p211-212：3-(ii)}{p211-212：3-(ii)}}
+
+        \begin{tleftbar}
+            $f$は$I$で単調に増加するので，
+            \[
+            \zeta_k = x_{k-1} \leqq \xi_k \leqq x_k=\eta_k 
+            \]
+            とすると，リーマン和に関して
+            \[
+            s(f;\Delta ; \zeta_k ) \leqq s(f;\Delta;\xi_k) \leqq s(f;\Delta;\eta_k)
+            \]
+            が成立する．
+            
+            また，$\xi_k' = (x_k ^2 + x_k x_{k-1}+x_{k-1} ^2)/3 $とおくと，
+            
+            \begin{align*}
+            s(f;\Delta,\xi_k' )& = \sum_{k=1}^{n} f(\xi_k ') v(I_k) \\
+            & =  \sum_{k=1}^{n} \frac{1}{3} (x_k ^2 + x_k x_{k-1}+x_{k-1} ^2)(x_k - x_{k-1}) \\
+            & = \frac{a^3}{3}
+            \end{align*}
+            であり，これを$J$とおくと，
+            \begin{align*} 
+            0 &\leqq \abs{s(f;\Delta; \xi_k)-J }\\
+            & \leqq  s(f;\Delta;\eta_k) -s(f;\Delta ; \zeta_k ) \\
+            & = \sum_{k=1}^{n} (x_k-x_{k-1} ) v(I_k) \\
+            & = d(\Delta) \sum_{k=1}^{n} (x_k-x_{k-1} ) \\
+            & = (a-0) d(\Delta)\\
+            & =a d(\Delta)
+            \end{align*}
+            であるから，$d (\Delta) \to 0$としたときに$a d(\Delta) \to 0$となり，
+            \[
+            \lim_{d(\Delta) \to 0} s(f;\Delta; \xi_k)=J.
+            \]
+            よって$f$は$I$でリーマン積分可能となり，
+            \[
+            \int_{I} f = \frac{a^3}{3}.
+            \]
+            \end{tleftbar}
+
 \subsection*{p239：1-(i)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p239：1-(i)}{p239：1-(i)}}
 
