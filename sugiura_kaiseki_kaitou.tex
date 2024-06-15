@@ -2050,6 +2050,67 @@ $n!x \notin \mathbb{Z}$のときは，
 \end{tleftbar}
 
 
+\subsection*{p126：2}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p126：2}{p126：2}}
+
+
+\begin{tleftbar}
+    \begin{proof}
+        \begin{description}
+            \item[必要条件であること] 
+            $ f $ が $ x=0 $ で微分可能であると仮定する．この条件は次のように書ける：
+            \[
+            f(x) - f(0) = c \cdot x + \varepsilon(x)
+            \]
+            ここで，$ c = (c_1, \ldots, c_n) $ は $ f $ の $ x=0 $ における勾配ベクトルであり，$ \varepsilon(x) $ は
+            $\lim_{x \to 0} \varepsilon(x)/\abs{x} = 0$をみたす関数である．このとき，各 $ i $ について次のように $ g_i(x) $ を定義する：
+            \[
+            g_i(x) = 
+            \begin{cases}
+            c_i + (\varepsilon(x) x_i)/\abs{x}^2 & (x \ne 0) \\
+            c_i & (x = 0)
+            \end{cases}
+            \]
+
+            この $ g_i(x) $ が $ x=0 $ で連続であることを示すために，$ x \to 0 $ の極限を考える．$ x \ne 0 $ のとき，
+            \[
+            \lim_{x \to 0} g_i(x) = \lim_{x \to 0} \left( c_i + \frac{\varepsilon(x) x_i}{|x|^2} \right) = c_i + \lim_{x \to 0} \frac{\varepsilon(x) x_i}{|x|^2}.
+            \]
+            ここで，$\varepsilon(x)/\abs{x} \to 0 $ なので，
+            \[
+            \abs{\frac{\varepsilon(x) x_i}{\abs{x}^2}} = \abs{\frac{\varepsilon(x)}{\abs{x}} \cdot \frac{x_i}{|x|}} \leqq  \abs{\frac{\varepsilon(x)}{\abs{x}} \cdot 1} = \abs{\frac{\varepsilon(x)}{\abs{x}}} \to 0 \quad (x \to 0).
+            \]
+            したがって，$\lim_{x \to 0} g_i(x) = c_i$なので，$ g_i(x) $ は $ x=0 $ で連続である．よって
+            \[
+            f(x) = f(0) + \sum_{i=1}^n x_i g_i(x).
+            \]
+            \item [十分条件であること]
+            ある連続な関数 $ g_i \colon \mathbb{R}^n \to \mathbb{R} $ が存在して，次のように表されるとする：
+            \[
+            f(x) = f(0) + \sum_{i=1}^n x_i g_i(x)
+            \]
+            このとき，$ g_i(x) $ が $ x=0 $ で連続であるため，各 $ i $ について $ g_i(0) $ が存在し，次が成り立つ：
+            \[
+            f(x) - f(0) = \sum_{i=1}^n x_i g_i(0) + \sum_{i=1}^n x_i (g_i(x) - g_i(0)).
+            \]
+            ここで，$ \varepsilon(x) = \sum_{i=1}^n x_i (g_i(x) - g_i(0)) $ とおくと，
+            \[
+            \lim_{x \to 0} \frac{\varepsilon(x)}{\abs{x}} = \lim_{x \to 0} \frac{\sum_{i=1}^n x_i (g_i(x) - g_i(0))}{\abs{x}}.
+            \]
+            三角不等式を用いると，
+            \[
+            \abs{ \frac{\varepsilon(x)}{\abs{x}} } \leqq \sum_{i=1}^n \abs{ \frac{x_i(g_i(x) - g_i(0))}{\abs{x}} }.
+            \]
+
+            $ g_i(x) $ が $ x=0 $ で連続であるため，$ g_i(x) \to g_i(0) $ となる．したがって，各$ i $について
+            \[
+            \abs{ \frac{g_i(x) - g_i(0)}{\abs{x}} } \to 0 \quad (x \to 0).
+            \]
+            ゆえに，$\lim_{x \to 0} \varepsilon(x)/\abs{x} = 0$となり，$ f $ は $ x=0 $ で微分可能である．
+        \end{description}
+    \end{proof}
+\end{tleftbar}
+
 \section*{第3章：初等函数}
 \addcontentsline{toc}{section}{\texorpdfstring{第3章：初等函数}{第3章：初等函数}}
 
@@ -2126,6 +2187,49 @@ $n!x \notin \mathbb{Z}$のときは，
     \end{proof}
     \end{tleftbar}
 
+    \subsection*{p211-212：2}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p211-212：2}{p211-212：2}}
+    
+
+\begin{tleftbar}
+	\begin{proof}
+	まず，$f$は$I$上で可積分であることから，任意の分割$\Delta$に対して，どのような代表点$\xi_k$を選んでも
+	\[
+	\abs{ s(f; \Delta; \xi_k) - J } < 1
+	\]
+	が成立する．ただしここで$J = \int_I f $とおいた．
+	
+	次に，分割$\Delta$のある区間$I_m$に対して代表点$\xi_m$を固定し，$k \ne m \in K(\Delta)$を満たす他の代表点を考え，さらに
+	\[
+	B = \sum_{k \ne m , m \in K(\Delta)} f(\xi_m) v(I_m)
+	\]
+	と定義する．このとき
+	\[
+	S(f; \Delta; \xi_k) = f(\xi_k) v(I_k) + B.
+	\]
+	ここで，先ほどの不等式$\abs{ S(f; \Delta; \xi_k) - J } < 1$を適用すると，
+	\[
+	\abs{ f(\xi_k) v(I_k) + B - J } < 1
+	\]
+	が得られ，これを整理すると
+	\[
+	-1 < f(\xi_k) v(I_k) + B - J < 1.
+	\]
+	つまり，
+	\[
+	J - 1 - B < f(\xi_k) v(I_k) < J + 1 - B.
+	\]
+	ここで，$v(I_k)$が$0$ではないことを考慮して両辺を$v(I_k)$で割ると，
+	\[
+	\frac{J - 1 - B}{v(I_k)} < f(\xi_k) < \frac{J + 1 - B}{v(I_k)}.
+	\]
+	したがって，$f(\xi_k)$は区間$I_k$上で有界であることがわかる．
+	
+	任意の区間$I_k$に対して同様の議論が適用できるため，関数$f$は区間$I$全体で有界であることが結論づけられる．
+	
+	以上により，$f$が$I$上で有界であることが証明された．
+	\end{proof}
+\end{tleftbar}
 
     \subsection*{p211-212：3-(i)}
     \addcontentsline{toc}{subsection}{\texorpdfstring{p211-212：3-(i)}{p211-212：3-(i)}}
