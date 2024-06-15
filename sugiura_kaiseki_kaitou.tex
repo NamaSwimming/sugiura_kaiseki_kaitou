@@ -2092,25 +2092,34 @@ $n!x \notin \mathbb{Z}$のときは，
     $f$は区間$I$内の$m$個の点$x = a_1, a_2, \ldots, a_m$でのみ$f(x) \ne 0$であるとする．
     この条件のもとで，
     \[
-    M = \max_{1 \leq k \leq m} \abs{f(a_k)}
+    M = \max_{1 \leqq k \leqq m} \abs{f(a_k)}
     \]
     と定義する．また任意の分割 $\Delta$ に対して，
     \[
-    s(f; \Delta, \xi) = \sum_{k=1}^{n} f(\xi_k) v(I_k)
+    s(f; \Delta; \xi) = \sum_{k \in K(\Delta)} f(\xi_k) v(I_k)
     \]
-    であるが，$\xi_k$ が $a_1, a_2, \ldots, a_m$のいずれかである場合のみ$f(\xi_k) \ne 0$であるから，
-    リーマン和に寄与する項は高々$m$個である．ゆえに．
+    である．ここで、$f(\xi_k) \ne 0$である項は高々$m$個であり，その個数を$m_0$とする．
+    このような項のみを考慮すると，リーマン和は次のように表せる：
     \[
-    \abs{s(f; \Delta, \xi)} = \abs{\sum_{k=1}^{n} f(\xi_k) v(I_k)} \leq m M \sum_{k=1}^{n}v(I_k).
+    s(f; \Delta; \xi) = \sum_{i=1}^{m_0} f(\xi_{k_i}) v(I_{k_i})
     \]
-    さて，$d(\Delta)$を分割$\Delta$の直径とすると，$v(I_k) \leq d(\Delta)^n$だから，
+    ここで，$i = 1, 2, \ldots, m_0$は$f(\xi_k) \ne 0$である区間$ I_{k_i} $を走るものとする．
     
+    次に，先に定義した$M$を用いると，
     \[
-    \abs{s(f; \Delta, \xi)} \leq m M d(\Delta)^n
+    \abs{s(f; \Delta; \xi)} = \abs{\sum_{i=1}^{m_0} f(\xi_{k_i}) v(I_{k_i})} \leqq M \sum_{i=1}^{m_0} v(I_{k_i})
     \]
-    ここで，$d(\Delta) \to 0$ とすると，$\abs{s(f; \Delta, \xi)} \to 0$となる．
-    したがって，$f$は区間$I$上でリーマン積分可能であり，
+    を得る．さて，$d(\Delta)$を分割$\Delta$の直径とすると，各区間の体積に関して$ v(I_{k_i}) \leqq d(\Delta)^n $だから，
+    \[
+    \abs{s(f; \Delta; \xi)} \leqq M \sum_{i=1}^{m_0} d(\Delta)^n = m_0 M d(\Delta)^n
+    \]
+    となる．ここで，リーマン和に寄与する項は$m_0$個であることを用いた．
     
+    ここで，$d(\Delta) \to 0$ とすると，$d(\Delta)^n \to 0$ であるため，
+    \[
+    \abs{s(f; \Delta; \xi)} \to 0
+    \]
+    となる．したがって，$f$は区間$I$上でリーマン積分可能であり，
     \[
     \int_{I} f(x)\, dx = 0.
     \]
