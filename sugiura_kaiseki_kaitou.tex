@@ -2193,11 +2193,15 @@ $n!x \notin \mathbb{Z}$のときは，
 
 \begin{tleftbar}
 	\begin{proof}
-	まず，$f$は$I$上で可積分であることから，任意の分割$\Delta$に対して，どのような代表点$\xi_k$を選んでも
+	まず，$f$は$I$上で可積分であることから，任意の$\varepsilon >0$に対して，分割$\Delta$が存在して
+    \[
+    \abs{s(f; \Delta; \xi) - J} < \varepsilon.
+    \]
+    が成立する．ここで$J = \int_I f$とおいた．ここでとくに，$1 >0$に対して，ある$\Delta$が存在し，
 	\[
-	\abs{ s(f; \Delta; \xi_k) - J } < 1
+	\abs{ s(f; \Delta; \xi) - J } < 1
 	\]
-	が成立する．ただしここで$J = \int_I f $とおいた．
+	が成立する．
 	
 	次に，分割$\Delta$のある区間$I_m$に対して代表点$\xi_m$を固定し，$k \ne m \in K(\Delta)$を満たす他の代表点を考え，さらに
 	\[
@@ -2205,9 +2209,9 @@ $n!x \notin \mathbb{Z}$のときは，
 	\]
 	と定義する．このとき
 	\[
-	S(f; \Delta; \xi_k) = f(\xi_k) v(I_k) + B.
+	S(f; \Delta; \xi) = f(\xi_k) v(I_k) + B.
 	\]
-	ここで，先ほどの不等式$\abs{ S(f; \Delta; \xi_k) - J } < 1$を適用すると，
+	ここで，先ほどの不等式$\abs{ s(f; \Delta; \xi) - J } < 1$を適用すると，
 	\[
 	\abs{ f(\xi_k) v(I_k) + B - J } < 1
 	\]
