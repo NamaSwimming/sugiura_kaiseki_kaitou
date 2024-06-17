@@ -2245,10 +2245,9 @@ $n!x \notin \mathbb{Z}$のときは，
         \]
         とすると，リーマン和に関して
         \[
-        s(f;\Delta ; \zeta_k ) \leqq s(f;\Delta;\xi_k) \leqq s(f;\Delta;\eta_k)
+        s(f;\Delta ; \zeta_k ) \leqq s(f;\Delta;\xi_k) \leqq s(f;\Delta;\eta_k).
         \]
-        が成立する．
-        
+
         また，$\xi_k' = (x_k+x_{k-1} )/2 $とおくと，
         
         \begin{align*}
@@ -2262,23 +2261,18 @@ $n!x \notin \mathbb{Z}$のときは，
         & \leqq  s(f;\Delta;\eta_k) -s(f;\Delta ; \zeta_k ) \\
         & = \sum_{k=1}^{n} (x_k-x_{k-1} ) v(I_k) \\
         & = d(\Delta) \sum_{k=1}^{n} (x_k-x_{k-1} ) \\
-        & = (a-0) d(\Delta)\\
-        & =a d(\Delta)
+        & = (a-0) d(\Delta)=a d(\Delta).
         \end{align*}
-        であるから，$d (\Delta) \to 0$としたときに$a d(\Delta) \to 0$となり，
+        ゆえに$d (\Delta) \to 0$としたときに$a d(\Delta) \to 0$となり，
         \[
         \lim_{d(\Delta) \to 0} s(f;\Delta; \xi_k)=J.
         \]
-        よって$f$は$I$でリーマン積分可能となり，
-        \[
-        \int_{I} f = \frac{a^2}{2}.
-        \]
+        よって$f$は$I$でリーマン積分可能となり，$\int_{I} f = \frac{a^2}{2}$である．
         \end{tleftbar}
         
 
         \subsection*{p211-212：3-(ii)}
         \addcontentsline{toc}{subsection}{\texorpdfstring{p211-212：3-(ii)}{p211-212：3-(ii)}}
-
         \begin{tleftbar}
             $f$は$I$で単調に増加するので，
             \[
@@ -2286,34 +2280,37 @@ $n!x \notin \mathbb{Z}$のときは，
             \]
             とすると，リーマン和に関して
             \[
-            s(f;\Delta ; \zeta_k ) \leqq s(f;\Delta;\xi_k) \leqq s(f;\Delta;\eta_k)
+            s(f;\Delta ; \zeta_k ) \leqq s(f;\Delta;\xi_k) \leqq s(f;\Delta;\eta_k).
             \]
-            が成立する．
-            
-            また，$\xi_k' = (x_k ^2 + x_k x_{k-1}+x_{k-1} ^2)/3 $とおくと，
-            
+            また，$\xi_k' = \sqrt{(x_k ^2 + x_k x_{k-1}+x_{k-1} ^2)/3} $とおくと，
             \begin{align*}
-            s(f;\Delta,\xi_k' )& = \sum_{k=1}^{n} f(\xi_k ') v(I_k) \\
-            & =  \sum_{k=1}^{n} \frac{1}{3} (x_k ^2 + x_k x_{k-1}+x_{k-1} ^2)(x_k - x_{k-1}) \\
-            & = \frac{a^3}{3}
+                s(f;\Delta,\xi_k' ) &= \sum_{k=1}^{n} f(\xi_k') v(I_k) \\
+                &= \sum_{k=1}^{n} (\xi_k')^2 (x_k - x_{k-1}) \\
+                &= \sum_{k=1}^{n} \left( \frac{x_k^2 + x_k x_{k-1} + x_{k-1}^2}{3} \right) (x_k - x_{k-1}) \\
+                &= \frac{1}{3} \sum_{k=1}^{n} (x_k^2 + x_k x_{k-1} + x_{k-1}^2) (x_k - x_{k-1}) \\
+                & = \frac{a^3}{3}.
             \end{align*}
-            であり，これを$J$とおくと，
-            \begin{align*} 
-            0 &\leqq \abs{s(f;\Delta; \xi_k)-J }\\
-            & \leqq  s(f;\Delta;\eta_k) -s(f;\Delta ; \zeta_k ) \\
-            & = \sum_{k=1}^{n} (x_k-x_{k-1} ) v(I_k) \\
-            & = d(\Delta) \sum_{k=1}^{n} (x_k-x_{k-1} ) \\
-            & = (a-0) d(\Delta)\\
-            & =a d(\Delta)
+            これを$J$とおくと，
+            \begin{align*}
+                0 &\leqq \abs{ s(f;\Delta; \xi_k) - J } \\
+                &\leqq s(f;\Delta;\eta_k) - s(f;\Delta ; \zeta_k ) \\
+                &= \sum_{k=1}^{n} f(x_k) (x_k - x_{k-1}) - \sum_{k=1}^{n} f(x_{k-1}) (x_k - x_{k-1}) \\
+                &= \sum_{k=1}^{n} x_k^2 (x_k - x_{k-1}) - \sum_{k=1}^{n} x_{k-1}^2 (x_k - x_{k-1}) \\
+                &= \sum_{k=1}^{n} (x_k^2 - x_{k-1}^2) (x_k - x_{k-1}) \\
+                &= \sum_{k=1}^{n} (x_k - x_{k-1})^2 (x_k + x_{k-1}) \\
+                &\leqq d(\Delta) \sum_{k=1}^{n} (x_k - x_{k-1}) (x_k + x_{k-1}).
             \end{align*}
-            であるから，$d (\Delta) \to 0$としたときに$a d(\Delta) \to 0$となり，
+            各区間$(x_{k-1},x_k)$において，$x_k + x_{k+1}$の最大値は$2a$であるから，
+            \begin{align*}
+                d(\Delta) \sum_{k=1}^{n} (x_k - x_{k-1}) (x_k + x_{k-1}) &\leqq d(\Delta) \sum_{k=1}^{n} 2a (x_k - x_{k-1}) \\
+                &= 2a d(\Delta) \sum_{k=1}^{n} (x_k - x_{k-1}) \\
+                &= 2a d(\Delta) (a - 0) = 2a^2 d(\Delta).
+                \end{align*}
+            ゆえに$d (\Delta) \to 0$としたときに$2a^2 d(\Delta) \to 0$となり，
             \[
             \lim_{d(\Delta) \to 0} s(f;\Delta; \xi_k)=J.
             \]
-            よって$f$は$I$でリーマン積分可能となり，
-            \[
-            \int_{I} f = \frac{a^3}{3}.
-            \]
+            よって$f$は$I$でリーマン積分可能となり，$\int_{I} f = \frac{a^3}{3}$である．
             \end{tleftbar}
 
 \subsection*{p239：1-(i)}
