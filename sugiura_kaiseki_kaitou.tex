@@ -1,4 +1,6 @@
-\documentclass[uplatex,dvipdfmx,a4paper,10pt,fleqn]{jsarticle}
+\documentclass[a4paper,10pt,fleqn]{ltjsarticle}
+
+\usepackage[hiragino-pron]{luatexja-preset}
 
 \input{preamble.tex}
 
@@ -1604,7 +1606,7 @@ $n!x \notin \mathbb{Z}$のときは，
 		\begin{enumerate}
 			\item $\norm{ f } \geq 0$ であること
 				
-				\parindent=1zw 各 $x \in K$ に対して, $\abs{f ( x ) } \geq 0$ である. 従って, $\norm{ f } = \max \{ \abs{ f ( x )} \mid x \in K \} \geq 0$
+				\parindent=1\zw 各 $x \in K$ に対して, $\abs{f ( x ) } \geq 0$ である. 従って, $\norm{ f } = \max \{ \abs{ f ( x )} \mid x \in K \} \geq 0$
 				
 			\item $\norm{ f } = 0 \iff  f = 0$ であること ( $f = 0$ は写像として定数函数 $0$ に等しいという意味です. )	
 				

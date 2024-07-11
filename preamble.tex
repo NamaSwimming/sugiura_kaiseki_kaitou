@@ -1,6 +1,6 @@
 \usepackage{cite}
 
-\usepackage[dvipdfmx]{graphicx}
+\usepackage{graphicx}
 
 %括弧
 \usepackage{delimseasy}
@@ -15,27 +15,27 @@
 
 % xcolorをロード
 \usepackage{titletoc}
-\usepackage{xcolor}
 
 % 色を定義
+
+\AtEndPreamble{
+%ハイパーリンク用
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{xcolor}
 \definecolor{BlueViolet}{RGB}{105,39,255}
 \definecolor{mylightgray}{HTML}{DDDDDD}
 \definecolor{mydarkgray}{HTML}{777777}
-
-% ハイパーリンク用
-\usepackage{url}
-
-% hyperrefをロード
-\usepackage[dvipdfmx,hidelinks]{hyperref}
-\usepackage[otfcid,otfmacros]{pxjahyper}
-\usepackage{bookmark}
-
 \hypersetup{
-  colorlinks=true,
-  citecolor=BlueViolet,
-  linkcolor=blue!50!black,
-  urlcolor=blue!70!black,
+    colorlinks=true,
+    citecolor=BlueViolet,
+    linkcolor=blue!50!black,
+    urlcolor=blue!70!black,
+  }
+\usepackage{bookmark}
 }
+
+
 
 
 %数式
@@ -50,7 +50,7 @@
 
 %定理環境
 \newtheoremstyle{mytheorem}{}{}{}{}{\bfseries}%
-{\\}{0.5zw}{\underline{\thmname{#1}\thmnumber{#2}\thmnote{\hspace{0.5em}#3}：}}
+{\\}{0.5\zw}{\underline{\thmname{#1}\thmnumber{#2}\thmnote{\hspace{0.5em}#3}：}}
 \theoremstyle{mytheorem}
 \newtheorem{theo}{定理}
 \newtheorem{prop}[theo]{命題}
@@ -76,7 +76,7 @@
 
 %leftbar環境に注釈が入れられないことを解消する環境．名前は，tcolorboxの[t]とleftbarの組み合わせ
 \newtcolorbox{tbleftline}{blanker,left=5mm,borderline west={1.1mm}{0pt}{mydarkgray}}
-\newenvironment{tleftbar}{\begin{tbleftline}\setlength{\parindent}{1zw}}{\end{tbleftline}}
+\newenvironment{tleftbar}{\begin{tbleftline}\setlength{\parindent}{1\zw}}{\end{tbleftline}}
 
 
 \usepackage{framed,color}
@@ -103,7 +103,7 @@
 \usepackage{tikz}
 \usetikzlibrary{intersections,calc,arrows.meta}
 \usepackage{tikz-3dplot}
-\usepackage[dvipdfmx,marginparwidth=0pt,margin=25truemm]{geometry}
+\usepackage[marginparwidth=0pt,margin=25truemm]{geometry}
 \usepackage{bxpapersize}
 \usepackage[absolute,overlay]{textpos} %図の配置を好きにする
 
