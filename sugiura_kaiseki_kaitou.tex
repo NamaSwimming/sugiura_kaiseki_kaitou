@@ -937,11 +937,11 @@ $n!x \notin \mathbb{Z}$のときは，
 
 \begin{tleftbar}
 	\begin{proof}
-		$\lim_{n \to \infty} \sqrt[n]{a_n} =r$であるから，$0<r<1$のとき，$r<k<1$に対して，ある$n_1 \in \mathbb{N}$が存在して，任意の$n \in \mathbb{N}$に対して，
+		$\lim_{n \to \infty} \sqrt[n]{a_n} =r$であるから，$0<r<1$であるとき，$r<k<1$となるような$k$をひとつ取ると，ある$n_1 \in \mathbb{N}$が存在して，任意の$n \in \mathbb{N}$に対して，
 		\[
 			n \ge n_1 \Longrightarrow a_n<k^n
 		\]
-		となる．ここで，定理5.5(比較判定法)と$\lim_{n \to \infty} k^n =0$より，$\sum a_n$は収束する．
+		となる．ここで，定理5.5(比較判定法)により，$\sum a_n$は収束する．
 
 		$r>1$のとき，$1>0$に対して，ある$n_2 \in \mathbb{N}$が存在して，任意の$n \in \mathbb{N}$に対して，
 		\[
@@ -994,21 +994,58 @@ $n!x \notin \mathbb{Z}$のときは，
         \lim_{n \to \infty} n(a^{\frac{1}{n}}-1) = \log a
         \]
         が成り立つ．
-      
-        よって，任意の$\varepsilon > 0$に対しある$N \in \mathbb{N}$が存在して，$n \geq N$となる全ての$n \in \mathbb{N}$に対して
+        ここで$0 < \varepsilon <\log a$であるような$\varepsilon$をとる．極限の定義より，
         \[
-        \log a - \varepsilon < n(a^{\frac{1}{n}}-1) < \log a + \varepsilon
+         n \geqq N \Longrightarrow \log a - \varepsilon < n (a^\frac{1}{n}-1)
         \]
-        となる．
-      
-        ここで$\varepsilon = \frac{\log a}{2}$とする．このとき，$n \geq N$において$ n(a^{\frac{1}{n}}-1) > \log a - \frac{\log a}{2}$すなわち$ a^{\frac{1}{n}}-1 > \frac{\log a}{2n}$となるから，この級数は発散することがわかる．
-      
-        $0<a<1$の場合も同様に考えて$\varepsilon = -\frac{\log a}{2}$とすると，十分大きなnに対して$-(a^{\frac{1}{n}}-1) > -\frac{\log a}{2n}$となるから発散する（$\log a < 0$に注意）．      
+        となるような自然数$N$が取れる．よって，$n \geqq N$において
+        \[
+            \frac{\log a - \varepsilon}{n} < a^\frac{1}{n}-1
+        \]
+        となる．$\sum \frac{\log a - \varepsilon}{n}$は発散するから，比較判定法により$\sum (a^{\frac{1}{n}}-1)$も発散する．
+
+        次に$ a<1$の場合を考える．$\log a <0$に注意して，$0 < \varepsilon <-\log a $となるような$\varepsilon$をとる．このとき，十分大きな$n$に対して
+        \[
+        n (a^\frac{1}{n}-1) < \log a + \varepsilon
+        \]
+        すなわち
+        \[
+        \frac{-\log a - \varepsilon}{n} < -(a^\frac{1}{n}-1)
+        \]
+        が成り立つ．$\sum \frac{-\log a - \varepsilon}{n}=\infty$であるから，比較判定法により$\sum -(a^{\frac{1}{n}}-1)=\infty$である．
+        よって$\sum (a^{\frac{1}{n}}-1)=-\infty$である．
 	\end{screen}
 
 
     \subsection*{p49-50：2-(iv)}
     \addcontentsline{toc}{subsection}{\texorpdfstring{p49-50：2-(iv)}{p49-50：2-(iv)}}
+
+    \kakko{補題}
+
+    $\lim_{n \to \infty} S_{2n}=S$，$\lim_{n \to \infty} S_{2n+1}=S$のとき，
+    \[
+    \lim_{n \to \infty} S_n = S
+    \]
+    である．
+
+    \begin{proof}
+    $\varepsilon >0$を任意にとる．仮定より
+    \begin{align*} 
+       &  n \geqq N_1 \Longrightarrow \abs{S_{2n}-S} < \varepsilon, \\
+       & n \geqq N_2 \Longrightarrow \abs{S_{2n+1}-S} < \varepsilon
+    \end{align*}
+    となるような自然数$N_1$，$N_2$が取れる．$N=\max\{N_1, N_2\}$と定義する．$n \geqq 2N +1$となる$n$を任意にとる．
+
+    $n$が偶数ならば$n =2k$となるような自然数$k$が取れる．このとき$k \geqq N$であるから，
+    \[
+    \abs{S_n -S}=\abs{S_{2k}-S}<\varepsilon 
+    \]
+    となる．同様に，$n$が奇数なら$n =2k+1$となる自然数$k$がとれる．$k \geqq N$であるから，
+    \[
+    \abs{S_n -S}=\abs{S_{2k+1}-S}<\varepsilon 
+    \]
+    が成り立つ．よって$\lim_{n \to \infty} S_n =S$である．
+    \end{proof}
 
     \begin{screen}
   $S_{n} = \sum ^{n}_{k=2} a_k$ とすると，
@@ -1026,7 +1063,7 @@ $n!x \notin \mathbb{Z}$のときは，
   \begin{align*}
     S_{2n+1} = \sum ^{n}_{k=1} \frac{(-1)^k}{k} + \sum ^{n}_{k=1} \frac{1}{k^2}.
   \end{align*}
-  であり，$S_{2n}=S_{2n+1}$であり，
+  であり，
   \[
     \lim_{n \to \infty} S_{2n+1} = -\log 2 + \frac{\pi^2}{6}.
   \]
