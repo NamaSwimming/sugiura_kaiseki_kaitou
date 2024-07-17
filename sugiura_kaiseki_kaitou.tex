@@ -206,7 +206,7 @@ $(-a)b = -ab$も同様にして示される．
                  c+(-c) &\leqq -c \\
                 \therefore ~ 0 &\leqq -c 
             \end{align*} 
-            である．ここで，$a \leqq b$，$-c \leqq 0$であることより
+            である．ここで，$a \leqq b$，$-c \geqq 0$であることより
             \[
                 a(-c) \leqq b (-c)
             \]
@@ -221,7 +221,7 @@ $(-a)b = -ab$も同様にして示される．
 
     \begin{itembox}[c]{(iv)}
         \begin{proof}
-            $a<0$であると仮定する．このとき，
+            $a<0$かつ$a^{-1} \leqq 0$であると仮定する．このとき，
             \[
                \left ( \frac{1}{a} \right) a < 0a
             \]
@@ -415,14 +415,14 @@ $n!x \notin \mathbb{Z}$のときは，
 
     任意の$a_1 , a_2 , \dots a_n \in \mathbb{R}$について，
     \[
-        \abs{a_1+a_2+\dots+a_n} \le \abs{a_1}+\abs{a_2}+\dots+\abs{a_n}
+        \abs{a_1+a_2+\dots+a_n} \leqq \abs{a_1}+\abs{a_2}+\dots+\abs{a_n}
     \]
     が成り立つ．
 
 
 \begin{proof}
     $n=2$のときは三角不等式そのものであるから，
-    $n \ge 3$とし，$n-1$個の実数については補題の主張が成り立つものとする．
+    $n \geqq 3$とし，$n-1$個の実数については補題の主張が成り立つものとする．
 
     いま，
     \[
@@ -430,15 +430,15 @@ $n!x \notin \mathbb{Z}$のときは，
     \]
     であるから，これに三角不等式を適用して，
     \[
-        \abs{a_1+a_2+\dots+a_n} \le \abs{a_1+a_2+\dots+a_{n-1}} +\abs{a_n}
+        \abs{a_1+a_2+\dots+a_n} \leqq \abs{a_1+a_2+\dots+a_{n-1}} +\abs{a_n}
     \]
     を得る．ここで，数学的帰納法の仮定より，
     \[
-        \abs{a_1+a_2+\dots+a_{n-1}} \le \abs{a_1}+\abs{a_2}+\dots+\abs{a_{n-1}}
+        \abs{a_1+a_2+\dots+a_{n-1}} \leqq \abs{a_1}+\abs{a_2}+\dots+\abs{a_{n-1}}
     \]
     がいえるので，ここまでの議論で，
     \[
-        \abs{a_1+a_2+\dots+a_n} \le \abs{a_1}+\abs{a_2}+\dots+\abs{a_n}
+        \abs{a_1+a_2+\dots+a_n} \leqq \abs{a_1}+\abs{a_2}+\dots+\abs{a_n}
     \]
     は$n$の場合にも成り立つことが示され．以上の議論より補題の主張が従う．
 \end{proof}
@@ -458,21 +458,21 @@ $n!x \notin \mathbb{Z}$のときは，
     \]
     と変形する．この右辺に補題を適用し，
     \[
-        \abs{\frac{(a_1-a)+(a_2-a)+\cdots+(a_n-a)}{n}} \le \frac{\abs{a_1-a}+\abs{a_2-a}+\cdots+\abs{a_n-a}}{n}
+        \abs{\frac{(a_1-a)+(a_2-a)+\cdots+(a_n-a)}{n}} \leqq \frac{\abs{a_1-a}+\abs{a_2-a}+\cdots+\abs{a_n-a}}{n}
     \]
     を得る．これにより，
     \[
-        n \ge N_1 \Longrightarrow \frac{\abs{a_1-a}+\abs{a_2-a}+\cdots+\abs{a_{n_1-1}-a}}{n} +\left( \frac{n-n_1+1}{n} \right ) \varepsilon 
+        n \ge N_1 \Longrightarrow \frac{\abs{a_1-a}+\abs{a_2-a}+\cdots+\abs{a_{N_1-1}-a}}{n} +\left( \frac{n-N_1+1}{n} \right ) \varepsilon 
     \]
-    となる．ここで$N_2 \coloneqq N_1 +1$とすると，$n \ge N_2$であるとき$\left( \frac{n-n_1+1}{n} \right ) \varepsilon < \varepsilon$となることに注意する．
+    となる．ここで$N_2 \coloneqq N_1 +1$とすると，$n \ge N_2$であるとき$\left( \frac{n-N_1+1}{n} \right ) \varepsilon < \varepsilon$となることに注意する．
     
     さて，
     \[
-        n \ge N_3 \Longrightarrow \frac{\abs{a_1-a}+\abs{a_2-a}+\cdots+\abs{a_{n_1-1}-a}}{n}<\varepsilon
+        n \ge N_3 \Longrightarrow \frac{\abs{a_1-a}+\abs{a_2-a}+\cdots+\abs{a_{N_1-1}-a}}{n}<\varepsilon
     \]
     となるように$N_3 \in \mathbb{N}$をとる．$N \coloneqq \max \{ N_2 , N_3 \}$とすると，
     \[
-        n \ge N \Longrightarrow \frac{\abs{a_1-a}+\abs{a_2-a}+\cdots+\abs{a_{n_1-1}-a}}{n} +\left( \frac{n-n_1+1}{n} \right ) \varepsilon < \varepsilon + \varepsilon = 2 \varepsilon
+        n \ge N \Longrightarrow \frac{\abs{a_1-a}+\abs{a_2-a}+\cdots+\abs{a_{n_1-1}-a}}{n} +\left( \frac{n-N_1+1}{n} \right ) \varepsilon < \varepsilon + \varepsilon = 2 \varepsilon
     \]
     であり，これより
     \[
@@ -680,11 +680,7 @@ $n!x \notin \mathbb{Z}$のときは，
 	\[
 		\lim_{n \to \infty} a_n b_n = \lim_{n \to \infty} a_n \cdot  \lim_{n \to \infty} b_n 
 	\]
-	である．また，アルキメデスの原理により， 任意の$\varepsilon >0$に対して，$n_0 \in \mathbb{N}$を$n_0 >\frac{1}{\varepsilon}$となるようにとることができ，このとき，任意の$n \in \mathbb{N}$に対して，
-	\[
-		n \ge n_0 \Longrightarrow 0<\frac{1}{n} \le \frac{1}{n_0} = \varepsilon
-	\]
-	となり，$\lim_{n \to \infty} \frac{1}{n} =0$である．これより，
+	である．これより，
 	\begin{align*}
 		\lim_{n \to \infty} \frac{1^2+2^2+\cdots+n^2}{n^3} & = \lim_{n \to \infty} \frac{1}{6} \left(1+\frac{1}{n} \right ) \left(2+\frac{1}{n} \right) \\
 		& = \left \{\lim_{n \to \infty} \frac{1}{6} \left(1+\frac{1}{n} \right ) \right \} \cdot \left \{\lim_{n \to \infty} \left(2+\frac{1}{n} \right ) \right \} \\
@@ -706,7 +702,8 @@ $n!x \notin \mathbb{Z}$のときは，
     となるとき，$\lim_{n \to \infty} a_n =0$である．
 
 \begin{proof}
-   $ \lim_{n \to \infty} \frac{a_{n+1}}{a_n} <1$であるから，$r~(0<r<1)$に対して，ある$N_1 \in \mathbb{N}$が存在して，任意の$n \in \mathbb{N}$に対して，
+   $ \lim_{n \to \infty} \frac{a_{n+1}}{a_n} <1$であるから，この左辺を$r_0$とおくと，$r_0<1$である．
+   このとき，$r~(r_0<r<1)$に対して，ある$N_1 \in \mathbb{N}$が存在して，任意の$n \in \mathbb{N}$に対して，
    \[
        n \ge N_1 \Longrightarrow \frac{a_{n+1}}{a_n}<r
    \]
@@ -795,15 +792,17 @@ $n!x \notin \mathbb{Z}$のときは，
 
 
 \begin{proof}
-    前半の主張のみ示せば後半の主張も同様に示せるので，前半のみ示す．与えられた条件により，任意の$\varepsilon>0$に対して，$n_0 \in \mathbb{N}$が存在して，任意の$n \in \mathbb{N}$に対して，
+    前半の主張のみ示せば後半の主張も同様に示せるので，前半のみ示す．
+    
+    $M>0$を任意にとる．$1/M = \varepsilon$とする．仮定により，$n_0 \in \mathbb{N}$が存在して，任意の$n \in \mathbb{N}$に対して，
     \[
-        n \ge n_0 \Longrightarrow |a_n-0|<\varepsilon
+        n \geqq n_0 \Longrightarrow \abs{a_n-0}<\varepsilon
     \]
-    が成り立つ，ここで$\frac{1}{\varepsilon}=M$とおくと，上の$n_0 \in \mathbb{N}$に対して，
+    が成り立つ．こおのとき，上の$n_0 \in \mathbb{N}$に対して，
     \[
-        n \ge n_0 \Longrightarrow \frac{1}{a_n} >\frac{1}{\varepsilon}=M
+        n \geqq n_0 \Longrightarrow \frac{1}{a_n} >\frac{1}{\varepsilon}=M
     \]
-    となり，これより$\lim_{n \to \infty} \frac{1}{a_n}=\infty$が示された．
+    となる．$M$は任意なので，これより$\lim_{n \to \infty} \frac{1}{a_n}=\infty$が示された．
 \end{proof}
 
 \kakko{補題}
@@ -883,19 +882,7 @@ $n!x \notin \mathbb{Z}$のときは，
         \[
             2<e<3
         \]
-        を得る．また，
-		\[
-			\lim_{n \to \infty} a_n \le e
-		\]
-		である．他方，
-		\[
-			\lim_{n \to \infty} a_n \ge a_n > 1 + \frac{1}{1!} + \frac{1}{2!} + \dots + \frac{1}{r!}
-		\]
-		であるから，ここで$r \to \infty$として，
-		\[
-			\lim_{n \to \infty} a_n \ge e
-		\]
-		となり，$\lim_{n \to \infty} a_n =e$を得る．
+        を得る．これが証明すべきことであった．
 	\end{proof}
 \end{tleftbar}
 \newpage 
