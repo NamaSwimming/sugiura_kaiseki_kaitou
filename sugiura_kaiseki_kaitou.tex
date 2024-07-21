@@ -864,15 +864,16 @@ $n!x \notin \mathbb{Z}$のときは，
 			a_{n} < a_{n+1}
 		\]
 		が成立し，$(a_n)_{n \in \mathbb{N}}$は単調増加数列である．また，
-		\begin{align*}
-			\label{p32 問2 2}
-			a_n &< 1 + \frac{1}{1!} + \frac{1}{2!} +\frac{1}{3!} + \dots + \frac{1}{n!} \\
-			& <  1 + \frac{1}{1!} + \frac{1}{2}+ \frac{1}{2^2} + \dots + \frac{1}{2^n} \\
-			& <  2 + \frac{1}{2} \left( \frac{ 1 - 2^{-n} }{ 1- \dfrac{1}{2} } \right)\\
-			& =  3-2^{-n} \\
-			& <  3
-		\end{align*}
-		であるから，$a_n < 3$となる．
+        \begin{align*}
+            a_n
+            &< 1 + \frac{1}{1!} + \frac{1}{2!} + \cdots + \frac{1}{n!} \\
+            &= \frac{5}{2} + \frac{1}{2}\left(\frac{1}{3} + \frac{1}{3 \cdot 4} + \cdots + \frac{1}{3 \cdot 4 \cdots n}\right) \\
+            &< \frac{5}{2} + \frac{1}{2}\left(\frac{1}{3} + \frac{1}{3^2} + \cdots + \frac{1}{3^{n-2}}\right) \\
+            &= \frac{5}{2} + \frac{1}{4}\left(1 - \frac{1}{3^{n-2}}\right) \\
+            &< \frac{11}{4}.
+           \end{align*}
+           よって，$a_n$は単調増加かつ上に有界であるから収束する．
+           $e = \lim_{n \to \infty} a_n$と定義すると，前述した評価により$e \leqq \frac{11}{4} < 3$である．
         
         また，$(a_n)_{n \in \mathbb{N}}$が単調増加数列であることから，任意の$n \in \mathbb{N} \setminus \{0,1\}$に対して，
 		\[
@@ -1229,7 +1230,7 @@ $n!x \notin \mathbb{Z}$のときは，
     \subsection*{p49-50：6}
     \addcontentsline{toc}{subsection}{\texorpdfstring{p49-50：6}{p49-50：6}}
     \begin{tleftbar}
-        $\lim_{n \to \infty} \frac{1}{2n+1} =0$により，$\sum_{n=0}^{\infty} \frac{(-1)^n}{2n+1}$は収束する．ここで，
+        まず，
         \[
              1-x^2+x^4-\cdots+(-1)^n x^{2n} =\frac{1}{1+x^2} +\frac{(-1)^n x^{2n+2}}{x^2+1}
         \]
@@ -2731,21 +2732,34 @@ $n!x \notin \mathbb{Z}$のときは，
 \addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(v)}{p247：1-(v)}}
 
 
-\begin{tleftbar}
-    $\tan \frac{x}{2}=t$とおくと，$\frac{dx}{dt}=\frac{2}{1+t^2}$，$\cos x = \frac{1-t^2}{1+t^2}$であるから，
-    \[
-        \int \frac{1}{a+b \cos x} \, dx  = \int \frac{1}{(a-b)t^2 +a+b} \, dt
-    \]
-    となる．よって，
-    \[
-        \int \frac{1}{a+b\cos x} \, dx =
-        \begin{cases}
-            \frac{1}{a} \tan \frac{x}{2}+ C &(\text{$a=b \ne 0$のとき})\\
-            -\frac{1}{a \tan \frac{x}{2}}+ C&(\text{$a=-b\ne 0$のとき})
-        \end{cases}
-    \]
-    \end{tleftbar}
-
+  \begin{tleftbar}
+    $\tan \frac{x}{2} = t$と置くと，
+    \begin{align*}
+      \int \frac{dx}{a+b \cos x}
+      &= 2 \int \frac{dt}{(a-b)t^2 + a+b} \\
+      &= 
+      \begin{cases*}
+        \frac{2}{a-b} \int \frac{\displaystyle dt}{\displaystyle t^2 + \frac{a+b}{a-b}}
+        & if $a \neq b$, \\
+        2 \int \frac{dt}{2a} & if $a = b$.
+      \end{cases*}
+    \end{align*}
+    ここで，$a \neq b$の場合はさらに$a = -b$，$\frac{a+b}{a-b} > 0$，$\frac{a+b}{a-b} < 0$の三通りに分ける．p234の原始関数表より，
+    \begin{align*}
+      \int \frac{dx}{a+b \cos x}
+      &=
+      \begin{cases*}
+        \frac{2}{a-b} \sqrt{\frac{a-b}{a+b}}
+        \arctan \left({\sqrt{\frac{a-b}{a+b}} \tan \frac{x}{2}}\right) & if $a^2 > b^2$, \\
+        \frac{1}{a-b} \sqrt{\frac{b-a}{b+a}} 
+        \log \abs*{\frac{\displaystyle\tan \frac{x}{2}
+        - \sqrt{\frac{b+a}{b-a}}}{\displaystyle\tan \frac{x}{2} + \sqrt{\frac{b+a}{b-a}}}}
+        & if $a^2 < b^2$, \\
+        \left(-a \tan \frac{x}{2}\right)^{-1} & if $a = -b$, \\
+        \frac{1}{a} \tan {\frac{x}{2}} & if $a = b$.
+      \end{cases*}
+    \end{align*}
+  \end{tleftbar}
 
 \subsection*{p247：1-(vi)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(vi)}{p247：1-(vi)}}
@@ -2975,6 +2989,19 @@ $n!x \notin \mathbb{Z}$のときは，
 
 \section*{第5章：級数}
 \addcontentsline{toc}{section}{\texorpdfstring{第5章：級数}{第5章：級数}}
+\kakko{補題}
+
+$a_{2n} \to \alpha$，$a_{2n+1} \to \beta$$\quad (\alpha,\beta \in [-\infty,\infty])$ならば，集積値全体の集合は$\{\alpha,\beta\}$である．
+
+\begin{proof}
+$a_n$の収束部分列$a_{n(k)}$を任意にとる．
+$\{n(k):k \in \mathbb{N}\}$は偶数，奇数の少なくとも一方を無限個含む．
+偶数がそうであったとして，$n(k)$から奇数を取り除いて小さい順に並べた列の$l$番目の項を$a_{n(k(l))}$とする．
+$a_{n(k(l))}$は$a_{2n}$の部分列であるから，仮定より$a_{n(k(l))} \to \alpha \quad (l \to \infty)$である．
+$a_{n(k)}$は収束するから，$a_{n(k)} \to \alpha \quad (k \to \infty)$である．
+奇数が無限個含まれる場合も同様に考えて，$a_{n(k)} \to \beta \quad (k \to \infty)$である．
+$a_{n(k)}$の取り方は任意だったから，集積値は$\alpha$と$\beta$のみである．
+\end{proof}
 
 \subsection*{p366：1-(i)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p366：1-(i)}{p366：1-(i)}}
@@ -2983,7 +3010,7 @@ $n!x \notin \mathbb{Z}$のときは，
     \[
         \lim_{m \to \infty} a_{2m} = 1 , \quad \lim_{m \to \infty} a_{2m-1} = -1
     \]
-    であり，$(a_n)_{n \in \mathbb{N}}$の集積値全体の集合は$\{ -1 , 1 \}$である．
+    であり，$(a_n)_{n \in \mathbb{N}}$の集積値全体の集合は補題により$\{ -1 , 1 \}$である．
 
     ゆえに，
     \[
@@ -3000,7 +3027,7 @@ $n!x \notin \mathbb{Z}$のときは，
     \[
         \lim_{m \to \infty} a_{2m} = \infty , \quad \lim_{m \to \infty} a_{2m-1} = -\infty
     \]
-    であり，$(a_n)_{n \in \mathbb{N}}$の集積値全体の集合は$\{ -\infty , \infty \}$である\footnote{補完数直線を考えているため，これでよい．}．
+    であり，$(a_n)_{n \in \mathbb{N}}$の集積値全体の集合は補題により$\{ -\infty , \infty \}$である\footnote{補完数直線を考えているため，これでよい．}．
 
     ゆえに，
     \[
@@ -3013,7 +3040,7 @@ $n!x \notin \mathbb{Z}$のときは，
 \addcontentsline{toc}{subsection}{\texorpdfstring{p366：1-(iii)}{p366：1-(iii)}}
 
 \begin{tleftbar}
-    $(a_n)_{n \in \mathbb{N}}$の集積値全体の集合は$\{ -\frac{\sqrt{3}}{2} , \frac{\sqrt{3}}{2} \}$である．
+    $ a_{n} = a_{n+6}$であることを考慮すると，$(a_n)_{n \in \mathbb{N}}$の集積値全体の集合は$\{ 0 , \pm \frac{\sqrt{3}}{2} \}$である．
     ゆえに，
     \[
         \varlimsup_{n \to \infty} a_n = \frac{\sqrt{3}}{2} , \quad \varliminf_{n \to \infty} a_n =-\frac{\sqrt{3}}{2}
