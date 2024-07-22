@@ -2564,6 +2564,18 @@ $n!x \notin \mathbb{Z}$のときは，
 
 \newpage 
 
+\subsection*{p239：3-(vi)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p239：3-(vi)}{p239：3-(vi)}}
+
+\begin{tleftbar}
+    $(\log x)' = \frac{1}{x}$であることを用いて，
+    \begin{align*}
+        \int \frac{(\log x)^2}{x} \, dx & = \int (\log x)^2 (\log x)' \, dx \\
+        & = \frac{(\log x)^3}{3} + C
+    \end{align*}
+    となり，これが答えである．
+\end{tleftbar}
+
 \subsection*{p239：3-(vii)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p239：3-(vii)}{p239：3-(vii)}}
 
@@ -2573,18 +2585,6 @@ $n!x \notin \mathbb{Z}$のときは，
         \int \frac{x^2+2}{(x+1)^3} \, dx & = \int \frac{(t-1)^2+2}{t^3} \, dt \\
         & = \int \left (\frac{1}{t}-\frac{2}{t^2}+\frac{3}{t^3}\right) \, dt \\
         & = \log \abs{x+1}+\frac{2}{x+1}-\frac{3}{2(x+1)^2}+C
-    \end{align*}
-    となり，これが答えである．
-\end{tleftbar}
-
-\subsection*{p239：3-(vi)}
-\addcontentsline{toc}{subsection}{\texorpdfstring{p239：3-(vi)}{p239：3-(vi)}}
-
-\begin{tleftbar}
-    $(\log x)' = \frac{1}{x}$であることを用いて，
-    \begin{align*}
-        \int \frac{(\log x)^2}{x} \, dx & = \int (\log x)^2 (\log x)' \, dx \\
-        & = \frac{(\log x)^3}{3} + C
     \end{align*}
     となり，これが答えである．
 \end{tleftbar}
@@ -2806,25 +2806,6 @@ $n!x \notin \mathbb{Z}$のときは，
 \end{tleftbar}
 
 
-\subsection*{p247：1-(xiii)}
-\addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(xiii)}{p247：1-(xiii)}}
-
-
-\begin{tleftbar}
-    $x+\frac{1}{x}=t$とおくと，$\frac{dt}{dx}=1-\frac{1}{x^2}$であり，求める不定積分は，
-    \begin{align*} 
-        \int \frac{1-x^2}{1+x^2\sqrt{1+x^4}} \, dx & = \int \frac{1-x^2}{x^2 (x+1/x)\sqrt{x^2 + 1/x^2}} \, dx \\
-        & =\int \frac{1}{t\sqrt{t^2-2}} \, dt
-    \end{align*}
-    となる．ここで，$s=\frac{1}{t}$とすると，$\frac{dt}{ds}=-\frac{1}{s^2}$であり，
-    \begin{align*} 
-        \int \frac{1}{t \sqrt{t^2-2}} \, dt & = \int \frac{1}{\sqrt{1-2s^2}} \, ds \\
-        & = \frac{1}{\sqrt{2}} \arcsin (\sqrt{2}s)+C \\
-        & = \frac{1}{\sqrt{2}} \arcsin \left (\frac{\sqrt{2}x}{x^2+1} \right)+C
-    \end{align*}
-    となる．
-\end{tleftbar}
-
 
 \subsection*{p247：1-(ix))}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(ix)}{p247：1-(ix)}}
@@ -2889,6 +2870,24 @@ $n!x \notin \mathbb{Z}$のときは，
     \end{align*}
 \end{tleftbar}
 
+\subsection*{p247：1-(xiii)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(xiii)}{p247：1-(xiii)}}
+
+
+\begin{tleftbar}
+    $x+\frac{1}{x}=t$とおくと，$\frac{dt}{dx}=1-\frac{1}{x^2}$であり，求める不定積分は，
+    \begin{align*} 
+        \int \frac{1-x^2}{1+x^2\sqrt{1+x^4}} \, dx & = \int \frac{1-x^2}{x^2 (x+1/x)\sqrt{x^2 + 1/x^2}} \, dx \\
+        & =\int \frac{1}{t\sqrt{t^2-2}} \, dt
+    \end{align*}
+    となる．ここで，$s=\frac{1}{t}$とすると，$\frac{dt}{ds}=-\frac{1}{s^2}$であり，
+    \begin{align*} 
+        \int \frac{1}{t \sqrt{t^2-2}} \, dt & = \int \frac{1}{\sqrt{1-2s^2}} \, ds \\
+        & = \frac{1}{\sqrt{2}} \arcsin (\sqrt{2}s)+C \\
+        & = \frac{1}{\sqrt{2}} \arcsin \left (\frac{\sqrt{2}x}{x^2+1} \right)+C
+    \end{align*}
+    となる．
+\end{tleftbar}
 
 \subsection*{p247：1-(xiv)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(xiv)}{p247：1-(xiv)}}
