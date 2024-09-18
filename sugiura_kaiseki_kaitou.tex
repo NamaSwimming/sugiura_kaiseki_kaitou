@@ -2984,6 +2984,77 @@ $n!x \notin \mathbb{Z}$のときは，
     
     \end{tikzpicture}
 
+    \newpage 
+
+    \subsection*{p325-326：1-(i)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p325-326：1-(i)}{p325-326：1-(i)}}
+
+\begin{tleftbar}
+\[
+I = \int_{-\infty}^{\infty} \frac{dx}{(t+x^2)^{n+1}} \quad (t > 0, n \in \mathbb{N})
+\]
+
+\[
+(1+x^2)^{n+1} = O(x^{2n+2}) \quad (x \to \pm \infty)
+\]
+
+\[
+\frac{1}{(t+x^2)^{n+1}} = O(x^{-2n-2}) \quad (x \to \pm \infty)
+\]
+ここで，
+\[
+-2n-2 < -1
+\]
+であるから，定理11.3により，広義積分可能である．
+
+\[
+x = \sqrt{t} \tan \theta 
+\]
+とすると．
+\begin{alignat*}{2}
+I &= \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \frac{\cos^{2n+2} \theta}{t^{n+1} } \frac{\sqrt{t}}{\cos^2 \theta} \, d \theta &&\\
+&= \frac{1}{t^{n+1/2}} \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \cos^{2n} \theta \, d\theta &&\\
+& = \frac{1}{t^{n+1/2}} \int_{0}^{\frac{\pi}{2}} 2 \cos^{2n} \theta \, d\theta&&  \\
+& = \frac{1}{t^{n+1/2}} \frac{\Gamma (n+1/2) \Gamma (1/2)}{\Gamma(n+1)} & \quad & \text{($\because$~定理12.4)}\\
+& = \frac{(2n-1)!! / 2^n \sqrt{\pi} \cdot \sqrt{\pi}}{t^{n+1/2} \cdot (n!)} & \quad & \text{($\because$~定理12.4)}\\\
+& = \frac{(2n-1)!!}{(2n)!!} t^{ - \frac{2n+1}{2}} \pi .
+\end{alignat*}
+\end{tleftbar}
+
+
+\newpage
+
+
+\subsection*{p325-326：1-(ii)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p325-326：1-(ii)}{p325-326：1-(ii)}}
+
+\begin{tleftbar}
+\[
+F(t) = \int_0^\pi \frac{dx}{(t + \cos x)^2} \quad (t > 1)
+\]
+
+\[
+\frac{\partial}{\partial t} \left( -\frac{1}{t+\cos x} \right) = \frac{1}{(t+\cos x)^2} 
+\]
+で
+\[
+\int_0^\pi \left ( -\frac{1}{t+\cos x} \right) \, dx , \quad \frac{1}{(t+\cos x)^2} 
+\]
+は$t>1$で連続で，
+\begin{alignat*}{2}
+    F(t) & = \int_0^\pi \frac{\partial}{\partial t} \left ( - \frac{1}{t+\cos x} \right) \, dx  & &\\
+    & = \frac{d}{d t} \int_0^\pi \left( -  \frac{dx}{t+\cos x} \right) & \quad & \text{($\because$~定理14.1)}\\
+    & = \frac{d}{d t} \int_0^\infty \left (-\frac{1}{t+ \frac{1-s^2}{1+s^2}} \right)  \frac{2ds}{1+s^2} & & \\
+    & = -\frac{d}{d t} \int_0^\infty \frac{2ds}{ (1+s^2)t + 1-s^2} & & \\
+    & = -2 \frac{d}{d t} \int_0^\infty \frac{ds}{(t-1)s^2+t+1} & & \\
+    & = -2 \frac{d}{dt} \Bigl [ \frac{1}{\sqrt{t+1}} \arctan \sqrt{\frac{t-1}{t+1}} s \Bigr ]_{s=0}^{s=\infty} & & \\
+    & = -2 \frac{d }{d t} \left ( \frac{1}{\sqrt{t^2-1}}\frac{\pi}{2}  \right ) & & \\
+    & = \pi  \frac{d}{dt} \{ -(t^2-1)^{-1/2} \}  & & \\
+    & = \pi \left ( - \frac{1}{2} \right )\{ -(t^2-1)^{-3/2} \} 2t & & \\
+    & = \frac{\pi t}{(t^2-1)^{3/2}}. & &
+\end{alignat*}
+\end{tleftbar}
+
 \newpage 
 
 \section*{第5章：級数}
