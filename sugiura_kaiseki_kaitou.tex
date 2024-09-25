@@ -3034,25 +3034,33 @@ F(t) = \int_0^\pi \frac{dx}{(t + \cos x)^2} \quad (t > 1)
 \]
 
 \[
-\frac{\partial}{\partial t} \left( -\frac{1}{t+\cos x} \right) = \frac{1}{(t+\cos x)^2} 
+f(x,t) = - \frac{1}{t+\cos x} \quad ( 0 \leqq x \leqq \pi , ~ t>1)
 \]
-で
+とすると，
 \[
-\int_0^\pi \left ( -\frac{1}{t+\cos x} \right) \, dx , \quad \frac{1}{(t+\cos x)^2} 
+\frac{\partial}{\partial t}  f(x,t) = \frac{1}{(t+\cos x)^2}.
 \]
-は$t>1$で連続で，
-\begin{alignat*}{2}
-    F(t) & = \int_0^\pi \frac{\partial}{\partial t} \left ( - \frac{1}{t+\cos x} \right) \, dx  & &\\
-    & = \frac{d}{d t} \int_0^\pi \left( -  \frac{dx}{t+\cos x} \right) & \quad & \text{($\because$~定理14.1)}\\
-    & = \frac{d}{d t} \int_0^\infty \left (-\frac{1}{t+ \frac{1-s^2}{1+s^2}} \right)  \frac{2ds}{1+s^2} & & \\
-    & = -\frac{d}{d t} \int_0^\infty \frac{2ds}{ (1+s^2)t + 1-s^2} & & \\
-    & = -2 \frac{d}{d t} \int_0^\infty \frac{ds}{(t-1)s^2+t+1} & & \\
-    & = -2 \frac{d}{dt} \Bigl [ \frac{1}{\sqrt{t+1}} \arctan \sqrt{\frac{t-1}{t+1}} s \Bigr ]_{s=0}^{s=\infty} & & \\
-    & = -2 \frac{d }{d t} \left ( \frac{1}{\sqrt{t^2-1}}\frac{\pi}{2}  \right ) & & \\
-    & = \pi  \frac{d}{dt} \{ -(t^2-1)^{-1/2} \}  & & \\
-    & = \pi \left ( - \frac{1}{2} \right )\{ -(t^2-1)^{-3/2} \} 2t & & \\
-    & = \frac{\pi t}{(t^2-1)^{3/2}}. & &
-\end{alignat*}
+いま，$f(x,t)$，$\partial f(x,t) / \partial t $は$[0,\pi] \times (1,\infty)$で連続であるから，定理14.1により，
+\begin{align*} 
+    \frac{\partial}{\partial t} \int_0^\pi f(x,t) \, dx & = \int_0^\pi \frac{\partial}{\partial t} f(x,t) \, dx \\
+    & = F(t)
+\end{align*}
+となる．
+
+また，
+\begin{align*} 
+    \int_0^\pi f(x,t) \, dx & = \int_0^\pi - \frac{dx}{t+\cos x}\\
+    & = \int_0^\infty \left ( - \frac{1}{t+\dfrac{1-s^2}{1+s^2}} \right) \frac{2ds}{1+s^2} \\
+    & = -2\int_0^\infty \frac{ds}{(t-1)s^2+t+1}  \\
+    & = -2 \Bigl [ \frac{1}{\sqrt{t+1}} \arctan \sqrt{\frac{t-1}{t+1}}s \Bigr]_{s=0}^{s=\infty} \\
+    & = \frac{-\pi}{\sqrt{t^2-1}}
+\end{align*}
+より，
+\begin{align*} 
+    F(t) & = \frac{d}{dt} \frac{-\pi}{\sqrt{t-2-1}} \\
+    & = \pi \left(-\frac{1}{2} \right) (t^2-1)^{-3/2} \cdot 2t \\
+    & = -\frac{\pi t}{(t^2-1)^{3/2}}.
+\end{align*}
 \end{tleftbar}
 
 \newpage 
