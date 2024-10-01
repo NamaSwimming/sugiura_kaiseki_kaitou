@@ -148,8 +148,73 @@ $a \in K$のとき，
 $(-a)b = -ab$も同様にして示される．
 \end{proof}
 \end{itembox}
+\begin{itembox}[c]{(8)}
+    \begin{proof}
+        (7)の前半の式において，$a$を$-a$に置き換えると，
+        \[
+            (-a)(-b) = -(-a)b.
+        \]
+        ここで，(7)の後半の式を用いると，
+        \begin{align*} 
+            -(-a)b & = -(-ab) \\
+            & = ab.
+        \end{align*}
+        これが証明すべきことであった．
+        \end{proof}
+\end{itembox}
+\begin{itembox}[c]{(9)}
+    \begin{proof}
+        $ a, b \in K$をとり，$ab =0$を仮定すると，
+        \begin{align*}
+            & ab + ab = ab \\
+            & \therefore ~ a(b+b)=ab.
+        \end{align*} 
+        ここで，$a \ne 0$を仮定すると．$a^{-1}$が存在するので，
+        $a^{-1}$を上記の式の両辺に左から掛けると
+        \begin{align*} 
+            & a^{-1}a(b+b)=a^{-1}ab \\
+            & \therefore ~ b+b=b \\
+            & \therefore ~ b=0.
+        \end{align*} 
+        よって$a \ne 0$のとき$b=0$である．
+
+        また，$b \ne 0$を仮定して同様に議論を進めると，
+        $b \ne 0$であるとき$ a=0$であることがわかる．
+
+        以上の議論から，$ab=0$ならば$a=0$または$b=0$であることが示された．
+    \end{proof}
+\end{itembox}
+\begin{itembox}[c]{(10)}
+    \begin{proof}
+        $ a \in K \setminus \{ 0 \} $に関して，
+        \begin{align*} 
+            (-a) \{ -(a)^{-1} \} &= aa^{-1} \\
+            & =1.
+        \end{align*}
+        よって，$-(a)^{-1}$は$-a$の逆元である．
+        このことから，
+        \[
+        (-a)^{-1} = -(a)^{-1}.
+        \]
+        これが証明すべきことであった．
+    \end{proof}
+\end{itembox}
+\begin{itembox}[c]{(11)}
+    \begin{proof}
+        $ a ,b\in K \setminus \{ 0 \} $に関して，
+        \begin{align*} 
+            (ab) (b^{-1} a^{-1}) & = a (bb^{-1}) a^{-1} \\
+            & = a1a^{-1} \\
+            & = aa^{-1} \\
+            & = 1
+        \end{align*} 
+        となり，$(ab)^{-1} = b^{-1} a^{-1}$である．
+        これが証明すべきことであった．
+    \end{proof}
+\end{itembox}
 %
-\newpage\subsection*{p3：問2}
+\newpage
+\subsection*{p3：問2}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p3：問2}{p3：問2}}
 
 \begin{itembox}[c]{(i)}
