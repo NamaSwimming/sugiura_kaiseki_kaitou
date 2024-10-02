@@ -997,6 +997,115 @@ $n!x \notin \mathbb{Z}$のときは，
 
 \newpage 
 
+\subsection*{p42-43：11)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p42-43：11)}{p42-43：11)}}
+
+\begin{tleftbar}
+\begin{proof}
+四元数体 $H$ を以下のように定義する．
+
+\[
+H = \{ (a_1, a_2, a_3, a_4) \mid a_i \in \mathbb{R}\}
+\]
+
+また，
+
+\[
+p=(a_1, a_2, a_3, a_4),\quad q=(b_1, b_2, b_3, b_4)
+\]
+とする．このとき，$ p ,q \in H$である．
+\begin{description}
+\item [(R1)] \mbox{} \\
+    任意の $q = (a_i)$，$p = (b_i) \in H$ に対して，
+    
+    \[
+    q + p = (a_1 + b_1, a_2 + b_2, a_3 + b_3, a_4 + b_4) = (b_1 + a_1, b_2 + a_2, b_3 + a_3, b_4 + a_4) = p + q
+    \]
+\item [(R2)] \mbox{} \\
+任意の $q = (a_i)$，$p = (b_i)$，$r = (c_i) \in H$ に対して，実数の加法の結合律から，
+
+\[
+(q + p) + r = q + (p + r)
+\]
+\item [(R3)] \mbox{} \\
+加法の単位元を $0 = (0, 0, 0, 0)$ とすると，任意の $q = (a_i) \in H$ に対して，
+\[
+q + 0 = (a_1 + 0, a_2 + 0, a_3 + 0, a_4 + 0) = q
+\]
+
+\item [(R4)] \mbox{} \\
+任意の $q = (a_1, a_2, a_3, a_4) \in H$ に対して，加法の逆元を $-q = (-a_1, -a_2, -a_3, -a_4)$ と定義すると，
+\[
+q + (-q) = (a_1 - a_1, a_2 - a_2, a_3 - a_3, a_4 - a_4) = (0, 0, 0, 0) = 0
+\]
+\item [(R6)] \mbox{} \\
+任意の $q, p, r \in H$ に対して，
+\[
+(q \cdot p) \cdot r = q \cdot (p \cdot r)
+\]
+これは四元数の乗法の定義から成り立つ．
+\item[(R7)] \mbox{} \\
+任意の $q, p, r \in H$ に対して，
+
+\[
+q \cdot (p + r) = q \cdot p + q \cdot r
+\]
+
+\[
+(p + q) \cdot r = p \cdot r + q \cdot r
+\]
+が成立する．これは乗法の定義と実数の分配律から成り立つ．
+\item [(R8)] \mbox{} \\
+乗法の単位元を $1 = (1, 0, 0, 0)$ とすると，任意の $q = (a_1, a_2, a_3, a_4) \in H$ に対して，
+
+\[
+q \cdot 1 = (a_1, a_2, a_3, a_4)
+\]
+なぜなら，
+\begin{align*}
+c_1 &= a_1 \cdot 1 - a_2 \cdot 0 - a_3 \cdot 0 - a_4 \cdot 0 = a_1, \\
+c_2 &= a_1 \cdot 0 + a_2 \cdot 1 + a_3 \cdot 0 - a_4 \cdot 0 = a_2, \\
+c_3 &= a_1 \cdot 0 - a_2 \cdot 0 + a_3 \cdot 1 + a_4 \cdot 0 = a_3, \\
+c_4 &= a_1 \cdot 0 + a_2 \cdot 0 - a_3 \cdot 0 + a_4 \cdot 1 = a_4.
+\end{align*}
+\item [(R9)] \mbox{} \\
+任意の $q = (a_1, a_2, a_3, a_4) \in H$ で $q \ne 0$（つまり、${a_1}^2 + {a_2}^2 + {a_3}^2 + {a_4}^2 > 0$）の場合，ノルムを
+
+\[
+N(q) = {a_1}^2 + {a_2}^2 + {a_3}^2 + {a_4}^2 > 0
+\]
+
+と定義する．共役四元数を
+
+\[
+q^* = (a_1, -a_2, -a_3, -a_4)
+\]
+
+と定義すると，
+
+\[
+q \cdot q^* = q^* \cdot q = (N(q), 0, 0, 0)
+\]
+
+よって，乗法の逆元を
+
+\[
+q^{-1} = \frac{q^*}{N(q)} = \left( \frac{a_1}{N(q)},\, -\frac{a_2}{N(q)},\, -\frac{a_3}{N(q)},\, -\frac{a_4}{N(q)} \right)
+\]
+と定義すると，
+\[
+q \cdot q^{-1} = \left( \frac{N(q)}{N(q)}, 0, 0, 0 \right) = (1, 0, 0, 0) = 1
+\]
+\item [(R10)]
+加法の単位元は $0 = (0, 0, 0, 0)$ であり，乗法の単位元は $1 = (1, 0, 0, 0)$ である．ゆえに
+\[
+0 \ne 1.
+\]
+\end{description}
+以上の考察により，四元数全体の集合 $H$ は(R5)を除く乗法の交換律を除くすべての体の公理をみたす．
+\end{proof}
+\end{tleftbar}
+\newpage 
 
     \subsection*{p49-50：1}
     \addcontentsline{toc}{subsection}{\texorpdfstring{p49-50：1}{p49-50：1}}
