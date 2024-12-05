@@ -57,6 +57,7 @@
     \item ねたんほ(解答の提供)
     \item まっちゃん(解答の提供)
     \item Daiki(解答の提供)
+    \item qwer(解答の提供)
     \item やたろう(Git管理)
     \item 不自然対数(\LaTeX 関連)
 \end{itemize}
@@ -1650,7 +1651,212 @@ q \cdot q^{-1} = \left( \frac{N(q)}{N(q)}, 0, 0, 0 \right) = (1, 0, 0, 0) = 1
   \end{leftbar}
 
     \newpage 
+    \subsection*{p63-64：5}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p63-64：5}{p63-64：5}}
+    \begin{leftbar}
+      \begin{proof} \mbox{　}  
+        \begin{enumerate}[(I)]
+        \item \mbox{} \\
+        $f$が$U$上連続のとき，$\mathbb{R}^n$の開集合$W$をひとつとる．
+        \begin{enumerate}[(i)]
+          \item \mbox{} \\
+          $ W \cap f(U) = \varnothing$のとき，$f(W) \ne \varnothing$より，$\mathbb{R}^n$上の開集合となる．
+          \item \mbox{} \\
+          $ W \cap f(U) \ne \varnothing$のとき，$f^{-1} (W)$の元$x$をひとつとる．
+          
+          $ f(x)=y$とすると，$U$は開集合なので，ある$\delta_0 >0$に対して$U(x,\delta_0) \subset U$となる．
+          $f$の連続性より，任意の$\varnothing >0$に対して，ある$\delta >0$~（$\delta_0 >\delta >0$）が存在して，
+          $f(U(x,\delta)) \subset U' (y,\varepsilon)$となる．
+    
+          また， $W$は開集合なので，$\varepsilon$を十分小さくとると
+          \[
+          U'(y,\varepsilon) \subset W,\quad f(U(x,\delta)) \subset U (x,\varepsilon) \subset W
+          \]
+          となる．
+          ここで，$f^{-1} (f(U(x,\delta))) \supset U(x,\delta)$より，
+          \[
+          U(x,\delta) \subset f^{-1} (f(U(x,\delta))) \subset f^{-1} (W)
+          \]
+          となり，$f^{-1} (W)$は$\mathbb{R}^n$の開集合である．
+        \end{enumerate}
+        \item \mbox{} \\
+        $ \mathbb{R}^n$の開集合$W$に対して，$f^{-1} (W)$が$\mathbb{R}^n$の開集合となるとき，
+        $U$の元$x$を1つとり，$f(x)=y$とする．
+    
+        任意の$\varepsilon >0$に対して，$U(y,\varepsilon)$は$\mathbb{R}^n$の開集合なので，
+        $f^{-1} (U'(y,\varepsilon))$も$\mathbb{R}^n$の開集合となる．
+    
+        $x \in f^{-1} (U'(y,\varepsilon))$より，
+        ある$\delta >0$が存在して，$U(x,\delta) \subset  f^{-1}(U'(y,\varepsilon)) \subset U$となり，
+        $f(U(x,\delta)) \subset f(f^{-1}(U(y,\varepsilon))) \subset U'(y,\varepsilon)$であるから，$f$は$x$で連続となる．
+        $x \in U$で任意に取れるので，$U$上連続である．
+        \end{enumerate}
+      \end{proof}
+    \end{leftbar}
+    \newpage 
 
+    
+    \subsection*{p63-64：6}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p63-64：6}{p63-64：6}}
+
+    \begin{leftbar}
+    \begin{proof} \mbox{　}
+      \begin{enumerate}[(I)]
+        \item \mbox{} \\
+    $f$が$U$上連続であるとき，$\mathbb{R}^n$の開集合$W$をひとつとる．
+    \begin{enumerate}[(i)]
+      \item \mbox{} \\
+    $W \cap f(U) = \varnothing$のとき，$f^{-1} (W) = \varnothing$より，$\mathbb{R}^n$上の開集合となり，成立する．
+    \item \mbox{} \\
+    $W \cap f(U) \ne \varnothing$のとき，$f^{-1} (W)$の元$x$をひとつとり，$y=f(x)$とする．
+    
+    $W$は開集合なので，$U'(y,\varepsilon) \subset W$となる$\varepsilon >0$がとれる．
+    $f$の連続性から，$\delta_0 >0$が存在して，
+    \[
+    f(U(x,\delta_0) \cap U) \subset U'(y,\varepsilon) \subset W.
+    \]
+    $f^{-1} (f(U(x,\delta_0) \cap U)) \supset U(x,\delta_0) \cap U$より，
+    \[
+    U(x,\delta_0) \cap U \subset f^{-1} (W).
+    \]
+    $V = \bigcup_{x \in f^{-1}(W)} U(x,\delta_0) \cap U$とすると，$V$は$\mathbb{R}^n$の開集合であり，
+    \[
+     V \cap U = \bigcup_{x \in f^{-1}(W)} (U(x,\delta_0) \cap U)  \subset f^{-1} (W).
+    \]
+    定義より$V \cap U \supset f^{-1} (W)$であるから，
+    \[
+    V \cap U = f^{-1} (W)
+    \]
+    となる．
+    \end{enumerate}
+    \item \mbox{} \\
+    $\mathbb{R}^n$の開集合$W$に対して，$f^{-1}(W)=V \cap U$となる開集合$V$が存在するとき，
+    $U$の元$x$を任意にひとつとり，$y=f(x)$とする．
+    
+    任意の$\varepsilon >0$に対して，$U'(y,\varepsilon)$は$\mathbb{R}^n$の開集合なので，
+    条件より，開集合$V$が存在して，
+    \[
+    f^{-1} (U'(y,\varepsilon)) = V \cap U
+    \]
+    となる．
+    $V$は開集合であるから，$\delta >0$が存在して，
+    \begin{align*} 
+      &U(x,\delta)  \subset V, \\
+      &f(U(x,\delta) \cap U) \subset U'(y,\varepsilon).
+    \end{align*}
+    $x$は$U$上で任意にとれるので，$f$は$U$上連続である．
+    \end{enumerate}
+    \end{proof}
+    \end{leftbar}
+    
+    \subsection*{p63-64：7}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p63-64：7}{p63-64：7}}
+    \begin{leftbar}
+    \begin{proof} $f$が単調増加のときを示せば十分である．
+    
+      任意の$ x_0 \in (a,b)$に対して，$f$は単調増加であるから，
+      \begin{align*} 
+        &\lim_{x \to x_0} f(x)=f_{+} (x_0) , \\
+        &\lim_{x \to x_0} f(x)=f_{-} (x_0)
+      \end{align*} 
+      がそれぞれ存在する．
+    
+      \begin{align*} 
+       & \text{$f(x)$が$x_0$において不連続} \\
+       \iff & f_{+} (x_0) \ne f_{-} (x_0) \\
+        \iff & f_{+} (x_0) - f_{-} (x_0)>0 
+      \end{align*} 
+      である．
+      \[
+      A_n =  \left \{ x \in (a,b) \mid f_{+} (x) - f_{-} (x) > \frac{f(b)-f(a)}{n} \right \}
+      \]
+      として．$\# (A_n) \geqq n$を仮定する．
+      $A_n$から適当に$a_1,a_2,\ldots,a_n$を取り出すと（$a<a_1 < a_2 < \cdots < a_n<b$），$f$の単調性により，
+      \[
+      f_{+} (a_i) \leqq f_{-} (a_{i+1}) \quad (1 \leqq \forall i \leqq n-1)
+      \]
+      なので，
+      \begin{align*} 
+        f(b)-f(a) &= \sum_{i=1}^{n} \frac{f(b)-f(a)}{n} \\
+        & < f_{+} (a_1) - f_{-} (a_1) + f_{+} (a_2) - f_{-} (a_2) + \cdots + f_{+} (a_n) - f_{-} (a_n) \\
+        & \leqq f_{+} (a_n) - f_{-} (a_1) \\
+        & \leqq f(b)-f(a)
+      \end{align*}
+      となり，矛盾する．
+      よって，$\# (A_n) < n$である．
+    
+      $f$の不連続点全体の集合を$A$とすれば，
+      \[
+      A \subset \left ( \bigcup_{n \in \mathbb{N}}  A_n \right ) \cup \{ a, b \}
+      \]
+      右辺は高々加算なので，$A$も高々可算である．
+    \end{proof}
+    \end{leftbar}
+    
+    \subsection*{p63-64：8}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p63-64：8}{p63-64：8}}
+    \begin{leftbar}
+      $ [0,1]$に対し，
+      \[
+      f(x)= \begin{cases} 
+        0 & (x=0) \\
+        1/n & (1/(n+1) < x \leqq 1/n\\
+      \end{cases}
+      ,\quad \left ( \because [0,1] = \{ 0 \} \cup \left ( bigcup_{n=1}^{\infty} (1/(n+1),1/n] \right ) \right )
+      \]
+      とすれば，広義単調増加で$x=1/n$（$n \in \mathbb{N}$）で不連続である．
+    \end{leftbar}
+    \newpage 
+
+    \subsection*{p63-64：9}
+    \addcontentsline{toc}{subsection}{\texorpdfstring{p63-64：9}{p63-64：9}}
+
+    \begin{leftbar}
+    \begin{proof}[\textbf{証明1}]
+      $F$の$[a,b]$における一様連続性を示す．(一様連続なら特に連続)
+      $\varepsilon >0$を任意に固定する．
+      $f$の一様連続性を使って，任意の$x,y \in [a,b] \cap \mathbb{Q}$に対し
+      \begin{align*}
+        \abs*{x-y} < \delta \implies \abs*{f(x) - f(y)} < \varepsilon/3
+      \end{align*}
+      となるように，$\delta > 0$を取る．
+      $\abs*{x-y} < \delta/3$，$x,y \in [a,b]$とし，$\abs*{F(x)-F(y)} < \varepsilon$であることを示す．
+      $x,y$にそれぞれ収束する$[a,b] \cap \mathbb{Q}$の数列$x_n,y_n$を取る．
+      $n$を十分大きく取って
+      \begin{align*}
+        \abs*{x_n-x} &< \delta/3, \quad \abs*{y_n-y} < \delta/3, \\
+        \abs*{F(x)-f(x_n)} &< \varepsilon/3, \quad \abs*{F(y)-f(y_n)} < \varepsilon/3
+      \end{align*}
+      となるようにする．
+      このとき
+      \begin{align*}
+        \abs*{x_n-y_n} \le \abs*{x_n-x} + \abs*{x-y} + \abs*{y-y_n} < \delta/3 + \delta/3 + \delta/3 = \delta
+      \end{align*}
+      が成り立つ．
+      すると$\delta$の取り方より，
+      \begin{align*}
+        \abs*{f(x_n)-f(y_n)} < \varepsilon/3 
+      \end{align*}
+      となる．
+      したがって，
+      \begin{align*}
+        \abs*{F(x)-F(y)} \le \abs*{F(x)-f(x_n)} + \abs*{f(x_n)-f(y_n)} + \abs*{f(y_n)-F(y)}
+        < \varepsilon/3 + \varepsilon/3 + \varepsilon/3 = \varepsilon.
+      \end{align*}
+    \end{proof}
+    \end{leftbar}
+
+    \begin{leftbar}
+    \begin{proof}[\textbf{証明2}]
+        $\varepsilon>0$を任意に取り，$\delta$は上の証明と同じように取る．
+        $\abs*{x-y} < \delta$，$x,y \in [a,b]$とする．
+        $(x,y) \cap \mathbb{Q}$の数列$x_n,y_n$で$x,y$に収束するものを取る．
+        明らかに$\abs*{x_n-y_n}<\delta$．
+        $\delta$の取り方より$\abs*{f(x_n)-f(y_n)}<\varepsilon$．
+        $n \to \infty$として$\abs*{F(x)-F(y)} \le \varepsilon$を得る．
+      \end{proof}
+    \end{leftbar}
+    \newpage 
     \subsection*{p72-74：3}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p72-74：3}{p72-74：3}}
 
