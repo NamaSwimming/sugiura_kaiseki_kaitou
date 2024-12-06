@@ -1877,9 +1877,9 @@ q \cdot q^{-1} = \left( \frac{N(q)}{N(q)}, 0, 0, 0 \right) = (1, 0, 0, 0) = 1
       \[
       f(x)= \begin{cases} 
         0 & (x=0) \\
-        1/n & (1/(n+1) < x \leqq 1/n\\
+        1/n & (1/(n+1) < x \leqq 1/n)\\
       \end{cases}
-      ,\quad \left ( \because [0,1] = \{ 0 \} \cup \left ( bigcup_{n=1}^{\infty} (1/(n+1),1/n] \right ) \right )
+      ,\quad \left ( \because [0,1] = \{ 0 \} \cup \bigcup_{n=1}^{\infty} (1/(n+1),1/n] \right ) 
       \]
       とすれば，広義単調増加で$x=1/n$（$n \in \mathbb{N}$）で不連続である．
     \end{leftbar}
@@ -1969,6 +1969,26 @@ q \cdot q^{-1} = \left( \frac{N(q)}{N(q)}, 0, 0, 0 \right) = (1, 0, 0, 0) = 1
         $n \to \infty$として$\abs*{F(x)-F(y)} \le \varepsilon$を得る．
       \end{proof}
     \end{leftbar}
+
+
+    \begin{leftbar}
+        \begin{proof}[\textup{\textbf{一意性の証明}}]
+            条件をみたす2つの関数$F_1 (x)$と$F_2(x)$に対して，ある$x$で$F_1(x) \ne F_2(x)$とすると，
+            $\varepsilon = \abs{F_1(x) - F_2(x)}/2$に対して，$F_1(x)$と$F_2(x)$の連続性により，
+            ある$\delta >0$が存在して，
+            \[
+            \abs{x-y}<\delta \land y \in [a,b] \Rightarrow \abs{F_1(y)-F_1(x)}<\varepsilon \land  \abs{F_2(y)-F_2(x)}<\varepsilon.
+            \]
+            特に$ U (x,\delta) \cap [a,b] \cap \mathbb{Q} \ne \varnothing$より，その元$y$に対して，
+            $F_1 (y)=F_2(y)~(=f(y))$となるが，
+            \begin{align*} 
+                \abs{F_1(x)-F_2(x)} & \leqq \abs{F_1(x)-F_1(y)} + \abs{F_2(y)-F_2(x)} \\
+                & < \frac{\varepsilon}{2} \cdot 2  = \abs{F_1(x) - F_2(x)}
+            \end{align*}
+            となり矛盾する．よって示された．
+            \end{proof}
+    \end{leftbar}
+    
     \newpage 
     \section*{p72-74：3}
 \addcontentsline{toc}{section}{\texorpdfstring{p72-74：3}{p72-74：3}}
