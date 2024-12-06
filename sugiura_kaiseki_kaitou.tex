@@ -1888,8 +1888,44 @@ q \cdot q^{-1} = \left( \frac{N(q)}{N(q)}, 0, 0, 0 \right) = (1, 0, 0, 0) = 1
     \section*{p63-64：9}
     \addcontentsline{toc}{section}{\texorpdfstring{p63-64：9}{p63-64：9}}
 
+
+    \begin{tleftbar}
+        \begin{proof}[\textup{\textbf{存在性の証明}}]
+            $\overline{[a,b] \mathbb{Q}}=[a,b]$であるから，$I=[a,b] \cap \mathbb{Q}$として，
+            $[a,b] \cap (\mathbb{R}-\mathbb{Q})$の元$x$に対して，Th6.1(1)より，
+            $x$に収束する$I$の数列$(x_n)_{n \in \mathbb{N}}$が存在する．
+            
+            その$(x_n)_{n \in \mathbb{N}}$に対して，
+            \[
+            F(x)\coloneqq \lim_{n \to \infty} f(x_n) 
+            \]
+            とする\footnote{$x \in I$のときも同様に，$x$に収束する$I$上の数列$(x_n)_{n \in \mathbb{N}}$をとって$F(x)\coloneqq \lim_{n \to \infty} f(x_n)$とする．これはTh6.2により well--definedで$F(x)=f(x)$である．}．
+            
+            次に，これがwell-definedであることを示す\footnote{$\lim_{n \to \infty} f(x_n)$が存在し，$(x_n)_{n \in \mathbb{N}}$の取り方に依らないこと．}．
+            $\varepsilon >0$に対して，$f$は一様連続であるから，ある$\delta >0$が存在して，
+            \[
+            \abs{x-y}<\delta \land x,y \in I \Rightarrow \abs{f(x)-f(y)}<\varepsilon
+            \]
+            となる．
+
+            また，$x_n \to x$（$n \to \infty$）であるので，ある$N \in \mathbb{N}$が存在して，
+            \begin{align*} 
+                n, m > N &\Rightarrow \abs{x_n-x_m}<\delta \land x_n,x_m \in I \\
+                & \abs{f(x_n)-f(x_m)}<\varepsilon
+            \end{align*}
+            となり，$(f(x_n))_{n \in \mathbb{N}}$はコーシー列となるので収束する．
+
+            $x$に収束する2つの数列$(x_n)_{n \in \mathbb{N}}$，$(y_n)_{n \in \mathbb{N}}$に対して，
+            $x_n$，$y_n$を交互にとった数列を$(z_n)_{n \in \mathbb{N}}$とすれば，
+            $z_n \to x$，$z_n \to y$（$n \to \infty$）となり，$(f(z_n))_{n \in \mathbb{N}}$は収束する．
+            $(f(x_n))_{n \in \mathbb{N}}$，$(f(y_n))_{n \in \mathbb{N}}$は上の部分列であるので，
+            同じ収束値に収束し，$(x_n)_{n \in \mathbb{N}}$の取り方に依らない．
+        \end{proof}
+    \end{tleftbar}
+
+
     \begin{leftbar}
-    \begin{proof}[\textup{\textbf{証明1}}]
+    \begin{proof}[\textup{\textbf{連続性の証明1}}]
       $F$の$[a,b]$における一様連続性を示す．(一様連続なら特に連続)
       $\varepsilon >0$を任意に固定する．
       $f$の一様連続性を使って，任意の$x,y \in [a,b] \cap \mathbb{Q}$に対し
@@ -1924,7 +1960,7 @@ q \cdot q^{-1} = \left( \frac{N(q)}{N(q)}, 0, 0, 0 \right) = (1, 0, 0, 0) = 1
     \end{leftbar}
 
     \begin{leftbar}
-    \begin{proof}[\textup{\textbf{証明2}}]
+    \begin{proof}[\textup{\textbf{連続性の証明2}}]
         $\varepsilon>0$を任意に取り，$\delta$は上の証明と同じように取る．
         $\abs*{x-y} < \delta$，$x,y \in [a,b]$とする．
         $(x,y) \cap \mathbb{Q}$の数列$x_n,y_n$で$x,y$に収束するものを取る．
