@@ -19,20 +19,20 @@
 % 色を定義
 
 \AtEndPreamble{
-%ハイパーリンク用
-\usepackage{url}
-\usepackage{hyperref}
-\usepackage{xcolor}
-\definecolor{BlueViolet}{RGB}{105,39,255}
-\definecolor{mylightgray}{HTML}{DDDDDD}
-\definecolor{mydarkgray}{HTML}{777777}
-\hypersetup{
+  %ハイパーリンク用
+  \usepackage{url}
+  \usepackage{hyperref}
+  \usepackage{xcolor}
+  \definecolor{BlueViolet}{RGB}{105,39,255}
+  \definecolor{mylightgray}{HTML}{DDDDDD}
+  \definecolor{mydarkgray}{HTML}{777777}
+  \hypersetup{
     colorlinks=true,
     citecolor=BlueViolet,
     linkcolor=blue!50!black,
     urlcolor=blue!70!black,
   }
-\usepackage{bookmark}
+  \usepackage{bookmark}
 }
 
 
@@ -122,20 +122,20 @@
 \newlength{\wdTempA}
 \newlength{\wdTempB}
 \newcommand{\adunderbrace}[2]{%
-\settowidth{\wdTempA}{$#1$}%
-\settowidth{\wdTempB}{${\scriptstyle #2}$}%
-\ifthenelse{\wdTempA<\wdTempB}{%
-\hspace*{.5\wdTempA}\hspace*{-.5\wdTempB}%
-\underbrace{#1}_{#2}%
-\hspace*{.5\wdTempA}\hspace*{-.5\wdTempB}%
-}{%
-\underbrace{#1}_{#2}%
-}%
+  \settowidth{\wdTempA}{$#1$}%
+  \settowidth{\wdTempB}{${\scriptstyle #2}$}%
+  \ifthenelse{\wdTempA<\wdTempB}{%
+    \hspace*{.5\wdTempA}\hspace*{-.5\wdTempB}%
+    \underbrace{#1}_{#2}%
+    \hspace*{.5\wdTempA}\hspace*{-.5\wdTempB}%
+  }{%
+    \underbrace{#1}_{#2}%
+  }%
 }%
 %丸付き文字
 \newcommand{\ctext}[1]{\raise0.2ex\hbox{\textcircled{\scriptsize{#1}}}}
 
-\setlength{\abovedisplayskip}{5pt} 
+\setlength{\abovedisplayskip}{5pt}
 \setlength{\belowdisplayskip}{3pt}
 %ユーザー定義
 \newcommand{\dash}[1]{#1^\prime}
@@ -153,74 +153,90 @@
 \renewcommand{\le}{\leqq}
 \renewcommand{\ge}{\geqq}
 
+%proof環境の変更
+\makeatletter
+\renewenvironment{proof}[1][\proofname]{%
+  \par\pushQED{\qed}%
+  \normalfont
+  % 元の設定：\topsep6\p@\@plus6\p@、\trivlistなど
+  \topsep6\p@\@plus6\p@%
+  \trivlist
+  \item[\hskip\labelsep\itshape #1\@addpunct{.}]% デフォルトではここで終わっていた
+  % 以下に改行を挿入
+  \mbox{}\par% ここで改行と適当な空白を入れる
+}{%
+  \popQED\endtrivlist\@endpefalse
+}
+\makeatother
+
 \newcommand\kakko[1]{\noindent\textbf{\textgt{《#1》}}}
 
 %増減表関連
 \newcommand{\ner}{
-\begin{tikzpicture}[scale=0.3,baseline=0.3]
-\draw[->,>=stealth] (0,0) to[bend right=45] (1,1);
-\end{tikzpicture}
+  \begin{tikzpicture}[scale=0.3,baseline=0.3]
+    \draw[->,>=stealth] (0,0) to[bend right=45] (1,1);
+  \end{tikzpicture}
 }
 
 \newcommand{\nel}{
-\begin{tikzpicture}[scale=0.3,baseline=0.3]
-\draw[->,>=stealth] (0,0) to[bend left=45] (1.2,1);
-\end{tikzpicture}
+  \begin{tikzpicture}[scale=0.3,baseline=0.3]
+    \draw[->,>=stealth] (0,0) to[bend left=45] (1.2,1);
+  \end{tikzpicture}
 }
 
 \newcommand{\sel}{
-\begin{tikzpicture}[scale=0.3,baseline=0.3]
-\draw[->,>=stealth] (0,1) to[bend left=45] (1,0);
-\end{tikzpicture}
+  \begin{tikzpicture}[scale=0.3,baseline=0.3]
+    \draw[->,>=stealth] (0,1) to[bend left=45] (1,0);
+  \end{tikzpicture}
 }
 
 \newcommand{\ser}{
-\begin{tikzpicture}[scale=0.3,baseline=0.3]
-\draw[->,>=stealth] (0,1) to[bend right=45] (1.2,0);
-\end{tikzpicture}
+  \begin{tikzpicture}[scale=0.3,baseline=0.3]
+    \draw[->,>=stealth] (0,1) to[bend right=45] (1.2,0);
+  \end{tikzpicture}
 }
 \usepackage[pagecolor=white,nopagecolor={none}]{pagecolor} % 背景色を変更するためのパッケージ
 
-\newcommand{\tituloum}[5]{\begin{titlepage} 
-    \begin{center} 
-        \pagecolor{white} % 背景色をBlueVioletに設定
-        \color{black} % テキストカラーを白に設定
-        
-        \vspace*{2\baselineskip}
-        
-        \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} 
-        \rule{\textwidth}{0.4pt} 
-        
-        \vspace{0.75\baselineskip} 
-        
-        {\huge #1} 
-        
-        \vspace{0.75\baselineskip}
-        
-        \rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
-        \rule{\textwidth}{1.6pt}
-        
-        \vspace{2\baselineskip}
-        
-        #3
-        
-        \vspace*{3\baselineskip}
-        
-        
-        {\huge #2}
-        
-        \vspace{0.5\baselineskip}
-        
-        \textit{#4}
-        
-        \vfill
-        
-        \vspace{0.3\baselineskip}
-        
-        #5
-        
+\newcommand{\tituloum}[5]{\begin{titlepage}
+    \begin{center}
+      \pagecolor{white} % 背景色をBlueVioletに設定
+      \color{black} % テキストカラーを白に設定
+
+      \vspace*{2\baselineskip}
+
+      \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+      \rule{\textwidth}{0.4pt}
+
+      \vspace{0.75\baselineskip}
+
+      {\huge #1}
+
+      \vspace{0.75\baselineskip}
+
+      \rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+      \rule{\textwidth}{1.6pt}
+
+      \vspace{2\baselineskip}
+
+      #3
+
+      \vspace*{3\baselineskip}
+
+
+      {\huge #2}
+
+      \vspace{0.5\baselineskip}
+
+      \textit{#4}
+
+      \vfill
+
+      \vspace{0.3\baselineskip}
+
+      #5
+
     \end{center}
-\end{titlepage}}
+  \end{titlepage}}
 
 \everymath{\displaystyle}
 
