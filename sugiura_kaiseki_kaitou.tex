@@ -1990,6 +1990,78 @@ $\lim_{n \to \infty} S_{2n}=S$，$\lim_{n \to \infty} S_{2n+1}=S$のとき，
 \end{leftbar}
 
 \newpage
+
+\section*{p72--74：1}
+\addcontentsline{toc}{section}{\texorpdfstring{p72--74：1}{p72--74：1}}
+
+
+\subsection*{p72--74：1-(i)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p72--74：1-(i)}{p72--74：1-(i)}}
+
+\begin{tleftbar}
+    $ f\colon \mathbb{R}^3 \to \mathbb{R}$を$f(x,y,z)=3x^2 + 2y^2 + 5z^2 -1$とする．
+    $f$は連続であり，$\mathbb{R} -\{ 0 \}$は$\mathbb{R}$の開集合であるので，
+    その逆像である$A^c$も開集合である．
+    よって，$A$は閉集合である．
+
+    また，$(x,y,z) \in A$に対して，
+    \begin{align*}
+        1 & = 3x^2 + 2y^2 + 5z^2 \\
+          & \geqq 3x^2
+    \end{align*}
+    であるから，
+    \[
+        \abs{x} \leqq \frac{1}{\sqrt{3}}.
+    \]
+    同様に，$ \abs{y} \leqq 1/\sqrt{2}$，$\abs{z} \leqq 1/\sqrt{5}$となり，$A$は有界である．
+
+    以上より，$A$はコンパクトである．
+\end{tleftbar}
+
+
+
+\subsection*{p72--74：1-(ii)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p72--74：1-(ii)}{p72--74：1-(ii)}}
+
+\begin{tleftbar}
+    $ x \in \mathbb{R}$に対して，$ (x,-x,1) \in A$であり，
+    \[
+        \norm{{}^t (x,-x,1)}=\sqrt{2x^2+1} \to \infty ~(x \to +\infty).
+    \]
+    このことから，$B$は有界でない．
+
+    よって，$B$はコンパクトでない．
+\end{tleftbar}
+
+
+\subsection*{p72--74：1-(iii)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p72--74：1-(iii)}{p72--74：1-(iii)}}
+
+\begin{tleftbar}
+    $(x,y,z) \in C$に対して，
+    \[
+        \varepsilon =\frac{1}{2}(1-\sqrt{x^2+y^2+z^2})
+    \]
+    とすれば，$U(x,\varepsilon)\subset C$となり，$C$は開集合である．
+
+    よって，$C$はコンパクトでない．
+\end{tleftbar}
+
+
+
+\subsection*{p72--74：1-(iv)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p72--74：1-(iv)}{p72--74：1-(iv)}}
+
+\begin{tleftbar}
+    $t>\sqrt{3}$に対して，$t^3 -3t >0$で，$(t,\sqrt{t^3-3t}/2) \in D$である．
+    \begin{align*}
+        \norm{{}^t (t,\sqrt{t^3-3t}/2)} & = t^2 + \frac{t^3}{4}-3t     \\
+                                        & \to  \infty ~(t \to \infty).
+    \end{align*}
+    より， $D$は有界でなく，コンパクトでない．
+\end{tleftbar}
+
+\newpage
 \section*{p72--74：3}
 \addcontentsline{toc}{section}{\texorpdfstring{p72--74：3}{p72--74：3}}
 
