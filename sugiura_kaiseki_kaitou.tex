@@ -2000,7 +2000,7 @@ $\lim_{n \to \infty} S_{2n}=S$，$\lim_{n \to \infty} S_{2n+1}=S$のとき，
 
 \begin{tleftbar}
     $ f\colon \mathbb{R}^3 \to \mathbb{R}$を$f(x,y,z)=3x^2 + 2y^2 + 5z^2 -1$とする．
-    $f$は連続であり，$\mathbb{R} -\{ 0 \}$は$\mathbb{R}$の開集合であるので，
+    $f$は連続であり，$\mathbb{R} -\{ 0 \}$は$\mathbb{R}$の開集合であるので，\S 6 ：問3より，
     その逆像である$A^c$も開集合である．
     よって，$A$は閉集合である．
 
@@ -2349,6 +2349,75 @@ $\norm{ \cdot }_1 : \mathbb{R}^n \ni ( x_1 , x_2 , \cdots , x_n ) \mapsto \sum_{
     \item 宮寺功 関数解析 ( ちくま学芸出版 )
     \item 洲之内治男 関数解析入門 ( 近代ライブラリ社 )
 \end{enumerate}
+
+
+\section*{p72--74：7}
+\addcontentsline{toc}{section}{\texorpdfstring{p72--74：7}{p72--74：7}}
+
+\begin{tleftbar}
+    \begin{proof}
+        部分列$(f_{n(k)})_{k \in \mathbb{N}}$を任意にひとつとる．
+        \[
+            f(x)= \lim_{k \to \infty} f_{n(k)}(x)
+            \begin{cases}
+                0 \quad  & ( 0 \leqq x < 1) \\
+                1  \quad & ( x=1)
+            \end{cases}
+        \]
+        であり，$f$に各点収束する．
+
+        $(f_{n(k)})_{k \in \mathbb{N}}$は一様収束するとすれば$f$に収束するが，$f$は連続でなく
+        「連続関数列$(f_n)_{n \in \mathbb{N}}$が$f$に各点収束すれば，$f$は連続」の対偶を考えることにより矛盾する\footnote{IV.~Thm 13.2，Thm 13.3より．}．よって一様収束しない．
+    \end{proof}
+\end{tleftbar}
+
+\newpage
+
+
+\section*{p72--74：8}
+\addcontentsline{toc}{section}{\texorpdfstring{p72--74：8}{p72--74：8}}
+
+\kakko{補題}
+
+
+コンパクト集合$S$上の連続写像$g$について，その像$g(S)$はコンパクトである．
+
+\begin{proof}[\textup{\textbf{補題の証明}}]
+    $g(S)$の開被覆$(U_{\lambda})_{\lambda \in \Lambda}$を任意にとる．
+
+    任意の$\lambda \in \Lambda$に対して，$g$は連続であるから，\S 6 ：問5より，
+    \[
+        g^{-1}(U_{\lambda}) =  U_{\lambda}'  \cap S
+    \]
+    となる開集合$U_{\lambda}'$がとれる．特に$(U_{\lambda}')_{\lambda \in \Lambda}$は$S$の開被覆となる．
+
+    $S$はコンパクトなので，$\lambda_1, \lambda_2, \ldots , \lambda_n \in \Lambda$が存在して
+    \[
+        S \subset \bigcup_{i=1}^{n} U_{\lambda_i}
+    \]
+    となり， $S$もコンパクトである．
+\end{proof}
+
+\begin{tleftbar}
+    \begin{proof}
+        $f$は単射なので，$f^{-1} \colon f(K) \mapsto K$がとれる．$\mathbb{R}^n$の開集合$W$をひとつとる．
+
+        $W \cup K^c$は開集合であるから
+        \[
+            (W \cup K^c)^c = W^c \cap K~(\subset K)
+        \]
+        は開集合で特にコンパクトである．
+
+        補題より，$f(W^c \cap K)$もコンパクトであり，
+        $W$の$f^{-1}$による逆像$W$は
+        \[
+            W' = (f(W^c \cap K))^c \cap f(K)
+        \]
+        であり$(f(W^c \cap K))^c$は開集合であるから
+        \S 6 ：問６より$f^{-1}$は$f(K)$上で連続である．
+    \end{proof}
+\end{tleftbar}
+
 
 \newpage
 
