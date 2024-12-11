@@ -2463,6 +2463,30 @@ $\norm{ \cdot }_1 : \mathbb{R}^n \ni ( x_1 , x_2 , \cdots , x_n ) \mapsto \sum_{
     \end{proof}
 \end{tleftbar}
 
+
+\section*{p72--74：10}
+\addcontentsline{toc}{section}{\texorpdfstring{p72--74：10}{p72--74：10}}
+
+\begin{tleftbar}
+    \begin{proof}
+        定義域上の任意の点$x$に対して，ある$ \lambda_x \in \Lambda$が存在して，
+        \[
+            f(x) \leqq f_{\lambda_x} (x) < f(x) + \varepsilon
+        \]
+        となる．
+
+        定義域上の点$a$を任意に一つ取ると，
+        $f_{\lambda_a}$は上半連続なので，適当な$\delta >0$に対して
+        \begin{align*}
+            \abs{x-a}<\delta & \Rightarrow f_{\lambda_a}(x) < f_{\lambda_a}(a)     \\
+                             & \Rightarrow  f_{\lambda_a}(x) < f (a) + \varepsilon \\
+                             & \Rightarrow f(x) < f(a) + \varepsilon
+        \end{align*}
+        となり，$f(x)$は$x=a$で上半連続である．
+    \end{proof}
+\end{tleftbar}
+
+
 \newpage
 
 \part*{第2章：微分法}
