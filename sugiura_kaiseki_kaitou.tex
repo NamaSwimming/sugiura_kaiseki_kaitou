@@ -2418,6 +2418,50 @@ $\norm{ \cdot }_1 : \mathbb{R}^n \ni ( x_1 , x_2 , \cdots , x_n ) \mapsto \sum_{
     \end{proof}
 \end{tleftbar}
 
+\newpage
+
+\section*{p72--74：9}
+\addcontentsline{toc}{section}{\texorpdfstring{p72--74：9}{p72--74：9}}
+
+\begin{tleftbar}
+    \begin{proof}
+        $g(x)$が下半連続であるとき，$-g(x)$は上半連続であるので，
+        $f(x)$が上半連続であることを示せば十分である．
+
+        $\varepsilon >0$をひとつとる．$ x\in K$に対して，
+        \[
+            \abs{y-x} < \delta_{(x)} \land y \in K \Rightarrow f(y) < f(x) + \varepsilon
+        \]
+        となる$\delta_{(x)}$がとれる．
+
+        $(U(x,\delta_{(x)})_{x\in K}$は$K$の開被覆であるので，
+        $K$のコンパクト性より，
+        \[
+            x_1 , x_2, \ldots , x_m \in K , \quad x_1 < x_2 < \cdots < x_m
+        \]
+        となるようにうまくとると，
+        \[
+            K \subset \bigcup_{i=1}^m U(x_i,\delta_i) ,\quad f(K) \subset \bigcup_{i=1}^m f(U(x_i,\delta_i))
+        \]
+        となる．
+
+        $f(x_i)$の$\mathrm{Max}$をとれば，$f(x_i)+\varepsilon$は$f(K)$の上界となるので，
+        $f(K)$は上に有界であり，特に$M = \sup f(K)$が存在する．
+
+        $n \geqq 1$に対して，$ M - 1/n < f(x_n) \leqq M$となる$x_n \in K$がとれて，
+        $\lim_{n \to \infty} f(x_n) = M$となる．
+
+        $K$は点列コンパクトなので，$(x_n)_{n \in \mathbb{N}}$の収束する部分列$(x_{n_k})_{k \in \mathbb{N}}$をとって
+        その極限値を$ x\in K$とする．
+        $\lim_{n \to \infty} f(x_{n(k)})=m$，$f$は上半連続であるから
+        $\varepsilon >0$に対して，十分大きい$k$で，
+        \[
+            \abs{M-f(x_{n(k)})} < \varepsilon,\quad f(x_{n(k)})<f(x)+\varepsilon
+        \]
+        となり，$M-2 \varepsilon < f(x) \leqq M $となる．
+        $\varepsilon$は任意にとれるので，$f(x) = M$となり，この$x$で$\mathrm{Max}$に達する．
+    \end{proof}
+\end{tleftbar}
 
 \newpage
 
