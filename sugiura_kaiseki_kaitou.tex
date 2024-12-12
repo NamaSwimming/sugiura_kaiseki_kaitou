@@ -2487,6 +2487,36 @@ $\norm{ \cdot }_1 : \mathbb{R}^n \ni ( x_1 , x_2 , \cdots , x_n ) \mapsto \sum_{
 \end{tleftbar}
 
 
+\section*{p72--74：11}
+\addcontentsline{toc}{section}{\texorpdfstring{p72--74：11}{p72--74：11}}
+
+\begin{tleftbar}
+    \begin{proof}
+        $K$，$L$がコンパクトであり，$f$の像は有界であるので，
+        $f(x,y)$を$L$を添字集合とする開集合$f_y (x)$とみなすと，
+        \[
+            f(x) =\inf_{y \in L} f_y (x)=\min_{y \in L} f(x,y)
+        \]
+        が定義できる．
+
+        各$f_y$は上半連続であり，問9より特に$\max $を持つ．
+        よって，
+        \[
+            \max_{x \in K} f(x) = \max_{x \in K} \min_{y \in L} f(x,y)
+        \]
+        が存在する．同様に，$\min_{y \in L} \max_{x \in K} f(x,y)$も存在する．
+
+        また，任意の$(x,y) \in K \times L$に対して，
+        \[
+            \min_{y \in L} \leqq f(x,y) \leqq \max_{x \in K} f(x,y)
+        \]
+        が成立するので，特に最左辺の$\max$を与える$x$と最右辺の$\min$を与える$y$に対して
+        \[
+            \max_{x \in K} \min_{y \in L} f(x,y) \leqq f(x,y) \leqq \min_{y \in L} \max_{x \in K} f(x,y).
+        \]
+    \end{proof}
+\end{tleftbar}
+
 \newpage
 
 \part*{第2章：微分法}
@@ -3523,7 +3553,7 @@ $\norm{ \cdot }_1 : \mathbb{R}^n \ni ( x_1 , x_2 , \cdots , x_n ) \mapsto \sum_{
             \frac{2}{a-b} \sqrt{\frac{a-b}{a+b}}
             \arctan \left({\sqrt{\frac{a-b}{a+b}} \tan \frac{x}{2}}\right) & if $a^2 > b^2$, \\
             \frac{1}{a-b} \sqrt{\frac{b-a}{b+a}}
-            \log \abs*{\frac{\displaystyle\tan \frac{x}{2}
+            \log \abs{\frac{\displaystyle\tan \frac{x}{2}
                     - \sqrt{\frac{b+a}{b-a}}}{\displaystyle\tan \frac{x}{2} + \sqrt{\frac{b+a}{b-a}}}}
                                                                            & if $a^2 < b^2$, \\
             \left(-a \tan \frac{x}{2}\right)^{-1}                          & if $a = -b$,    \\
