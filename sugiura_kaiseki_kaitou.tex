@@ -2519,6 +2519,36 @@ $\norm{ \cdot }_1 : \mathbb{R}^n \ni ( x_1 , x_2 , \cdots , x_n ) \mapsto \sum_{
 
 \newpage
 
+
+\section*{p72--74：12}
+\addcontentsline{toc}{section}{\texorpdfstring{p72--74：12}{p72--74：12}}
+
+\begin{tleftbar}
+    \begin{proof}
+        $(a,b) \in K \times L$が$f$の鞍点であるとき，(i)，(ii)より，
+        \[
+            f(a,b) = \max_{x \in K} f(x,b) = \min_{y \in L} f(a,y)
+        \]
+        が成立する．
+
+        また特に，
+        \[
+            \max_{x \in K} \min_{y \in L} f(x,y) \geqq \min_{y \in L} f(a,y) =f(a,b)= \max_{x \in K} f(x,b) \geqq \min_{y \in L} \max_{x \in K} f(x,y)
+        \]
+        であるので，問11 と併せて
+        \[
+            \max_{x \in K} \min_{y \in L} f(x,y) = \min_{y \in L} \max_{x \in K} f(x,y)
+        \]
+        を得る．
+
+        逆に上をみたすとき，
+        $\min_{y \in L} f(x,y)$の$K$上での$\max$を与える点を$a$，
+        $\max_{x \in K} f(x,y)$の$L$上での$\min$を与える点を$b$とすると，$(a,b)$は(i)，(ii)をみたし鞍点となる．
+    \end{proof}
+\end{tleftbar}
+
+\newpage
+
 \part*{第2章：微分法}
 \addcontentsline{toc}{part}{\texorpdfstring{第2章：微分法}{第2章：微分法}}
 
