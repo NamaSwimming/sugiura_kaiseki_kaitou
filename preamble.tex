@@ -95,6 +95,71 @@
 }
 \makeatother
 
+%コラム環境
+\colorlet{colexam}{lightgray!60!black}
+
+\newtcolorbox[auto counter,number format=\Roman]{column}{
+  empty,
+  title={\bfseries\sffamily Column \thetcbcounter}, % カウンタをローマ数字で表示
+  attach boxed title to top left,
+  boxed title style={
+      empty,
+      size=minimal,
+      toprule=2pt,
+      top=4pt,
+      left=1cm, % タイトルを右に移動
+      overlay={
+          % タイトルの上の線を削除
+          % \draw[colexam,line width=2pt]
+          %   ([yshift=-1pt]frame.north west) -- ([yshift=-1pt]frame.north east);
+        }
+    },
+  coltitle=colexam,
+  fonttitle=\Large\bfseries,
+  before=\par\medskip\noindent,
+  parbox=false,
+  boxsep=0pt,
+  left=5mm, % 左のマージンを増やしてタイトルを右に移動
+  right=3mm,
+  top=4pt,
+  breakable,
+  pad at break*=0mm,
+  vfill before first,
+  overlay unbroken={
+      \draw[colexam,line width=2pt]
+      ([xshift=-0.5pt,yshift=10pt]frame.north east)
+      -- ([xshift=-0.5pt]frame.south east);
+      \draw[colexam,line width=2pt]
+      ([xshift=-1pt,yshift=10pt]frame.north west)
+      -- ([xshift=-1pt]frame.south west);
+    },
+  overlay first={
+      \draw[colexam,line width=2pt]
+      ([xshift=-0.5pt,yshift=10pt]frame.north east)
+      -- ([xshift=-0.5pt]frame.south east);
+      \draw[colexam,line width=2pt]
+      ([xshift=-1pt,yshift=10pt]frame.north west)
+      -- ([xshift=-1pt]frame.south west);
+    },
+  overlay middle={
+      \draw[colexam,line width=2pt]
+      ([xshift=-0.5pt,yshift=10pt]frame.north east)
+      -- ([xshift=-0.5pt]frame.south east);
+      \draw[colexam,line width=2pt]
+      ([xshift=-1pt,yshift=10pt]frame.north west)
+      -- ([xshift=-1pt]frame.south west);
+    },
+  overlay last={
+      \draw[colexam,line width=2pt]
+      ([xshift=-0.5pt,yshift=10pt]frame.north east)
+      -- ([xshift=-0.5pt]frame.south east);
+      \draw[colexam,line width=2pt]
+      ([xshift=-1pt,yshift=10pt]frame.north west)
+      -- ([xshift=-1pt]frame.south west);
+    },%
+}
+
+
 %題名付き四角
 \usepackage{ascmac}
 \usepackage{fancybox}
@@ -152,22 +217,6 @@
 \renewcommand{\geq}{\geqq}
 \renewcommand{\le}{\leqq}
 \renewcommand{\ge}{\geqq}
-
-%proof環境の変更
-\makeatletter
-\renewenvironment{proof}[1][\proofname]{%
-  \par\pushQED{\qed}%
-  \normalfont
-  % 元の設定：\topsep6\p@\@plus6\p@、\trivlistなど
-  \topsep6\p@\@plus6\p@%
-  \trivlist
-  \item[\hskip\labelsep\itshape #1\@addpunct{.}]% デフォルトではここで終わっていた
-  % 以下に改行を挿入
-  \mbox{}\par% ここで改行と適当な空白を入れる
-}{%
-  \popQED\endtrivlist\@endpefalse
-}
-\makeatother
 
 \newcommand\kakko[1]{\noindent\textbf{\textgt{《#1》}}}
 
