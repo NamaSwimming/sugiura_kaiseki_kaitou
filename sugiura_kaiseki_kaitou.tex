@@ -1518,6 +1518,86 @@ $\lim_{n \to \infty} S_{2n}=S$，$\lim_{n \to \infty} S_{2n+1}=S$のとき，
 
 \newpage
 
+\section*{p49--50：7}
+\addcontentsline{toc}{section}{\texorpdfstring{p49--50：7}{p49--50：7}}
+
+
+\subsection*{p49--50：7-(i)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p49--50：7-(i)}{p49--50：7-(i)}}
+
+
+\kakko{補題}
+
+$h>0$をみたす$h$をとると，$n \in \mathbb{N}$のとき
+\[
+    1+nh \leqq (1+h)^n
+\]
+が成り立つ．
+
+\begin{proof}
+    $n \geqq 2$のとき，
+    \begin{align*}
+        (1+h)^n & = 1+nh + \frac{n(n-1)}{2!}h^2 + \dots + h^n \\
+                & \geqq 1+nh.
+    \end{align*}
+    $n = 1$のときもこれは成り立つ．よって示された．
+\end{proof}
+
+\begin{leftbar}
+    \begin{proof}
+        \begin{description}
+            \item[(I)] $ \abs{x}<1$のとき，$\abs{x}=1/(1+h)$とすると，
+                  \[
+                      2n x^{2n} = 2n \left( \frac{1}{1+h} \right)^{2n}
+                      \geqq \frac{2n}{1+2nh+n^2h^2}
+                      \to 0 \quad (n \to \infty).
+                  \]
+                  であるから，このとき
+                  \[
+                      \lim_{n \to \infty} \frac{1}{1+2nx^{2n}}  = \frac{1}{1+0}
+                      = 1
+                      \ne 0.
+                  \]
+                  したがってこのとき，系~5.1の対偶により，級数$\sum \frac{1}{1+2nx^{2n}}$は発散する．
+            \item [(II)] $ \abs{x}=1$のとき，与えられた級数は
+                  \[
+                      \sum \frac{1}{2n+1}
+                  \]
+                  となり，任意の$n \in \mathbb{N}$について，$ 1/n < 1/(2n+1) < 1/(2n)$であるから，調和級数$\sum 1/n$が発散することと併せて，この級数は発散する．
+            \item [(III)] $ \abs{x}>1$のとき，数列 $a_n$ を
+                  \[
+                      a_n = \frac{1}{2n x^{2n}}
+                  \]
+                  と定義する．このとき，隣接する項の比 $a_{n+1} / a_n$ は次のように計算される：
+                  \[
+                      \frac{a_{n+1}}{a_n} = \frac{\frac{1}{2(n+1)x^{2(n+1)}}}{\frac{1}{2n x^{2n}}}
+                      = \frac{2n x^{2n}}{2(n+1)x^{2n+2}}
+                      = \frac{1}{1 + \frac{1}{n}} \cdot \frac{1}{x^2}.
+                  \]
+
+                  ここで $\abs{x} > 1$ より $1/x^2 < 1$ であるから，
+                  $\frac{1}{1 + \frac{1}{n}} \cdot \frac{1}{x^2} \leq 1$ が成立する．したがって，定理5.6より
+                  \[
+                      \sum  \frac{1}{2n x^{2n}}
+                  \]
+                  は収束する．
+
+                  また，不等式
+                  \[
+                      0 < \frac{1}{1 + 2n x^{2n}} < \frac{1}{2n x^{2n}}
+                  \]
+                  が成立することと，定理5.5~1)より，級数
+                  \[
+                      \sum \frac{1}{1 + 2n x^{2n}}
+                  \]
+                  も収束する．
+        \end{description}
+        以上の考察により，この級数が収束するのは$\abs{x}>1$のときである．
+    \end{proof}
+\end{leftbar}
+
+\newpage
+
 \section*{p49--50：8}
 \addcontentsline{toc}{section}{\texorpdfstring{p49--50：8}{p49--50：8}}
 
