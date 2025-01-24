@@ -1533,7 +1533,7 @@ $\lim_{n \to \infty} S_{2n}=S$，$\lim_{n \to \infty} S_{2n+1}=S$のとき，
               \[
                   1 + 2nx^{2n} \leqq 1+2n ,\quad \therefore ~ \frac{1}{1+2n} \leqq \frac{1}{1+2nx^{2n}}.
               \]
-              であり，
+              また，
               \[
                   \sum \frac{1}{1+2n} =\infty
               \]
@@ -1547,18 +1547,7 @@ $\lim_{n \to \infty} S_{2n}=S$，$\lim_{n \to \infty} S_{2n+1}=S$のとき，
               \[
                   \frac{1}{1+2n x^{2n}} \leqq \frac{1}{1+2 \cdot 1 \cdot x^{2n}} < \frac{1}{2x^{2n}} <\left( \frac{1}{x} \right)^{2n}
               \]
-              である．
-
-              $c_n = (1/x)^{2n}$としたとき，数列$(c_n)_{n \in \mathbb{N}}$の第$n$部分和を$S_n$とすると
-              \[
-                  S_n = \frac{x^{2n+2}-1}{x^{2n}(x^2-1)}
-              \]
-              であるから，
-              \begin{align*}
-                  \sum \left( \frac{1}{x} \right)^{2n} & =\lim_{n \to \infty} S_n \\
-                                                       & = \frac{x^2}{x^2-1}
-              \end{align*}
-              となり，級数$\sum c_n$は収束する．ゆえに定理 5.5~1)により，
+              であり，なおかつ$\sum ( 1/x )^{2n}$は収束する．ゆえに定理 5.5~1)により，
               \[
                   \sum \frac{1}{1+2nx^{2n}}
               \]
