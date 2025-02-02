@@ -1561,6 +1561,114 @@ $\lim_{n \to \infty} S_{2n}=S$，$\lim_{n \to \infty} S_{2n+1}=S$のとき，
 
 \newpage
 
+\subsection*{p49--50：7-(ii)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p49--50：7-(ii)}{p49--50：7-(ii)}}
+
+
+\kakko{補題1}
+
+$n$を自然数とするとき，
+\[
+    \frac{(2n-1)!!}{(2n)!!} < \frac{1}{\sqrt{2n+1}}
+\]
+である．
+
+\begin{proof}
+    \[
+        (2k-1)(2k+1)  = 4k^2-1 < 4k^2
+    \]
+    だから，$ k=1,2,\ldots,n$について不等式をかけて
+    \begin{align*}
+        \frac{((2n+1)!!)^2}{2n+1}            & < ((2n)!!)^2                            \\
+        \therefore ~ \frac{(2n+1)!!}{(2n)!!} & < \sqrt{2n+1}=\frac{2n+1}{\sqrt{2n+1}}.
+    \end{align*}
+    よって，
+    \[
+        \frac{(2n-1)!!}{(2n)!!} < \frac{1}{\sqrt{2n+1}}.
+    \]
+\end{proof}
+
+\kakko{補題2（ラーベの判定法）}
+
+正項級数$\sum a_n$について，
+\[
+    \lim_{n\to\infty} n \left(\frac{a_n}{a_{n+1}}-1 \right) = r
+\]
+が存在するとき，$\sum a_n$は$r >1$ならば収束し，$r < 1$ならば発散する．
+
+\begin{proof}
+    $r>1$のとき，$ 1< r_0 < r$をみたす$r_0 \in \mathbb{R}$をとる．仮定より，ある$N_1 \in \mathbb{N}$が存在して，
+    任意の$n \in \mathbb{N}$に対して，$n \geqq N_1$ならば$n (a_n/a_{n+1}-1) > r_0$となる．
+
+    このことから，$ n \geqq N_1$ならば，
+    \[
+        n a_n -(n+1)a_{n+1} > (r_0-1) a_{n+1}
+    \]
+    であるから，
+    \[
+        (r_0-1) \sum_{n=N_1}^{m} a_{n+1}  < \sum_{n=N_1}^{m} (n a_n - (n+1) a_{n+1})
+        <N_1 a_{N_1} - (m+1) a_{m+1}
+        < N_1 a_{N_1}.
+    \]
+    このことから，両辺の$m \to \infty$とした極限をとり，
+    \[
+        \sum_{n=N_1}^{\infty} a_n <\frac{N_1 a_{N_1}}{r_0-1}
+    \]
+    を得る．ゆえに$\sum a_n$は収束する．
+
+    $r < 1$のとき，仮定により，ある$N_2 \in \mathbb{N}$が存在して
+    任意の$n \in \mathbb{N}$に対して，$n \geqq N_2$ならば$n(a_n/a_{n+1}-1) < 1$となる．
+
+    このことから，$n \geqq N_2$ならば，
+    \[
+        n a_n < (n+1) a_{n+1}
+    \]
+    であるから， $N_2 a_{N_2} < (N_2 +1)a_{N_2+1} <  \dots< n a_n $より
+    \[
+        a_n > \frac{N_2 a_{N_2}}{n} \quad (n \geqq N_2)
+    \]
+    を得る．よって比較判定法から$\sum a_n$は発散する．
+\end{proof}
+
+\begin{tleftbar}
+    \begin{proof}
+        \[
+            a_n = \frac{(2n-1)!!}{(2n)!!} (1-x^2)^n
+        \]
+        とおく\footnote{二重階乗の記法を用いた．}．
+
+        ここで，
+        \[
+            \frac{(2n-1)!!}{(2n)!!} = \frac{(2n)!}{2^{2n}(n!)^2} = \frac{1}{4^n} \binom{2n}{n}
+        \]
+        なので，
+        \[
+            \abs{a_{n+1}/a_n}  = \frac{\dbinom{2n+2}{n+1}}{4\dbinom{2n}{n}} \abs{1-x^2}
+            =  \frac{\dfrac{(2n+2)!}{((n+1)!)^2}}{4\cdot \dfrac{(n!)^2}{(2n)!}} \abs{1-x^2}
+            =  \frac{(2n+1)(n+1)}{2(n+1)^2} \abs{1-x^2}.
+        \]
+        よって，
+        \[
+            \lim_{n\to\infty} \abs{a_{n+1}/a_n}  = \lim_{n\to\infty}  \frac{(2n+1)(n+1)}{2(n+1)^2} \abs{1-x^2} =\abs{1-x^2}.
+        \]
+        したがって，ダランベールの判定法により，$\abs{1-x^2}<1$すなわち$ -\sqrt{2}<x<0$，$0<x<\sqrt{2}$のとき，この級数は収束する．
+
+        $1-x^2=-1$すなわち$x=\pm \sqrt{2}$のとき，補題1を用いると，
+        \[
+            \frac{(2n-1)!!}{(2n)!!}< \frac{1}{\sqrt{2n+1}} \to 0 \quad (n \to \infty)
+        \]
+        であり，$ \frac{(2n-1)!!}{(2n)!!}$は単調減少であるから，この級数は収束する．
+
+        $1-x^2=1$すなわち$x=0$のとき，
+        \begin{align*}
+            n \left(\frac{a_n}{a_{n+1}}-1\right) & =n\left(\frac{2n+2}{2n+1}-1\right)                   \\
+                                                 & =\frac{n}{2n+1} \to \frac{1}{2} \quad (n \to \infty)
+        \end{align*}
+        であるから，ラーベの判定法により，この級数は発散する．
+    \end{proof}
+\end{tleftbar}
+
+\newpage
 \section*{p49--50：8}
 \addcontentsline{toc}{section}{\texorpdfstring{p49--50：8}{p49--50：8}}
 
