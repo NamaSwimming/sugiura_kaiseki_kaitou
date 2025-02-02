@@ -1631,41 +1631,44 @@ $n$を自然数とするとき，
 \end{proof}
 
 \begin{tleftbar}
-    \begin{proof}
-        \[
-            a_n = \frac{(2n-1)!!}{(2n)!!} (1-x^2)^n
-        \]
-        とおく\footnote{二重階乗の記法を用いた．}．
+    \[
+        a_n = \frac{(2n-1)!!}{(2n)!!} (1-x^2)^n
+    \]
+    とおく\footnote{二重階乗の記法を用いた．}．
 
-        ここで，
-        \[
-            \frac{(2n-1)!!}{(2n)!!} = \frac{(2n)!}{2^{2n}(n!)^2} = \frac{1}{4^n} \binom{2n}{n}
-        \]
-        なので，
-        \[
-            \abs{a_{n+1}/a_n}  = \frac{\dbinom{2n+2}{n+1}}{4\dbinom{2n}{n}} \abs{1-x^2}
-            =  \frac{\dfrac{(2n+2)!}{((n+1)!)^2}}{4\cdot \dfrac{(n!)^2}{(2n)!}} \abs{1-x^2}
-            =  \frac{(2n+1)(n+1)}{2(n+1)^2} \abs{1-x^2}.
-        \]
-        よって，
-        \[
-            \lim_{n\to\infty} \abs{a_{n+1}/a_n}  = \lim_{n\to\infty}  \frac{(2n+1)(n+1)}{2(n+1)^2} \abs{1-x^2} =\abs{1-x^2}.
-        \]
-        したがって，ダランベールの判定法により，$\abs{1-x^2}<1$すなわち$ -\sqrt{2}<x<0$，$0<x<\sqrt{2}$のとき，この級数は収束する．
+    ここで，
+    \[
+        \frac{(2n-1)!!}{(2n)!!} = \frac{(2n)!}{2^{2n}(n!)^2} = \frac{1}{4^n} \binom{2n}{n}
+    \]
+    なので，
+    \[
+        \abs{a_{n+1}/a_n}  = \frac{\dbinom{2n+2}{n+1}}{4\dbinom{2n}{n}} \abs{1-x^2}
+        =  \frac{\dfrac{(2n+2)!}{((n+1)!)^2}}{4\cdot \dfrac{(n!)^2}{(2n)!}} \abs{1-x^2}
+        =  \frac{(2n+1)(n+1)}{2(n+1)^2} \abs{1-x^2}.
+    \]
+    よって，
+    \[
+        \lim_{n\to\infty} \abs{a_{n+1}/a_n}  = \lim_{n\to\infty}  \frac{(2n+1)(n+1)}{2(n+1)^2} \abs{1-x^2} =\abs{1-x^2}.
+    \]
+    したがって，ダランベールの判定法により，$\abs{1-x^2}<1$すなわち$ -\sqrt{2}<x<0$，$0<x<\sqrt{2}$のとき，この級数は収束する．
 
-        $1-x^2=-1$すなわち$x=\pm \sqrt{2}$のとき，補題1を用いると，
-        \[
-            \frac{(2n-1)!!}{(2n)!!}< \frac{1}{\sqrt{2n+1}} \to 0 \quad (n \to \infty)
-        \]
-        であり，$ \frac{(2n-1)!!}{(2n)!!}$は単調減少であるから，この級数は収束する．
+    $1-x^2=-1$すなわち$x=\pm \sqrt{2}$のとき，補題1を用いると，
+    \[
+        \frac{(2n-1)!!}{(2n)!!}< \frac{1}{\sqrt{2n+1}} \to 0 \quad (n \to \infty)
+    \]
+    であり，$ \frac{(2n-1)!!}{(2n)!!}$は単調減少であるから，この級数は収束する．
 
-        $1-x^2=1$すなわち$x=0$のとき，
-        \begin{align*}
-            n \left(\frac{a_n}{a_{n+1}}-1\right) & =n\left(\frac{2n+2}{2n+1}-1\right)                   \\
-                                                 & =\frac{n}{2n+1} \to \frac{1}{2} \quad (n \to \infty)
-        \end{align*}
-        であるから，ラーベの判定法により，この級数は発散する．
-    \end{proof}
+    $1-x^2=1$すなわち$x=0$のとき，
+    \begin{align*}
+        n \left(\frac{a_n}{a_{n+1}}-1\right) & =n\left(\frac{2n+2}{2n+1}-1\right)                   \\
+                                             & =\frac{n}{2n+1} \to \frac{1}{2} \quad (n \to \infty)
+    \end{align*}
+    であるから，ラーベの判定法により，この級数は発散する．
+
+    以上のことから，求める$x$の範囲は
+    \[
+        -\sqrt{2} \leqq x < 0 , \quad 0 < x \leqq \sqrt{2}.
+    \]
 \end{tleftbar}
 
 \newpage
