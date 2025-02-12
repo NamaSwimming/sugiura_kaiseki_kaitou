@@ -1405,7 +1405,7 @@ $\lim_{n \to \infty} S_{2n}=S$，$\lim_{n \to \infty} S_{2n+1}=S$のとき，
     定理 5.7 (Ratio Test)より収束する．
 \end{screen}
 
-\subsection*{p49--50：2-(x)}
+\subsection*{p49--50：2-(x)} \label{p49--50：2-(x)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p49--50：2-(x)}{p49--50：2-(x)}}
 
 \begin{screen}
@@ -4270,6 +4270,54 @@ $0 \cdot \infty$や$\infty - \infty$などは定義しない．
 \end{leftbar}
 
 \newpage
+
+\section*{p371：1}
+\addcontentsline{toc}{section}{\texorpdfstring{p371：1}{p371：1}}
+
+
+\subsection*{p371：1-(i)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p371：1-(i)}{p371：1-(i)}}
+
+\begin{tleftbar}
+    $n =0$のとき，$\sqrt{1+n^2}-n =1-0= 1$であり，この項は有限なので級数の収束・発散に影響しない．
+
+    $n \geq 1$のとき，
+    \begin{align*}
+        \sqrt{1+n^2}-n & = \frac{(\sqrt{1+n^2}+n)(\sqrt{1+n^2}-n)}{\sqrt{1+n^2}+n} \\
+                       & = \frac{1}{\sqrt{1+n^2}+n}                                \\
+                       & \geqq \frac{1}{\sqrt{n^2+n^2}+n}                          \\
+                       & \geqq \frac{1}{(\sqrt{2}+1)n}
+    \end{align*}
+    である．ここで，
+    \[
+        \sum_{n=1}^{\infty} \frac{1}{(\sqrt{2}+1)n} =\infty
+    \]
+    であるから，比較判定法により，$ \sum_{n=0}^{\infty} ( \sqrt{1+n^2}-n )$は発散する．
+\end{tleftbar}
+
+
+\subsection*{p371：1-(iii)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p371：1-(iii)}{p371：1-(iii)}}
+
+\begin{tleftbar}
+    $n \in \mathbb{N}$に対して，$ \sqrt[n]{n} \leqq n$であるから，
+
+    \[
+        \frac{1}{\sqrt[n]{n}} \geqq \frac{1}{n}
+    \]
+    となる．
+
+    $ \sum_{n=1}^{\infty} \frac{1}{n}$は発散するから，比較判定法により，$ \sum_{n=1}^{\infty} \frac{1}{\sqrt[n]{n}}$も発散する．
+\end{tleftbar}
+
+
+\subsection*{p371：1-(iv)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p371：1-(iv)}{p371：1-(iv)}}
+
+\hyperref[p49--50：2-(x)]{p49--50：2-(x)}と重複している．
+
+\newpage
+
 
 \begin{thebibliography}{9}
     \bibitem{sugiura} 杉浦光夫『解析入門I』，東京大学出版会，1980
