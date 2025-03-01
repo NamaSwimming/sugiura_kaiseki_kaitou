@@ -2933,7 +2933,9 @@ $\norm{ \cdot }_1 : \mathbb{R}^n \ni ( x_1 , x_2 , \cdots , x_n ) \mapsto \sum_{
 
 \kakko{補題}
 
-$x$についての$n$次多項式 $H_n (x)$の隣り合う$2$根を$a < b$としたとき，
+$H_n(x)$は$n$次多項式で，$n$個の相異なる実根を持つとする．
+
+このとき，$H_n (x)$の隣り合う$2$根を$a < b$とすると，
 \[
     H_n'(a) H_n'(b)<0.
 \]
@@ -2960,64 +2962,190 @@ $x$についての$n$次多項式 $H_n (x)$の隣り合う$2$根を$a < b$とし
     \]
 \end{proof}
 
+補題をふまえた上で，いくつかの命題に分けて証明していく．
+
+\kakko{命題1}
+
+テキストの(i)，(ii)が成り立つ．
+
+
 \begin{leftbar}
-    まず定義
-    \[
-        \frac{d^n}{dx^n}\bigl(e^{-x^2}\bigr)
-        \;=\;
-        (-1)^n\,e^{-x^2}\,H_n(x)
-    \]
-    を確認する．左辺は $e^{-x^2}$ に $n$ 回の微分を施したものなので，右辺の $H_n(x)$ は明らかに $x$ の多項式成分となる．さらに最高次の微分を考えると，$x^n$ の項が最上位で残ることから，$H_n(x)$ は次数 $n$ の多項式であることが分かる．
-
-    (i)について，
-    \begin{align*}
-          & \frac{d}{dx} \left[ e^{x^2} \frac{d^n}{dx^n} (e^{-x^2} )\right]                      \\
-        = & 2x e^{x^2} \frac{d^n}{dx^n} (e^{-x^2}) + e^{x^2} \frac{d^{n+1}}{dx^{n+1}} (e^{-x^2})
-    \end{align*}
-    であるから，この式に$(-1)^n$をかけて整理すると，
-    \begin{align*}
-        (-1)^n \frac{d}{dx} \left[ e^{x^2} \frac{d^n}{dx^n} (e^{-x^2} )\right] & = 2x(-1)^n e^{x^2} \frac{d^n}{dx^n} (e^{-x^2}) -(-1)^{n+1} e^{x^2} \frac{d^{n+1}}{dx^{n+1}} (e^{-x^2}) \\
-        \therefore ~ H_n ' (x)                                                 & = 2x H_n(x) - H_{n+1}(x).
-    \end{align*}
-    整理すると
-    \[
-        H_{n+1}(x) =  2x H_n(x)-H_n'(x).
-    \]
-    (ii)について，
-    $ (e^{-x^2})^{(n+1)} = \{ (-2x)e^{-x^2} \}^{(n)}$であるから，
-    \begin{align*}
-        (e^{-x^2})^{(n+1)} & = (-2xe^{-x^2})^{(n)}                                                                                                                                  \\
-                           & = -2 (xe^{-x^2})^{(n)}                                                                                                                                 \\
-                           & = -2 \sum_{r=0}^{n} \binom{n}{r} x^{(n)} (e^{-x^2})^{(n-r)}                                                                                            \\
-                           & = -2 \left ( \binom{n}{0} x^{(0)} (e^{-x^2})^{(n-0)} + \binom{n}{1} x^{(1)} (e^{-x^2})^{(n-1)} + \dots + \binom{n}{n} x^{(n)} (e^{-x^2})^{(0)} \right) \\
-                           & = -2 \left(  x (e^{-x^2})^{(n)} + n x^{(1)} (e^{-x^2})^{(n-1)} \right)                                                                                 \\
-                           & = -2 \left ( x \frac{d^n}{dx^n} (e^{-x^2}) + n \frac{d^{n-1}}{dx^{n-1}} (e^{-x^2}) \right).
-    \end{align*}
-    よって，
-    \begin{align*}
-        (-1)^{n+1} e^{x^2} \frac{d^{n+1}}{d x^{n+1}} (e^{-x^2}) & = 2 (-1)^n e^{x^2} x \frac{d^n}{dx^n} (e^{-x^2}) -2 n (-1)^{n-1} e^{x^2}\frac{d^{n-1}}{dx^{n-1}} (e^{-x^2}) \\
-        \therefore ~ H_{n+1} (x)                                & = 2x H_n(x) - 2nH_{n-1}(x).
-    \end{align*}
-    これと(i)の結果を比較すると，
-    \[
-        H '' (x) - 2x H_n' (x) + 2nH_n (x)=0.
-    \]
-
-    また，$ H_n(x)$の隣り合う$2$根を$a$，$b$とすると
-    補題より，
-    \[
-        H_n '(a) H_n '(b)<0
-    \]
-    である．
-
-    $ H_n '(x)=2n H_{n-1}(x)$より，
-    \[
-        H_{n-1}(a) H_{n-1}(b) < 0
-    \]
-    このことから，$a$と$b$の間に$H_{n-1}(x)$の根が存在することがわかった．
-
-    以上のことから，全ての事柄が証明された．
+    \begin{proof}
+        (i)について，
+        \begin{align*}
+              & \frac{d}{dx} \left[ e^{x^2} \frac{d^n}{dx^n} (e^{-x^2} )\right]                      \\
+            = & 2x e^{x^2} \frac{d^n}{dx^n} (e^{-x^2}) + e^{x^2} \frac{d^{n+1}}{dx^{n+1}} (e^{-x^2})
+        \end{align*}
+        であるから，この式に$(-1)^n$をかけて整理すると，
+        \begin{align*}
+            (-1)^n \frac{d}{dx} \left[ e^{x^2} \frac{d^n}{dx^n} (e^{-x^2} )\right] & = 2x(-1)^n e^{x^2} \frac{d^n}{dx^n} (e^{-x^2}) -(-1)^{n+1} e^{x^2} \frac{d^{n+1}}{dx^{n+1}} (e^{-x^2}) \\
+            \therefore ~ H_n ' (x)                                                 & = 2x H_n(x) - H_{n+1}(x).
+        \end{align*}
+        整理すると
+        \[
+            H_{n+1}(x) =  2x H_n(x)-H_n'(x).
+        \]
+        (ii)について，
+        $ (e^{-x^2})^{(n+1)} = \{ (-2x)e^{-x^2} \}^{(n)}$であるから，
+        \begin{align*}
+            (e^{-x^2})^{(n+1)} & = (-2xe^{-x^2})^{(n)}                                                                                                                                  \\
+                               & = -2 (xe^{-x^2})^{(n)}                                                                                                                                 \\
+                               & = -2 \sum_{r=0}^{n} \binom{n}{r} x^{(n)} (e^{-x^2})^{(n-r)}                                                                                            \\
+                               & = -2 \left ( \binom{n}{0} x^{(0)} (e^{-x^2})^{(n-0)} + \binom{n}{1} x^{(1)} (e^{-x^2})^{(n-1)} + \dots + \binom{n}{n} x^{(n)} (e^{-x^2})^{(0)} \right) \\
+                               & = -2 \left(  x (e^{-x^2})^{(n)} + n x^{(1)} (e^{-x^2})^{(n-1)} \right)                                                                                 \\
+                               & = -2 \left ( x \frac{d^n}{dx^n} (e^{-x^2}) + n \frac{d^{n-1}}{dx^{n-1}} (e^{-x^2}) \right).
+        \end{align*}
+        よって，
+        \begin{align*}
+            (-1)^{n+1} e^{x^2} \frac{d^{n+1}}{d x^{n+1}} (e^{-x^2}) & = 2 (-1)^n e^{x^2} x \frac{d^n}{dx^n} (e^{-x^2}) -2 n (-1)^{n-1} e^{x^2}\frac{d^{n-1}}{dx^{n-1}} (e^{-x^2}) \\
+            \therefore ~ H_{n+1} (x)                                & = 2x H_n(x) - 2nH_{n-1}(x).
+        \end{align*}
+        これと(i)の結果を比較すると，
+        \[
+            H '' (x) - 2x H_n' (x) + 2nH_n (x)=0.
+        \]
+    \end{proof}
 \end{leftbar}
+
+\kakko{命題2}
+
+$H_n (x)$は$n$次多項式である．
+
+\begin{leftbar}
+    \begin{proof}
+        $n$についての数学的帰納法により示す．
+        \begin{enumerate}[(I)]
+            \item $n =0, 1$のとき，
+                  \begin{align*}
+                      H_0 (x) & = 1,  \\
+                      H_1 (x) & = 2x, \\
+                  \end{align*}
+                  であるから，$n=0, 1 $のとき成立する．
+            \item $k \in \mathbb{N}$を任意に取り，$H_k (x)$が$k$次多項式であると仮定する．
+                  $ H_{k+1}(x) =  2x H_k(x)-H_k'(x)$であるから，
+                  帰納法の仮定により，$ 2 x H_k (x)$が$k+1$次多項式であることと，$H_k'(x)$が$k-1$次多項式であることが従い，$H_{k+1}(x)$も$k+1$次多項式である．
+        \end{enumerate}
+        よって数学的帰納法により，$H_n (x)$は任意の$n$について$n$次多項式である．
+    \end{proof}
+\end{leftbar}
+
+\kakko{命題3}
+
+$H_n(x)$ は，任意の $n \in \mathbb{N}$ に対して $n$ 個の相異なる実根をもつ．
+
+\begin{leftbar}
+    \begin{proof}
+        数学的帰納法およびRolleの定理を用いて示す．
+        \noindent
+        \begin{enumerate}[(I)]
+            \item \mbox{}
+                  \[
+                      H_0(x) = 1, \quad H_1(x) = 2x, \quad H_2(x) = 2x^2-1.
+                  \]
+                  $H_0(x)$ は定数多項式で実根を持たない(ただし「$n=0$個」の根と解釈)，
+                  $H_1(x) = 2x$ は $x=0$ に $1$つの実根をもつ．
+                  $H_2(x)$ は相異なる$2$つの実根をもつ．
+                  したがって，$n=0,1,2$のときに成立する．
+            \item
+                  $k \geqq 2$ について，
+                  $H_k(x)$は$k$個の相異なる実根をもつ
+                  と仮定する．$H_k(x)$ の実根を
+                  \[
+                      \alpha_1 < \alpha_2 < \dots < \alpha_k
+                  \]
+                  と表す．
+
+                  Hermite多項式の基本的性質として，以下の関係式が成り立つ：
+                  \[
+                      H_{k+1}(x)  = 2xH_k(x)-H_k'(x).
+                  \]
+                  まず，Rolleの定理により，開区間 $(\alpha_i,\alpha_{i+1})$ に対して少なくとも1つの $\beta_i$ が存在し，
+                  \[
+                      \alpha_i < \beta_i < \alpha_{i+1},\quad
+                      H_k'(\beta_i) = 0
+                      \quad (i=1,2,\dots,k-1)
+                  \]
+                  が成り立つ．
+                  $H_k '(x)$は$k-1$次多項式であるから，そのような点は$\beta_i$のみである．
+                  よって$i = 0,1,\dots,k-1$に対し，$(\beta_i,\beta_{i+1})$においては$H_k '(x) \ne 0$であり，
+                  かつ$H_k '(x)$の符号は一定である（ただし，$ \beta_0 =-\infty$，$\beta_{k+1} = \infty$とする）．
+
+                  特に，$(\beta_{k-1},\beta_k)$で$H_k '(x)$は単調増加または単調減少であり，
+                  $\lim_{x \to \infty} H_k (x) =\infty$だから消去法で単調増加である．
+                  つまり$H_k '(x) (\alpha_k) > 0$である．
+
+                  (i)の結果により$H_{n+1} (\alpha_i) =-H_k'(\alpha_i)$であるから，
+                  補題により，$H_{n+1}(\alpha_i)$の符号は交互に変わり，
+                  かつ$H_{k+1}(\alpha_k) < 0$であるから，
+
+                  以上の議論から，$k$ が偶数のときは $\alpha_1$ での値が正となり，以降交互に符号が変化して最後 $\alpha_k$ では負になる．
+                  一方，$k$ が奇数のときは $\alpha_1$ での値が負となり，以降交互に符号が変化して最後 $\alpha_k$ ではやはり負になる．
+                  すなわち，$i=1,\dots,k$ について $H_{k+1}(\alpha_i)$ の符号は必ず「交互列」となり，最終項は負である．
+
+                  ここで中間値の定理を適用すると，
+                  \[
+                      (\alpha_1,\alpha_2),~(\alpha_2,\alpha_3),~\dots,~(\alpha_{k-1},\alpha_k)
+                  \]
+                  の各区間内で $H_{k+1}(x)$ は符号を変えるため，少なくとも1つずつ実根をもつ．
+                  よってここまでで合計 $(k-1)$ 個の相異なる根が存在する．
+
+                  最後に，$H_{k+1}(x)$ の最高次項は $2^{k+1} x^{k+1}$ であり，
+                  \[
+                      \lim_{x \to +\infty} H_{k+1}(x) =
+                      \begin{cases}
+                          +\infty & (k+1 \text{が偶数}) \\
+                          -\infty & (k+1 \text{が奇数})
+                      \end{cases},
+                      \quad
+                      \lim_{x \to -\infty} H_{k+1}(x) =
+                      \begin{cases}
+                          +\infty & (k+1 \text{が偶数}) \\
+                          -\infty & (k+1 \text{が奇数})
+                      \end{cases}.
+                  \]
+                  したがって，$\alpha_1$ より左側または $\alpha_k$ より右側にも
+                  もう1つずつ根が必ず存在する．
+                  （偶奇によって「左端」と「右端」のどちらに2つ目の根が現れるかが変わるが，
+                  いずれにせよ両側あわせて最終的に2つの根が得られるという意味．）
+
+                  以上をまとめると，
+                  \[
+                      (\alpha_j,\alpha_{j+1}) \text{ に } (k-1)\text{ 個}, \quad
+                      (-\infty,\alpha_1) \text{ または } (\alpha_k,\infty) \text{ に } 2\text{ 個}
+                  \]
+                  の相異なる実根が存在するので，合計で $k+1$ 個の実根が存在する．
+
+                  以上により，$H_k(x)$ が $k$ 個の実根をもつとき，$H_{k+1}(x)$ は
+                  $k+1$ 個の相異なる実根をもつことが示された．
+        \end{enumerate}
+        よって数学的帰納法により，すべての $n \in \mathbb{N}$（あるいは $n \ge 0$）に対し
+        $H_n(x)$ は $n$ 個の相異なる実根をもつことが証明された．
+    \end{proof}
+\end{leftbar}
+
+\kakko{命題4}
+
+$H_n(x)$の隣り合う二根の間に$H_{n-1}(x)$の根が一つある
+
+
+\begin{leftbar}
+    \begin{proof}
+        $H_n(x)$の隣り合う$2$根を$a$，$b$とすると
+        補題より，
+        \[
+            H_n '(a) H_n '(b)<0
+        \]
+        である．
+
+        $ H_n '(x)=2n H_{n-1}(x)$より，
+        \[
+            H_{n-1}(a) H_{n-1}(b) < 0
+        \]
+        このことから，$a$と$b$の間に$H_{n-1}(x)$の根が存在することがわかった．
+    \end{proof}
+\end{leftbar}
+以上のことから，全ての事柄が証明された．\qed
+
 \newpage
 \section*{p106--107：3}
 \addcontentsline{toc}{section}{\texorpdfstring{p106--107：3}{p106--107：3}}
