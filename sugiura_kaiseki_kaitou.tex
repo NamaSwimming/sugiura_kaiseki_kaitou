@@ -1836,6 +1836,31 @@ $n$を自然数とするとき，
     を得て，これが答えである．
 \end{tleftbar}
 
+\subsection*{p63--64：2-(\romannumeral5)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p63--64：2-(\romannumeral5)}{p63--64：2-(\romannumeral5)}}
+
+\begin{leftbar}
+    \begin{align*}
+        x(1-y^n)-y(1-x^n)-x^n+y^n
+         & = x-y+xy^n+x^ny-x^n+y^n                                     \\
+         & = x(1-x^{n-1})-y(1-y^{n-1})+xy(x^{n-1}-y^{n-1})             \\
+         & = x(1-x)(1+\dots+x^{n-2})+y(x^n-xy^{n-1}+y^{n-1}-1)         \\
+         & = x(1-x)(1+\dots+x^{n-2})+y(1-x)(y^{n-1}-(1+\dots+x^{n-1})) \\
+         & = (1-x)(y^n-y(1+\dots+x^{n-1})+x+\dots+x^{n-1})             \\
+         & = (1-x)(1-y)((x-y)+(x^2-y^2)+\dots+(x^{n-1}-y^{n-1}))       \\
+         &
+        \begin{multlined}
+            = (1-x)(1-y)(x-y)(1+(x+y)+(x^2+xy+y^2)+\dots \\
+            +(x^{n-2}+x^{n-3}y+\dots+y^{n-2}))
+        \end{multlined}
+    \end{align*}
+    だから，所期の極限は最後の因子の項の個数に等しい．よって答えは
+    \[
+        1+2+\ldots+(n-1) = \frac{n(n-1)}{2}
+    \]
+    となる．
+\end{leftbar}
+
 
 \section*{p63--64：3}
 \addcontentsline{toc}{section}{\texorpdfstring{p63--64：3}{p63--64：3}}
