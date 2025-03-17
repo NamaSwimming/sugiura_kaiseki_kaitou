@@ -2224,7 +2224,6 @@ $n$を自然数とするとき，
 \end{tleftbar}
 
 
-
 \subsection*{p72--74：1-(\romannumeral2)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p72--74：1-(\romannumeral2)}{p72--74：1-(\romannumeral2)}}
 
@@ -2760,6 +2759,267 @@ $\norm{ \cdot }_1 : \mathbb{R}^n \ni ( x_1 , x_2 , \cdots , x_n ) \mapsto \sum_{
         $\max_{x \in K} f(x,y)$の$L$上での$\min$を与える点を$b$とすると，$(a,b)$は(\romannumeral1)，(\romannumeral2)をみたし鞍点となる．
     \end{proof}
 \end{tleftbar}
+\newpage
+
+
+\section*{p79--80：1}
+\addcontentsline{toc}{section}{\texorpdfstring{p79--80：1}{p79--80：1}}
+
+\begin{leftbar}
+    \begin{proof}
+        $C$ 上の点 $P$ をひとつとり，$C$ の中心とのある方向のなす角を考えることで，
+        $[0,2\pi]$ から $C$ への全射な連続写像 $\varphi$ を得る．
+        $[0,\pi]$ 上で定義された関数
+        \[
+            g(x) = f\circ \varphi(x) - f \circ \varphi(x+\pi)
+        \]
+        に対して，$g(0) = g(\pi) = 0$ ならば，$\varphi(0)$ と $\varphi(\pi)$ を通る直線は一致する．一方，$g(0) \ne 0$ の場合は
+        \[
+            g(0)g(\pi) < 0
+        \]
+        となり，$[0,\pi]$ 上で $g(x)$ は連続なので，中間値の定理より
+        \[
+            0 < c < \pi
+        \]
+        なるある $c$ で
+        \[
+            g(c) = 0
+        \]
+        となる．よって，$\varphi(c)$ と $\varphi(c+\pi)$ を通る直線が一致する．
+    \end{proof}
+\end{leftbar}
+
+
+\section*{p79--80：2}
+\addcontentsline{toc}{section}{\texorpdfstring{p79--80：2}{p79--80：2}}
+
+\begin{leftbar}
+    \begin{proof}
+        各$\lambda$に対して，$U_\lambda= A \cap U_\lambda '$となる$ U_\lambda ' \in \mathcal{O} (\mathbb{R}^n)$をとる．
+        \begin{enumerate}[(i)]
+            \item
+                  \begin{align*}
+                      \bigcup_{\lambda \in \Lambda} U_\lambda & = \bigcup_{\lambda \in \Lambda} (A \cap U_\lambda ')  \\
+                                                              & = A \cap (\bigcup_{\lambda \in \Lambda} U_\lambda ').
+                  \end{align*}
+                  ここで，定理8.3より
+                  \[
+                      \bigcup_{\lambda \in \Lambda} U_\lambda ' \in \mathcal{O} (\mathbb{R}^n)
+                  \]
+                  であるから
+                  \[
+                      \bigcup_{\lambda \in \Lambda} U_\lambda \in \mathcal{O} (A).
+                  \]
+            \item
+                  \begin{align*}
+                      U_1 \cap U_2 & = (U_1 ' \cap A) \cap (U_2 ' \cap A) \\
+                                   & = (U_1 ' \cap U_2 ') \cap A.
+                  \end{align*}
+                  ここで，定理8.3より
+                  \[
+                      U_1 ' \cap U_2 ' \in \mathcal{O} (\mathbb{R}^n)
+                  \]
+                  であるから
+                  \[
+                      U_1 \cap U_2 \in \mathcal{O} (A).
+                  \]
+            \item
+                  $\mathbb{R}^n, \varnothing \in \mathcal{O} (\mathbb{R}^n)$であり，
+                  \[
+                      A = A \cap \mathbb{R}^n, \quad \varnothing = A \cap \varnothing \in \mathcal{O} (A).
+                  \]
+        \end{enumerate}
+    \end{proof}
+\end{leftbar}
+
+
+\section*{p79--80：3}
+\addcontentsline{toc}{section}{\texorpdfstring{p79--80：3}{p79--80：3}}
+
+\begin{leftbar}
+    \begin{proof}
+        $F_\alpha = F_{\alpha} ' \cap A$となる$F_{\alpha} ' \in \mathcal{F} (\mathbb{R}^n)$をとる．
+        \begin{enumerate}[(i)]
+            \item
+                  \begin{align*}
+                      \bigcup_{\alpha \in A} F_\alpha & = \bigcup_{\alpha \in A} (F_{\alpha} ' \cap A)  \\
+                                                      & = A \cap (\bigcup_{\alpha \in A} F_{\alpha} ').
+                  \end{align*}
+                  ここで，定理8.3より
+                  \[
+                      \bigcup_{\alpha \in A} F_{\alpha} ' \in \mathcal{F} (\mathbb{R}^n)
+                  \]
+                  であるから
+                  \[
+                      \bigcup_{\alpha \in A} F_\alpha \in \mathcal{F} (A).
+                  \]
+            \item
+                  \begin{align*}
+                      F_1 \cap F_2 & = (F_1 ' \cap A) \cap (F_2 ' \cap A) \\
+                                   & = (F_1 ' \cap F_2 ') \cap A.
+                  \end{align*}
+                  ここで，定理8.3より
+                  \[
+                      F_1 ' \cap F_2 ' \in \mathcal{F} (\mathbb{R}^n)
+                  \]
+                  であるから
+                  \[
+                      F_1 \cap F_2 \in \mathcal{F} (A).
+                  \]
+            \item
+                  $\mathbb{R}^n, \varnothing \in \mathcal{F} (\mathbb{R}^n)$であり，
+                  \[
+                      A = A \cap \mathbb{R}^n, \quad \varnothing = A \cap \varnothing \in \mathcal{F} (A).
+                  \]
+            \item $B \in \mathcal{F} (A)$とする．$B =  A \cap F$となる$F \in \mathcal{F} (\mathbb{R}^n)$に対して，
+                  \[
+                      F^c\in \mathcal{O} (\mathbb{R}^n)
+                  \]
+                  であり，
+                  \[
+                      C_A (B) = A \cap F^c \in \mathcal{O} (A)
+                  \]
+                  となる．
+
+                  $C_A (B) \in \mathcal{O}(A)$のとき，$C_A (B) = A \cap U$となる$U \in \mathcal{O} (\mathbb{R}^n)$に対して，
+                  \[
+                      U^c \in \mathcal{F} (\mathbb{R}^n)
+                  \]
+                  であるから，
+                  \[
+                      B = A \cap U^c \in \mathcal{F} (A).
+                  \]
+                  以上より，
+                  \[
+                      B \in \mathcal{F} (A) \iff C_A (B) \in \mathcal{O} (A).
+                  \]
+        \end{enumerate}
+    \end{proof}
+\end{leftbar}
+
+
+\section*{p79--80：4} \label{p79--80：4}
+\addcontentsline{toc}{section}{\texorpdfstring{p79--80：4}{p79--80：4}}
+
+\begin{leftbar}
+    \begin{proof}
+        $(\text{a}) \iff (\text{b})$，$(\text{b}) \iff (\text{c})$を示す．
+
+        \paragraph{(a) $\iff$ (b)について}
+
+        \subparagraph{(a) $\Longrightarrow$ (b)}
+        区間の定義により明らか．
+
+        \subparagraph{(b) $\Longrightarrow$ (a)}
+        $I \ne \varnothing$より，$M = \sup A$，$m = \inf A$が$\overline{\mathbb{R}}= \mathbb{R} \cup \{ \pm \infty \}$に存在する．
+
+        このとき，$m$，$M$の任意の近傍 $U_m$，$U_M$ において，$I$ の元 $a$，$b$ が存在するので
+        （$M$（$m$）が $\infty$（$-\infty$）のときは近傍 $U$ を
+        \[
+            U = \{ x \mid x > R\}\quad (\text{あるいは}\quad U = \{ x \mid x < R\})
+        \]
+        とする），仮定より，$[a,b] \subset I$ となる．
+
+        近傍は任意にとれるから，$(m,M) \subset I$ となり，$\sup$，$\inf$の定義から
+        \[
+            I \supset [m,M] = A
+        \]
+        であるから，$I$ は区間となる．
+
+        よって，$(\text{a}) \iff (\text{b})$ が示された．
+
+        \paragraph{(b) $\iff$ (c)について}
+
+        \subparagraph{(b) $\Longrightarrow$ (c)}
+        $I$ が連結でない，つまり
+        \[
+            I = A \dotplus B,\quad A,B \ne \varnothing,\quad A , B \in \mathcal{O} (I)
+        \]
+        となっているとする．$A$，$B$ の元 $a_1$，$b_1$ が $a_1 < b_1$ であるとき，以下のように
+        $(a_n)_{n \in \mathbb{N}}$，$(b_n)_{n \in \mathbb{N}}$ がとれる：
+
+        \begin{itemize}
+            \item $d_n = (a_n + b_n)/2$ として，$d_n \in [a_n,b_n] \subset I$．
+            \item $I= A \dotplus B$ より，$d_n \in A$ または $d_n \in B$ が一方だけ必ず成立する．
+            \item $d_n \in A$ のときは，$a_{n+1} = d_n$，$b_{n+1} = b_n$．
+            \item $d_n \in B$ のときは，$a_{n+1} = a_n$，$b_{n+1} = d_n$．
+        \end{itemize}
+
+        いずれの場合も $a_{n+1}< b_{n+1}$ であるから，
+        とくに
+        \[
+            \abs{a_{n+1} - b_{n+1}} = \frac{\abs{a_n - b_n}}{2}
+        \]
+        より
+        \[
+            \lim_{n \to \infty} \abs{a_n - b_n} = 0
+        \]
+        である．さらに
+        \[
+            a_n \leqq a_{n+1} \leqq b_{n+1} \leqq b_n
+        \]
+        となるので
+        \[
+            \lim_{n \to \infty} a_n = \lim_{n \to \infty} b_n = \alpha
+        \]
+        を得る．
+
+        $\alpha \in I$ であるから，$\alpha \in A$ または $\alpha \in B$ であるが，いずれの場合においても
+        $A , B \in \mathcal{O} (I)$ となることに矛盾する．
+
+        \subparagraph{(c) $\Longrightarrow$ (b)}
+        対偶を示す．$a,b \in I$，$a < b$ となる $a$，$b$ に対して，
+        \[
+            a < x < b \quad \text{かつ}\quad x \notin I
+        \]
+        となる $x$ がとれるとする．
+
+        このとき
+        \[
+            A = I \cap (x,\infty), \quad B = I \cap (-\infty,x)
+        \]
+        とおけば，
+        \[
+            I = A \dotplus B,\quad A , B \ne \varnothing,\quad A , B \in \mathcal{O} (I)
+        \]
+        となり，$I$ は連結でない．
+
+        よって，$(\text{b}) \iff (\text{c})$ が示された．
+        \bigskip
+
+        以上により
+        \[
+            (\text{a}) \iff (\text{b}) \iff (\text{c})
+        \]
+        が示された．
+    \end{proof}
+\end{leftbar}
+
+
+\section*{p79--80：5} \label{p79--80：5}
+\addcontentsline{toc}{section}{\texorpdfstring{p79--80：5}{p79--80：5}}
+
+\begin{leftbar}
+    \begin{proof}
+        $f(A)$が連結でないと仮定し，$f(A) = B \dotplus C$，$B,C \ne \varnothing$かつ$B,C \in \mathcal{O} (f(A))$とする．
+        $B = f(A) \cap B '$，$C = f(A) \cap C '$，$B ', C ' \in \mathcal{O} (\mathbb{R}^n)$となる$B'$，$C'$をとると，
+        p63--64：6より，$f^{-1} (B) = f^{-1}(B') \in \mathcal{O}(A)$，$f^{-1} (C) = f^{-1}(C') \in \mathcal{O}(A)$である．
+        また，$f^{-1}(B) \dotplus f^{-1}(C) =A$，$ f^{-1}(B), f^{-1}(C) \ne \varnothing$より，$A$が連結であることに矛盾する．
+    \end{proof}
+\end{leftbar}
+
+
+\section*{p79--80：6}
+\addcontentsline{toc}{section}{\texorpdfstring{p79--80：6}{p79--80：6}}
+
+\begin{leftbar}
+    \begin{proof}
+        $I = [a,b]$に対して，\hyperref[p79--80：4]{p79--80：4}，\hyperref[p79--80：5]{p79--80：5}より，$f(I)$も区間である．
+        \hyperref[p79--80：5]{p79--80：5}(a)より，$[f(a),f(b)]$または$[f(b),f(a)]$は$f(I$の部分集合であるから，
+        その中間の値$\gamma$に対して，$f(c)=\gamma$となる$c \in I$が存在する．
+    \end{proof}
+\end{leftbar}
+
 
 \newpage
 
