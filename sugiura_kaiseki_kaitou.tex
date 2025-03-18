@@ -1978,7 +1978,7 @@ $n$を自然数とするとき，
 \newpage
 
 
-\section*{p63--64：6}
+\section*{p63--64：6} \label{p63--64：6}
 \addcontentsline{toc}{section}{\texorpdfstring{p63--64：6}{p63--64：6}}
 
 \begin{leftbar}
@@ -2833,7 +2833,7 @@ $\norm{ \cdot }_1 : \mathbb{R}^n \ni ( x_1 , x_2 , \cdots , x_n ) \mapsto \sum_{
 \end{leftbar}
 
 
-\section*{p79--80：3}
+\section*{p79--80：3} \label{p79--80：3}
 \addcontentsline{toc}{section}{\texorpdfstring{p79--80：3}{p79--80：3}}
 
 \begin{leftbar}
@@ -3015,11 +3015,49 @@ $\norm{ \cdot }_1 : \mathbb{R}^n \ni ( x_1 , x_2 , \cdots , x_n ) \mapsto \sum_{
 \begin{leftbar}
     \begin{proof}
         $I = [a,b]$に対して，\hyperref[p79--80：4]{p79--80：4}，\hyperref[p79--80：5]{p79--80：5}より，$f(I)$も区間である．
-        \hyperref[p79--80：5]{p79--80：5}(a)より，$[f(a),f(b)]$または$[f(b),f(a)]$は$f(I$の部分集合であるから，
+        \hyperref[p79--80：5]{p79--80：5}(a)より，$[f(a),f(b)]$または$[f(b),f(a)]$は$f(I)$の部分集合であるから，
         その中間の値$\gamma$に対して，$f(c)=\gamma$となる$c \in I$が存在する．
     \end{proof}
 \end{leftbar}
 
+
+\section*{p79--80：7} \label{p79--80：7}
+\addcontentsline{toc}{section}{\texorpdfstring{p79--80：7}{p79--80：7}}
+
+\begin{leftbar}
+    \begin{proof}
+        $B$が連続でないと仮定し，$B=C\dotplus D$，$C, D \neq \varnothing$，$C,D\in \mathcal{O}(B)$とする．
+        $C=C'\cap B$，$D=D'\cap B$となる$C',D'\in \mathcal{O}(R^n)$をとると，
+        $C''=C'\cap A$，$D''=D'\cap A$とすることで$C'',D''\in \mathcal{O}(A)$となり，
+        $A=C''\dotplus D''$となる．
+        $c \subset C'$に対してその近傍$U$において$U\subset C'$とでき，
+        触点の定義により$A\cap U\neq \varnothing$で$C''\neq \varnothing$となる．
+        同様に$D''\neq \varnothing$より，$A$が連続であることに矛盾する．
+    \end{proof}
+\end{leftbar}
+
+\section*{p79--80：8}
+\addcontentsline{toc}{section}{\texorpdfstring{p79--80：8}{p79--80：8}}
+\begin{leftbar}
+    \[
+        D_n = \left\{(\frac{1}{n},y)\; \middle| \; 0\leqq y\leqq 1,\right\}, \quad E=\{(x,0)\mid 0<x\leqq 1\}
+    \]
+    とする．
+    $C=\bigcup_{n=1}^{\infty}\left(E\cup D_n\right)$となるが，$E$，$D_n$は連結で$\{ (1/n,0) \}= E \cap D_n$であるから，
+    p79--80：11より，$E\cup D_n$，$C$も連結となる．
+    $C\subset A\subset \overline{C}=A\cup\{(0,0)\}$より，\hyperref[p79--80：7]{p79--80：7}から$A$も連結となる．
+    $(0,0)\notin A$であるから，$(0,1)\in B$と$(1,0)\in C$を弧によって結ぶことはできない．
+\end{leftbar}
+
+\section*{p79--80：9}
+\addcontentsline{toc}{section}{\texorpdfstring{p79--80：9}{p79--80：9}}
+
+\begin{leftbar}
+    \begin{proof}
+        $(\text{a})\iff (\text{b})$については\hyperref[p63--64：6]{p63--64：6}の言い換え．
+        $(\text{a})\iff  (\text{c})$については\hyperref[p79--80：3]{p79--80：3}による．
+    \end{proof}
+\end{leftbar}
 
 \newpage
 
