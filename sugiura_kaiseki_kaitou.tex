@@ -3059,6 +3059,68 @@ $\norm{ \cdot }_1 : \mathbb{R}^n \ni ( x_1 , x_2 , \cdots , x_n ) \mapsto \sum_{
     \end{proof}
 \end{leftbar}
 
+
+\section*{p79--80：10} \label{p79--80：10}
+\addcontentsline{toc}{section}{\texorpdfstring{p79--80：10}{p79--80：10}}
+
+\begin{leftbar}
+    \begin{proof}
+        $A = \bigcup_{\lambda \in L} A_\lambda$ が連結でないと仮定し，
+        $A =(B \cap A)\dotplus(C \cap A)$，$B \cap A ,C \cap A \neq \varnothing$，$B, C \in \mathcal{O}(\mathbb{R}^n)$とする．
+        とする．
+        $ B \cap A ,C \cap A \neq \varnothing$ より，$B \cap A_{\lambda_1}$，$C \cap A_{\lambda_2} \neq \varnothing$
+        となる $\lambda_1,\lambda_2 \in L$をとる．
+        ここで，$C \cap A_{\lambda_1} \neq \varnothing$ とすれば，
+        $A_{\lambda_1}$ が連結であることに矛盾し，
+        $C \cap A_{\lambda_1} = \varnothing$ となる．
+        同様に $B \cap A_{\lambda_2} = \varnothing$ となる．
+        \[
+            A_{\lambda_1} \cup A_{\lambda_2} \subset  A \subset B \cup C
+        \]
+        であるから，
+        \begin{align*}
+            A_{\lambda_1} \cup A_{\lambda_2} & =( B \cup C) \cap (A_{\lambda_1} \cup A_{\lambda_2})                                      \\
+                                             & =(B \cap A_{\lambda_2} \cap A_{\lambda_1}) \cup (C \cap A_{\lambda_1} \cap A_{\lambda_2}) \\
+                                             & =\varnothing
+        \end{align*}
+        であり，矛盾する．
+        よって，$A = \bigcup_{\lambda \in L} A_\lambda$ は連結である．
+    \end{proof}
+\end{leftbar}
+
+
+\section*{p79--80：11} \label{p79--80：11}
+\addcontentsline{toc}{section}{\texorpdfstring{p79--80：11}{p79--80：11}}
+
+\begin{leftbar}
+    \begin{proof}
+        \hyperref[p79--80：10]{p79--80：10}より$C$ は連結集合であり，
+        定義どおり特に最大なものである．
+
+        $C \subset A$ より，
+        \[
+            C \subset (\overline{C} \cap A) \subset \overline{C}
+        \]
+        である，
+
+        \hyperref[p79--80：7]{p79--80：7}より，
+        $\overline{C} \cap A$も連結で，$c$は最大であるから，$\overline{C} \cap A \subset C$ となる．
+        よって，$ C = \overline{C} \cap A \in \mathcal{F}$ である．
+    \end{proof}
+\end{leftbar}
+
+\begin{column}
+    集合 $A \subset \mathbb{R}^n$ に対して，$2^A$ 上の同値関係を
+    \[
+        x \sim y　\iff \text{「$A$ の連結な部分集合 $M$ が存在して $x, y \in M$ となる」}.
+    \]
+    とする（推移律をみたすことは\hyperref[p79--80：10]{p79--80：10}による）．
+    このとき，$x \in A$ に対する同値類 $C_{(x)}$ は，$C$ と一致する．
+
+    詳しくは松坂和夫著『集合・位相入門』などを参照のこと．
+\end{column}
+
+
 \newpage
 
 \part*{第2章：微分法}
