@@ -3075,44 +3075,53 @@ $\norm{ \cdot }_1 : \mathbb{R}^n \ni ( x_1 , x_2 , \cdots , x_n ) \mapsto \sum_{
 \section*{p79--80：12} \label{p79--80：12}
 \addcontentsline{toc}{section}{\texorpdfstring{p79--80：12}{p79--80：12}}
 
-この問題における同値関係$\sim$は\hyperref[p79--80：11]{p79--80：12}のものである．
-また，(\romannumeral1)，(\romannumeral2)は(\romannumeral3)より略す．
+(\romannumeral1)，(\romannumeral2)は(\romannumeral3)より略す．
 
 \begin{leftbar}
-    \begin{proof}
-        \[
-            A = \{ (x_1,\dots,x_n) \in \R^n \mid {x_1}^2  + \dots + {x_p}^2 -{x_{p+1}}^2 -\dots-{x_n}^2 = 1 \}\quad (1 \leqq p \leqq n).
-        \]
-        $A$の点をとり，$ (q_1,q_2,\dots,q_n)$とし，$0$と$q_i$による区間を$I$とする（$i=p+1,p+2,\dots,n$）．
-        \begin{align*}
-            \varphi \colon I & = I_{p+1} \times I_{p+2} \times \dots \times I_n \ni (x_{p+1},x_{p+2},\dots,x_n)                                                                      \\
-                             & \quad \longmapsto (\frac{q_1}{r_0}\sqrt{1+{x_{p+1}}^2+\dots+{x_n}^2},\dots,\frac{q_p}{r_0}\sqrt{1+{x_{p+1}}^2+\dots+{x_n}^2},x_{p+1},\dots,x_n) \in A \\
-                             & (r_0 = \sqrt{{q_{p+1}}^2+\dots+{q_n}^2+1}).
-        \end{align*}
-        は連続写像であり，\hyperref[p79--80：4]{p79--80：4}，\hyperref[p79--80：5]{p79--80：5}より$\varphi(I)$は$A$の連結集合で，
-        \[
-            (q_1,q_2,\dots,q_n) \sim (\frac{q_1}{r_0},\dots,\frac{q_p}{r_0},0,\dots,0).
-        \]
-        ここで，
-        \[
-            {x_1}^2+\dots+{x_p}^2=1 \land x_{p+1}=x_{p+2}=\dots=x_n=0
-        \]
-        によって定義される集合$B$に対して，$(q_1,\dots,q_n)$が$A$全体を動くとき，
-        $(q_1/r_0,\dots,q_p/r_0,0,\dots,0)$は$B$全体をとるので，$A$と$B$の連結成分の個数は一致する．
+    $A = \{\,(x_1,\ldots,x_n) \in \mathbb{R}^n: x_1^2+\cdots+x_p^2-x_{p+1}^2-\cdots-x_n^2 = 1\,\}$とする．
 
-        また，$p=1$のとき，
-        \[
-            B= \{ (1,0,0,\dots,0) , (-1,0,0,\dots,0) \}
-        \]
-        より，$p=1$では$2$個である．
+    \paragraph{$p=1$のとき:}
+    条件を変形して
+    \begin{align*}
+        A
+         & = \{\,(x_1,\ldots,x_n) \in \mathbb{R}^n: x_1^2 = 1+x_2^2+\cdots+x_n^2\,\} \\
+         &
+        \begin{multlined}
+            = \{\,(x_1,\ldots,x_n) \in  \mathbb{R}^n: x_1 = \textstyle\sqrt{1+x_2^2+\cdots+x_n^2}\,\} \\
+            \cup \{\,(x_1,\ldots,x_n) \in  \mathbb{R}^n: x_1 = -\textstyle\sqrt{1+x_2^2+\cdots+x_n^2}\,\}
+        \end{multlined}
+    \end{align*}
+    がわかる．そこで
+    $A^{\pm} = \{\,(x_1,\ldots,x_n) \in  \mathbb{R}^n: x_1 = \pm\textstyle\sqrt{1+x_2^2+\cdots+x_n^2}\,\}$とする．
 
-        $p \ne 1$のとき，$p \geqq 2$であり，
-        \begin{align*}
-            \psi \colon & [0,\pi] \times [0,\pi] \times \dots \times [0,\pi] \times [0,2\pi] \ni (\theta_1,\theta_2,\dots,\theta_p)                                                              \\
-                        & \longmapsto (\cos \theta_1,\sin \theta_1 \cos \theta_2,\dots,\sin \theta_1\dots\sin \theta_{p-2} \cos \theta_{p-1}, \sin \theta_1 \dots \sin \theta_p,0,\dots,0) \in B
-        \end{align*}
-        は全射な連続写像で\hyperref[p79--80：4]{p79--80：4}，\hyperref[p79--80：5]{p79--80：5}より$B$も連結で，連結成分は$1$個である．
+    $R^{n-1} \ni (x_2,\ldots,x_n) \longmapsto (\pm\textstyle\sqrt{1+x_2^2+\cdots+x_n^2},x_2,\ldots,x_n) \in A^{\pm}$
+    で定義される写像は連続な全射であり，$R^{n-1}$は連結だから5)より$A^{\pm}$も連結である.
+    また，$(x_1,\ldots,x_n) \in A^+$なら$x_1 \ge 1$であり，$A^-$の元の第一成分は負だから$(x_1,\ldots,x_n) \notin A^-$となる．
+    よって$A^+ \cap A^- = \varnothing$である．
 
-        以上より,$p=1$のとき$2$個，$p \geqq 2$のとき$1$個である．
-    \end{proof}
+    以上より$A$はちょうど2つの連結成分を持つ．
+
+    \paragraph{$p\neq1$のとき:}
+    同じように$x_1$について解いて$A = A^+ \cup A^-$とする．
+    ただし今度は
+    \begin{align*}
+        A^{\pm}
+         & = \left\{\,(x_1,\ldots,x_n) \in \mathbb{R}^n:
+        \begin{aligned}
+            x_1 = \pm\textstyle\sqrt{1-x_2^2-\cdots-x_p^2+x_{p+1}^2+\cdots+x_n^2}, \\
+            1-x_2^2-\cdots-x_p^2+x_{p+1}^2+\cdots+x_n^2 \ge 0
+        \end{aligned}
+        \,\right\}
+    \end{align*}
+    と定義する．
+    $\varphi^{\pm} \colon B \coloneq \{\,(x_2,\ldots,x_n) \in \mathbb{R}^{n-1}: 1-x_2^2-\cdots-x_p^2+x_{p+1}^2+\cdots+x_n^2 \ge 0\,\} \to A^{\pm}$を
+    \[
+        (x_2,\ldots,x_n) \longmapsto (\pm\textstyle\sqrt{1-x_2^2-\cdots-x_p^2+x_{p+1}^2+\cdots+x_n^2},x_2,\ldots,x_n)
+    \]
+    によって定める．
+    ここで$B$は原点に関して星型だから連結である．
+    $\varphi^{\pm}$は連続な全射だから$A^{\pm}$も連結である．
+    $(0,1,0,0,\ldots,0) \in A^+ \cap A^-$だから10)より$A$も連結，つまり連結成分の個数は1個である．
+
+    以上より,$p=1$のとき$2$個，$p \ne 1$のとき$1$個である．
 \end{leftbar}
