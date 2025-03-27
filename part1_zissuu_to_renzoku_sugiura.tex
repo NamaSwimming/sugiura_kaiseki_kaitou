@@ -3077,6 +3077,11 @@ $\norm{ \cdot }_1 : \mathbb{R}^n \ni ( x_1 , x_2 , \cdots , x_n ) \mapsto \sum_{
 
 (\romannumeral1)，(\romannumeral2)は(\romannumeral3)より略す．
 
+
+\subsection*{p79--80：12-(\romannumeral3)} \label{p79--80：12-(\romannumeral3)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p79--80：12-(\romannumeral3)}{p79--80：12-(\romannumeral3)}}
+
+
 \begin{leftbar}
     $A = \{\,(x_1,\ldots,x_n) \in \mathbb{R}^n: x_1^2+\cdots+x_p^2-x_{p+1}^2-\cdots-x_n^2 = 1\,\}$とする．
 
@@ -3124,4 +3129,62 @@ $\norm{ \cdot }_1 : \mathbb{R}^n \ni ( x_1 , x_2 , \cdots , x_n ) \mapsto \sum_{
     $(0,1,0,0,\ldots,0) \in A^+ \cap A^-$だから10)より$A$も連結，つまり連結成分の個数は1個である．
 
     以上より,$p=1$のとき$2$個，$p \ne 1$のとき$1$個である．
+\end{leftbar}
+
+
+\subsection*{p79--80：12-(\romannumeral4)} \label{p79--80：12-(\romannumeral4)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p79--80：12-(\romannumeral4)}{p79--80：12-(\romannumeral4)}}
+
+\begin{leftbar}
+    \[
+        A = \{ (x,y) \in \mathbb{R}^2 \mid y^2(x-a)=x^2(x+a) \}
+    \]
+    とする．
+    \begin{align*}
+        x \in A & \iff y= \pm \abs{x}\sqrt{\frac{x+a}{x-a}} \land \frac{x+a}{x-a} >0 \\
+                & \iff y= \pm \abs{x}\sqrt{\frac{x+a}{x-a}} \land \abs{x} \leqq a .
+    \end{align*}
+    \[
+        f(x)=\abs{x}\sqrt{\frac{x+a}{x-a}}
+    \]
+    とする．
+
+    \paragraph{$x \leqq -a$のとき:}
+    \[
+        y=f(x)=-x \sqrt{1+\frac{2a}{x-a}}
+    \]
+    となり，$f(-a)=0$であるから，$f$の連続性より，
+    \[
+        y^2(x-a)=x^2(x+a) \land x \leqq -a
+    \]
+    は連結集合である．
+
+    \paragraph{$x \leqq -a$のとき:}
+    \[
+        f(x)=x \sqrt{1+\frac{2a}{x-a}} >0
+    \]
+    であるから，$f$の連続性より
+    \begin{align*}
+         & y^2(x-a)=x^2(x+a) \land x \geqq -a \land y >0 , \\
+         & y^2(x-a)=x^2(x+a) \land x \geqq -a \land y <0
+    \end{align*}
+    はそれぞれ連結集合で，これは同じ連結成分になりえないことから，2個の連結成分を持つ．
+
+    以上の考察により，連結成分の個数は3個である．
+\end{leftbar}
+
+
+\section*{p79--80：13} \label{p79--80：13}
+\addcontentsline{toc}{section}{\texorpdfstring{p79--80：13}{p79--80：13}}
+
+\begin{leftbar}
+    \begin{proof}
+        $ t \in [0,1]$に対して，$at +b(1-t) \in A$であるから，
+        $f(at +b(1-t))$は$[0,1] \longrightarrow \mathbb{R}$の連続関数である．
+        中間値の定理より，$f(a)$と$f(b)$の中間なる値$\gamma$に対して
+        \[
+            f(as +b(1-s)) = \gamma
+        \]
+        となる$s \in [0,1]$が存在する．$t=as+b(1-s)$とすればよい．
+    \end{proof}
 \end{leftbar}
