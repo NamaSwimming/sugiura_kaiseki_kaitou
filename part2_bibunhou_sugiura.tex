@@ -11,27 +11,105 @@
 \addcontentsline{toc}{subsection}{\texorpdfstring{p90--91：1-(\romannumeral1)}{p90--91：1-(\romannumeral1)}}
 
 
-\begin{tikzpicture}
-    \draw[->] (-3,0) -- (3,0) node[below] {$x$};
-    \draw[->] (0,-3) -- (0,3) node[left]  {$y$};
-    \draw (0,0) node[below left] {$\mathrm{O}$} coordinate (O);
-    \draw (0,1) node [above left] {$1$};
-    \draw (0,-1) node [below left] {$-1$};
-    \draw (2,0) node [above left] { $2$};
-    \draw (-2,0) node [above left] { $-2$};
-    \draw plot[domain=0:{2*pi}, variable=\theta, smooth] ({2*cos (\theta r)},{sin (\theta r)});
-\end{tikzpicture}
+\begin{minipage}[c]{0.60\textwidth}
+    楕円
+    \[
+        \left\{ (x,y) \in \mathbb{R}^2 \; \middle| \; \frac{x^2}{4} + y^2 = 1 \right\}
+    \]
+    を描写すればよく，図のようになる．
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.35\textwidth}
+    \begin{tikzpicture}[scale=0.8]
+        \draw[->] (-3,0) -- (3,0) node[below] {$x$};
+        \draw[->] (0,-3) -- (0,3) node[left]  {$y$};
+        \draw (0,0) node[below left] {$\mathrm{O}$} coordinate (O);
+        \draw (0,1) node [above left] {$1$};
+        \draw (0,-1) node [below left] {$-1$};
+        \draw (2,0) node [above left] { $2$};
+        \draw (-2,0) node [above left] { $-2$};
+        \draw plot[domain=0:{2*pi}, variable=\theta, smooth] ({2*cos (\theta r)},{sin (\theta r)});
+    \end{tikzpicture}
+\end{minipage}
 
 \subsection*{p90--91：1-(\romannumeral2)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p90--91：1-(\romannumeral2)}{p90--91：1-(\romannumeral2)}}
 
-
-\begin{tikzpicture}
-    \draw[->] (-3,0) -- (3,0) node[below] {$x$};
-    \draw[->] (0,-3) -- (0,3) node[left]  {$y$};
-    \draw (0,0) node[below left] {$\mathrm{O}$} coordinate (O);
-    \draw plot[domain=0:{2*pi}, variable=\theta, smooth] ({cos (2*\theta r)},{sin (\theta r)});
-\end{tikzpicture}
+\begin{minipage}[c]{0.60\textwidth}
+    \renewcommand{\arraystretch}{1.6}
+    \begin{tabular}{|c||cccccccccc|}
+        \hline
+        $t$
+         & $0$
+         & $\cdots$
+         & $\tfrac{\pi}{2}$
+         & $\cdots$
+         & $\pi$
+         & $\cdots$
+         & $\tfrac{3\pi}{2}$
+         & $\cdots$
+         & $2\pi$
+         & $\cdots$
+        \\ \hline
+        $\frac{dx}{dt}$
+         & $0$
+         & $-$
+         & $0$
+         & $+$
+         & $0$
+         & $-$
+         & $0$
+         & $+$
+         & $0$
+         &
+        \\ \hline
+        $x(t)$
+         & $1$
+         & $\searrow$
+         & $-1$
+         & $\nearrow$
+         & $1$
+         & $\searrow$
+         & $-1$
+         & $\nearrow$
+         & $1$
+         &
+        \\ \hline
+        $\frac{dy}{dt}$
+         & $+$
+         & $+$
+         & $0$
+         & $-$
+         & $-$
+         & $-$
+         & $0$
+         & $+$
+         & $+$
+         &
+        \\ \hline
+        $ y(t)$
+         & $0$
+         & $\nearrow$
+         & $1$
+         & $\searrow$
+         & $0$
+         & $\searrow$
+         & $-1$
+         & $\nearrow$
+         & $0$
+         &
+        \\ \hline
+    \end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.35\textwidth}
+    \begin{tikzpicture}[scale=0.8]
+        \draw[->] (-3,0) -- (3,0) node[below] {$x$};
+        \draw[->] (0,-3) -- (0,3) node[left]  {$y$};
+        \draw (0,0) node[below left] {$\mathrm{O}$} coordinate (O);
+        \draw plot[domain=0:{2*pi}, variable=\theta, smooth] ({cos (2*\theta r)},{sin (\theta r)});
+    \end{tikzpicture}
+\end{minipage}
 
 
 \subsection*{p90--91：1-(\romannumeral3)}
