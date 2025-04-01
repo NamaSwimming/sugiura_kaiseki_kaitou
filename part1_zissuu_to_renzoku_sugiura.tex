@@ -987,6 +987,59 @@ $c>1$のとき，$\lim_{n \to \infty} \frac{1}{c^n} = 0$である．
     \end{proof}
 \end{leftbar}
 
+
+\begin{leftbar}
+    [別解1]
+    \begin{proof}
+        任意に $a \in \mathbb{Q}$ をとる．無理数として $\sqrt{2}$ を選び，数列 $(x_n)_{n \in \mathbb{N}}$ を
+        \[
+            x_n = a + \frac{\sqrt{2}}{n}\quad (n=1,2,3,\dots)
+        \]
+        と定義する．このとき，$\sqrt{2}/n$ は常に無理数であるから，$a$ が有理数でも $x_n$ は有理数になり得ず，$x_n \in \mathbb{R}\setminus\mathbb{Q}$ となる．
+
+        一方，
+        \[
+            \lim_{n \to \infty} x_n=\lim_{n \to \infty} \left(a + \frac{\sqrt{2}}{n}\right)=a
+        \]
+        であるから，任意の $\varepsilon > 0$ に対して，ある $N \in \mathbb{N}$ が存在し，任意の $n \in \mathbb{N}$ について
+        \[
+            n \geqq N \Longrightarrow \abs{x_n - a} < \varepsilon
+        \]
+        が成り立つ．ここで $a$ は任意だったので，任意の $a \in \mathbb{Q}$ と任意の $\varepsilon > 0$ に対して，区間 $(a-\varepsilon, a+\varepsilon)$ に属する無理数 $x_n$ が常に存在する．
+
+        したがって，任意の $a \in \mathbb{Q}$，$\varepsilon > 0$ に対して，$\abs{a-b}<\varepsilon$ を満たす無理数 $b$ が存在することが示された．
+    \end{proof}
+\end{leftbar}
+
+
+\begin{leftbar}
+    [別解2]
+    \begin{proof}
+        「ある $\varepsilon>0$と$a \in \mathbb{Q}$ について，開区間 $(a-\varepsilon,a+\varepsilon)$ には無理数が一切含まれない」と仮定する．
+        このとき
+        \[
+            (a-\varepsilon,a+\varepsilon) \subset \mathbb{Q}
+        \]
+        である．これを踏まえた上で
+        \[
+            x \in  (a-\varepsilon,a+\varepsilon)
+        \]
+        を任意にとると，$ x \in \mathbb{Q} $ である．
+        このとき，任意の$c \in \mathbb{Q}$ に対して
+        \[
+            (c-\varepsilon , c+\varepsilon) =\{ x +c -a \mid x \in (a-\varepsilon,a+\varepsilon) \} \subset \mathbb{Q}
+        \]
+        である．$c$は任意にとったので，
+        \[
+            \bigcup_{c \in \mathbb{Q}} (c-\varepsilon,c+\varepsilon) =\mathbb{R} \subset \mathbb{Q}
+        \]
+        となり，これは矛盾である．
+
+        したがって，背理法により，任意の $a \in \mathbb{Q}$ と $\varepsilon > 0$ に対して，開区間 $(a-\varepsilon,a+\varepsilon)$ には無理数が含まれることが示された．
+        すなわち，任意の $a \in \mathbb{Q}$ と $\varepsilon > 0$ に対して，$\abs{a-b}<\varepsilon$ を満たす無理数 $b$ が存在することが示された．
+    \end{proof}
+\end{leftbar}
+
 \newpage
 \section*{p42--43：3}
 \addcontentsline{toc}{section}{\texorpdfstring{p42--43：3}{p42--43：3}}
