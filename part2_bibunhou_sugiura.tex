@@ -131,7 +131,7 @@
 \subsection*{p90--91：9-(\romannumeral1)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p90--91：9-(\romannumeral1)}{p90--91：9-(\romannumeral1)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     \[
         ( \log x )^{(1)}= 1/x , \quad (\log x)^{(2)} = - 1/x^2 , \quad (\log x)^{(3)} = 2/x^3,\quad (\log x)^{(4)} = - 6 /x^4
     \]
@@ -162,56 +162,54 @@
         (\log x)^{(n)} = \frac{(-1)^{n-1}  (n-1)!}{x^n}
     \]
     である．
-\end{tleftbar}
+\end{tanswer}
 
-\begin{tleftbar}
+\begin{tanswer}
     \[
         \left(   \frac{1}{x^2+3x+2} \right)^{(n)} = (-1)^n n! \{ (x+1)^{-n-1} - (x+2)^{-n-1} \}
     \]
-\end{tleftbar}
+\end{tanswer}
 
 
 
 \section*{p90--91：10}
 \addcontentsline{toc}{section}{\texorpdfstring{p90--91：10}{p90--91：10}}
 
-\begin{tleftbar}
-    \begin{proof}
-        $u(x)= (x^2-1)^n$とおく，このとき，
-        \[
-            U'(x)= 2x n(x^2-1)^{n-1}
-        \]
-        だから，
-        \[
-            (x^2-1) u'(x)=2nx \cdot u(x)
-        \]
-        この両辺を$(n+1)$回微分して，
-        \begin{align*}
-             & (x^2-1)u^{(n+2)}(x)+2(n+1)x u^{(n+1)} x + \frac{(n+1)n}{2} \cdot u^{(n)} (x) = 2nx u^{(n+1)}(x) + 2(n+1) n u^{(n)}(x) \\
-             & \therefore ~(x^2-1)u^{(n+2)}(x) + 2n u^{(n+1)}(x)-(n+1)n u^{(n)}(x)=0
-        \end{align*}
-        ここで，$ u^{(n)} (x)= 2^n n! P_n (x)$なので，
-        \begin{align*}
-             & (x^2 -1) \{ 2^n n! P_n ''(x) \} +2x \{ 2^n n! P_n (x) \} -n(n+1) \{ 2^n n P_n(x) \} =0 \\
-             & \therefore ~ (x^2-1) P_n ''(x)+2x P_n '(x) -n(n+1) P_n (x)=0
-        \end{align*}
-    \end{proof}
-\end{tleftbar}
+\begin{tproof}
+    $u(x)= (x^2-1)^n$とおく，このとき，
+    \[
+        U'(x)= 2x n(x^2-1)^{n-1}
+    \]
+    だから，
+    \[
+        (x^2-1) u'(x)=2nx \cdot u(x)
+    \]
+    この両辺を$(n+1)$回微分して，
+    \begin{align*}
+         & (x^2-1)u^{(n+2)}(x)+2(n+1)x u^{(n+1)} x + \frac{(n+1)n}{2} \cdot u^{(n)} (x) = 2nx u^{(n+1)}(x) + 2(n+1) n u^{(n)}(x) \\
+         & \therefore ~(x^2-1)u^{(n+2)}(x) + 2n u^{(n+1)}(x)-(n+1)n u^{(n)}(x)=0
+    \end{align*}
+    ここで，$ u^{(n)} (x)= 2^n n! P_n (x)$なので，
+    \begin{align*}
+         & (x^2 -1) \{ 2^n n! P_n ''(x) \} +2x \{ 2^n n! P_n (x) \} -n(n+1) \{ 2^n n P_n(x) \} =0 \\
+         & \therefore ~ (x^2-1) P_n ''(x)+2x P_n '(x) -n(n+1) P_n (x)=0
+    \end{align*}
+\end{tproof}
 
 \newpage
 \section*{p106--107：1}
 \addcontentsline{toc}{section}{\texorpdfstring{p106--107：1}{p106--107：1}}
 
-\kakko{補題}
-
-\[
-    Q_k (x)= (n! 2^n)^{-1} \frac{d^k}{dx^k} (x^2-1)^n \quad (0 \leqq k \leqq n)
-\]
-とおく．$0 \leqq k <n$のとき，$Q_k (x)$は$(x^2-1)^{n-k}$で割り切られ．
-\[
-    Q_k (1)= Q_k(-1)=0
-\]
-である．
+\begin{lemma}{}{}
+    \[
+        Q_k (x)= (n! 2^n)^{-1} \frac{d^k}{dx^k} (x^2-1)^n \quad (0 \leqq k \leqq n)
+    \]
+    とおく．$0 \leqq k <n$のとき，$Q_k (x)$は$(x^2-1)^{n-k}$で割り切られ．
+    \[
+        Q_k (1)= Q_k(-1)=0
+    \]
+    である．
+\end{lemma}
 
 \begin{proof}
     $k$に関する帰納法により示す．$k=0$のときは
@@ -237,31 +235,29 @@
     となり，これが証明すべきことであった．
 \end{proof}
 
-\begin{leftbar}
-    \begin{proof}
-        $Q_k (x)$が$(-1,1)$上に$k$個の相異なる根を持つことを，$k$に関する数学的帰納法で示す．
-        \begin{enumerate}[(i)]
-            \item $k=0$の場合
-                  \[
-                      Q_0(x)= (n! 2^n)^{-1} (x^2-1)^n
-                  \]
-                  なので，$(-1,1)$に根を持たない．
-            \item $k>0$として，$k-1$の場合の主張の成立を仮定すると，$Q_{k-1}(x)$は$(-1,1)$に$k-1$個の相異なる根を持つから，
-                  それらを
-                  \[
-                      x_1,x_2,\dots,x_{k-1}\quad (-1<x_1<x_2<\dots <x_{k-1}<1)
-                  \]とおく．
-                  ここで，$Q_{k-1} (x)$は閉区間$[-1,1]$で微分可能なので，
-                  各区間$[-1,x_1],[x_1,x_2],\dots,[x_{k-1},1]$においても微分可能であり，補題により，
-                  \[
-                      Q_{k-1} (-1) = Q_{k-1}(x_1)=\dots = Q_{k-1}(x_{k-1})=Q_{k-1}(1)=0
-                  \]
-                  である．したがって各小区間においてロルの定理が適用できて，$Q_{k-1}' (x)=Q_k(x)$は$(-1,x_1),(x_1,x_2),\dots,(x_{k-1},1)$において根をもつ．
-        \end{enumerate}
-        以上(\romannumeral1)，(\romannumeral2)の議論により，$Q_k (x)$は$(-1,1)$において相異なる$k$個の根をもつ．
-        特に$k=n$のとき，$Q_n (x)=P_n(x)$で$P_n (x)$は$(-1,1)$において相異なる$n$個の根をもつ．
-    \end{proof}
-\end{leftbar}
+\begin{tproof}
+    $Q_k (x)$が$(-1,1)$上に$k$個の相異なる根を持つことを，$k$に関する数学的帰納法で示す．
+    \begin{enumerate}[(i)]
+        \item $k=0$の場合
+              \[
+                  Q_0(x)= (n! 2^n)^{-1} (x^2-1)^n
+              \]
+              なので，$(-1,1)$に根を持たない．
+        \item $k>0$として，$k-1$の場合の主張の成立を仮定すると，$Q_{k-1}(x)$は$(-1,1)$に$k-1$個の相異なる根を持つから，
+              それらを
+              \[
+                  x_1,x_2,\dots,x_{k-1}\quad (-1<x_1<x_2<\dots <x_{k-1}<1)
+              \]とおく．
+              ここで，$Q_{k-1} (x)$は閉区間$[-1,1]$で微分可能なので，
+              各区間$[-1,x_1],[x_1,x_2],\dots,[x_{k-1},1]$においても微分可能であり，補題により，
+              \[
+                  Q_{k-1} (-1) = Q_{k-1}(x_1)=\dots = Q_{k-1}(x_{k-1})=Q_{k-1}(1)=0
+              \]
+              である．したがって各小区間においてロルの定理が適用できて，$Q_{k-1}' (x)=Q_k(x)$は$(-1,x_1),(x_1,x_2),\dots,(x_{k-1},1)$において根をもつ．
+    \end{enumerate}
+    以上(\romannumeral1)，(\romannumeral2)の議論により，$Q_k (x)$は$(-1,1)$において相異なる$k$個の根をもつ．
+    特に$k=n$のとき，$Q_n (x)=P_n(x)$で$P_n (x)$は$(-1,1)$において相異なる$n$個の根をもつ．
+\end{tproof}
 
 \newpage
 
@@ -269,15 +265,14 @@
 \addcontentsline{toc}{section}{\texorpdfstring{p106--107：2}{p106--107：2}}
 
 
+\begin{lemma}{}{}
+    $H_n(x)$は$n$次多項式で，$n$個の相異なる実根を持つとする．
 
-\kakko{補題}
-
-$H_n(x)$は$n$次多項式で，$n$個の相異なる実根を持つとする．
-
-このとき，$H_n (x)$の隣り合う$2$根を$a < b$とすると，
-\[
-    H_n'(a) H_n'(b)<0.
-\]
+    このとき，$H_n (x)$の隣り合う$2$根を$a < b$とすると，
+    \[
+        H_n'(a) H_n'(b)<0.
+    \]
+\end{lemma}
 
 \begin{proof}
     $H_n (x)$は$n$次多項式だから，$x_1 < x_2 < \dots <x_n$として以下のようにかける：
@@ -303,212 +298,202 @@ $H_n(x)$は$n$次多項式で，$n$個の相異なる実根を持つとする．
 
 補題をふまえた上で，いくつかの命題に分けて証明していく．
 
-\kakko{命題1}
-
-テキストの(i)，(ii)が成り立つ．
-
-
-\begin{leftbar}
-    \begin{proof}
-        (i)について，
-        \begin{align*}
-              & \frac{d}{dx} \left[ e^{x^2} \frac{d^n}{dx^n} (e^{-x^2} )\right]                      \\
-            = & 2x e^{x^2} \frac{d^n}{dx^n} (e^{-x^2}) + e^{x^2} \frac{d^{n+1}}{dx^{n+1}} (e^{-x^2})
-        \end{align*}
-        であるから，この式に$(-1)^n$をかけて整理すると，
-        \begin{align*}
-            (-1)^n \frac{d}{dx} \left[ e^{x^2} \frac{d^n}{dx^n} (e^{-x^2} )\right] & = 2x(-1)^n e^{x^2} \frac{d^n}{dx^n} (e^{-x^2}) -(-1)^{n+1} e^{x^2} \frac{d^{n+1}}{dx^{n+1}} (e^{-x^2}) \\
-            \therefore ~ H_n ' (x)                                                 & = 2x H_n(x) - H_{n+1}(x).
-        \end{align*}
-        整理すると
-        \[
-            H_{n+1}(x) =  2x H_n(x)-H_n'(x).
-        \]
-        (ii)について，
-        $ (e^{-x^2})^{(n+1)} = \{ (-2x)e^{-x^2} \}^{(n)}$であるから，
-        \begin{align*}
-            (e^{-x^2})^{(n+1)} & = (-2xe^{-x^2})^{(n)}                                                                                                                                  \\
-                               & = -2 (xe^{-x^2})^{(n)}                                                                                                                                 \\
-                               & = -2 \sum_{r=0}^{n} \binom{n}{r} x^{(n)} (e^{-x^2})^{(n-r)}                                                                                            \\
-                               & = -2 \left ( \binom{n}{0} x^{(0)} (e^{-x^2})^{(n-0)} + \binom{n}{1} x^{(1)} (e^{-x^2})^{(n-1)} + \dots + \binom{n}{n} x^{(n)} (e^{-x^2})^{(0)} \right) \\
-                               & = -2 \left(  x (e^{-x^2})^{(n)} + n x^{(1)} (e^{-x^2})^{(n-1)} \right)                                                                                 \\
-                               & = -2 \left ( x \frac{d^n}{dx^n} (e^{-x^2}) + n \frac{d^{n-1}}{dx^{n-1}} (e^{-x^2}) \right).
-        \end{align*}
-        よって，
-        \begin{align*}
-            (-1)^{n+1} e^{x^2} \frac{d^{n+1}}{d x^{n+1}} (e^{-x^2}) & = 2 (-1)^n e^{x^2} x \frac{d^n}{dx^n} (e^{-x^2}) -2 n (-1)^{n-1} e^{x^2}\frac{d^{n-1}}{dx^{n-1}} (e^{-x^2}) \\
-            \therefore ~ H_{n+1} (x)                                & = 2x H_n(x) - 2nH_{n-1}(x).
-        \end{align*}
-        これと(i)の結果を比較すると，
-        \[
-            H '' (x) - 2x H_n' (x) + 2nH_n (x)=0.
-        \]
-    \end{proof}
-\end{leftbar}
-
-\kakko{命題2}
-
-$H_n (x)$は$n$次多項式である．
-
-\begin{leftbar}
-    \begin{proof}
-        $n$についての数学的帰納法により示す．
-        \begin{enumerate}[(I)]
-            \item $n =0, 1$のとき，
-                  \begin{align*}
-                      H_0 (x) & = 1,  \\
-                      H_1 (x) & = 2x,
-                  \end{align*}
-                  であるから，$n=0, 1 $のとき成立する．
-            \item $k \in \mathbb{N}$を任意に取り，$H_k (x)$が$k$次多項式であると仮定する．
-                  $ H_{k+1}(x) =  2x H_k(x)-H_k'(x)$であるから，
-                  帰納法の仮定により，$ 2 x H_k (x)$が$k+1$次多項式であることと，$H_k'(x)$が$k-1$次多項式であることが従い，$H_{k+1}(x)$も$k+1$次多項式である．
-        \end{enumerate}
-        よって数学的帰納法により，$H_n (x)$は任意の$n$について$n$次多項式である．
-    \end{proof}
-\end{leftbar}
-
-\kakko{命題3}
-
-$H_n(x)$ は，任意の $n \in \mathbb{N}$ に対して $n$ 個の相異なる実根をもつ．
-
-\begin{leftbar}
-    \begin{proof}
-        数学的帰納法およびRolleの定理を用いて示す．
-        \noindent
-        \begin{enumerate}[(I)]
-            \item \mbox{}
-                  \[
-                      H_0(x) = 1, \quad H_1(x) = 2x, \quad H_2(x) = 2x^2-1.
-                  \]
-                  $H_0(x)$ は定数多項式で実根を持たない(ただし「$n=0$個」の根と解釈)，
-                  $H_1(x) = 2x$ は $x=0$ に $1$つの実根をもつ．
-                  $H_2(x)$ は相異なる$2$つの実根をもつ．
-                  したがって，$n=0,1,2$のときに成立する．
-            \item
-                  $k \geqq 2$ について，
-                  $H_k(x)$は$k$個の相異なる実根をもつ
-                  と仮定する．$H_k(x)$ の実根を
-                  \[
-                      \alpha_1 < \alpha_2 < \dots < \alpha_k
-                  \]
-                  と表す．
-
-                  Hermite多項式の基本的性質として，以下の関係式が成り立つ：
-                  \[
-                      H_{k+1}(x)  = 2xH_k(x)-H_k'(x).
-                  \]
-                  まず，Rolleの定理により，開区間 $(\alpha_i,\alpha_{i+1})$ に対して少なくとも1つの $\beta_i$ が存在し，
-                  \[
-                      \alpha_i < \beta_i < \alpha_{i+1},\quad
-                      H_k'(\beta_i) = 0
-                      \quad (i=1,2,\dots,k-1)
-                  \]
-                  が成り立つ．
-                  $H_k '(x)$は$k-1$次多項式であるから，そのような点は$\beta_i$のみである．
-                  よって$i = 0,1,\dots,k-1$に対し，$(\beta_i,\beta_{i+1})$においては$H_k '(x) \ne 0$であり，
-                  かつ$H_k '(x)$の符号は一定である（ただし，$ \beta_0 =-\infty$，$\beta_k = \infty$とする）．
-
-                  特に，$(\beta_{k-1},\beta_k)$で$H_k (x)$は単調増加または単調減少であり，
-                  $\lim_{x \to \infty} H_k (x) =\infty$だから消去法で単調増加である．
-                  つまり$H_k ' (\alpha_k) > 0$である．
-
-                  (i)の結果により$H_{n+1} (\alpha_i) =-H_k'(\alpha_i)$であるから，
-                  補題により，$H_{n+1}(\alpha_i)$の符号は交互に変わり，
-                  かつ$H_{k+1}(\alpha_k) < 0$である．
-
-                  以上の議論から，$k$ が偶数のときは $\alpha_1$ での値が正となり，以降交互に符号が変化して最後 $\alpha_k$ では負になる．
-                  一方，$k$ が奇数のときは $\alpha_1$ での値が負となり，以降交互に符号が変化して最後 $\alpha_k$ ではやはり負になる．
-
-                  ここで中間値の定理を適用すると，
-                  \[
-                      (\alpha_1,\alpha_2),~(\alpha_2,\alpha_3),~\dots,~(\alpha_{k-1},\alpha_k)
-                  \]
-                  の各区間内で $H_{k+1}(x)$ は符号を変えるため，少なくとも1つずつ実根をもつ．
-                  よってここまでで合計 $(k-1)$ 個の相異なる根が存在する．
-
-                  最後に，$H_{k+1}(x)$ の最高次項は $2^{k+1} x^{k+1}$ であり，
-                  \[
-                      \lim_{x \to +\infty} H_{k+1}(x) =
-                      \begin{cases}
-                          +\infty & (k \text{が偶数}) \\
-                          +\infty & (k \text{が奇数})
-                      \end{cases},
-                      \quad
-                      \lim_{x \to -\infty} H_{k+1}(x) =
-                      \begin{cases}
-                          -\infty & (k \text{が偶数}) \\
-                          +\infty & (k \text{が奇数})
-                      \end{cases}.
-                  \]
-                  したがって，$\alpha_1$ より左側と $\alpha_k$ より右側に
-                  もう1つずつ根が必ず存在する．
-
-                  以上をまとめると，
-                  \[
-                      (\alpha_j,\alpha_{j+1}) \text{ に } (k-1)\text{ 個}, \quad
-                      (-\infty,\alpha_1) \text{ または } (\alpha_k,\infty) \text{ に } 2\text{ 個}
-                  \]
-                  の相異なる実根が存在するので，合計で $k+1$ 個の実根が存在する．
-
-                  以上により，$H_k(x)$ が $k$ 個の実根をもつとき，$H_{k+1}(x)$ は
-                  $k+1$ 個の相異なる実根をもつことが示された．
-        \end{enumerate}
-        よって数学的帰納法により，すべての $n \in \mathbb{N}$（あるいは $n \ge 0$）に対し
-        $H_n(x)$ は $n$ 個の相異なる実根をもつことが証明された．
-    \end{proof}
-\end{leftbar}
-
-\kakko{命題4}
-
-$H_n(x)$の隣り合う二根の間に$H_{n-1}(x)$の根が一つある
+\begin{proposition}{}{}
+    テキストの(i)，(ii)が成り立つ．
+\end{proposition}
 
 
-\begin{leftbar}
-    \begin{proof}
-        $H_n(x)$の隣り合う$2$根を$a$，$b$とすると
-        補題より，
-        \[
-            H_n '(a) H_n '(b)<0
-        \]
-        である．
+\begin{tproof}
+    (i)について，
+    \begin{align*}
+          & \frac{d}{dx} \left[ e^{x^2} \frac{d^n}{dx^n} (e^{-x^2} )\right]                      \\
+        = & 2x e^{x^2} \frac{d^n}{dx^n} (e^{-x^2}) + e^{x^2} \frac{d^{n+1}}{dx^{n+1}} (e^{-x^2})
+    \end{align*}
+    であるから，この式に$(-1)^n$をかけて整理すると，
+    \begin{align*}
+        (-1)^n \frac{d}{dx} \left[ e^{x^2} \frac{d^n}{dx^n} (e^{-x^2} )\right] & = 2x(-1)^n e^{x^2} \frac{d^n}{dx^n} (e^{-x^2}) -(-1)^{n+1} e^{x^2} \frac{d^{n+1}}{dx^{n+1}} (e^{-x^2}) \\
+        \therefore ~ H_n ' (x)                                                 & = 2x H_n(x) - H_{n+1}(x).
+    \end{align*}
+    整理すると
+    \[
+        H_{n+1}(x) =  2x H_n(x)-H_n'(x).
+    \]
+    (ii)について，
+    $ (e^{-x^2})^{(n+1)} = \{ (-2x)e^{-x^2} \}^{(n)}$であるから，
+    \begin{align*}
+        (e^{-x^2})^{(n+1)} & = (-2xe^{-x^2})^{(n)}                                                                                                                                  \\
+                           & = -2 (xe^{-x^2})^{(n)}                                                                                                                                 \\
+                           & = -2 \sum_{r=0}^{n} \binom{n}{r} x^{(n)} (e^{-x^2})^{(n-r)}                                                                                            \\
+                           & = -2 \left ( \binom{n}{0} x^{(0)} (e^{-x^2})^{(n-0)} + \binom{n}{1} x^{(1)} (e^{-x^2})^{(n-1)} + \dots + \binom{n}{n} x^{(n)} (e^{-x^2})^{(0)} \right) \\
+                           & = -2 \left(  x (e^{-x^2})^{(n)} + n x^{(1)} (e^{-x^2})^{(n-1)} \right)                                                                                 \\
+                           & = -2 \left ( x \frac{d^n}{dx^n} (e^{-x^2}) + n \frac{d^{n-1}}{dx^{n-1}} (e^{-x^2}) \right).
+    \end{align*}
+    よって，
+    \begin{align*}
+        (-1)^{n+1} e^{x^2} \frac{d^{n+1}}{d x^{n+1}} (e^{-x^2}) & = 2 (-1)^n e^{x^2} x \frac{d^n}{dx^n} (e^{-x^2}) -2 n (-1)^{n-1} e^{x^2}\frac{d^{n-1}}{dx^{n-1}} (e^{-x^2}) \\
+        \therefore ~ H_{n+1} (x)                                & = 2x H_n(x) - 2nH_{n-1}(x).
+    \end{align*}
+    これと(i)の結果を比較すると，
+    \[
+        H '' (x) - 2x H_n' (x) + 2nH_n (x)=0.
+    \]
+\end{tproof}
 
-        $ H_n '(x)=2n H_{n-1}(x)$より，
-        \[
-            H_{n-1}(a) H_{n-1}(b) < 0
-        \]
-        このことから，$a$と$b$の間に$H_{n-1}(x)$の根が存在することがわかった．
-    \end{proof}
-\end{leftbar}
+\begin{proposition}{}{}
+    $H_n (x)$は$n$次多項式である．
+\end{proposition}
+
+\begin{tproof}
+    $n$についての数学的帰納法により示す．
+    \begin{enumerate}[(I)]
+        \item $n =0, 1$のとき，
+              \begin{align*}
+                  H_0 (x) & = 1,  \\
+                  H_1 (x) & = 2x,
+              \end{align*}
+              であるから，$n=0, 1 $のとき成立する．
+        \item $k \in \mathbb{N}$を任意に取り，$H_k (x)$が$k$次多項式であると仮定する．
+              $ H_{k+1}(x) =  2x H_k(x)-H_k'(x)$であるから，
+              帰納法の仮定により，$ 2 x H_k (x)$が$k+1$次多項式であることと，$H_k'(x)$が$k-1$次多項式であることが従い，$H_{k+1}(x)$も$k+1$次多項式である．
+    \end{enumerate}
+    よって数学的帰納法により，$H_n (x)$は任意の$n$について$n$次多項式である．
+\end{tproof}
+
+\begin{proposition}{}{}
+    $H_n(x)$ は，任意の $n \in \mathbb{N}$ に対して $n$ 個の相異なる実根をもつ．
+\end{proposition}
+
+\begin{tproof}
+    数学的帰納法およびRolleの定理を用いて示す．
+    \noindent
+    \begin{enumerate}[(I)]
+        \item \mbox{}
+              \[
+                  H_0(x) = 1, \quad H_1(x) = 2x, \quad H_2(x) = 2x^2-1.
+              \]
+              $H_0(x)$ は定数多項式で実根を持たない(ただし「$n=0$個」の根と解釈)，
+              $H_1(x) = 2x$ は $x=0$ に $1$つの実根をもつ．
+              $H_2(x)$ は相異なる$2$つの実根をもつ．
+              したがって，$n=0,1,2$のときに成立する．
+        \item
+              $k \geqq 2$ について，
+              $H_k(x)$は$k$個の相異なる実根をもつ
+              と仮定する．$H_k(x)$ の実根を
+              \[
+                  \alpha_1 < \alpha_2 < \dots < \alpha_k
+              \]
+              と表す．
+
+              Hermite多項式の基本的性質として，以下の関係式が成り立つ：
+              \[
+                  H_{k+1}(x)  = 2xH_k(x)-H_k'(x).
+              \]
+              まず，Rolleの定理により，開区間 $(\alpha_i,\alpha_{i+1})$ に対して少なくとも1つの $\beta_i$ が存在し，
+              \[
+                  \alpha_i < \beta_i < \alpha_{i+1},\quad
+                  H_k'(\beta_i) = 0
+                  \quad (i=1,2,\dots,k-1)
+              \]
+              が成り立つ．
+              $H_k '(x)$は$k-1$次多項式であるから，そのような点は$\beta_i$のみである．
+              よって$i = 0,1,\dots,k-1$に対し，$(\beta_i,\beta_{i+1})$においては$H_k '(x) \ne 0$であり，
+              かつ$H_k '(x)$の符号は一定である（ただし，$ \beta_0 =-\infty$，$\beta_k = \infty$とする）．
+
+              特に，$(\beta_{k-1},\beta_k)$で$H_k (x)$は単調増加または単調減少であり，
+              $\lim_{x \to \infty} H_k (x) =\infty$だから消去法で単調増加である．
+              つまり$H_k ' (\alpha_k) > 0$である．
+
+              (i)の結果により$H_{n+1} (\alpha_i) =-H_k'(\alpha_i)$であるから，
+              補題により，$H_{n+1}(\alpha_i)$の符号は交互に変わり，
+              かつ$H_{k+1}(\alpha_k) < 0$である．
+
+              以上の議論から，$k$ が偶数のときは $\alpha_1$ での値が正となり，以降交互に符号が変化して最後 $\alpha_k$ では負になる．
+              一方，$k$ が奇数のときは $\alpha_1$ での値が負となり，以降交互に符号が変化して最後 $\alpha_k$ ではやはり負になる．
+
+              ここで中間値の定理を適用すると，
+              \[
+                  (\alpha_1,\alpha_2),~(\alpha_2,\alpha_3),~\dots,~(\alpha_{k-1},\alpha_k)
+              \]
+              の各区間内で $H_{k+1}(x)$ は符号を変えるため，少なくとも1つずつ実根をもつ．
+              よってここまでで合計 $(k-1)$ 個の相異なる根が存在する．
+
+              最後に，$H_{k+1}(x)$ の最高次項は $2^{k+1} x^{k+1}$ であり，
+              \[
+                  \lim_{x \to +\infty} H_{k+1}(x) =
+                  \begin{cases}
+                      +\infty & (k \text{が偶数}) \\
+                      +\infty & (k \text{が奇数})
+                  \end{cases},
+                  \quad
+                  \lim_{x \to -\infty} H_{k+1}(x) =
+                  \begin{cases}
+                      -\infty & (k \text{が偶数}) \\
+                      +\infty & (k \text{が奇数})
+                  \end{cases}.
+              \]
+              したがって，$\alpha_1$ より左側と $\alpha_k$ より右側に
+              もう1つずつ根が必ず存在する．
+
+              以上をまとめると，
+              \[
+                  (\alpha_j,\alpha_{j+1}) \text{ に } (k-1)\text{ 個}, \quad
+                  (-\infty,\alpha_1) \text{ または } (\alpha_k,\infty) \text{ に } 2\text{ 個}
+              \]
+              の相異なる実根が存在するので，合計で $k+1$ 個の実根が存在する．
+
+              以上により，$H_k(x)$ が $k$ 個の実根をもつとき，$H_{k+1}(x)$ は
+              $k+1$ 個の相異なる実根をもつことが示された．
+    \end{enumerate}
+    よって数学的帰納法により，すべての $n \in \mathbb{N}$（あるいは $n \ge 0$）に対し
+    $H_n(x)$ は $n$ 個の相異なる実根をもつことが証明された．
+\end{tproof}
+
+\begin{proposition}{}{}
+    $H_n(x)$の隣り合う二根の間に$H_{n-1}(x)$の根が一つある．
+\end{proposition}
+
+
+\begin{tproof}
+    $H_n(x)$の隣り合う$2$根を$a$，$b$とすると
+    補題より，
+    \[
+        H_n '(a) H_n '(b)<0
+    \]
+    である．
+
+    $ H_n '(x)=2n H_{n-1}(x)$より，
+    \[
+        H_{n-1}(a) H_{n-1}(b) < 0
+    \]
+    このことから，$a$と$b$の間に$H_{n-1}(x)$の根が存在することがわかった．
+\end{tproof}
 以上のことから，全ての事柄が証明された．\qed
 
 \newpage
 \section*{p106--107：3}
 \addcontentsline{toc}{section}{\texorpdfstring{p106--107：3}{p106--107：3}}
 
-\begin{tleftbar}
-    \begin{proof}
-        まず，$f(a)=0$， $g(a)=0$と定義しておく．$0<\delta <b-a$を満たす$\delta$をとると，$f$と$g$は$[a,a+\delta]$で連続であり，
-        $(a,a+\delta)$で微分可能である．いま$g(x) \ne 0$~($ x \in (a,a+\delta)$)であるから，
-        コーシーの平均値の定理により，
-        \[
-            \frac{f(x)-f(a)}{g(x)-g(a)} = \frac{f'(c)}{g'(c)}
-        \]
-        を満たす$c \in (a,x)$が存在する．いま$f(a)=0$，$g(a)=0$と定義したので，
-        \[
-            \frac{f(x)}{g(x)} = \frac{f'(c)}{g'(c)}
-        \]
-        である．$ x \to a+0$のとき，$c \to a+0$であるから，仮定により，
-        \[
-            \lim_{x \to a+0} \frac{f(x)}{g(x)} = \lim_{c \to a+0} \frac{f'(c)}{g'(c)} =l
-        \]
-        である．$ x \to a-0$のときは同様にすればよく，$ x \to a$の場合はこれら二つの考察により結果が従う．
+\begin{tproof}
+    まず，$f(a)=0$， $g(a)=0$と定義しておく．$0<\delta <b-a$を満たす$\delta$をとると，$f$と$g$は$[a,a+\delta]$で連続であり，
+    $(a,a+\delta)$で微分可能である．いま$g(x) \ne 0$~($ x \in (a,a+\delta)$)であるから，
+    コーシーの平均値の定理により，
+    \[
+        \frac{f(x)-f(a)}{g(x)-g(a)} = \frac{f'(c)}{g'(c)}
+    \]
+    を満たす$c \in (a,x)$が存在する．いま$f(a)=0$，$g(a)=0$と定義したので，
+    \[
+        \frac{f(x)}{g(x)} = \frac{f'(c)}{g'(c)}
+    \]
+    である．$ x \to a+0$のとき，$c \to a+0$であるから，仮定により，
+    \[
+        \lim_{x \to a+0} \frac{f(x)}{g(x)} = \lim_{c \to a+0} \frac{f'(c)}{g'(c)} =l
+    \]
+    である．$ x \to a-0$のときは同様にすればよく，$ x \to a$の場合はこれら二つの考察により結果が従う．
 
-        $ x \to +\infty$のときは$ t=1/x$として$f(t)$と$g(t)$の極限を考えれば同じ結論に帰着する．
+    $ x \to +\infty$のときは$ t=1/x$として$f(t)$と$g(t)$の極限を考えれば同じ結論に帰着する．
 
-        以上の議論により証明された．
-    \end{proof}
-\end{tleftbar}
+    以上の議論により証明された．
+\end{tproof}
 
 \newpage
 
@@ -521,7 +506,7 @@ $H_n(x)$の隣り合う二根の間に$H_{n-1}(x)$の根が一つある
 \subsection*{p106--107：8-(\romannumeral1)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p106--107：8-(\romannumeral1)}{p106--107：8-(\romannumeral1)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     \[
         f(x)=3x^4 -8x^3+6x^2
     \]
@@ -554,14 +539,14 @@ $H_n(x)$の隣り合う二根の間に$H_{n-1}(x)$の根が一つある
         \draw(0,0)node[below right]{O};%原点
         \draw[domain=-0.2:1.3,samples=100]plot(\x,{3*pow(\x,4)-8*pow(\x,3)+6*pow(\x,2)})node[right]{$y=3x^4-8x^3+6x^2$};
     \end{tikzpicture}
-\end{tleftbar}
+\end{tanswer}
 
 \newpage
 
 \subsection*{p106--107：8-(\romannumeral2)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p106--107：8-(\romannumeral2)}{p106--107：8-(\romannumeral2)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     $x>0$のもとで，
     \[
         f(x)=x^\frac{1}{x}
@@ -598,8 +583,7 @@ $H_n(x)$の隣り合う二根の間に$H_{n-1}(x)$の根が一つある
         \draw(0,0)node[below right]{O};%原点
         \draw[domain=0.1:4,samples=100]plot(\x,{pow(\x,1/\x)}) node[right]{$y=x^{1/x}$};
     \end{tikzpicture}
-
-\end{tleftbar}
+\end{tanswer}
 
 \newpage
 
@@ -608,116 +592,112 @@ $H_n(x)$の隣り合う二根の間に$H_{n-1}(x)$の根が一つある
 
 
 
-\begin{tleftbar}
-    \begin{proof}
-        3つのことを証明する．
-        \begin{description}
-            \item[a)とb)が同値であること] \mbox{} \par
-                  $a < x \leqq y$または$y \leqq x <a$に対して，$0 \leqq t < 1$を用いて，
-                  \[
-                      x=ta+(1-t)y
-                  \]
-                  とおく．$a < x \leqq y$とする．このとき，
-                  \begin{equation}
-                      \label{eq:p107 10) 1}
-                      t = \frac{x-y}{a-y}
-                  \end{equation}
-                  と表せることはよい．
+\begin{tproof}
+    3つのことを証明する．
+    \begin{description}
+        \item[a)とb)が同値であること] \mbox{} \par
+              $a < x \leqq y$または$y \leqq x <a$に対して，$0 \leqq t < 1$を用いて，
+              \[
+                  x=ta+(1-t)y
+              \]
+              とおく．$a < x \leqq y$とする．このとき，
+              \begin{equation}
+                  \label{eq:p107 10) 1}
+                  t = \frac{x-y}{a-y}
+              \end{equation}
+              と表せることはよい．
 
-                  また，$f$は$I$で凸であり，これは
-                  \begin{equation}
-                      \label{eq:p107 10) 2}
-                      f(x)=tf(x)+(1-t)f(x) < tf(a)+(1-t)f(y)
-                  \end{equation}
-                  と同値である．$x<y$のとき\eqref{eq:p107 10) 2}に\eqref{eq:p107 10) 1}の$t$の値を代入すれば，
-                  \begin{equation}
-                      \label{eq:p107 10) 3}
-                      \frac{f(x)-f(a)}{x-a} < \frac{f(y)-f(x)}{y-x}
-                  \end{equation}
-                  を得る．$x=y$のときは明らか．
-            \item [a)とc)が同値であること] \mbox{} \par
-                  c)を仮定する．\eqref{eq:p107 10) 3}の左辺について，平均値の定理により，
-                  \[
-                      \frac{f(x)-f(a)}{x-a}=f'(\xi)
-                  \]
-                  をみたす$\xi ~(a<\xi <x)$が存在する．同様に，\eqref{eq:p107 10) 3}の右辺について，平均値の定理により，
-                  \[
-                      \frac{f(y)-f(x)}{y-x}=f'(\eta)
-                  \]
-                  をみたす$\eta~ (x<\eta < y)$が存在する．仮定により，$f'(\xi)\leqq f'(\eta)$だから，\eqref{eq:p107 10) 3}が成り立ち，a)が従う．
+              また，$f$は$I$で凸であり，これは
+              \begin{equation}
+                  \label{eq:p107 10) 2}
+                  f(x)=tf(x)+(1-t)f(x) < tf(a)+(1-t)f(y)
+              \end{equation}
+              と同値である．$x<y$のとき\eqref{eq:p107 10) 2}に\eqref{eq:p107 10) 1}の$t$の値を代入すれば，
+              \begin{equation}
+                  \label{eq:p107 10) 3}
+                  \frac{f(x)-f(a)}{x-a} < \frac{f(y)-f(x)}{y-x}
+              \end{equation}
+              を得る．$x=y$のときは明らか．
+        \item [a)とc)が同値であること] \mbox{} \par
+              c)を仮定する．\eqref{eq:p107 10) 3}の左辺について，平均値の定理により，
+              \[
+                  \frac{f(x)-f(a)}{x-a}=f'(\xi)
+              \]
+              をみたす$\xi ~(a<\xi <x)$が存在する．同様に，\eqref{eq:p107 10) 3}の右辺について，平均値の定理により，
+              \[
+                  \frac{f(y)-f(x)}{y-x}=f'(\eta)
+              \]
+              をみたす$\eta~ (x<\eta < y)$が存在する．仮定により，$f'(\xi)\leqq f'(\eta)$だから，\eqref{eq:p107 10) 3}が成り立ち，a)が従う．
 
-                  a)，すなわち\eqref{eq:p107 10) 3}を仮定する．
-                  左辺について，$x \to + a$とすれば，これは$f'(a)$に収束し，右辺は，
-                  これは$(f(y)-f(a))/(y-a)$に収束する（これを$\alpha$とおく．）．$f'(a) \leqq \alpha$となることはよい．
-                  また，$x \to - y$とすれば，左辺は$\alpha$に，右辺は$f'(y)$に収束する．$\alpha \leqq f'(y)$となることもよい．
+              a)，すなわち\eqref{eq:p107 10) 3}を仮定する．
+              左辺について，$x \to + a$とすれば，これは$f'(a)$に収束し，右辺は，
+              これは$(f(y)-f(a))/(y-a)$に収束する（これを$\alpha$とおく．）．$f'(a) \leqq \alpha$となることはよい．
+              また，$x \to - y$とすれば，左辺は$\alpha$に，右辺は$f'(y)$に収束する．$\alpha \leqq f'(y)$となることもよい．
 
-                  よって，a)とc)は同値である．
+              よって，a)とc)は同値である．
 
-            \item[a)とd)が同値であること] \mbox{} \par
-                  d)を仮定する．これは$f'(x)$は$I$上で単調増加であることと同値である．
-        \end{description}
-        以上の議論により，示された．
-    \end{proof}
-\end{tleftbar}
+        \item[a)とd)が同値であること] \mbox{} \par
+              d)を仮定する．これは$f'(x)$は$I$上で単調増加であることと同値である．
+    \end{description}
+    以上の議論により，示された．
+\end{tproof}
 
 
 \section*{p126：2}
 \addcontentsline{toc}{section}{\texorpdfstring{p126：2}{p126：2}}
 
 
-\begin{tleftbar}
-    \begin{proof}
-        \begin{description}
-            \item[必要条件であること]
-                  $ f $ が $ x=0 $ で微分可能であると仮定する．この条件は次のように書ける：
-                  \[
-                      f(x) - f(0) = c \cdot x + \varepsilon(x)
-                  \]
-                  ここで，$ c = (c_1, \ldots, c_n) $ は $ f $ の $ x=0 $ における勾配ベクトルであり，$ \varepsilon(x) $ は
-                  $\lim_{x \to 0} \varepsilon(x)/\abs{x} = 0$をみたす関数である．このとき，各 $ i $ について次のように $ g_i(x) $ を定義する：
-                  \[
-                      g_i(x) =
-                      \begin{cases}
-                          c_i + (\varepsilon(x) x_i)/\abs{x}^2 & (x \ne 0) \\
-                          c_i                                  & (x = 0)
-                      \end{cases}
-                  \]
+\begin{tproof}
+    \begin{description}
+        \item[必要条件であること]
+              $ f $ が $ x=0 $ で微分可能であると仮定する．この条件は次のように書ける：
+              \[
+                  f(x) - f(0) = c \cdot x + \varepsilon(x)
+              \]
+              ここで，$ c = (c_1, \ldots, c_n) $ は $ f $ の $ x=0 $ における勾配ベクトルであり，$ \varepsilon(x) $ は
+              $\lim_{x \to 0} \varepsilon(x)/\abs{x} = 0$をみたす関数である．このとき，各 $ i $ について次のように $ g_i(x) $ を定義する：
+              \[
+                  g_i(x) =
+                  \begin{cases}
+                      c_i + (\varepsilon(x) x_i)/\abs{x}^2 & (x \ne 0) \\
+                      c_i                                  & (x = 0)
+                  \end{cases}
+              \]
 
-                  この $ g_i(x) $ が $ x=0 $ で連続であることを示すために，$ x \to 0 $ の極限を考える．$ x \ne 0 $ のとき，
-                  \[
-                      \lim_{x \to 0} g_i(x) = \lim_{x \to 0} \left( c_i + \frac{\varepsilon(x) x_i}{|x|^2} \right) = c_i + \lim_{x \to 0} \frac{\varepsilon(x) x_i}{|x|^2}.
-                  \]
-                  ここで，$\varepsilon(x)/\abs{x} \to 0 $ なので，
-                  \[
-                      \abs{\frac{\varepsilon(x) x_i}{\abs{x}^2}} = \abs{\frac{\varepsilon(x)}{\abs{x}} \cdot \frac{x_i}{|x|}} \leqq  \abs{\frac{\varepsilon(x)}{\abs{x}} \cdot 1} = \abs{\frac{\varepsilon(x)}{\abs{x}}} \to 0 \quad (x \to 0).
-                  \]
-                  したがって，$\lim_{x \to 0} g_i(x) = c_i$なので，$ g_i(x) $ は $ x=0 $ で連続である．よって
-                  \[
-                      f(x) = f(0) + \sum_{i=1}^n x_i g_i(x).
-                  \]
-            \item [十分条件であること]
-                  ある連続な関数 $ g_i \colon \mathbb{R}^n \to \mathbb{R} $ が存在して，次のように表されるとする：
-                  \[
-                      f(x) = f(0) + \sum_{i=1}^n x_i g_i(x)
-                  \]
-                  このとき，$ g_i(x) $ が $ x=0 $ で連続であるため，各 $ i $ について $ g_i(0) $ が存在し，次が成り立つ：
-                  \[
-                      f(x) - f(0) = \sum_{i=1}^n x_i g_i(0) + \sum_{i=1}^n x_i (g_i(x) - g_i(0)).
-                  \]
-                  ここで，$ \varepsilon(x) = \sum_{i=1}^n x_i (g_i(x) - g_i(0)) $ とおくと，
-                  \[
-                      \lim_{x \to 0} \frac{\varepsilon(x)}{\abs{x}} = \lim_{x \to 0} \frac{\sum_{i=1}^n x_i (g_i(x) - g_i(0))}{\abs{x}}.
-                  \]
-                  三角不等式を用いると，
-                  \[
-                      \abs{ \frac{\varepsilon(x)}{\abs{x}} } \leqq \sum_{i=1}^n \abs{ \frac{x_i(g_i(x) - g_i(0))}{\abs{x}} }.
-                  \]
+              この $ g_i(x) $ が $ x=0 $ で連続であることを示すために，$ x \to 0 $ の極限を考える．$ x \ne 0 $ のとき，
+              \[
+                  \lim_{x \to 0} g_i(x) = \lim_{x \to 0} \left( c_i + \frac{\varepsilon(x) x_i}{|x|^2} \right) = c_i + \lim_{x \to 0} \frac{\varepsilon(x) x_i}{|x|^2}.
+              \]
+              ここで，$\varepsilon(x)/\abs{x} \to 0 $ なので，
+              \[
+                  \abs{\frac{\varepsilon(x) x_i}{\abs{x}^2}} = \abs{\frac{\varepsilon(x)}{\abs{x}} \cdot \frac{x_i}{|x|}} \leqq  \abs{\frac{\varepsilon(x)}{\abs{x}} \cdot 1} = \abs{\frac{\varepsilon(x)}{\abs{x}}} \to 0 \quad (x \to 0).
+              \]
+              したがって，$\lim_{x \to 0} g_i(x) = c_i$なので，$ g_i(x) $ は $ x=0 $ で連続である．よって
+              \[
+                  f(x) = f(0) + \sum_{i=1}^n x_i g_i(x).
+              \]
+        \item [十分条件であること]
+              ある連続な関数 $ g_i \colon \mathbb{R}^n \to \mathbb{R} $ が存在して，次のように表されるとする：
+              \[
+                  f(x) = f(0) + \sum_{i=1}^n x_i g_i(x)
+              \]
+              このとき，$ g_i(x) $ が $ x=0 $ で連続であるため，各 $ i $ について $ g_i(0) $ が存在し，次が成り立つ：
+              \[
+                  f(x) - f(0) = \sum_{i=1}^n x_i g_i(0) + \sum_{i=1}^n x_i (g_i(x) - g_i(0)).
+              \]
+              ここで，$ \varepsilon(x) = \sum_{i=1}^n x_i (g_i(x) - g_i(0)) $ とおくと，
+              \[
+                  \lim_{x \to 0} \frac{\varepsilon(x)}{\abs{x}} = \lim_{x \to 0} \frac{\sum_{i=1}^n x_i (g_i(x) - g_i(0))}{\abs{x}}.
+              \]
+              三角不等式を用いると，
+              \[
+                  \abs{ \frac{\varepsilon(x)}{\abs{x}} } \leqq \sum_{i=1}^n \abs{ \frac{x_i(g_i(x) - g_i(0))}{\abs{x}} }.
+              \]
 
-                  $ g_i(x) $ が $ x=0 $ で連続であるため，$ g_i(x) \to g_i(0) $ となる．したがって，各$ i $について
-                  \[
-                      \abs{ \frac{g_i(x) - g_i(0)}{\abs{x}} } \to 0 \quad (x \to 0).
-                  \]
-                  ゆえに，$\lim_{x \to 0} \varepsilon(x)/\abs{x} = 0$となり，$ f $ は $ x=0 $ で微分可能である．
-        \end{description}
-    \end{proof}
-\end{tleftbar}
+              $ g_i(x) $ が $ x=0 $ で連続であるため，$ g_i(x) \to g_i(0) $ となる．したがって，各$ i $について
+              \[
+                  \abs{ \frac{g_i(x) - g_i(0)}{\abs{x}} } \to 0 \quad (x \to 0).
+              \]
+              ゆえに，$\lim_{x \to 0} \varepsilon(x)/\abs{x} = 0$となり，$ f $ は $ x=0 $ で微分可能である．
+    \end{description}
+\end{tproof}

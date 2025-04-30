@@ -7,92 +7,88 @@
 \addcontentsline{toc}{section}{\texorpdfstring{p211-212：1}{p211-212：1}}
 
 
-\begin{tleftbar}
-    \begin{proof}
-        $f$は区間$I$内の$m$個の点$x = a_1, a_2, \ldots, a_m$でのみ$f(x) \ne 0$であるとする．
-        この条件のもとで，
-        \[
-            M = \max_{1 \leqq k \leqq m} \abs{f(a_k)}
-        \]
-        と定義する．また任意の分割 $\Delta$ に対して，
-        \[
-            s(f; \Delta; \xi) = \sum_{k \in K(\Delta)} f(\xi_k) v(I_k)
-        \]
-        である．ここで、$f(\xi_k) \ne 0$である項は高々$m$個であり，その個数を$m_0$とする．
-        このような項のみを考慮すると，リーマン和は次のように表せる：
-        \[
-            s(f; \Delta; \xi) = \sum_{i=1}^{m_0} f(\xi_{k_i}) v(I_{k_i})
-        \]
-        ここで，$i = 1, 2, \ldots, m_0$は$f(\xi_k) \ne 0$である区間$ I_{k_i} $を走るものとする．
+\begin{tproof}
+    $f$は区間$I$内の$m$個の点$x = a_1, a_2, \ldots, a_m$でのみ$f(x) \ne 0$であるとする．
+    この条件のもとで，
+    \[
+        M = \max_{1 \leqq k \leqq m} \abs{f(a_k)}
+    \]
+    と定義する．また任意の分割 $\Delta$ に対して，
+    \[
+        s(f; \Delta; \xi) = \sum_{k \in K(\Delta)} f(\xi_k) v(I_k)
+    \]
+    である．ここで、$f(\xi_k) \ne 0$である項は高々$m$個であり，その個数を$m_0$とする．
+    このような項のみを考慮すると，リーマン和は次のように表せる：
+    \[
+        s(f; \Delta; \xi) = \sum_{i=1}^{m_0} f(\xi_{k_i}) v(I_{k_i})
+    \]
+    ここで，$i = 1, 2, \ldots, m_0$は$f(\xi_k) \ne 0$である区間$ I_{k_i} $を走るものとする．
 
-        次に，先に定義した$M$を用いると，
-        \[
-            \abs{s(f; \Delta; \xi)} = \abs{\sum_{i=1}^{m_0} f(\xi_{k_i}) v(I_{k_i})} \leqq M \sum_{i=1}^{m_0} v(I_{k_i})
-        \]
-        を得る．さて，$d(\Delta)$を分割$\Delta$の直径とすると，各区間の体積に関して$ v(I_{k_i}) \leqq d(\Delta)^n $だから，
-        \[
-            \abs{s(f; \Delta; \xi)} \leqq M \sum_{i=1}^{m_0} d(\Delta)^n = m_0 M d(\Delta)^n
-        \]
-        となる．ここで，リーマン和に寄与する項は$m_0$個であることを用いた．
+    次に，先に定義した$M$を用いると，
+    \[
+        \abs{s(f; \Delta; \xi)} = \abs{\sum_{i=1}^{m_0} f(\xi_{k_i}) v(I_{k_i})} \leqq M \sum_{i=1}^{m_0} v(I_{k_i})
+    \]
+    を得る．さて，$d(\Delta)$を分割$\Delta$の直径とすると，各区間の体積に関して$ v(I_{k_i}) \leqq d(\Delta)^n $だから，
+    \[
+        \abs{s(f; \Delta; \xi)} \leqq M \sum_{i=1}^{m_0} d(\Delta)^n = m_0 M d(\Delta)^n
+    \]
+    となる．ここで，リーマン和に寄与する項は$m_0$個であることを用いた．
 
-        ここで，$d(\Delta) \to 0$ とすると，$d(\Delta)^n \to 0$ であるため，
-        \[
-            \abs{s(f; \Delta; \xi)} \to 0
-        \]
-        となる．したがって，$f$は区間$I$上でリーマン積分可能であり，
-        \[
-            \int_{I} f(x)\, dx = 0.
-        \]
-    \end{proof}
-\end{tleftbar}
+    ここで，$d(\Delta) \to 0$ とすると，$d(\Delta)^n \to 0$ であるため，
+    \[
+        \abs{s(f; \Delta; \xi)} \to 0
+    \]
+    となる．したがって，$f$は区間$I$上でリーマン積分可能であり，
+    \[
+        \int_{I} f(x)\, dx = 0.
+    \]
+\end{tproof}
 
 \section*{p211-212：2}
 \addcontentsline{toc}{section}{\texorpdfstring{p211-212：2}{p211-212：2}}
 
 
-\begin{tleftbar}
-    \begin{proof}
-        まず，$f$は$I$上で可積分であることから，任意の$\varepsilon >0$に対して，分割$\Delta$が存在して
-        \[
-            \abs{s(f; \Delta; \xi) - J} < \varepsilon.
-        \]
-        が成立する．ここで$J = \int_I f$とおいた．ここでとくに，$1 >0$に対して，ある$\Delta$が存在し，
-        \[
-            \abs{ s(f; \Delta; \xi) - J } < 1
-        \]
-        が成立する．
+\begin{tproof}
+    まず，$f$は$I$上で可積分であることから，任意の$\varepsilon >0$に対して，分割$\Delta$が存在して
+    \[
+        \abs{s(f; \Delta; \xi) - J} < \varepsilon.
+    \]
+    が成立する．ここで$J = \int_I f$とおいた．ここでとくに，$1 >0$に対して，ある$\Delta$が存在し，
+    \[
+        \abs{ s(f; \Delta; \xi) - J } < 1
+    \]
+    が成立する．
 
-        次に，分割$\Delta$のある区間$I_k$に対して代表点$\xi_k$を固定し，$k \ne m \in K(\Delta)$を満たす他の代表点を考え，さらに
-        \[
-            B = \sum_{k \ne m , m \in K(\Delta)} f(\xi_m) v(I_m)
-        \]
-        と定義する．このとき
-        \[
-            S(f; \Delta; \xi) = f(\xi_k) v(I_k) + B.
-        \]
-        ここで，先ほどの不等式$\abs{ s(f; \Delta; \xi) - J } < 1$を適用すると，
-        \[
-            \abs{ f(\xi_k) v(I_k) + B - J } < 1
-        \]
-        が得られ，これを整理すると
-        \[
-            -1 < f(\xi_k) v(I_k) + B - J < 1.
-        \]
-        つまり，
-        \[
-            J - 1 - B < f(\xi_k) v(I_k) < J + 1 - B.
-        \]
-        ここで，$v(I_k)$が$0$ではないことを考慮して両辺を$v(I_k)$で割ると，
-        \[
-            \frac{J - 1 - B}{v(I_k)} < f(\xi_k) < \frac{J + 1 - B}{v(I_k)}.
-        \]
-        したがって，$f(\xi_k)$は区間$I_k$上で有界であることがわかる．
+    次に，分割$\Delta$のある区間$I_k$に対して代表点$\xi_k$を固定し，$k \ne m \in K(\Delta)$を満たす他の代表点を考え，さらに
+    \[
+        B = \sum_{k \ne m , m \in K(\Delta)} f(\xi_m) v(I_m)
+    \]
+    と定義する．このとき
+    \[
+        S(f; \Delta; \xi) = f(\xi_k) v(I_k) + B.
+    \]
+    ここで，先ほどの不等式$\abs{ s(f; \Delta; \xi) - J } < 1$を適用すると，
+    \[
+        \abs{ f(\xi_k) v(I_k) + B - J } < 1
+    \]
+    が得られ，これを整理すると
+    \[
+        -1 < f(\xi_k) v(I_k) + B - J < 1.
+    \]
+    つまり，
+    \[
+        J - 1 - B < f(\xi_k) v(I_k) < J + 1 - B.
+    \]
+    ここで，$v(I_k)$が$0$ではないことを考慮して両辺を$v(I_k)$で割ると，
+    \[
+        \frac{J - 1 - B}{v(I_k)} < f(\xi_k) < \frac{J + 1 - B}{v(I_k)}.
+    \]
+    したがって，$f(\xi_k)$は区間$I_k$上で有界であることがわかる．
 
-        任意の区間$I_k$に対して同様の議論が適用できるため，関数$f$は区間$I$全体で有界であることが結論づけられる．
+    任意の区間$I_k$に対して同様の議論が適用できるため，関数$f$は区間$I$全体で有界であることが結論づけられる．
 
-        以上により，$f$が$I$上で有界であることが証明された．
-    \end{proof}
-\end{tleftbar}
+    以上により，$f$が$I$上で有界であることが証明された．
+\end{tproof}
 
 
 \section*{p211-212：3}
@@ -102,7 +98,7 @@
 \subsection*{p211-212：3-(\romannumeral1)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p211-212：3-(\romannumeral1)}{p211-212：3-(\romannumeral1)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     $f$は$I$で単調に増加するので，
     \[
         \zeta_k = x_{k-1} \leqq \xi_k \leqq x_k=\eta_k
@@ -132,12 +128,12 @@
         \lim_{d(\Delta) \to 0} s(f;\Delta; \xi_k)=J.
     \]
     よって$f$は$I$でリーマン積分可能となり，$\int_{I} f = \frac{a^2}{2}$である．
-\end{tleftbar}
+\end{tanswer}
 
 
 \subsection*{p211-212：3-(\romannumeral2)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p211-212：3-(\romannumeral2)}{p211-212：3-(\romannumeral2)}}
-\begin{tleftbar}
+\begin{tanswer}
     $f$は$I$で単調に増加するので，
     \[
         \zeta_k = x_{k-1} \leqq \xi_k \leqq x_k=\eta_k
@@ -175,7 +171,7 @@
         \lim_{d(\Delta) \to 0} s(f;\Delta; \xi_k)=J.
     \]
     よって$f$は$I$でリーマン積分可能となり，$\int_{I} f = \frac{a^3}{3}$である．
-\end{tleftbar}
+\end{tanswer}
 
 
 \section*{p239：1}
@@ -184,7 +180,7 @@
 \subsection*{p239：1-(\romannumeral1)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p239：1-(\romannumeral1)}{p239：1-(\romannumeral1)}}
 
-\begin{screen}
+\begin{tanswer}
     $\tan \frac{x}{2}=t$とおくと，
     \begin{align*}
         \int_{0}^{\frac{\pi}{2}} \cfrac{\sin x}{1+\cos x} \, dx & = \int_{0}^{1} \cfrac{\cfrac{2t}{1+t^2}}{1+\cfrac{1-t^2}{1+t^2}} \cdot \cfrac{2}{1+t^2} \, dt \\
@@ -192,13 +188,13 @@
                                                                 & = \Bigl[\log (t^2+1)\Bigl]_{0}^{1}                                                            \\
                                                                 & = \log 2-0 = \log 2
     \end{align*}
-\end{screen}
+\end{tanswer}
 
 
 \subsection*{p239：1-(\romannumeral2)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p239：1-(\romannumeral2)}{p239：1-(\romannumeral2)}}
 
-\begin{screen}
+\begin{tanswer}
     $x-a=a \sin \theta$ ($-\pi \le \theta < \pi$)とする置換を用いる．
     \begin{align*}
         \int_{0}^{a} \sqrt{2ax-x^2} \, dx & = \int_{0}^{a} \sqrt{-(x-a)^2+a^2} \, dx                                                 \\
@@ -209,14 +205,14 @@
                                           & = \frac{1}{2} a^2 \left [\theta + \frac{1}{2}\sin 2 \theta \right ]_{-\frac{\pi}{2}}^{0} \\
                                           & = \frac{\pi a^2}{4}
     \end{align*}
-\end{screen}
+\end{tanswer}
 
 
 \subsection*{p239：1-(\romannumeral3)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p239：1-(\romannumeral3)}{p239：1-(\romannumeral3)}}
 
 
-\begin{screen}
+\begin{tanswer}
     \begin{align*}
         \abs{\sin 2 \theta} =
         \begin{cases}
@@ -230,12 +226,12 @@
                                                        & = \left [-\frac{\cos 2 \theta}{2}\right]_{0}^{\frac{\pi}{2}} + \left [\frac{\cos 2 \theta}{2}\right]_{\frac{\pi}{2}}^{\pi} \\
                                                        & = -\frac{(-1-1)}{2} + \frac{1+1}{2} = 2
     \end{align*}
-\end{screen}
+\end{tanswer}
 
 
 \subsection*{p239：1-(\romannumeral4)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p239：1-(\romannumeral4)}{p239：1-(\romannumeral4)}}
-\begin{screen}
+\begin{tanswer}
     \begin{align*}
         \int_{0}^{\pi} e^{inx} \, dx  =
         \begin{cases}
@@ -254,13 +250,13 @@
                                       & = \frac{1}{in} (1-1)=0
     \end{align*}
     となる．
-\end{screen}
+\end{tanswer}
 
 
 \subsection*{p239：1-(v)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p239：1-(v)}{p239：1-(v)}}
 
-\begin{screen}
+\begin{tanswer}
     $m=n$のとき，
     \begin{align*}
         \int_{0}^{2\pi} \cos m x \sin nx \, dx & = \int_{0}^{2\pi} \cos mx \sin mx \, dx                            \\
@@ -277,12 +273,12 @@
         \int_{0}^{2\pi} \cos mx \sin nx \, dx =\int_{0}^{2\pi} \sin mx \cos nx \, dx =0 ~(n,m \in \mathbb{N})
     \]
     となる．
-\end{screen}
+\end{tanswer}
 
 
 \subsection*{p239：1-(vi)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p239：1-(vi)}{p239：1-(vi)}}
-\begin{screen}
+\begin{tanswer}
     $m \ne n$のとき，
     \begin{align*}
         \int_{0}^{2\pi} \cos mx \cos nx \, dx & = \int_{0}^{2\pi} \left (\frac{\cos(m+n)x+\cos(n-m)x}{2}\right) \, dx                 \\
@@ -310,7 +306,7 @@
         \end{cases}
     \end{align*}
     である．
-\end{screen}
+\end{tanswer}
 
 \section*{p239：3}
 \addcontentsline{toc}{section}{\texorpdfstring{p239：3}{p239：3}}
@@ -318,7 +314,7 @@
 \subsection*{p239：3-(\romannumeral1)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p239：3-(\romannumeral1)}{p239：3-(\romannumeral1)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     部分積分法を用いると，
     \begin{align*}
         \int x^\alpha \log x \, dx & = \frac{x^{\alpha +1} \log x}{\alpha +1}　- \int \frac{x^{\alpha +1}}{\alpha+1} \cdot \frac{1}{x} \, dx \\
@@ -326,12 +322,12 @@
                                    & = \frac{x^{\alpha+1} \log x}{\alpha +1} - \frac{x^{\alpha +1}}{(\alpha +1)^2}+ C
     \end{align*}
     となり，これが答えである．
-\end{tleftbar}
+\end{tanswer}
 
 \subsection*{p239：3-(\romannumeral2)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p239：3-(\romannumeral2)}{p239：3-(\romannumeral2)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     部分積分法を用いると，
     \begin{align*}
         \int x^n e^x \, dx & = x^n e^x - n \int x^{n-1} e^x \, dx                                   \\
@@ -340,12 +336,12 @@
                            & = e^x (x^n -n x^{n-1}+ \cdots +(-1)^n n!) + C
     \end{align*}
     となる．
-\end{tleftbar}
+\end{tanswer}
 
 \subsection*{p239：3-(\romannumeral3)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p239：3-(\romannumeral3)}{p239：3-(\romannumeral3)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     部分積分法を用いると，
     \begin{align*}
         \int (\log x)^n \, dx & = \int (\log x)^n  (x)' \, dx                                                           \\
@@ -354,11 +350,11 @@
                               & = \cdots = x (\log x)^n - n x(\log x)^{n-1} + \cdots + x(-1)^n n!+C
     \end{align*}
     となり，これが答えである．
-\end{tleftbar}
+\end{tanswer}
 
 \subsection*{p239：3-(\romannumeral4)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p239：3-(\romannumeral4)}{p239：3-(\romannumeral4)}}
-\begin{leftbar}
+\begin{tanswer}
     部分積分法を用いると，
     \begin{align*}
         \int \arcsin x \, dx & = \int (x)' \arcsin x \, dx                        \\
@@ -366,38 +362,38 @@
                              & = x \arcsin x + \sqrt{1-x^2} + C
     \end{align*}
     であり，これが答えである．
-\end{leftbar}
+\end{tanswer}
 
 \subsection*{p239：3-(v)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p239：3-(v)}{p239：3-(v)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     $\cos ^2 x = \frac{1+\cos 2x}{2}$なので，
     \begin{align*}
         \int \cos ^2 x \, dx & = \int \frac{1+\cos 2x}{2} \, dx      \\
                              & = \frac{x}{2}+\frac{1}{4} \sin 2x + C
     \end{align*}
     である．
-\end{tleftbar}
+\end{tanswer}
 
 \newpage
 
 \subsection*{p239：3-(vi)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p239：3-(vi)}{p239：3-(vi)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     $(\log x)' = \frac{1}{x}$であることを用いて，
     \begin{align*}
         \int \frac{(\log x)^2}{x} \, dx & = \int (\log x)^2 (\log x)' \, dx \\
                                         & = \frac{(\log x)^3}{3} + C
     \end{align*}
     となり，これが答えである．
-\end{tleftbar}
+\end{tanswer}
 
 \subsection*{p239：3-(vii)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p239：3-(vii)}{p239：3-(vii)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     $x+1 =t$とおくと，$dt=dx$であり，
     \begin{align*}
         \int \frac{x^2+2}{(x+1)^3} \, dx & = \int \frac{(t-1)^2+2}{t^3} \, dt                                 \\
@@ -405,12 +401,12 @@
                                          & = \log \abs{x+1}+\frac{2}{x+1}-\frac{3}{2(x+1)^2}+C
     \end{align*}
     となり，これが答えである．
-\end{tleftbar}
+\end{tanswer}
 
 \subsection*{p239：3-(viii)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p239：3-(viii)}{p239：3-(viii)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     $\cos ^2 x = 1- \sin ^2 x$なので，
     \begin{align*}
         \int \sin ^3 x \cos ^2 x \, dx & = \int \sin ^3 x (1-\sin ^2 x) \, dx = \int (\sin ^3 x - \sin ^5 x ) \, dx \\
@@ -420,12 +416,12 @@
                                        & = \frac{\cos ^5 x}{5}-\frac{\cos ^3 x}{3}+C
     \end{align*}
     である．
-\end{tleftbar}
+\end{tanswer}
 
 \subsection*{p239：3-(ix)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p239：3-(ix)}{p239：3-(ix)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     $\sqrt[6]{x}=t$とおくと，$x=t^6$であるから，$\frac{dx}{dt}=6t^5$である．これらを用いると，
     \begin{align*}
         \int \frac{1}{\sqrt{x}-\sqrt[3]{x}} \, dx & = \int \frac{1}{t^3-t^2} \cdot 6t^5 \, dt                                 \\
@@ -435,7 +431,7 @@
                                                   & = 2\sqrt{x}+3 \sqrt[3]{x} + 6 \sqrt[6]{x} + 6 \log \abs{\sqrt[6]{x}-1}+ C
     \end{align*}
     である
-\end{tleftbar}
+\end{tanswer}
 
 
 \section*{p239--240：4}
@@ -445,7 +441,7 @@
 \subsection*{p239--240：4-(\romannumeral1)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p239--240：4-(\romannumeral1)}{p239--240：4-(\romannumeral1)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     \begin{align*}
         \frac{1}{n+1}+ \frac{1}{n+2}+\dots + \frac{1}{2n} & = \sum_{k=1}^{n} \frac{1}{n+k}               \\
                                                           & = \frac{1}{n} \sum_{k=1}^{n} \frac{1}{1+k/n}
@@ -457,14 +453,14 @@
                                 & = \Bigl [ \log (1+x) \Bigl]_{0}^{1} = \log 2
     \end{align*}
     である．
-\end{tleftbar}
+\end{tanswer}
 
 
 
 \subsection*{p239--240：4-(\romannumeral2)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p239--240：4-(\romannumeral1)}{p239--240：4-(\romannumeral2)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     \begin{align*}
         \frac{1}{\sqrt{n^2+n}}+\frac{1}{\sqrt{n^2+2n}}+\dots+\frac{1}{\sqrt{n^2+n^2}} & = \sum_{k=1}^{n} \frac{1}{\sqrt{n^2+kn}}            \\
                                                                                       & = \frac{1}{n} \sum_{k=1}^{n} \frac{1}{\sqrt{1+k/n}}
@@ -476,7 +472,7 @@
                                 & =\int_{1}^{\sqrt{2}} \frac{1}{t} \cdot 2t \, dt                         \\
                                 & = \Bigl[2t \Bigl ]_{1}^{\sqrt{2}} =2(\sqrt{2}-1)
     \end{align*}
-\end{tleftbar}
+\end{tanswer}
 
 
 \section*{p247：1}
@@ -486,7 +482,7 @@
 \subsection*{p247：1-(\romannumeral1)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(\romannumeral1)}{p247：1-(\romannumeral1)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     計算すると，
     \begin{align*}
         \int \frac{1}{x^3-x} \, dx & = \frac{1}{2} \int \left \{ \frac{-(x-1)+(x+1)}{(x-1)x(x+1)} \right \} \, dx                 \\
@@ -496,13 +492,13 @@
                                    & = -\log \abs{x} + \frac{1}{2} \log \abs{x^2-1}+ C
     \end{align*}
     であり，これが答えである．
-\end{tleftbar}
+\end{tanswer}
 
 
 \subsection*{p247：1-(\romannumeral2)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(\romannumeral2)}{p247：1-(\romannumeral2)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     $(x-1)(x-2)(x-3)=x^3 -6x^2+11x-6$であるから，
     \[
         \int \frac{x^3}{(x-1)(x-2)(x-3)} \, dx  = \int \left (1+ \frac{6x^2-11x+6}{(x-1)(x-2)(x-3)}\right) \, dx
@@ -522,12 +518,12 @@
                                                & = x + \frac{1}{2} \log \abs{\frac{(x-1)(x-3)^{27}}{(x-2)^{16}}}+C
     \end{align*}
     である．
-\end{tleftbar}
+\end{tanswer}
 
 \subsection*{p247：1-(\romannumeral3)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(\romannumeral3)}{p247：1-(\romannumeral3)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     $A,B,C,D$を定数として，
     \[
         \frac{x^3+1}{x(x-1)^3} = \frac{A}{x}+\frac{B}{x-1}+\frac{C}{(x-1)^2}+\frac{D}{(x-1)^3}
@@ -538,26 +534,26 @@
                                           & = \log \abs*{\frac{(x-1)^2}{x}} -\frac{1}{(x-1)}-\frac{1}{(x-1)^2}+ C
     \end{align*}
     を得る．
-\end{tleftbar}
+\end{tanswer}
 
 
 \subsection*{p247：1-(\romannumeral4)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(\romannumeral4)}{p247：1-(\romannumeral4)}}
 
-\begin{leftbar}
+\begin{tanswer}
     命題 6.2 3)と例 3の結果を用いると，
     \begin{align*}
         \int \frac{dx}{(x^2 + 1)^3}
          & = \frac{x}{4(x^2 + 1)^2} + \frac{3}{8}(\frac{x}{x^2 + 1} + \arctan x) \\
          & = \frac{3x^3 + 5x}{8(x^2+1)^2} + \frac{3}{8} \arctan x.
     \end{align*}
-\end{leftbar}
+\end{tanswer}
 
 \subsection*{p247：1-(v)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(v)}{p247：1-(v)}}
 
 
-\begin{tleftbar}
+\begin{tanswer}
     $\tan \frac{x}{2} = t$と置くと，
     \begin{align*}
         \int \frac{dx}{a+b \cos x}
@@ -584,13 +580,13 @@
             \frac{1}{a} \tan {\frac{x}{2}}                                 & if $a = b$.
         \end{cases*}
     \end{align*}
-\end{tleftbar}
+\end{tanswer}
 
 \subsection*{p247：1-(vi)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(vi)}{p247：1-(vi)}}
 
 
-\begin{leftbar}
+\begin{tanswer}
     $\frac{1}{\cos^2 x} = (\tan x)'$と見て部分積分する．
     \begin{align*}
         \int \frac{dx}{\sin^3 x \cos^2 x}
@@ -599,13 +595,13 @@
          & = \frac{1}{\sin^2 x \cos x} + 3 \int \frac{dx}{\sin^3 x}                                              \\
          & = \frac{1}{\sin^2 x \cos x} - \frac{3 \cos x}{2 \sin^2 x} + \frac{3}{2} \log \abs*{\tan \frac{x}{2}}.
     \end{align*}
-\end{leftbar}
+\end{tanswer}
 
 
 \subsection*{p247：1-(vii)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(vii)}{p247：1-(vii)}}
 
-\begin{leftbar}
+\begin{tanswer}
     分母分子に$1-(\sin x + \cos x)$を掛ける．
     \begin{align*}
         \int \frac{\sin x}{1 + \sin x + \cos x} \,dx
@@ -614,27 +610,27 @@
          & = -\frac{1}{2}(\log \abs{\sec x + \tan x} + \log \abs{\cos x} - x)         \\
          & = \frac{1}{2}(x - \log \abs{1 + \sin x}).
     \end{align*}
-\end{leftbar}
+\end{tanswer}
 
 \subsection*{p247：1-(viii)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(viii)}{p247：1-(viii)}}
 
 
 
-\begin{tleftbar}
+\begin{tanswer}
     $\tan x = t$とおくと，$\frac{dt}{dx}= \frac{1}{\cos ^2 x}$であるから，求める不定積分は，
     \begin{align*}
         \int \frac{1/\cos ^2 x}{a^2 + b^2 \tan ^2 x} \, dx & = \int \frac{1}{a^2+b^2 t^2} \, dt                          \\
                                                            & = \frac{1}{ab} \arctan \left (\frac{b}{a} \tan x \right)+ C
     \end{align*}
     である．
-\end{tleftbar}
+\end{tanswer}
 
 
 
 \subsection*{p247：1-(ix)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(ix)}{p247：1-(ix)}}
-\begin{leftbar}
+\begin{tanswer}
     $\log x = t$と変換して部分積分すると，
     \begin{align*}
         \int \sin \log x \,dx
@@ -648,13 +644,13 @@
          & = \frac{1}{2}(\sin t - \cos t)            \\
          & = \frac{1}{2}(\sin \log x - \cos \log x).
     \end{align*}
-\end{leftbar}
+\end{tanswer}
 
 
 \subsection*{p247：1-(x)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(x)}{p247：1-(x)}}
 
-\begin{leftbar}
+\begin{tanswer}
     $x = \sin t$と置く．
     \begin{align*}
         \int \sqrt {\frac{1-x}{1+x}} \,dx
@@ -666,13 +662,13 @@
          & = \arcsin x  + \cos \arcsin x                                     \\
          & = \arcsin x + \sqrt{1-x^2}.
     \end{align*}
-\end{leftbar}
+\end{tanswer}
 
 \subsection*{p247：1-(xi)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(xi)}{p247：1-(xi)}}
 
 
-\begin{tleftbar}
+\begin{tanswer}
     $x=\frac{1}{t}$とおくと，$\frac{dx}{dt}=-\frac{1}{t^2}$である．また，$x^2+1 = \frac{1}{t^2} +1$となる．よって，
     \begin{align*}
         \int \frac{1}{x\sqrt{x^2+1}} \, dx & = \int \frac{t}{\sqrt{1/t^2+1}} \cdot (-1/t^2) \, dt \\
@@ -681,25 +677,25 @@
                                            & = \log \abs{\frac{1+\sqrt{x^2+1}}{x}}+C
     \end{align*}
     である．
-\end{tleftbar}
+\end{tanswer}
 
 
 \subsection*{p247：1-(xii)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(xii)}{p247：1-(xii)}}
 
 
-\begin{tleftbar}
+\begin{tanswer}
     \begin{align*}
         \int \frac{1}{\sqrt{(x-a)(b-x)}} \, dx & = \int \frac{1}{\sqrt{\left (\dfrac{b-a}{2} \right )^2 - \left (x-\dfrac{a+b}{2} \right )^2 }} \\
                                                & = \arcsin \left(\frac{2x-a-b}{b-a} \right)+C
     \end{align*}
-\end{tleftbar}
+\end{tanswer}
 
 \subsection*{p247：1-(xiii)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(xiii)}{p247：1-(xiii)}}
 
 
-\begin{tleftbar}
+\begin{tanswer}
     $x+\frac{1}{x}=t$とおくと，$\frac{dt}{dx}=1-\frac{1}{x^2}$であり，求める不定積分は，
     \begin{align*}
         \int \frac{1-x^2}{1+x^2\sqrt{1+x^4}} \, dx & = \int \frac{1-x^2}{x^2 (x+1/x)\sqrt{x^2 + 1/x^2}} \, dx \\
@@ -712,20 +708,20 @@
                                             & = \frac{1}{\sqrt{2}} \arcsin \left(\frac{\sqrt{2}x}{x^2+1} \right)+C
     \end{align*}
     となる．
-\end{tleftbar}
+\end{tanswer}
 
 \subsection*{p247：1-(xiv)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p247：1-(xiv)}{p247：1-(xiv)}}
 
 
-\begin{leftbar}
+\begin{tanswer}
     $1 = (x)'$と見て部分積分する．
     \begin{align*}
         \int \arctan x \,dx
          & = x \arctan x - \int \frac{x}{1+x^2} \,dx \\
          & = x \arctan x - \frac{1}{2} \log (x^2+1).
     \end{align*}
-\end{leftbar}
+\end{tanswer}
 
 \newpage
 
@@ -733,7 +729,7 @@
 \section*{p290：3}
 \addcontentsline{toc}{section}{\texorpdfstring{p290：3}{p290：3}}
 
-\begin{leftbar}
+\begin{tanswer}
     求める面積を $S$とすると，第1象限の面積を$4$倍すればよいので，
     \begin{align*}
         S & =4 \cdot  \frac{1}{2}\int_{0}^{\frac{\pi}{4}} r^2 \, d \theta \\
@@ -743,7 +739,7 @@
           & = 2a^2
     \end{align*}
     となる．
-\end{leftbar}
+\end{tanswer}
 
 \begin{tikzpicture}[scale=1.8]
     % パラメータ
@@ -781,7 +777,7 @@
 \section*{p290：4}
 \addcontentsline{toc}{section}{\texorpdfstring{p290：4}{p290：4}}
 
-\begin{leftbar}
+\begin{tanswer}
     求める面積を$S$，求める求める体積を$V$とおくと，
     \begin{align*}
         S & = \frac{1}{2} \int_{0}^{2\pi} r^2 \, d \theta                                                           \\
@@ -791,7 +787,7 @@
           & = \frac{3 \pi a^2}{2}
     \end{align*}
     となる．
-\end{leftbar}
+\end{tanswer}
 
 \begin{tikzpicture}[scale=1.8]
     % グレーで塗りつぶす領域の描画
@@ -819,7 +815,7 @@
 \subsection*{p325--326：1-(\romannumeral1)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p325--326：1-(\romannumeral1)}{p325--326：1-(\romannumeral1)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     \[
         I = \int_{-\infty}^{\infty} \frac{dx}{(t+x^2)^{n+1}} \quad (t > 0, n \in \mathbb{N})
     \]
@@ -849,7 +845,7 @@
           & = \frac{(2n-1)!! / 2^n \sqrt{\pi} \cdot \sqrt{\pi}}{t^{n+1/2} \cdot (n!)}                                              & \quad & \text{($\because$~定理12.4)} \\\
           & = \frac{(2n-1)!!}{(2n)!!} t^{ - \frac{2n+1}{2}} \pi .
     \end{alignat*}
-\end{tleftbar}
+\end{tanswer}
 
 
 \newpage
@@ -858,7 +854,7 @@
 \subsection*{p325--326：1-(\romannumeral2)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p325--326：1-(\romannumeral2)}{p325--326：1-(\romannumeral2)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     \[
         F(t) = \int_0^\pi \frac{dx}{(t + \cos x)^2} \quad (t > 1)
     \]
@@ -891,4 +887,4 @@
              & = \pi \left(-\frac{1}{2} \right) (t^2-1)^{-3/2} \cdot 2t \\
              & = -\frac{\pi t}{(t^2-1)^{3/2}}.
     \end{align*}
-\end{tleftbar}
+\end{tanswer}

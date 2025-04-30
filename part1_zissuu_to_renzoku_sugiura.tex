@@ -8,198 +8,168 @@
 
 \subsection*{p2：1-(\romannumeral1)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p2：1-(\romannumeral1)}{p2：1-(\romannumeral1)}}
+\begin{tproof}
+    $0,0' \in K$がともに加法単位元の性質を満たすとする．
 
-\begin{leftbar}
-    \begin{proof}
-        $0,0' \in K$がともに加法単位元の性質を満たすとする．
-
-        このとき，$0$が加法単位元の性質をもつことから，
-        \[
-            0'+0=0'
-        \]
-        同様に，$0'$が加法単位元の性質をもつことから，
-        \[
-            0+0' = 0
-        \]
-        交換律より，$0+0'=0'+0$なので，
-        \[
-            0'=0'+0 =0+0' =0
-        \]
-        これからただちに加法単位元の一意性が従う．
-    \end{proof}
-\end{leftbar}
+    このとき，$0$が加法単位元の性質をもつことから，
+    \[
+        0'+0=0'
+    \]
+    同様に，$0'$が加法単位元の性質をもつことから，
+    \[
+        0+0' = 0
+    \]
+    交換律より，$0+0'=0'+0$なので，
+    \[
+        0'=0'+0 =0+0' =0
+    \]
+    これからただちに加法単位元の一意性が従う．
+\end{tproof}
 
 \subsection*{p2：1-(\romannumeral2)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p2：1-(\romannumeral2)}{p2：問1-(\romannumeral2)}}
-
-\begin{leftbar}
-    \begin{proof}
-        $a ,b \in K$とし，
-        \[
-            a+b =0
-        \]
-        とする．このとき，
-        \[
-            -a = -a+0 = -a +(a+b)=(-a+a)+b =0+b = b
-        \]
-        となり，加法逆元の一意性が従う．
-    \end{proof}
-\end{leftbar}
+\begin{tproof}
+    $a ,b \in K$とし，
+    \[
+        a+b =0
+    \]
+    とする．このとき，
+    \[
+        -a = -a+0 = -a +(a+b)=(-a+a)+b =0+b = b
+    \]
+    となり，加法逆元の一意性が従う．
+\end{tproof}
 
 \subsection*{p2：1-(\romannumeral3)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p2：1-(\romannumeral3)}{p2：1-(\romannumeral3)}}
-
-\begin{leftbar}
-    \begin{proof}
-        $a \in K$のとき，
-        \begin{gather*}
-            a+(-a)=0 \\
-            \therefore (-a)+a =0
-        \end{gather*}
-        他方，$-(-a)$は$(-a)$の加法逆元であるから，
-        \[
-            (-a)+(-(-a))=0
-        \]
-        これと逆元の一意性により，$a=-(-a)$が従う．
-    \end{proof}
-\end{leftbar}
+\begin{tproof}
+    $a \in K$のとき，
+    \begin{gather*}
+        a+(-a)=0 \\
+        \therefore (-a)+a =0
+    \end{gather*}
+    他方，$-(-a)$は$(-a)$の加法逆元であるから，
+    \[
+        (-a)+(-(-a))=0
+    \]
+    これと逆元の一意性により，$a=-(-a)$が従う．
+\end{tproof}
 
 \subsection*{p2：1-(\romannumeral4)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p2：1-(\romannumeral4)}{p2：1-(\romannumeral4)}}
-\begin{leftbar}
-    \begin{proof}
-        $a \in K$のとき，
-        \begin{align*}
-            1a & = (0 + 1)a \\
-               & = 0a + 1a
-        \end{align*}
-        が成り立つ．両辺に$-(1a)$を加えれば，
-        \[
-            1a + (-(1a)) = 0a + 1a + (-(1a)) = 0a + 0.
-        \]
-        よって，$0 = 0a$が従う．
-    \end{proof}
-\end{leftbar}
+\begin{tproof}
+    $a \in K$のとき，
+    \begin{align*}
+        1a & = (0 + 1)a \\
+           & = 0a + 1a
+    \end{align*}
+    が成り立つ．両辺に$-(1a)$を加えれば，
+    \[
+        1a + (-(1a)) = 0a + 1a + (-(1a)) = 0a + 0.
+    \]
+    よって，$0 = 0a$が従う．
+\end{tproof}
 
 \subsection*{p2：1-(\romannumeral5)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p2：1-(\romannumeral5)}{p2：1-(\romannumeral5)}}
-\begin{leftbar}
-    \begin{proof}
-        $a \in K$に対して，
-        \[
-            a+(-1)a=(1+(-1))a =0a =0
-        \]
-        であるから，$-a$が$a$の加法逆元であることと含めて主張が従う．
-    \end{proof}
-\end{leftbar}
+\begin{tproof}
+    $a \in K$に対して，
+    \[
+        a+(-1)a=(1+(-1))a =0a =0
+    \]
+    であるから，$-a$が$a$の加法逆元であることと含めて主張が従う．
+\end{tproof}
 
 \newpage
 
 \subsection*{p2：1-(\romannumeral6)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p2：1-(\romannumeral6)}{p2：1-(\romannumeral6)}}
-\begin{leftbar}
-    \begin{proof}
-        (4)の結果を用いる．$a=-1$とすると，
-        \[
-            (-1)(-1)=-(-1)=1
-        \]
-        これが証明すべきことであった．
-    \end{proof}
-\end{leftbar}
+\begin{tproof}
+    (4)の結果を用いる．$a=-1$とすると，
+    \[
+        (-1)(-1)=-(-1)=1
+    \]
+    これが証明すべきことであった．
+\end{tproof}
 \subsection*{p2：1-(\romannumeral7)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p2：1-(\romannumeral7)}{p2：1-(\romannumeral7)}}
-
-\begin{leftbar}
-    \begin{proof}
-        $a,b \in K$に対して，
-        \begin{align*}
-            a(-b)+ab         & = a((-b)+b) \\
-                             & = a0        \\
-                             & =0          \\
-            \therefore \quad & a(-b)=-ab
-        \end{align*}
-        $(-a)b = -ab$も同様にして示される．
-    \end{proof}
-\end{leftbar}
+\begin{tproof}
+    $a,b \in K$に対して，
+    \begin{align*}
+        a(-b)+ab         & = a((-b)+b) \\
+                         & = a0        \\
+                         & =0          \\
+        \therefore \quad & a(-b)=-ab
+    \end{align*}
+    $(-a)b = -ab$も同様にして示される．
+\end{tproof}
 
 \subsection*{p2：1-(\romannumeral8)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p2：1-(\romannumeral8)}{p2：1-(\romannumeral8)}}
-
-\begin{leftbar}
-    \begin{proof}
-        (7)の前半の式において，$a$を$-a$に置き換えると，
-        \[
-            (-a)(-b) = -(-a)b.
-        \]
-        ここで，(7)の後半の式を用いると，
-        \begin{align*}
-            -(-a)b & = -(-ab) \\
-                   & = ab.
-        \end{align*}
-        これが証明すべきことであった．
-    \end{proof}
-\end{leftbar}
+\begin{tproof}
+    (7)の前半の式において，$a$を$-a$に置き換えると，
+    \[
+        (-a)(-b) = -(-a)b.
+    \]
+    ここで，(7)の後半の式を用いると，
+    \begin{align*}
+        -(-a)b & = -(-ab) \\
+               & = ab.
+    \end{align*}
+    これが証明すべきことであった．
+\end{tproof}
 
 
 \subsection*{p2：1-(\romannumeral9)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p2：1-(\romannumeral9)}{p2：1-(\romannumeral9)}}
+\begin{tproof}
+    $ a, b \in K$をとり，$ab =0$を仮定すると，
+    \begin{align*}
+         & ab + ab = ab            \\
+         & \therefore ~ a(b+b)=ab.
+    \end{align*}
+    ここで，$a \ne 0$を仮定すると．$a^{-1}$が存在するので，
+    $a^{-1}$を上記の式の両辺に左から掛けると
+    \begin{align*}
+         & a^{-1}a(b+b)=a^{-1}ab \\
+         & \therefore ~ b+b=b    \\
+         & \therefore ~ b=0.
+    \end{align*}
+    よって$a \ne 0$のとき$b=0$である．
 
-\begin{leftbar}
-    \begin{proof}
-        $ a, b \in K$をとり，$ab =0$を仮定すると，
-        \begin{align*}
-             & ab + ab = ab            \\
-             & \therefore ~ a(b+b)=ab.
-        \end{align*}
-        ここで，$a \ne 0$を仮定すると．$a^{-1}$が存在するので，
-        $a^{-1}$を上記の式の両辺に左から掛けると
-        \begin{align*}
-             & a^{-1}a(b+b)=a^{-1}ab \\
-             & \therefore ~ b+b=b    \\
-             & \therefore ~ b=0.
-        \end{align*}
-        よって$a \ne 0$のとき$b=0$である．
+    また，$b \ne 0$を仮定して同様に議論を進めると，
+    $b \ne 0$であるとき$ a=0$であることがわかる．
 
-        また，$b \ne 0$を仮定して同様に議論を進めると，
-        $b \ne 0$であるとき$ a=0$であることがわかる．
-
-        以上の議論から，$ab=0$ならば$a=0$または$b=0$であることが示された．
-    \end{proof}
-\end{leftbar}
+    以上の議論から，$ab=0$ならば$a=0$または$b=0$であることが示された．
+\end{tproof}
 
 \subsection*{p2：1-(\romannumeral10)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p2：1-(\romannumeral10)}{p2：1-(\romannumeral10)}}
-
-\begin{leftbar}
-    \begin{proof}
-        $ a \in K \setminus \{ 0 \} $に関して，
-        \begin{align*}
-            (-a) \{ -(a)^{-1} \} & = aa^{-1} \\
-                                 & =1.
-        \end{align*}
-        よって，$-(a)^{-1}$は$-a$の逆元である．
-        このことから，
-        \[
-            (-a)^{-1} = -(a)^{-1}.
-        \]
-        これが証明すべきことであった．
-    \end{proof}
-\end{leftbar}
+\begin{tproof}
+    $ a \in K \setminus \{ 0 \} $に関して，
+    \begin{align*}
+        (-a) \{ -(a)^{-1} \} & = aa^{-1} \\
+                             & =1.
+    \end{align*}
+    よって，$-(a)^{-1}$は$-a$の逆元である．
+    このことから，
+    \[
+        (-a)^{-1} = -(a)^{-1}.
+    \]
+    これが証明すべきことであった．
+\end{tproof}
 \subsection*{p2：1-(\romannumeral11)}
-\addcontentsline{toc}{subsection}{\texorpdfstring{p2：1-(\romannumeral11)}{p2：1-(\romannumeral11)}}
-\begin{leftbar}
-    \begin{proof}
-        $ a ,b\in K \setminus \{ 0 \} $に関して，
-        \begin{align*}
-            (ab) (b^{-1} a^{-1}) & = a (bb^{-1}) a^{-1} \\
-                                 & = a1a^{-1}           \\
-                                 & = aa^{-1}            \\
-                                 & = 1
-        \end{align*}
-        となり，$(ab)^{-1} = b^{-1} a^{-1}$である．
-        これが証明すべきことであった．
-    \end{proof}
-\end{leftbar}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p2：1-(\romannumeral11)}{p2：1-(\romannumeral11)}}\begin{tproof}
+    $ a ,b\in K \setminus \{ 0 \} $に関して，
+    \begin{align*}
+        (ab) (b^{-1} a^{-1}) & = a (bb^{-1}) a^{-1} \\
+                             & = a1a^{-1}           \\
+                             & = aa^{-1}            \\
+                             & = 1
+    \end{align*}
+    となり，$(ab)^{-1} = b^{-1} a^{-1}$である．
+    これが証明すべきことであった．
+\end{tproof}
 %
 \newpage
 \section*{p3：2}
@@ -207,126 +177,111 @@
 
 \subsection*{p2：2-(\romannumeral1)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p3：2-(\romannumeral1)}{p3：2-(\romannumeral1)}}
+\begin{tproof}
+    $a \leqq b$において，(R15)より
+    \[
+        0 \leqq b-a
+    \]
+    を得る．
 
-\begin{leftbar}
-    \begin{proof}
-        $a \leqq b$において，(R15)より
-        \[
-            0 \leqq b-a
-        \]
-        を得る．
+    逆に，$0 \leqq b-a$において，(R15)により
+    \[
+        a \leqq b
+    \]
+    を得る．
 
-        逆に，$0 \leqq b-a$において，(R15)により
-        \[
-            a \leqq b
-        \]
-        を得る．
-
-        以上の考察により証明された．
-    \end{proof}
-\end{leftbar}
+    以上の考察により証明された．
+\end{tproof}
 
 \subsection*{p2：2-(\romannumeral2)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p3：2-(\romannumeral2)}{p3：2-(\romannumeral2)}}
+\begin{tproof}
+    $a \leqq b$において，(R15)により
+    \[
+        0 \leqq b-a
+    \]
+    となる．
+    ここで，(R15)を適用して，
+    \[
+        -b \leqq -a
+    \]
+    を得る．
 
-\begin{leftbar}
-    \begin{proof}
-        $a \leqq b$において，(R15)により
-        \[
-            0 \leqq b-a
-        \]
-        となる．
-        ここで，(R15)を適用して，
-        \[
-            -b \leqq -a
-        \]
-        を得る．
+    逆に，$-b\leqq -a$について，(R15)より
+    \[
+        0 \leqq b -a
+    \]
+    となる．この両辺に$a$を加えて，
+    \[
+        a \leqq b
+    \]
+    を得る．
 
-        逆に，$-b\leqq -a$について，(R15)より
-        \[
-            0 \leqq b -a
-        \]
-        となる．この両辺に$a$を加えて，
-        \[
-            a \leqq b
-        \]
-        を得る．
-
-        以上の考察により証明された．
-    \end{proof}
-\end{leftbar}
+    以上の考察により証明された．
+\end{tproof}
 
 \newpage
 
 \subsection*{p2：2-(\romannumeral3)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p3：2-(\romannumeral3)}{p3：2-(\romannumeral3)}}
-
-\begin{leftbar}
-    \begin{proof}
-        $c \leqq 0$から
-        \begin{align*}
-            c+(-c)         & \leqq -c \\
-            \therefore ~ 0 & \leqq -c
-        \end{align*}
-        である．ここで，$a \leqq b$，$-c \geqq 0$であることより
-        \[
-            a(-c) \leqq b (-c)
-        \]
-        である．これより$ -ac \leqq -bc$であるから，
-        \begin{align*}
-            -ac + (ac+bc)   & \leqq -bc +(ac+bc) \\
-            \therefore ~ bc & \leqq ac
-        \end{align*}
-        を得て，これが証明すべきことであった．
-    \end{proof}
-\end{leftbar}
+\begin{tproof}
+    $c \leqq 0$から
+    \begin{align*}
+        c+(-c)         & \leqq -c \\
+        \therefore ~ 0 & \leqq -c
+    \end{align*}
+    である．ここで，$a \leqq b$，$-c \geqq 0$であることより
+    \[
+        a(-c) \leqq b (-c)
+    \]
+    である．これより$ -ac \leqq -bc$であるから，
+    \begin{align*}
+        -ac + (ac+bc)   & \leqq -bc +(ac+bc) \\
+        \therefore ~ bc & \leqq ac
+    \end{align*}
+    を得て，これが証明すべきことであった．
+\end{tproof}
 
 \subsection*{p2：2-(\romannumeral4)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p3：2-(\romannumeral4)}{p3：2-(\romannumeral4)}}
+\begin{tproof}
+    $a<0$かつ$a^{-1} \leqq 0$であると仮定する．このとき，
+    \[
+        \left( \frac{1}{a} \right) a < 0a
+    \]
+    なので，
+    \[
+        1<0
+    \]
+    となるが，これは$1>0$に矛盾．
 
-\begin{leftbar}
-    \begin{proof}
-        $a<0$かつ$a^{-1} \leqq 0$であると仮定する．このとき，
-        \[
-            \left( \frac{1}{a} \right) a < 0a
-        \]
-        なので，
-        \[
-            1<0
-        \]
-        となるが，これは$1>0$に矛盾．
-
-        よって，仮定したことが誤りであり，$a>0$のとき$a^{-1} >0$である．
-    \end{proof}
-\end{leftbar}
+    よって，仮定したことが誤りであり，$a>0$のとき$a^{-1} >0$である．
+\end{tproof}
 
 \subsection*{p2：2-(\romannumeral5)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p3：2-(\romannumeral5)}{p3：2-(\romannumeral5)}}
-
-\begin{leftbar}
-    \begin{proof}
-        \[
-            a \leqq c
-        \]
-        において，(R15)より．
-        \[
-            a+b \leqq b+c
-        \]
-        を得る．他方，
-        \[
-            b \leqq d
-        \]
-        において，(R15)より
-        \[
-            b + c \leqq c+d
-        \]
-        となる．ここで，推移律を適用すると，
-        \[
-            a+b \leqq c+d
-        \]
-        が得られ，これが証明すべきことであった．
-    \end{proof}
-\end{leftbar}
+\begin{tproof}
+    \[
+        a \leqq c
+    \]
+    において，(R15)より．
+    \[
+        a+b \leqq b+c
+    \]
+    を得る．他方，
+    \[
+        b \leqq d
+    \]
+    において，(R15)より
+    \[
+        b + c \leqq c+d
+    \]
+    となる．ここで，推移律を適用すると，
+    \[
+        a+b \leqq c+d
+    \]
+    が得られ，これが証明すべきことであった．
+\end{tproof}
 %
 \section*{p16--17：1}
 \addcontentsline{toc}{section}{\texorpdfstring{p16--17：1}{p16--17：1}}
@@ -334,7 +289,7 @@
 \subsection*{p16--17：1-(\romannumeral1)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p16--17：1-(\romannumeral1)}{p16--17：1-(\romannumeral1)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     $a=0$のときは明らかに$0$に収束するので，$a \ne 0$とする．$2\abs{a} \le N$となる$N \in \mathbb{N}$をとる．このとき，
     \begin{align*}
         0 & < \abs{ \frac{a^n}{n!} }                                                                              \\
@@ -351,12 +306,12 @@
         \lim_{n \to \infty} \frac{a^n}{n!} =0
     \]
     である
-\end{tleftbar}
+\end{tanswer}
 
 \subsection*{p16--17：1-(\romannumeral2)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p16--17：1-(\romannumeral2)}{p16--17：1-(\romannumeral2)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     $a=1$のときは明らかに$1$に収束するので，まず$a>1$のときを考える．$\delta_n >0$を用いて，
     \[
         \sqrt[n]{a} =1+\delta_n
@@ -376,12 +331,12 @@
         \lim_{n \to \infty} \sqrt[n]{a} =1
     \]
     となる．
-\end{tleftbar}
+\end{tanswer}
 
 \subsection*{p16--17：1-(\romannumeral3)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p16--17：1-(\romannumeral3)}{p16--17：1-(\romannumeral3)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     $\frac{n}{2}$以下の最大の自然数を$m$とおく．与えられた式は，
     \[
         \left( 0  < \right) \frac{n!}{n^n}  = \frac{1 \cdot 2 \dotsm m \cdot (m+1) \dotsm n}{n^n}
@@ -399,10 +354,10 @@
         \lim_{n \to \infty}\frac{n!}{n^n} =0
     \]
     である．
-\end{tleftbar}
+\end{tanswer}
 \subsection*{p16--17：1-(\romannumeral4)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p16--17：1-(\romannumeral4)}{p16--17：1-(\romannumeral4)}}
-\begin{tleftbar}
+\begin{tanswer}
     のちに$n \to \infty$の極限を考えることを考慮すると，
     \begin{align*}
         2^n & = (1+1)^n                            \\
@@ -418,11 +373,11 @@
         \lim_{n \to \infty} \frac{n}{2^n}=0
     \]
     である．
-\end{tleftbar}
+\end{tanswer}
 
 \subsection*{p16--17：1-(\romannumeral5)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p16--17：1-(\romannumeral5)}{p16--17：1-(\romannumeral5)}}
-\begin{tleftbar}
+\begin{tanswer}
     まず，
     \[
         0<\sqrt{n+1} - \sqrt{n} = \frac{1}{\sqrt{n+1} + \sqrt{n}}
@@ -440,55 +395,57 @@
         \lim_{n \to \infty} (\sqrt{n+1} - \sqrt{n} )=0
     \]
     である．
-\end{tleftbar}
+\end{tanswer}
 
 \section*{p16--17：2}
 \addcontentsline{toc}{section}{\texorpdfstring{p16--17：2}{p16--17：2}}
 
-$n=1,2,\ldots$に対して，
-\[
-    f_{n} (x)=\lim_{m \to \infty} (\cos (n! \pi x)) ^{2m}
-\]
-とおく．
-ここで，$n!x \in \mathbb{Z}$のとき，
-\[
-    \cos (n! \pi x)=\pm 1
-\]
-$n!x \notin \mathbb{Z}$のときは，
-\[
-    \abs{\cos (n! \pi x)}<1
-\]
-であるから，
-\[
-    f_{n} (x)=
-    \begin{cases}
-        1 & (n!x \in \mathbb{Z})    \\
-        0 & (n!x \notin \mathbb{Z})
-    \end{cases}
-\]
-となる．
-さて，$x \in \mathbb{R} \setminus \mathbb{Q}$であるならば，どんな$n \in \mathbb{N}$に対しても，$n! x$が整数とならない．
-また，$x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とすれば，$n$が$q$より十分大きいときに$n!x$は整数となる．
-よって，
-\[
-    \lim_{n \to \infty} \left( \lim_{m \to \infty} (\cos (n! \pi x)) ^{2m} \right)=
-    \begin{cases}
-        1 & (x \in \mathbb{Q})                      \\
-        0 & (x \in \mathbb{R} \setminus \mathbb{Q})
-    \end{cases}
-\]
+\begin{tanswer}
+    $n=1,2,\ldots$に対して，
+    \[
+        f_{n} (x)=\lim_{m \to \infty} (\cos (n! \pi x)) ^{2m}
+    \]
+    とおく．
+    ここで，$n!x \in \mathbb{Z}$のとき，
+    \[
+        \cos (n! \pi x)=\pm 1
+    \]
+    $n!x \notin \mathbb{Z}$のときは，
+    \[
+        \abs{\cos (n! \pi x)}<1
+    \]
+    であるから，
+    \[
+        f_{n} (x)=
+        \begin{cases}
+            1 & (n!x \in \mathbb{Z})    \\
+            0 & (n!x \notin \mathbb{Z})
+        \end{cases}
+    \]
+    となる．
+    さて，$x \in \mathbb{R} \setminus \mathbb{Q}$であるならば，どんな$n \in \mathbb{N}$に対しても，$n! x$が整数とならない．
+    また，$x \in \mathbb{Q}$のとき，$ x=\frac{p}{q}(p，q \in \mathbb{Z}，q>0)$とすれば，$n$が$q$より十分大きいときに$n!x$は整数となる．
+    よって，
+    \[
+        \lim_{n \to \infty} \left( \lim_{m \to \infty} (\cos (n! \pi x)) ^{2m} \right)=
+        \begin{cases}
+            1 & (x \in \mathbb{Q})                      \\
+            0 & (x \in \mathbb{R} \setminus \mathbb{Q})
+        \end{cases}
+    \]
+\end{tanswer}
 
 
 \section*{p16--17：3}
 \addcontentsline{toc}{section}{\texorpdfstring{p16--17：3}{p16--17：3}}
 
-\kakko{補題}
-
-任意の$a_1 , a_2 , \dots, a_n \in \mathbb{R}$について，
-\[
-    \abs{a_1+a_2+\dots+a_n} \leqq \abs{a_1}+\abs{a_2}+\dots+\abs{a_n}
-\]
-が成り立つ．
+\begin{lemma}{}{}
+    任意の$a_1 , a_2 , \dots, a_n \in \mathbb{R}$について，
+    \[
+        \abs{a_1+a_2+\dots+a_n} \leqq \abs{a_1}+\abs{a_2}+\dots+\abs{a_n}
+    \]
+    が成り立つ．
+\end{lemma}
 
 
 \begin{proof}
@@ -514,94 +471,90 @@ $n!x \notin \mathbb{Z}$のときは，
     は$n$の場合にも成り立つことが示され．以上の議論より補題の主張が従う．
 \end{proof}
 
-\begin{tleftbar}
-    \begin{proof}
-        $\lim_{n \to \infty} a_n =a$であるから，
-        任意の$\varepsilon >0$に対して，ある$N_1 \in \mathbb{N}$が存在して，任意の$n \in \mathbb{N}$に対して，
-        \[
-            n \ge N_1 \Longrightarrow \abs{a_n -a}<\varepsilon
-        \]
-        となる．
+\begin{tproof}
+    $\lim_{n \to \infty} a_n =a$であるから，
+    任意の$\varepsilon >0$に対して，ある$N_1 \in \mathbb{N}$が存在して，任意の$n \in \mathbb{N}$に対して，
+    \[
+        n \ge N_1 \Longrightarrow \abs{a_n -a}<\varepsilon
+    \]
+    となる．
 
-        また，
-        \[
-            \abs{\frac{a_1+a_2+\cdots+a_n}{n}-a}= \abs{\frac{(a_1-a)+(a_2-a)+\cdots+(a_n-a)}{n}}
-        \]
-        と変形する．この右辺に補題を適用し，
-        \[
-            \abs{\frac{(a_1-a)+(a_2-a)+\cdots+(a_n-a)}{n}} \leqq \frac{\abs{a_1-a}+\abs{a_2-a}+\cdots+\abs{a_n-a}}{n}
-        \]
-        を得る．これにより，
-        \[
-            n \ge N_1 \Longrightarrow \frac{\abs{a_1-a}+\abs{a_2-a}+\cdots+\abs{a_{N_1-1}-a}}{n} +\left( \frac{n-N_1+1}{n} \right ) \varepsilon
-        \]
-        となる．ここで$N_2 \coloneqq N_1 +1$とすると，$n \ge N_2$であるとき$\left( \frac{n-N_1+1}{n} \right ) \varepsilon < \varepsilon$となることに注意する．
+    また，
+    \[
+        \abs{\frac{a_1+a_2+\cdots+a_n}{n}-a}= \abs{\frac{(a_1-a)+(a_2-a)+\cdots+(a_n-a)}{n}}
+    \]
+    と変形する．この右辺に補題を適用し，
+    \[
+        \abs{\frac{(a_1-a)+(a_2-a)+\cdots+(a_n-a)}{n}} \leqq \frac{\abs{a_1-a}+\abs{a_2-a}+\cdots+\abs{a_n-a}}{n}
+    \]
+    を得る．これにより，
+    \[
+        n \ge N_1 \Longrightarrow \frac{\abs{a_1-a}+\abs{a_2-a}+\cdots+\abs{a_{N_1-1}-a}}{n} +\left( \frac{n-N_1+1}{n} \right ) \varepsilon
+    \]
+    となる．ここで$N_2 \coloneqq N_1 +1$とすると，$n \ge N_2$であるとき$\left( \frac{n-N_1+1}{n} \right ) \varepsilon < \varepsilon$となることに注意する．
 
-        さて，
-        \[
-            n \ge N_3 \Longrightarrow \frac{\abs{a_1-a}+\abs{a_2-a}+\cdots+\abs{a_{N_1-1}-a}}{n}<\varepsilon
-        \]
-        となるように$N_3 \in \mathbb{N}$をとる．$N \coloneqq \max \{ N_2 , N_3 \}$とすると，
-        \[
-            n \ge N \Longrightarrow \frac{\abs{a_1-a}+\abs{a_2-a}+\cdots+\abs{a_{N_1-1}-a}}{n} +\left( \frac{n-N_1+1}{n} \right ) \varepsilon < \varepsilon + \varepsilon = 2 \varepsilon
-        \]
-        であり，これより
-        \[
-            n \ge N \Longrightarrow \abs{\frac{a_1+a_2+\cdots+a_n}{n}-a} < 2 \varepsilon
-        \]
-        となる．書き換えると．
-        \[
-            \lim_{n \to \infty} \frac{a_1+a_2+\cdots+a_n}{n}=a
-        \]
-        となり，これが証明すべきことであった．
-    \end{proof}
-\end{tleftbar}
+    さて，
+    \[
+        n \ge N_3 \Longrightarrow \frac{\abs{a_1-a}+\abs{a_2-a}+\cdots+\abs{a_{N_1-1}-a}}{n}<\varepsilon
+    \]
+    となるように$N_3 \in \mathbb{N}$をとる．$N \coloneqq \max \{ N_2 , N_3 \}$とすると，
+    \[
+        n \ge N \Longrightarrow \frac{\abs{a_1-a}+\abs{a_2-a}+\cdots+\abs{a_{N_1-1}-a}}{n} +\left( \frac{n-N_1+1}{n} \right ) \varepsilon < \varepsilon + \varepsilon = 2 \varepsilon
+    \]
+    であり，これより
+    \[
+        n \ge N \Longrightarrow \abs{\frac{a_1+a_2+\cdots+a_n}{n}-a} < 2 \varepsilon
+    \]
+    となる．書き換えると．
+    \[
+        \lim_{n \to \infty} \frac{a_1+a_2+\cdots+a_n}{n}=a
+    \]
+    となり，これが証明すべきことであった．
+\end{tproof}
 
 \newpage
 
 \section*{p16--17：5}
 \addcontentsline{toc}{section}{\texorpdfstring{p16--17：5}{p16--17：5}}
 
-\begin{tleftbar}
-    \begin{proof}
-        イ)の条件により，
-        \[
-            A \subset \{n \in \mathbb{N} \mid n \geqq m\}
-        \]
-        は明らかである．ここで，
-        \[
-            H=\{0,1,\dots,m-1\} \cup A
-        \]
-        とおく．このとき，$H$の定義から$0 \in H$である．
+\begin{tproof}
+    イ)の条件により，
+    \[
+        A \subset \{n \in \mathbb{N} \mid n \geqq m\}
+    \]
+    は明らかである．ここで，
+    \[
+        H=\{0,1,\dots,m-1\} \cup A
+    \]
+    とおく．このとき，$H$の定義から$0 \in H$である．
 
-        次に，$n \in H$であることを仮定する．このとき，
-        \begin{enumerate}[(i)]
-            \item  $n<m-1$であれば，$n+1 \in \{0,1,\dots,m-1\}$より，$n+1 \in H$となる
-            \item $n=m-1$であれば，$n+1=m \in A$より，$n+1 \in H$となる
-            \item $n \geqq m$であれば，ロ)より$n+1 \in A$であり，$A \subset H $により$n + 1\in H$となる
-        \end{enumerate}
-        よって，いずれの場合でも
-        \[
-            n+1 \in H
-        \]
-        したがって，$H$は継承的である．$\mathbb{N}$は最小の継承的な集合であるから，$\mathbb{N} \subset H$である．
+    次に，$n \in H$であることを仮定する．このとき，
+    \begin{enumerate}[(i)]
+        \item  $n<m-1$であれば，$n+1 \in \{0,1,\dots,m-1\}$より，$n+1 \in H$となる
+        \item $n=m-1$であれば，$n+1=m \in A$より，$n+1 \in H$となる
+        \item $n \geqq m$であれば，ロ)より$n+1 \in A$であり，$A \subset H $により$n + 1\in H$となる
+    \end{enumerate}
+    よって，いずれの場合でも
+    \[
+        n+1 \in H
+    \]
+    したがって，$H$は継承的である．$\mathbb{N}$は最小の継承的な集合であるから，$\mathbb{N} \subset H$である．
 
-        つまり，$\mathbb{N} =  \{0,1,\dots,m-1\} \cup \{n \in \mathbb{N} \mid n \geqq m \}$であることと，
-        $H$の定義により，
-        \[
-            \{0,1,\dots,m-1\} \cup \{n \in \mathbb{N} \mid n \geqq m \} \subset \{0,1，,\dots,m-1\} \cup A
-        \]
-        となる．よって，
-        \[
-            \{n \in \mathbb{N}\mid n \geqq m \} \subset A
-        \]
-        となる．これと$ A \subset \{n \in \mathbb{N} \mid n \geqq m\}$であることを併せると，
-        \[
-            A=\{n \in \mathbb{N} \mid n \geqq m \}
-        \]
-        となり，これが証明すべきことであった．
-    \end{proof}
-\end{tleftbar}
+    つまり，$\mathbb{N} =  \{0,1,\dots,m-1\} \cup \{n \in \mathbb{N} \mid n \geqq m \}$であることと，
+    $H$の定義により，
+    \[
+        \{0,1,\dots,m-1\} \cup \{n \in \mathbb{N} \mid n \geqq m \} \subset \{0,1，,\dots,m-1\} \cup A
+    \]
+    となる．よって，
+    \[
+        \{n \in \mathbb{N}\mid n \geqq m \} \subset A
+    \]
+    となる．これと$ A \subset \{n \in \mathbb{N} \mid n \geqq m\}$であることを併せると，
+    \[
+        A=\{n \in \mathbb{N} \mid n \geqq m \}
+    \]
+    となり，これが証明すべきことであった．
+\end{tproof}
 
 \newpage
 
@@ -610,132 +563,124 @@ $n!x \notin \mathbb{Z}$のときは，
 
 \kakko{$m+n$について}
 
-\begin{tleftbar}
-    \begin{proof}
-        $n \in \mathbb{N}$についての命題$p(n)$を
-        \[
-            p(n) ~{:}~ \forall m \in \mathbb{N} \colon  m+n \in \mathbb{N}
-        \]
-        とする．
-        \begin{enumerate}[(i)]
-            \item $n=0$のとき，$m+0=m$であり，$m \in \mathbb{N}$であるから，$p(0)$は真である．
-            \item 任意の$k \in \mathbb{N}$に対して，$p(k)$が真であると仮定する．このとき，$m+k \in \mathbb{N}$である．
-                  ここで，
-                  \[
-                      m+(k+1)=(m+k)+1
-                  \] であり，$m+k \in \mathbb{N}$に注意すると，$\mathbb{N}$が最小の継承的集合であることから，
-                  \[
-                      m+(k+1)=(m+k)+1  \in \mathbb{N}
-                  \]
-                  である．よって，このとき$p(k+1)$も真である．
-        \end{enumerate}
-        以上(\romannumeral1)，(\romannumeral2)より，任意の$n \in \mathbb{N}$に対して$p(n)$が真である．これが証明すべきことであった．
-    \end{proof}
-\end{tleftbar}
+\begin{tproof}
+    $n \in \mathbb{N}$についての命題$p(n)$を
+    \[
+        p(n) ~{:}~ \forall m \in \mathbb{N} \colon  m+n \in \mathbb{N}
+    \]
+    とする．
+    \begin{enumerate}[(i)]
+        \item $n=0$のとき，$m+0=m$であり，$m \in \mathbb{N}$であるから，$p(0)$は真である．
+        \item 任意の$k \in \mathbb{N}$に対して，$p(k)$が真であると仮定する．このとき，$m+k \in \mathbb{N}$である．
+              ここで，
+              \[
+                  m+(k+1)=(m+k)+1
+              \] であり，$m+k \in \mathbb{N}$に注意すると，$\mathbb{N}$が最小の継承的集合であることから，
+              \[
+                  m+(k+1)=(m+k)+1  \in \mathbb{N}
+              \]
+              である．よって，このとき$p(k+1)$も真である．
+    \end{enumerate}
+    以上(\romannumeral1)，(\romannumeral2)より，任意の$n \in \mathbb{N}$に対して$p(n)$が真である．これが証明すべきことであった．
+\end{tproof}
 
 
 \kakko{$mn$について}
 
-\begin{tleftbar}
-    \begin{proof}
-        $n \in \mathbb{N}$についての命題$q(n)$を
-        \[
-            q(n) ~{:}~ \forall m \in \mathbb{N} \colon  mn \in \mathbb{N}
-        \]
-        とする．
-        \begin{enumerate}[(i)]
-            \item $n=0$のとき，$m \cdot 0=0$であり，$0 \in \mathbb{N}$であるから，$p(0)$は真である．
-            \item 任意の$k \in \mathbb{N}$に対して，$p(k)$が真であると仮定する．このとき，$mk \in \mathbb{N}$である．
-                  ここで，
-                  \[
-                      m(k+1)=mk + k
-                  \] であり，$mk \in \mathbb{N}$，$k \in \mathbb{N}$に注意すると，証明したことから
-                  \[
-                      mk + k   \in \mathbb{N}
-                  \]
-                  である．よって，このとき$p(k+1)$も真である．
-        \end{enumerate}
-        以上(\romannumeral1)，(\romannumeral2)より，任意の$n \in \mathbb{N}$に対して$p(n)$が真である．これが証明すべきことであった．
-    \end{proof}
-\end{tleftbar}
+\begin{tproof}
+    $n \in \mathbb{N}$についての命題$q(n)$を
+    \[
+        q(n) ~{:}~ \forall m \in \mathbb{N} \colon  mn \in \mathbb{N}
+    \]
+    とする．
+    \begin{enumerate}[(i)]
+        \item $n=0$のとき，$m \cdot 0=0$であり，$0 \in \mathbb{N}$であるから，$p(0)$は真である．
+        \item 任意の$k \in \mathbb{N}$に対して，$p(k)$が真であると仮定する．このとき，$mk \in \mathbb{N}$である．
+              ここで，
+              \[
+                  m(k+1)=mk + k
+              \] であり，$mk \in \mathbb{N}$，$k \in \mathbb{N}$に注意すると，証明したことから
+              \[
+                  mk + k   \in \mathbb{N}
+              \]
+              である．よって，このとき$p(k+1)$も真である．
+    \end{enumerate}
+    以上(\romannumeral1)，(\romannumeral2)より，任意の$n \in \mathbb{N}$に対して$p(n)$が真である．これが証明すべきことであった．
+\end{tproof}
 
 \newpage
 
 \kakko{$m-n$について}
 
-\begin{tleftbar}
-    \begin{proof}
-        $n \in \mathbb{N}$についての命題$r(n)$を
-        \[
-            r(n) ~{:}~ \forall m \in \mathbb{N} \colon  m<n \lor m-n  \in \mathbb{N}
-        \]
-        とする．
-        \begin{enumerate}[(I)]
-            \item $n=0$のとき，$m - 0 =m$であり，$m \in \mathbb{N}$であるから，$r(0)$は真である．
-            \item 任意の$k \in \mathbb{N}$に対して，$r(k)$が真であると仮定する．このとき，$k<n \lor k-n  \in \mathbb{N}$である．
-                  \begin{enumerate}[(i)]
-                      \item $m \leqq   k$のとき，$m <k+1$であり，$r(k+1)$も真である．
-                      \item $m > k$のとき，まず
-                            \[
-                                m-(k+1)=m-k-1
-                            \] であり，$m-k \in \mathbb{N}$，$1 \in \mathbb{N}$に注意すると，証明したことから
-                            \[
-                                m-k-1  \in \mathbb{N}
-                            \]
-                            である．
-                  \end{enumerate}
-                  よって，このとき$r(k+1)$も真である．
-        \end{enumerate}
-        以上(\romannumeral1)，(\romannumeral2)より，任意の$n \in \mathbb{N}$に対して$r(n)$が真である．これが証明すべきことであった．
-    \end{proof}
-\end{tleftbar}
+\begin{tproof}
+    $n \in \mathbb{N}$についての命題$r(n)$を
+    \[
+        r(n) ~{:}~ \forall m \in \mathbb{N} \colon  m<n \lor m-n  \in \mathbb{N}
+    \]
+    とする．
+    \begin{enumerate}[(I)]
+        \item $n=0$のとき，$m - 0 =m$であり，$m \in \mathbb{N}$であるから，$r(0)$は真である．
+        \item 任意の$k \in \mathbb{N}$に対して，$r(k)$が真であると仮定する．このとき，$k<n \lor k-n  \in \mathbb{N}$である．
+              \begin{enumerate}[(i)]
+                  \item $m \leqq   k$のとき，$m <k+1$であり，$r(k+1)$も真である．
+                  \item $m > k$のとき，まず
+                        \[
+                            m-(k+1)=m-k-1
+                        \] であり，$m-k \in \mathbb{N}$，$1 \in \mathbb{N}$に注意すると，証明したことから
+                        \[
+                            m-k-1  \in \mathbb{N}
+                        \]
+                        である．
+              \end{enumerate}
+              よって，このとき$r(k+1)$も真である．
+    \end{enumerate}
+    以上(\romannumeral1)，(\romannumeral2)より，任意の$n \in \mathbb{N}$に対して$r(n)$が真である．これが証明すべきことであった．
+\end{tproof}
 
 \newpage
 
 \section*{p16--17：7}
 \addcontentsline{toc}{section}{\texorpdfstring{p16--17：7}{p16--17：7}}
 
-\begin{tleftbar}
-    \begin{proof}
-        $n < k < n+1$となる自然数$k$が存在すると仮定する．
-        この不等式から，辺々$n$を引くと
-        \[
-            0 < k - n < 1
-        \]
-        を得る．$n$と$k$は自然数としたから，問6により，$k-n$は自然数である．
+\begin{tproof}
+    $n < k < n+1$となる自然数$k$が存在すると仮定する．
+    この不等式から，辺々$n$を引くと
+    \[
+        0 < k - n < 1
+    \]
+    を得る．$n$と$k$は自然数としたから，問6により，$k-n$は自然数である．
 
-        よって，$0<a<1$となる自然数$a$が存在しないことを示せばよい．
-        \[
-            H=\{0\} \cup \{n \in \mathbb{N} \mid n \geqq 1 \}
-        \]
-        とおくと，
-        \begin{align*}
-             & 0 \in H   \\
-             & 0+1 \in H
-        \end{align*}
-        である．ゆえに$ 0 \in H$となる．
+    よって，$0<a<1$となる自然数$a$が存在しないことを示せばよい．
+    \[
+        H=\{0\} \cup \{n \in \mathbb{N} \mid n \geqq 1 \}
+    \]
+    とおくと，
+    \begin{align*}
+         & 0 \in H   \\
+         & 0+1 \in H
+    \end{align*}
+    である．ゆえに$ 0 \in H$となる．
 
-        また，$k \geqq 1$となる$k \in \mathbb{N}$に対しては，$k +1 \geqq 1$
-        であり，
-        \[
-            k+1 \in \{n \in \mathbb{N} \mid n \geqq 1 \}
-        \]
-        となるため，$k+1 \in H$である．
+    また，$k \geqq 1$となる$k \in \mathbb{N}$に対しては，$k +1 \geqq 1$
+    であり，
+    \[
+        k+1 \in \{n \in \mathbb{N} \mid n \geqq 1 \}
+    \]
+    となるため，$k+1 \in H$である．
 
-        ここまでの考察から，
-        \begin{enumerate}
-            \item $0 \in H$
-            \item $n \in H \Longrightarrow n+1 \in H$
-        \end{enumerate}
-        であるから$H$は継承的である．
+    ここまでの考察から，
+    \begin{enumerate}
+        \item $0 \in H$
+        \item $n \in H \Longrightarrow n+1 \in H$
+    \end{enumerate}
+    であるから$H$は継承的である．
 
-        したがって，$\mathbb{N}$が最小の継承的集合であることから，
-        $\mathbb{N} \subset H$となる．
+    したがって，$\mathbb{N}$が最小の継承的集合であることから，
+    $\mathbb{N} \subset H$となる．
 
-        $H$の定義により，$a \notin H$なので，$a \notin \mathbb{N}$となり，$0<a<1$となる自然数$a$は存在しない．
-        これが証明すべきことであった．
-    \end{proof}
-\end{tleftbar}
+    $H$の定義により，$a \notin H$なので，$a \notin \mathbb{N}$となり，$0<a<1$となる自然数$a$は存在しない．
+    これが証明すべきことであった．
+\end{tproof}
 
 \newpage
 
@@ -746,7 +691,7 @@ $n!x \notin \mathbb{Z}$のときは，
 \subsection*{p31--33：1-(\romannumeral1)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p31--33：1-(\romannumeral1)}{p31--33：1-(\romannumeral1)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     \begin{align*}
         \frac{1^2+2^2+\cdots+n^2}{n^3} & = \frac{\dfrac{1}{6}n(n+1)(2n+1)}{n^3}                                \\
                                        & =\frac{1}{6} \left(1+\frac{1}{n} \right ) \left(2+\frac{1}{n} \right)
@@ -761,21 +706,19 @@ $n!x \notin \mathbb{Z}$のときは，
                                                            & = \left \{\lim_{n \to \infty} \frac{1}{6} \left(1+\frac{1}{n} \right ) \right \} \cdot \left \{\lim_{n \to \infty} \left(2+\frac{1}{n} \right ) \right \} \\
                                                            & = \frac{1}{6} (1+0) \cdot (2+0) =\frac{1}{3}
     \end{align*}
-\end{tleftbar}
+\end{tanswer}
 
 
 \subsection*{p31--33：1-(\romannumeral2)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p31--33：1-(\romannumeral2)}{p31--33：1-(\romannumeral2)}}
 
-\kakko{補題}
-
-
-正数列$(a_n)_{n \in \mathbb{N}}$に対して，$\left(\frac{a_{n+1}}{a_n} \right)_{n \in \mathbb{N}}$が収束し，
-\[
-    \lim_{n \to \infty} \frac{a_{n+1}}{a_n} <1
-\]
-となるとき，$\lim_{n \to \infty} a_n =0$である．
-
+\begin{lemma}{}{}
+    正数列$(a_n)_{n \in \mathbb{N}}$に対して，$\left(\frac{a_{n+1}}{a_n} \right)_{n \in \mathbb{N}}$が収束し，
+    \[
+        \lim_{n \to \infty} \frac{a_{n+1}}{a_n} <1
+    \]
+    となるとき，$\lim_{n \to \infty} a_n =0$である．
+\end{lemma}
 \begin{proof}
     $ \lim_{n \to \infty} \frac{a_{n+1}}{a_n} <1$であるから，この左辺を$r_0$とおくと，$r_0<1$である．
     このとき，$r~(r_0<r<1)$に対して，ある$N_1 \in \mathbb{N}$が存在して，任意の$n \in \mathbb{N}$に対して，
@@ -790,7 +733,7 @@ $n!x \notin \mathbb{Z}$のときは，
 \end{proof}
 
 
-\begin{tleftbar}
+\begin{tanswer}
     $a_n = \frac{n^2}{a^n}$とおく．$0<a \le 1$のときは明らかに$\lim_{n \to \infty} a_n=\infty$となる．\par
     $a>1$のとき，$\frac{a_{n+1}}{a_n} =\frac{\left(1+\dfrac{1}{n}\right)^2}{a}$となり，
     \[
@@ -806,10 +749,10 @@ $n!x \notin \mathbb{Z}$のときは，
         \end{cases}
     \end{align*}
     となる．
-\end{tleftbar}
+\end{tanswer}
 \subsection*{p31--33：1-(\romannumeral3)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p31--33：1-(\romannumeral3)}{p31--33：1-(\romannumeral3)}}
-\begin{tleftbar}
+\begin{tanswer}
     明らかに$\sqrt[n]{n} >1$なので，$\delta_n >0$を用いて，
     \[
         \sqrt[n]{n} = 1+ \delta_n
@@ -828,11 +771,11 @@ $n!x \notin \mathbb{Z}$のときは，
         \lim_{n \to \infty} \sqrt[n]{n} =1
     \]
     である．
-\end{tleftbar}
+\end{tanswer}
 
 \subsection*{p31--33：1-(\romannumeral4)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p31--33：1-(\romannumeral4)}{p31--33：1-(\romannumeral4)}}
-\begin{tleftbar}
+\begin{tanswer}
     $a_n= n^k e^{-n}$とおく．このとき，
     \[
         \lim_{n \to \infty} \frac{a_{n+1}}{a_n} =  \lim_{n \to \infty} \frac{\left(1+\dfrac{1}{n}\right)^k}{e} =\frac{1}{e} <1
@@ -842,11 +785,11 @@ $n!x \notin \mathbb{Z}$のときは，
         \lim_{n \to \infty} n^k e^{-n}=0
     \]
     である．
-\end{tleftbar}
+\end{tanswer}
 
 \subsection*{p31--33：1-(v)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p31--33：1-(v)}{p31--33：1-(v)}}
-\begin{tleftbar}
+\begin{tanswer}
     $a_n =\left (1-\frac{1}{n^2}\right)^n$とおく．
     \begin{align*}
         \lim_{n \to \infty} a_n & =\lim_{n \to \infty} \left (1-\frac{1}{n^2}\right)^n                              \\
@@ -854,17 +797,17 @@ $n!x \notin \mathbb{Z}$のときは，
                                 & = e \cdot \frac{1}{e} =1
     \end{align*}
     である．
-\end{tleftbar}
+\end{tanswer}
 
 \subsection*{p31--33：1-(vi)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p31--33：1-(vi)}{p31--33：1-(vi)}}
-\kakko{補題}
 
+\begin{lemma}{}{}
 
-$(a_n)_{n \in \mathbb{N}}$を実数列とし，$a_n > 0$とする．もし$\lim_{n \to \infty} a_n =0$であれば$\lim_{n \to \infty} \frac{1}{a_n}=\infty$である．
-また，もし$\lim_{n \to \infty} a_n =\infty$であるならば，$\lim_{n \to \infty} \frac{1}{a_n} =0$である，
+    $(a_n)_{n \in \mathbb{N}}$を実数列とし，$a_n > 0$とする．もし$\lim_{n \to \infty} a_n =0$であれば$\lim_{n \to \infty} \frac{1}{a_n}=\infty$である．
+    また，もし$\lim_{n \to \infty} a_n =\infty$であるならば，$\lim_{n \to \infty} \frac{1}{a_n} =0$である，
 
-
+\end{lemma}
 
 \begin{proof}
     前半の主張のみ示せば後半の主張も同様に示せるので，前半のみ示す．
@@ -880,11 +823,15 @@ $(a_n)_{n \in \mathbb{N}}$を実数列とし，$a_n > 0$とする．もし$\lim_
     となる．$M$は任意なので，これより$\lim_{n \to \infty} \frac{1}{a_n}=\infty$が示された．
 \end{proof}
 
-\kakko{補題}
+
+\begin{lemma}{}{}
 
 
-$c>1$のとき，$\lim_{n \to \infty} \frac{1}{c^n} = 0$である．
 
+    $c>1$のとき，$\lim_{n \to \infty} \frac{1}{c^n} = 0$である．
+
+
+\end{lemma}
 \begin{proof}
     $c>1$より，$\delta >0$を用いて$c=1+\delta$とおける．このとき，のちに$n \to \infty$の極限を考えることを考慮すると，
     \begin{align*}
@@ -899,7 +846,7 @@ $c>1$のとき，$\lim_{n \to \infty} \frac{1}{c^n} = 0$である．
     である．
 \end{proof}
 
-\begin{tleftbar}
+\begin{tanswer}
     $a_n = (c^n +c^{-n})^{-1}$とおく．$c=1$のときは明らかに$\lim_{n \to \infty} a_n =\frac{1}{2}$である．
 
     $c>1$のとき，2つの補題により，
@@ -917,303 +864,287 @@ $c>1$のとき，$\lim_{n \to \infty} \frac{1}{c^n} = 0$である．
         \end{cases}
     \end{align*}
     である．
-\end{tleftbar}
+\end{tanswer}
 
 
 \section*{p31--33：2}
 \addcontentsline{toc}{section}{\texorpdfstring{p31--33：2}{p31--33：2}}
 
-\begin{tleftbar}
-    \begin{proof}
-        二項定理を用いて$(a_n)_{n \in \mathbb{N}}$の一般項を展開すると，
-        \begin{align*}
-            a_n & =  1 + n \cdot \frac{1}{n} + \frac{n(n-1)}{2!} \cdot \frac{1}{n^2} + \dots + \frac{n(n-1)\cdots(n-r+1)}{r!} \cdot \frac{1}{n^r} + \cdots \frac{n!}{n!} \cdot + \frac{1}{n^n}                                                                              \\
-                & = 1+ \frac{1}{1!} + \frac{1}{2!} \left(1- \frac{1}{n} \right) + \dots + \frac{1}{r!} \cdot  \left(1 - \frac{1}{n} \right) \dots \left (1-\frac{r-1}{n} \right) + \dots +  \frac{1}{n!} \left(1 - \frac{1}{n} \right) \dots \left(1- \frac{n-1}{n} \right)
-        \end{align*}
-        同様にして，$a_{n+1}$の展開式を得たとき，$ \frac{1}{n+1} < \frac{1}{n}$であることにより，$r\in \{ 1,2,\dots ,n\}$に対して，
-        \[
-            \frac{1}{r!} \cdot  \left(1 - \frac{1}{n} \right) \dots \left (1-\frac{r-1}{n} \right) < \frac{1}{r!} \cdot  \left(1 - \frac{1}{n+1} \right) \dots \left (1-\frac{r-1}{n+1} \right)
-        \]
-        が成立する．これと，$a_{n+1}$の展開式のほうが，正の項を一つ多く含むことから，任意の$n \in \mathbb{N}$に対して，
-        \[
-            a_{n} < a_{n+1}
-        \]
-        が成立し，$(a_n)_{n \in \mathbb{N}}$は単調増加数列である．また，
-        \begin{align*}
-            a_n
-             & < 1 + \frac{1}{1!} + \frac{1}{2!} + \cdots + \frac{1}{n!}                                                         \\
-             & = \frac{5}{2} + \frac{1}{2}\left(\frac{1}{3} + \frac{1}{3 \cdot 4} + \cdots + \frac{1}{3 \cdot 4 \cdots n}\right) \\
-             & < \frac{5}{2} + \frac{1}{2}\left(\frac{1}{3} + \frac{1}{3^2} + \cdots + \frac{1}{3^{n-2}}\right)                  \\
-             & = \frac{5}{2} + \frac{1}{4}\left(1 - \frac{1}{3^{n-2}}\right)                                                     \\
-             & < \frac{11}{4}.
-        \end{align*}
-        よって，$a_n$は単調増加かつ上に有界であるから収束する．
-        $e = \lim_{n \to \infty} a_n$と定義すると，前述した評価により$e \leqq \frac{11}{4} < 3$である．
+\begin{tproof}
+    二項定理を用いて$(a_n)_{n \in \mathbb{N}}$の一般項を展開すると，
+    \begin{align*}
+        a_n & =  1 + n \cdot \frac{1}{n} + \frac{n(n-1)}{2!} \cdot \frac{1}{n^2} + \dots + \frac{n(n-1)\cdots(n-r+1)}{r!} \cdot \frac{1}{n^r} + \cdots \frac{n!}{n!} \cdot + \frac{1}{n^n}                                                                              \\
+            & = 1+ \frac{1}{1!} + \frac{1}{2!} \left(1- \frac{1}{n} \right) + \dots + \frac{1}{r!} \cdot  \left(1 - \frac{1}{n} \right) \dots \left (1-\frac{r-1}{n} \right) + \dots +  \frac{1}{n!} \left(1 - \frac{1}{n} \right) \dots \left(1- \frac{n-1}{n} \right)
+    \end{align*}
+    同様にして，$a_{n+1}$の展開式を得たとき，$ \frac{1}{n+1} < \frac{1}{n}$であることにより，$r\in \{ 1,2,\dots ,n\}$に対して，
+    \[
+        \frac{1}{r!} \cdot  \left(1 - \frac{1}{n} \right) \dots \left (1-\frac{r-1}{n} \right) < \frac{1}{r!} \cdot  \left(1 - \frac{1}{n+1} \right) \dots \left (1-\frac{r-1}{n+1} \right)
+    \]
+    が成立する．これと，$a_{n+1}$の展開式のほうが，正の項を一つ多く含むことから，任意の$n \in \mathbb{N}$に対して，
+    \[
+        a_{n} < a_{n+1}
+    \]
+    が成立し，$(a_n)_{n \in \mathbb{N}}$は単調増加数列である．また，
+    \begin{align*}
+        a_n
+         & < 1 + \frac{1}{1!} + \frac{1}{2!} + \cdots + \frac{1}{n!}                                                         \\
+         & = \frac{5}{2} + \frac{1}{2}\left(\frac{1}{3} + \frac{1}{3 \cdot 4} + \cdots + \frac{1}{3 \cdot 4 \cdots n}\right) \\
+         & < \frac{5}{2} + \frac{1}{2}\left(\frac{1}{3} + \frac{1}{3^2} + \cdots + \frac{1}{3^{n-2}}\right)                  \\
+         & = \frac{5}{2} + \frac{1}{4}\left(1 - \frac{1}{3^{n-2}}\right)                                                     \\
+         & < \frac{11}{4}.
+    \end{align*}
+    よって，$a_n$は単調増加かつ上に有界であるから収束する．
+    $e = \lim_{n \to \infty} a_n$と定義すると，前述した評価により$e \leqq \frac{11}{4} < 3$である．
 
-        また，$(a_n)_{n \in \mathbb{N}}$が単調増加数列であることから，任意の$n \in \mathbb{N} \setminus \{0,1\}$に対して，
-        \[
-            a_n > a_1 = \left(1+\frac{1}{1}\right)^1 =2
-        \]
-        であるから，
-        \[
-            2<e<3
-        \]
-        を得る．これが証明すべきことであった．
-    \end{proof}
-\end{tleftbar}
+    また，$(a_n)_{n \in \mathbb{N}}$が単調増加数列であることから，任意の$n \in \mathbb{N} \setminus \{0,1\}$に対して，
+    \[
+        a_n > a_1 = \left(1+\frac{1}{1}\right)^1 =2
+    \]
+    であるから，
+    \[
+        2<e<3
+    \]
+    を得る．これが証明すべきことであった．
+\end{tproof}
 \newpage
 
 
 \section*{p31--33：11}
 \addcontentsline{toc}{section}{\texorpdfstring{p31--33：11}{p31--33：11}}
 
+\begin{tproof}
+    背理法で示す．
 
-\begin{leftbar}
-    \begin{proof}
-        背理法で示す．
+    ある$ a\in \mathbb{Q}$と$\varepsilon >0$に対して，$\abs{b-a}<\varepsilon$となるような$b \in \mathbb{R} \setminus \mathbb{Q}$が存在しない，つまり，
+    ある$a \in \mathbb{Q}$と$\varepsilon >0$に対して，区間$(a-\varepsilon , a+ \varepsilon)$が有理数のみから成るとする．
+    このとき
+    \[
+        (a-\varepsilon , a+ \varepsilon) \subset \mathbb{Q}
+    \]
+    である．
 
-        ある$ a\in \mathbb{Q}$と$\varepsilon >0$に対して，$\abs{b-a}<\varepsilon$となるような$b \in \mathbb{R} \setminus \mathbb{Q}$が存在しない，つまり，
-        ある$a \in \mathbb{Q}$と$\varepsilon >0$に対して，区間$(a-\varepsilon , a+ \varepsilon)$が有理数のみから成るとする．
-        このとき
-        \[
-            (a-\varepsilon , a+ \varepsilon) \subset \mathbb{Q}
-        \]
-        である．
+    さて，任意の$ c \in \mathbb{Q}$に対して，$ (c-\varepsilon , c+ \varepsilon)$が不可算集合であることから，とくに$(a-\varepsilon , a+ \varepsilon)$も不可算集合である．
+    しかし，$(a-\varepsilon , a+ \varepsilon) \subset \mathbb{Q}$であるから，可算集合の部分集合が不可算集合であることになり矛盾である．
 
-        さて，任意の$ c \in \mathbb{Q}$に対して，$ (c-\varepsilon , c+ \varepsilon)$が不可算集合であることから，とくに$(a-\varepsilon , a+ \varepsilon)$も不可算集合である．
-        しかし，$(a-\varepsilon , a+ \varepsilon) \subset \mathbb{Q}$であるから，可算集合の部分集合が不可算集合であることになり矛盾である．
-
-        ゆえに，先の仮定が誤りであるから，任意の$ a\in \mathbb{Q}$と任意の$\varepsilon >0$に対して，$\abs{b-a}<\varepsilon$となるような$b \in \mathbb{R} \setminus \mathbb{Q}$が存在する．
-    \end{proof}
-\end{leftbar}
+    ゆえに，先の仮定が誤りであるから，任意の$ a\in \mathbb{Q}$と任意の$\varepsilon >0$に対して，$\abs{b-a}<\varepsilon$となるような$b \in \mathbb{R} \setminus \mathbb{Q}$が存在する．
+\end{tproof}
 
 
-\begin{leftbar}
+\begin{tproof}
     [別解1]
-    \begin{proof}
-        任意に $a \in \mathbb{Q}$ をとる．無理数として $\sqrt{2}$ を選び，数列 $(x_n)_{n \in \mathbb{N}}$ を
-        \[
-            x_n = a + \frac{\sqrt{2}}{n}\quad (n=1,2,3,\dots)
-        \]
-        と定義する．このとき，$\sqrt{2}/n$ は常に無理数であるから，$a$ が有理数でも $x_n$ は有理数になり得ず，$x_n \in \mathbb{R}\setminus\mathbb{Q}$ となる．
+    任意に $a \in \mathbb{Q}$ をとる．無理数として $\sqrt{2}$ を選び，数列 $(x_n)_{n \in \mathbb{N}}$ を
+    \[
+        x_n = a + \frac{\sqrt{2}}{n}\quad (n=1,2,3,\dots)
+    \]
+    と定義する．このとき，$\sqrt{2}/n$ は常に無理数であるから，$a$ が有理数でも $x_n$ は有理数になり得ず，$x_n \in \mathbb{R}\setminus\mathbb{Q}$ となる．
 
-        一方，
-        \[
-            \lim_{n \to \infty} x_n=\lim_{n \to \infty} \left(a + \frac{\sqrt{2}}{n}\right)=a
-        \]
-        であるから，任意の $\varepsilon > 0$ に対して，ある $N \in \mathbb{N}$ が存在し，任意の $n \in \mathbb{N}$ について
-        \[
-            n \geqq N \Longrightarrow \abs{x_n - a} < \varepsilon
-        \]
-        が成り立つ．ここで $a$ は任意だったので，任意の $a \in \mathbb{Q}$ と任意の $\varepsilon > 0$ に対して，区間 $(a-\varepsilon, a+\varepsilon)$ に属する無理数 $x_n$ が常に存在する．
+    一方，
+    \[
+        \lim_{n \to \infty} x_n=\lim_{n \to \infty} \left(a + \frac{\sqrt{2}}{n}\right)=a
+    \]
+    であるから，任意の $\varepsilon > 0$ に対して，ある $N \in \mathbb{N}$ が存在し，任意の $n \in \mathbb{N}$ について
+    \[
+        n \geqq N \Longrightarrow \abs{x_n - a} < \varepsilon
+    \]
+    が成り立つ．ここで $a$ は任意だったので，任意の $a \in \mathbb{Q}$ と任意の $\varepsilon > 0$ に対して，区間 $(a-\varepsilon, a+\varepsilon)$ に属する無理数 $x_n$ が常に存在する．
 
-        したがって，任意の $a \in \mathbb{Q}$，$\varepsilon > 0$ に対して，$\abs{a-b}<\varepsilon$ を満たす無理数 $b$ が存在することが示された．
-    \end{proof}
-\end{leftbar}
+    したがって，任意の $a \in \mathbb{Q}$，$\varepsilon > 0$ に対して，$\abs{a-b}<\varepsilon$ を満たす無理数 $b$ が存在することが示された．
+\end{tproof}
 
 
-\begin{leftbar}
+\begin{tproof}
     [別解2]
-    \begin{proof}
-        「ある $\varepsilon>0$と$a \in \mathbb{Q}$ について，開区間 $(a-\varepsilon,a+\varepsilon)$ には無理数が一切含まれない」と仮定する．
-        このとき
-        \[
-            (a-\varepsilon,a+\varepsilon) \subset \mathbb{Q}
-        \]
-        である．これを踏まえた上で
-        \[
-            x \in  (a-\varepsilon,a+\varepsilon)
-        \]
-        を任意にとると，$ x \in \mathbb{Q} $ である．
-        このとき，任意の$c \in \mathbb{Q}$ に対して
-        \[
-            (c-\varepsilon , c+\varepsilon) =\{ x +c -a \mid x \in (a-\varepsilon,a+\varepsilon) \} \subset \mathbb{Q}
-        \]
-        である．$c$は任意にとったので，
-        \[
-            \bigcup_{c \in \mathbb{Q}} (c-\varepsilon,c+\varepsilon) =\mathbb{R} \subset \mathbb{Q}
-        \]
-        となり，これは矛盾である．
+    「ある $\varepsilon>0$と$a \in \mathbb{Q}$ について，開区間 $(a-\varepsilon,a+\varepsilon)$ には無理数が一切含まれない」と仮定する．
+    このとき
+    \[
+        (a-\varepsilon,a+\varepsilon) \subset \mathbb{Q}
+    \]
+    である．これを踏まえた上で
+    \[
+        x \in  (a-\varepsilon,a+\varepsilon)
+    \]
+    を任意にとると，$ x \in \mathbb{Q} $ である．
+    このとき，任意の$c \in \mathbb{Q}$ に対して
+    \[
+        (c-\varepsilon , c+\varepsilon) =\{ x +c -a \mid x \in (a-\varepsilon,a+\varepsilon) \} \subset \mathbb{Q}
+    \]
+    である．$c$は任意にとったので，
+    \[
+        \bigcup_{c \in \mathbb{Q}} (c-\varepsilon,c+\varepsilon) =\mathbb{R} \subset \mathbb{Q}
+    \]
+    となり，これは矛盾である．
 
-        したがって，背理法により，任意の $a \in \mathbb{Q}$ と $\varepsilon > 0$ に対して，開区間 $(a-\varepsilon,a+\varepsilon)$ には無理数が含まれることが示された．
-        すなわち，任意の $a \in \mathbb{Q}$ と $\varepsilon > 0$ に対して，$\abs{a-b}<\varepsilon$ を満たす無理数 $b$ が存在することが示された．
-    \end{proof}
-\end{leftbar}
+    したがって，背理法により，任意の $a \in \mathbb{Q}$ と $\varepsilon > 0$ に対して，開区間 $(a-\varepsilon,a+\varepsilon)$ には無理数が含まれることが示された．
+    すなわち，任意の $a \in \mathbb{Q}$ と $\varepsilon > 0$ に対して，$\abs{a-b}<\varepsilon$ を満たす無理数 $b$ が存在することが示された．
+\end{tproof}
 
 \newpage
 \section*{p42--43：3}
 \addcontentsline{toc}{section}{\texorpdfstring{p42--43：3}{p42--43：3}}
 
 
-\begin{tleftbar}
-    \begin{proof}
-        正規性と直交性をそれぞれ証明する．
-        \begin{description}
-            \item[正規性] $(u_1, \ldots, u_n)$の各ベクトルのノルムが$1$であることを示す．
-                  \[
-                      u_i = \frac{y_i}{\abs{y_i}} \quad (i = 1, \ldots, n)
-                  \]
-                  であるから，正規性は明らかである．
-            \item[直交性] $(u_1, \ldots, u_n)$の各ベクトルが互いに直交することを数学的帰納法で証明する．
-                  \begin{enumerate}[(i)]
-                      \item $u_1$と$u_2$について，
-                            \begin{align*}
-                                (u_2 | u_1) & = \left(\left. \frac{x_2 - (x_2 | u_1) u_1}{\abs{ x_2 - (x_2 | u_1) u_1 }} \right|u_1 \right) \\
-                                            & = \frac{(x_2 | u_1) - (x_2 | u_1) \|u_1\|^2}{\abs{ x_2 - (x_2 | u_1) u_1 }}                   \\
-                                            & = \frac{(x_2 | u_1) - (x_2 | u_1) \cdot 1}{\abs{ x_2 - (x_2 | u_1) u_1 }}                     \\
-                                            & = 0.
-                            \end{align*}
-                            したがって．$u_1$と$u_2$は直交する．
+\begin{tproof}
+    正規性と直交性をそれぞれ証明する．
+    \begin{description}
+        \item[正規性] $(u_1, \ldots, u_n)$の各ベクトルのノルムが$1$であることを示す．
+              \[
+                  u_i = \frac{y_i}{\abs{y_i}} \quad (i = 1, \ldots, n)
+              \]
+              であるから，正規性は明らかである．
+        \item[直交性] $(u_1, \ldots, u_n)$の各ベクトルが互いに直交することを数学的帰納法で証明する．
+              \begin{enumerate}[(i)]
+                  \item $u_1$と$u_2$について，
+                        \begin{align*}
+                            (u_2 | u_1) & = \left(\left. \frac{x_2 - (x_2 | u_1) u_1}{\abs{ x_2 - (x_2 | u_1) u_1 }} \right|u_1 \right) \\
+                                        & = \frac{(x_2 | u_1) - (x_2 | u_1) \|u_1\|^2}{\abs{ x_2 - (x_2 | u_1) u_1 }}                   \\
+                                        & = \frac{(x_2 | u_1) - (x_2 | u_1) \cdot 1}{\abs{ x_2 - (x_2 | u_1) u_1 }}                     \\
+                                        & = 0.
+                        \end{align*}
+                        したがって．$u_1$と$u_2$は直交する．
 
-                      \item $u_1, u_2, \ldots, u_i$が互いに直交するベクトルであると仮定する．すなわち，
-                            \[
-                                (u_i | u_j) = 0 \quad (i \ne j)
-                            \]
-                            を仮定する．このとき，$u_j$と$u_{i+1}$\footnote{$u_{i+1}$は問題文で述べられている定義からわかる．}について，
-                            \begin{align*}
-                                (u_j | u_{i+1}) & =\left  ( u_j \left| \frac{x_{i+1} - \sum_{k=1}^{i} (x_{i+1} | u_k) u_k}{\abs{| x_{i+1} - \sum_{k=1}^{i} (x_{i+1} | u_k) u_k }} \right. \right) \\
-                                                & = \frac{(u_j | x_{i+1}) - \sum_{k=1}^{i} (x_{i+1} | u_k) (u_j | u_k)}{\abs{| x_{i+1} - \sum_{k=1}^{i} (x_{i+1} | u_k) u_k }}                    \\
-                                                & = \frac{(u_j | x_{i+1}) - (x_{i+1} | u_j) \abs{u_j}^2}{\abs{| x_{i+1} - \sum_{k=1}^{i} (x_{i+1} | u_k) u_k }}                                   \\
-                                                & = \frac{(u_j | x_{i+1}) - (x_{i+1} | u_j) \cdot 1}{\abs{| x_{i+1} - \sum_{k=1}^{i} (x_{i+1} | u_k) u_k }}                                       \\
-                                                & = 0.
-                            \end{align*}
-                  \end{enumerate}
-                  (\romannumeral1)と(\romannumeral2)より，直交性が示される．
-        \end{description}
-        以上の考察により，$(u_1, \ldots, u_n)$は$\mathbb{R}^n$の正規直交基底である．
-    \end{proof}
-\end{tleftbar}
+                  \item $u_1, u_2, \ldots, u_i$が互いに直交するベクトルであると仮定する．すなわち，
+                        \[
+                            (u_i | u_j) = 0 \quad (i \ne j)
+                        \]
+                        を仮定する．このとき，$u_j$と$u_{i+1}$\footnote{$u_{i+1}$は問題文で述べられている定義からわかる．}について，
+                        \begin{align*}
+                            (u_j | u_{i+1}) & =\left  ( u_j \left| \frac{x_{i+1} - \sum_{k=1}^{i} (x_{i+1} | u_k) u_k}{\abs{| x_{i+1} - \sum_{k=1}^{i} (x_{i+1} | u_k) u_k }} \right. \right) \\
+                                            & = \frac{(u_j | x_{i+1}) - \sum_{k=1}^{i} (x_{i+1} | u_k) (u_j | u_k)}{\abs{| x_{i+1} - \sum_{k=1}^{i} (x_{i+1} | u_k) u_k }}                    \\
+                                            & = \frac{(u_j | x_{i+1}) - (x_{i+1} | u_j) \abs{u_j}^2}{\abs{| x_{i+1} - \sum_{k=1}^{i} (x_{i+1} | u_k) u_k }}                                   \\
+                                            & = \frac{(u_j | x_{i+1}) - (x_{i+1} | u_j) \cdot 1}{\abs{| x_{i+1} - \sum_{k=1}^{i} (x_{i+1} | u_k) u_k }}                                       \\
+                                            & = 0.
+                        \end{align*}
+              \end{enumerate}
+              (\romannumeral1)と(\romannumeral2)より，直交性が示される．
+    \end{description}
+    以上の考察により，$(u_1, \ldots, u_n)$は$\mathbb{R}^n$の正規直交基底である．
+\end{tproof}
 
 \newpage
 
 \section*{p42--43：11}
 \addcontentsline{toc}{section}{\texorpdfstring{p42--43：11}{p42--43：11}}
+\begin{tproof}
+    四元数体 $H$ を以下のように定義する．
 
-\begin{leftbar}
-    \begin{proof}
-        四元数体 $H$ を以下のように定義する．
+    \[
+        H = \{ (a_1, a_2, a_3, a_4) \mid a_i \in \mathbb{R}\}
+    \]
 
-        \[
-            H = \{ (a_1, a_2, a_3, a_4) \mid a_i \in \mathbb{R}\}
-        \]
+    また，
 
-        また，
+    \[
+        p=(a_1, a_2, a_3, a_4),\quad q=(b_1, b_2, b_3, b_4)
+    \]
+    とする．このとき，$ p ,q \in H$である．
+    \begin{description}
+        \item [(R1)] \mbox{} \\
+              任意の $q = (a_i)$，$p = (b_i) \in H$ に対して，
 
-        \[
-            p=(a_1, a_2, a_3, a_4),\quad q=(b_1, b_2, b_3, b_4)
-        \]
-        とする．このとき，$ p ,q \in H$である．
-        \begin{description}
-            \item [(R1)] \mbox{} \\
-                  任意の $q = (a_i)$，$p = (b_i) \in H$ に対して，
+              \[
+                  q + p = (a_1 + b_1, a_2 + b_2, a_3 + b_3, a_4 + b_4) = (b_1 + a_1, b_2 + a_2, b_3 + a_3, b_4 + a_4) = p + q
+              \]
+        \item [(R2)] \mbox{} \\
+              任意の $q = (a_i)$，$p = (b_i)$，$r = (c_i) \in H$ に対して，実数の加法の結合律から，
 
-                  \[
-                      q + p = (a_1 + b_1, a_2 + b_2, a_3 + b_3, a_4 + b_4) = (b_1 + a_1, b_2 + a_2, b_3 + a_3, b_4 + a_4) = p + q
-                  \]
-            \item [(R2)] \mbox{} \\
-                  任意の $q = (a_i)$，$p = (b_i)$，$r = (c_i) \in H$ に対して，実数の加法の結合律から，
+              \[
+                  (q + p) + r = q + (p + r)
+              \]
+        \item [(R3)] \mbox{} \\
+              加法の単位元を $0 = (0, 0, 0, 0)$ とすると，任意の $q = (a_i) \in H$ に対して，
+              \[
+                  q + 0 = (a_1 + 0, a_2 + 0, a_3 + 0, a_4 + 0) = q
+              \]
 
-                  \[
-                      (q + p) + r = q + (p + r)
-                  \]
-            \item [(R3)] \mbox{} \\
-                  加法の単位元を $0 = (0, 0, 0, 0)$ とすると，任意の $q = (a_i) \in H$ に対して，
-                  \[
-                      q + 0 = (a_1 + 0, a_2 + 0, a_3 + 0, a_4 + 0) = q
-                  \]
+        \item [(R4)] \mbox{} \\
+              任意の $q = (a_1, a_2, a_3, a_4) \in H$ に対して，加法の逆元を $-q = (-a_1, -a_2, -a_3, -a_4)$ と定義すると，
+              \[
+                  q + (-q) = (a_1 - a_1, a_2 - a_2, a_3 - a_3, a_4 - a_4) = (0, 0, 0, 0) = 0
+              \]
+        \item [(R6)] \mbox{} \\
+              任意の $q, p, r \in H$ に対して，
+              \[
+                  (q \cdot p) \cdot r = q \cdot (p \cdot r)
+              \]
+              これは四元数の乗法の定義から成り立つ．
+        \item[(R7)] \mbox{} \\
+              任意の $q, p, r \in H$ に対して，
 
-            \item [(R4)] \mbox{} \\
-                  任意の $q = (a_1, a_2, a_3, a_4) \in H$ に対して，加法の逆元を $-q = (-a_1, -a_2, -a_3, -a_4)$ と定義すると，
-                  \[
-                      q + (-q) = (a_1 - a_1, a_2 - a_2, a_3 - a_3, a_4 - a_4) = (0, 0, 0, 0) = 0
-                  \]
-            \item [(R6)] \mbox{} \\
-                  任意の $q, p, r \in H$ に対して，
-                  \[
-                      (q \cdot p) \cdot r = q \cdot (p \cdot r)
-                  \]
-                  これは四元数の乗法の定義から成り立つ．
-            \item[(R7)] \mbox{} \\
-                  任意の $q, p, r \in H$ に対して，
+              \[
+                  q \cdot (p + r) = q \cdot p + q \cdot r
+              \]
 
-                  \[
-                      q \cdot (p + r) = q \cdot p + q \cdot r
-                  \]
+              \[
+                  (p + q) \cdot r = p \cdot r + q \cdot r
+              \]
+              が成立する．これは乗法の定義と実数の分配律から成り立つ．
+        \item [(R8)] \mbox{} \\
+              乗法の単位元を $1 = (1, 0, 0, 0)$ とすると，任意の $q = (a_1, a_2, a_3, a_4) \in H$ に対して，
 
-                  \[
-                      (p + q) \cdot r = p \cdot r + q \cdot r
-                  \]
-                  が成立する．これは乗法の定義と実数の分配律から成り立つ．
-            \item [(R8)] \mbox{} \\
-                  乗法の単位元を $1 = (1, 0, 0, 0)$ とすると，任意の $q = (a_1, a_2, a_3, a_4) \in H$ に対して，
+              \[
+                  q \cdot 1 = (a_1, a_2, a_3, a_4)
+              \]
+              なぜなら，
+              \begin{align*}
+                  c_1 & = a_1 \cdot 1 - a_2 \cdot 0 - a_3 \cdot 0 - a_4 \cdot 0 = a_1, \\
+                  c_2 & = a_1 \cdot 0 + a_2 \cdot 1 + a_3 \cdot 0 - a_4 \cdot 0 = a_2, \\
+                  c_3 & = a_1 \cdot 0 - a_2 \cdot 0 + a_3 \cdot 1 + a_4 \cdot 0 = a_3, \\
+                  c_4 & = a_1 \cdot 0 + a_2 \cdot 0 - a_3 \cdot 0 + a_4 \cdot 1 = a_4.
+              \end{align*}
+        \item [(R9)] \mbox{} \\
+              任意の $q = (a_1, a_2, a_3, a_4) \in H$ で $q \ne 0$（つまり、${a_1}^2 + {a_2}^2 + {a_3}^2 + {a_4}^2 > 0$）の場合，ノルムを
 
-                  \[
-                      q \cdot 1 = (a_1, a_2, a_3, a_4)
-                  \]
-                  なぜなら，
-                  \begin{align*}
-                      c_1 & = a_1 \cdot 1 - a_2 \cdot 0 - a_3 \cdot 0 - a_4 \cdot 0 = a_1, \\
-                      c_2 & = a_1 \cdot 0 + a_2 \cdot 1 + a_3 \cdot 0 - a_4 \cdot 0 = a_2, \\
-                      c_3 & = a_1 \cdot 0 - a_2 \cdot 0 + a_3 \cdot 1 + a_4 \cdot 0 = a_3, \\
-                      c_4 & = a_1 \cdot 0 + a_2 \cdot 0 - a_3 \cdot 0 + a_4 \cdot 1 = a_4.
-                  \end{align*}
-            \item [(R9)] \mbox{} \\
-                  任意の $q = (a_1, a_2, a_3, a_4) \in H$ で $q \ne 0$（つまり、${a_1}^2 + {a_2}^2 + {a_3}^2 + {a_4}^2 > 0$）の場合，ノルムを
+              \[
+                  N(q) = {a_1}^2 + {a_2}^2 + {a_3}^2 + {a_4}^2 > 0
+              \]
 
-                  \[
-                      N(q) = {a_1}^2 + {a_2}^2 + {a_3}^2 + {a_4}^2 > 0
-                  \]
+              と定義する．共役四元数を
 
-                  と定義する．共役四元数を
+              \[
+                  q^* = (a_1, -a_2, -a_3, -a_4)
+              \]
 
-                  \[
-                      q^* = (a_1, -a_2, -a_3, -a_4)
-                  \]
+              と定義すると，
 
-                  と定義すると，
+              \[
+                  q \cdot q^* = q^* \cdot q = (N(q), 0, 0, 0)
+              \]
 
-                  \[
-                      q \cdot q^* = q^* \cdot q = (N(q), 0, 0, 0)
-                  \]
+              よって，乗法の逆元を
 
-                  よって，乗法の逆元を
-
-                  \[
-                      q^{-1} = \frac{q^*}{N(q)} = \left( \frac{a_1}{N(q)},\, -\frac{a_2}{N(q)},\, -\frac{a_3}{N(q)},\, -\frac{a_4}{N(q)} \right)
-                  \]
-                  と定義すると，
-                  \[
-                      q \cdot q^{-1} = \left( \frac{N(q)}{N(q)}, 0, 0, 0 \right) = (1, 0, 0, 0) = 1
-                  \]
-            \item [(R10)]
-                  加法の単位元は $0 = (0, 0, 0, 0)$ であり，乗法の単位元は $1 = (1, 0, 0, 0)$ である．ゆえに
-                  \[
-                      0 \ne 1.
-                  \]
-        \end{description}
-        以上の考察により，四元数全体の集合 $H$ は(R5)を除く乗法の交換律を除くすべての体の公理をみたす．
-    \end{proof}
-\end{leftbar}
+              \[
+                  q^{-1} = \frac{q^*}{N(q)} = \left( \frac{a_1}{N(q)},\, -\frac{a_2}{N(q)},\, -\frac{a_3}{N(q)},\, -\frac{a_4}{N(q)} \right)
+              \]
+              と定義すると，
+              \[
+                  q \cdot q^{-1} = \left( \frac{N(q)}{N(q)}, 0, 0, 0 \right) = (1, 0, 0, 0) = 1
+              \]
+        \item [(R10)]
+              加法の単位元は $0 = (0, 0, 0, 0)$ であり，乗法の単位元は $1 = (1, 0, 0, 0)$ である．ゆえに
+              \[
+                  0 \ne 1.
+              \]
+    \end{description}
+    以上の考察により，四元数全体の集合 $H$ は(R5)を除く乗法の交換律を除くすべての体の公理をみたす．
+\end{tproof}
 \newpage
 
 \section*{p49--50：1}
 \addcontentsline{toc}{section}{\texorpdfstring{p49--50：1}{p49--50：1}}
 
-\begin{tleftbar}
-    \begin{proof}
-        $\lim_{n \to \infty} \sqrt[n]{a_n} =r$であるから，$0<r<1$であるとき，$r<k<1$となるような$k$をひとつ取ると，ある$n_1 \in \mathbb{N}$が存在して，任意の$n \in \mathbb{N}$に対して，
-        \[
-            n \ge n_1 \Longrightarrow a_n<k^n
-        \]
-        となる．ここで，定理5.5(比較判定法)により，$\sum a_n$は収束する．
+\begin{tproof}
+    $\lim_{n \to \infty} \sqrt[n]{a_n} =r$であるから，$0<r<1$であるとき，$r<k<1$となるような$k$をひとつ取ると，ある$n_1 \in \mathbb{N}$が存在して，任意の$n \in \mathbb{N}$に対して，
+    \[
+        n \ge n_1 \Longrightarrow a_n<k^n
+    \]
+    となる．ここで，定理5.5(比較判定法)により，$\sum a_n$は収束する．
 
-        $r>1$のとき，$1>0$に対して，ある$n_2 \in \mathbb{N}$が存在して，任意の$n \in \mathbb{N}$に対して，
-        \[
-            n \ge n_2 \Longrightarrow a_n >1
-        \]
-        が成り立ち，$\lim_{n \to \infty} a_n \ne 0$となる．よって定理5.1~系の対偶により$\sum a_n$は発散する．
-    \end{proof}
-\end{tleftbar}
+    $r>1$のとき，$1>0$に対して，ある$n_2 \in \mathbb{N}$が存在して，任意の$n \in \mathbb{N}$に対して，
+    \[
+        n \ge n_2 \Longrightarrow a_n >1
+    \]
+    が成り立ち，$\lim_{n \to \infty} a_n \ne 0$となる．よって定理5.1~系の対偶により$\sum a_n$は発散する．
+\end{tproof}
 
 
 \section*{p49--50：2}
@@ -1223,7 +1154,7 @@ $c>1$のとき，$\lim_{n \to \infty} \frac{1}{c^n} = 0$である．
 \subsection*{p49--50：2-(\romannumeral1)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p49--50：2-(\romannumeral1)}{p49--50：2-(\romannumeral1)}}
 
-\begin{screen}
+\begin{tanswer}
     \[
         \frac{2n^2}{n^3+1}=\frac{2/3}{n+1}+\frac{4n/3-2/3}{n^2-n+1}
     \]
@@ -1233,13 +1164,13 @@ $c>1$のとき，$\lim_{n \to \infty} \frac{1}{c^n} = 0$である．
                                 & >\sum \frac{2/3}{n+1} \rightarrow \infty
     \end{align*}
     となる．よってこの級数は発散する
-\end{screen}
+\end{tanswer}
 
 
 \subsection*{p49--50：2-(\romannumeral2)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p49--50：2-(\romannumeral2)}{p49--50：2-(\romannumeral2)}}
 
-\begin{screen}
+\begin{tanswer}
     \[
         \sum ^{\infty}_{n=1}\frac{\sqrt{n}}{1+n^2}<\sum \frac{\sqrt{n}}{n^2}=\sum^{\infty}_{n=1}\frac{1}{n^{3/2}}~\left(<1+\int^{\infty}_{1}\frac{dx}{x^{3/2}}=3\right)
     \]
@@ -1249,13 +1180,13 @@ $c>1$のとき，$\lim_{n \to \infty} \frac{1}{c^n} = 0$である．
         \sum \frac{1}{n^\alpha}
     \]
     が$\alpha >1$のときに収束することを用いることもできる．
-\end{screen}
+\end{tanswer}
 
 
 \subsection*{p49--50：2-(\romannumeral3)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p49--50：2-(\romannumeral3)}{p49--50：2-(\romannumeral3)}}
 
-\begin{screen}
+\begin{tanswer}
     $a=1$のときは明らかに収束する．
 
     $a>1$の場合を考える．$\lim_{x \to 0} \frac{a^x-1}{x} = \log a$であるから
@@ -1283,20 +1214,19 @@ $c>1$のとき，$\lim_{n \to \infty} \frac{1}{c^n} = 0$である．
     \]
     が成り立つ．$\sum \frac{-\log a - \varepsilon}{n}=\infty$であるから，比較判定法により$\sum -(a^{\frac{1}{n}}-1)=\infty$である．
     よって$\sum (a^{\frac{1}{n}}-1)=-\infty$である．
-\end{screen}
+\end{tanswer}
 
 
 \subsection*{p49--50：2-(\romannumeral4)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p49--50：2-(\romannumeral4)}{p49--50：2-(\romannumeral4)}}
 
-\kakko{補題}
-
-$\lim_{n \to \infty} S_{2n}=S$，$\lim_{n \to \infty} S_{2n+1}=S$のとき，
-\[
-    \lim_{n \to \infty} S_n = S
-\]
-である．
-
+\begin{lemma}{}{}
+    $\lim_{n \to \infty} S_{2n}=S$，$\lim_{n \to \infty} S_{2n+1}=S$のとき，
+    \[
+        \lim_{n \to \infty} S_n = S
+    \]
+    である．
+\end{lemma}
 \begin{proof}
     $\varepsilon >0$を任意にとる．仮定より
     \begin{align*}
@@ -1316,7 +1246,7 @@ $\lim_{n \to \infty} S_{2n}=S$，$\lim_{n \to \infty} S_{2n+1}=S$のとき，
     が成り立つ．よって$\lim_{n \to \infty} S_n =S$である．
 \end{proof}
 
-\begin{screen}
+\begin{tanswer}
     $S_{n} = \sum ^{n}_{k=2} a_k$ とすると，
     \begin{align*}
         S_{2n} & = \sum ^{2n}_{k=2} a_{k}                                              \\
@@ -1337,25 +1267,25 @@ $\lim_{n \to \infty} S_{2n}=S$，$\lim_{n \to \infty} S_{2n+1}=S$のとき，
         \lim_{n \to \infty} S_{2n+1} = -\log 2 + \frac{\pi^2}{6}.
     \]
     したがって$S_{2n}$，$S_{2n+1}$は同じ値に収束する．これは$S_{n}$が収束することを意味するため，この級数は収束する．
-\end{screen}
+\end{tanswer}
 
 
 \subsection*{p49--50：2-(v)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p49--50：2-(v)}{p49--50：2-(v)}}
 
 
-\begin{screen}
+\begin{tanswer}
     定理5.7（ダランベールの収束判定）を用いる．$a_n=n/2^n$とおくと
     \[
         \lim_{n \to \infty}\frac{a_{n+1}}{a_n}=\lim_{n \to \infty}\frac{n+1}{n}\frac{2^n}{2^{n+1}}=\frac{1}{2}<1
     \]
     となることにより，この級数は収束する
-\end{screen}
+\end{tanswer}
 
 \subsection*{p49--50：2-(vi)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p49--50：2-(vi)}{p49--50：2-(vi)}}
 
-\begin{screen}
+\begin{tanswer}
     部分和の数列を$S_{n}$として$S_{2n}$が発散することを示す． 二項ずつ括弧に入れることで，
     \[
         S_{2n} = \sum ^{n}_{k=1} \left (\frac{1}{(2k-1)!} - \frac{1}{2k} \right )
@@ -1377,20 +1307,20 @@ $\lim_{n \to \infty} S_{2n}=S$，$\lim_{n \to \infty} S_{2n+1}=S$のとき，
         \sum^{\infty}_{k=N} \left (\frac{1}{2k} - \frac{1}{(2k-1)!}\right) =\infty
     \]
     であるからこの級数は発散する．
-\end{screen}
+\end{tanswer}
 
 
 
 \subsection*{p49--50：2-(vii)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p49--50：2-(vii)}{p49--50：2-(vii)}}
-\begin{screen}
+\begin{tanswer}
     $\left (\frac{\log x}{\sqrt x}\right)' = \frac{2-\log x}{2x^{3/2}}$であり，右辺は十分大きな$x$に対して$0$以下となる．さらに，$\lim _{n \to \infty} \frac{\log n}{\sqrt n} = 0$であるから，定理 V. 4.1 よりこの交代級数は収束する．
-\end{screen}
+\end{tanswer}
 
 \subsection*{p49--50：2-(viii)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p49--50：2-(viii)}{p49--50：2-(viii)}}
 
-\begin{screen}
+\begin{tanswer}
     \[
         \frac{(1+n)^n}{n^{n+1}}>\frac{n^n}{n^{n+1}}=\frac{1}{n}
     \]
@@ -1399,20 +1329,20 @@ $\lim_{n \to \infty} S_{2n}=S$，$\lim_{n \to \infty} S_{2n+1}=S$のとき，
         \sum \frac{(1+n)^n}{n^{n+1}}>\sum \frac{1}{n} \rightarrow \infty
     \]
     となる．よってこの級数は発散する．
-\end{screen}
+\end{tanswer}
 
 
 \subsection*{p49--50：2-(ix)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p49--50：2-(ix)}{p49--50：2-(ix)}}
 
-\begin{screen}
+\begin{tanswer}
     定理 5.7 (Ratio Test)より収束する．
-\end{screen}
+\end{tanswer}
 
 \subsection*{p49--50：2-(x)} \label{p49--50：2-(x)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p49--50：2-(x)}{p49--50：2-(x)}}
 
-\begin{screen}
+\begin{tanswer}
     定理5.7（ダランベールの収束判定）より$a_n=\left(\dfrac{n}{n+1}\right)^{n^2}$とすると
     \begin{align*}
         \frac{a_{n+1}}{a_n} & =\frac{(n+1)^{(n+1)^2}}{(n+2)^{(n+1)^2}}\frac{(n+1)^{n^2}}{n^{n^2}}=\frac{(n+1)^{n^2}}{n^{n^2}}\frac{(n+1)^{n^2}}{(n+2)^{n^2}}\frac{(n+1)^{2n+1}}{(n+2)^{2n+1}} \\
@@ -1433,71 +1363,67 @@ $\lim_{n \to \infty} S_{2n}=S$，$\lim_{n \to \infty} S_{2n+1}=S$のとき，
         \frac{a_{n+1}}{a_n}=e \times \frac{1}{e^2}=\frac{1}{e}<1
     \]
     となる．ゆえにこの級数は収束する．
-\end{screen}
+\end{tanswer}
 
 \kakko{(x)の別解}
 
-\begin{screen}
+\begin{tanswer}
     1)で証明した命題を用いると，
     \[
         \lim _{n \to \infty} \cfrac{1}{\Bigg(1+\cfrac{1}{n}\Bigg)^n} = \frac{1}{e} < 1
     \]
     であるから収束する．
-\end{screen}
+\end{tanswer}
 
 
 \subsection*{p49--50：2-(xi)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p49--50：2-(xi)}{p49--50：2-(xi)}}
 
 
-\begin{screen}
+\begin{tanswer}
     十分大きな$n$に対し$\log n \geq 2$であるから，$\frac{1}{n^2}$との比較により収束する．
-\end{screen}
+\end{tanswer}
 
 \newpage
 
 \section*{p49--50：3}
 \addcontentsline{toc}{section}{\texorpdfstring{p49--50：3}{p49--50：3}}
 
-\begin{tleftbar}
-    \begin{proof}
-        $\sum a_n $が絶対収束するので，$\sum \abs{a_n}$も収束する．
-        よって，定理5.1 系より，$\lim_{n \to \infty} \abs{a_n} =0$となる．
-        このとき，$1>0$に対して，ある$n_1 \in \mathbb{N}$が存在して，任意の$n \in \mathbb{N}$に対して，
-        \[
-            n \ge n_1 \Longrightarrow \abs{\abs{a_n} -0}<1
-        \]
-        が成り立つ．また，$\abs{a_n}<1$のとき，
-        \[
-            0 \le \abs{{a_n}^2} \le {\abs{a_n}}^2 \le \abs{a_n}
-        \]
-        が成り立つ．ここで，$\sum \abs{a_n}$が収束し，各項は正なので， 定理5.5(比較判定法)により，$\sum \abs{{a_n}^2}$も収束する．ゆえに$\sum {a_n}^2$は絶対収束する．
-    \end{proof}
-\end{tleftbar}
+\begin{tproof}
+    $\sum a_n $が絶対収束するので，$\sum \abs{a_n}$も収束する．
+    よって，定理5.1 系より，$\lim_{n \to \infty} \abs{a_n} =0$となる．
+    このとき，$1>0$に対して，ある$n_1 \in \mathbb{N}$が存在して，任意の$n \in \mathbb{N}$に対して，
+    \[
+        n \ge n_1 \Longrightarrow \abs{\abs{a_n} -0}<1
+    \]
+    が成り立つ．また，$\abs{a_n}<1$のとき，
+    \[
+        0 \le \abs{{a_n}^2} \le {\abs{a_n}}^2 \le \abs{a_n}
+    \]
+    が成り立つ．ここで，$\sum \abs{a_n}$が収束し，各項は正なので， 定理5.5(比較判定法)により，$\sum \abs{{a_n}^2}$も収束する．ゆえに$\sum {a_n}^2$は絶対収束する．
+\end{tproof}
 
 
 \section*{p49--50：5}
 \addcontentsline{toc}{section}{\texorpdfstring{p49--50：5}{p49--50：5}}
 
-\begin{tleftbar}
-    \begin{proof}
-        与えられた条件により，$0 <r <c , r \ne \infty $をみたす$r \in \mathbb{R}$に対して，ある$N \in \mathbb{N}$が存在して，
-        任意の$n \in \mathbb{N}$に対して，
-        \[
-            n \ge N \Longrightarrow \abs{\frac{a_n}{b_n}-c}<r
-        \]
-        が成り立つ．これにより，
-        \begin{align*}
-             & 0<-r +c < \frac{a_n}{b_n} < r+c            \\
-             & \therefore ~  (-r+c) b_n < a_n < (r+c) b_n
-        \end{align*}
-        となる．これと比較原理により，$\sum a_n$と$\sum b_n$は同時に収束，発散することが証明された．
-    \end{proof}
-\end{tleftbar}
+\begin{tproof}
+    与えられた条件により，$0 <r <c , r \ne \infty $をみたす$r \in \mathbb{R}$に対して，ある$N \in \mathbb{N}$が存在して，
+    任意の$n \in \mathbb{N}$に対して，
+    \[
+        n \ge N \Longrightarrow \abs{\frac{a_n}{b_n}-c}<r
+    \]
+    が成り立つ．これにより，
+    \begin{align*}
+         & 0<-r +c < \frac{a_n}{b_n} < r+c            \\
+         & \therefore ~  (-r+c) b_n < a_n < (r+c) b_n
+    \end{align*}
+    となる．これと比較原理により，$\sum a_n$と$\sum b_n$は同時に収束，発散することが証明された．
+\end{tproof}
 
 \section*{p49--50：6}
 \addcontentsline{toc}{section}{\texorpdfstring{p49--50：6}{p49--50：6}}
-\begin{tleftbar}
+\begin{tanswer}
     まず，
     \[
         1-x^2+x^4-\cdots+(-1)^n x^{2n} =\frac{1}{1+x^2} +\frac{(-1)^n x^{2n+2}}{x^2+1}
@@ -1518,7 +1444,7 @@ $\lim_{n \to \infty} S_{2n}=S$，$\lim_{n \to \infty} S_{2n+1}=S$のとき，
         \sum_{n=0}^{\infty} \frac{(-1)^n}{2n+1} =\frac{\pi}{4}
     \]
     である．
-\end{tleftbar}
+\end{tanswer}
 
 \newpage
 
@@ -1530,7 +1456,7 @@ $\lim_{n \to \infty} S_{2n}=S$，$\lim_{n \to \infty} S_{2n+1}=S$のとき，
 \addcontentsline{toc}{subsection}{\texorpdfstring{p49--50：7-(\romannumeral1)}{p49--50：7-(\romannumeral1)}}
 
 
-\begin{leftbar}
+\begin{tanswer}
     \begin{enumerate}[(i)]
         \item \mbox{　} \\
               $\abs{x} \leqq 1$のとき，
@@ -1561,21 +1487,21 @@ $\lim_{n \to \infty} S_{2n}=S$，$\lim_{n \to \infty} S_{2n+1}=S$のとき，
     \[
         \abs{x}>1.
     \]
-\end{leftbar}
+\end{tanswer}
 
 \newpage
 
 \subsection*{p49--50：7-(\romannumeral2)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p49--50：7-(\romannumeral2)}{p49--50：7-(\romannumeral2)}}
 
+\begin{lemma}{}{}
 
-\kakko{補題1}
-
-$n$を自然数とするとき，
-\[
-    \frac{(2n-1)!!}{(2n)!!} < \frac{1}{\sqrt{2n+1}}
-\]
-である．
+    $n$を自然数とするとき，
+    \[
+        \frac{(2n-1)!!}{(2n)!!} < \frac{1}{\sqrt{2n+1}}
+    \]
+    である．
+\end{lemma}
 
 \begin{proof}
     \[
@@ -1592,13 +1518,13 @@ $n$を自然数とするとき，
     \]
 \end{proof}
 
-\kakko{補題2（ラーベの判定法）}
-
-正項級数$\sum a_n$について，
-\[
-    \lim_{n\to\infty} n \left(\frac{a_n}{a_{n+1}}-1 \right) = r
-\]
-が存在するとき，$\sum a_n$は$r >1$ならば収束し，$r < 1$ならば発散する．
+\begin{lemma}{（ラーベの判定法}{}
+    正項級数$\sum a_n$について，
+    \[
+        \lim_{n\to\infty} n \left(\frac{a_n}{a_{n+1}}-1 \right) = r
+    \]
+    が存在するとき，$\sum a_n$は$r >1$ならば収束し，$r < 1$ならば発散する．
+\end{lemma}
 
 \begin{proof}
     $r>1$のとき，$ 1< r_0 < r$をみたす$r_0 \in \mathbb{R}$をとる．仮定より，ある$N_1 \in \mathbb{N}$が存在して，
@@ -1634,7 +1560,7 @@ $n$を自然数とするとき，
     を得る．よって比較判定法から$\sum a_n$は発散する．
 \end{proof}
 
-\begin{tleftbar}
+\begin{tanswer}
     \[
         a_n = \frac{(2n-1)!!}{(2n)!!} (1-x^2)^n
     \]
@@ -1673,37 +1599,35 @@ $n$を自然数とするとき，
     \[
         -\sqrt{2} \leqq x < 0 , \quad 0 < x \leqq \sqrt{2}.
     \]
-\end{tleftbar}
+\end{tanswer}
 
 \newpage
 \section*{p49--50：8}
 \addcontentsline{toc}{section}{\texorpdfstring{p49--50：8}{p49--50：8}}
 
-\begin{tleftbar}
-    \begin{proof}
-        この級数\footnote{この級数をケンプナー級数という．}の第$n$部分和を$s_n$，分母が$n$桁である項の末尾までの和を$t_n$とする．このとき$s_n < t_n$である．
+\begin{tproof}
+    この級数\footnote{この級数をケンプナー級数という．}の第$n$部分和を$s_n$，分母が$n$桁である項の末尾までの和を$t_n$とする．このとき$s_n < t_n$である．
 
-        分母が$k$桁である項の和を考える．このような項は，$8 \cdot 9^{k-1}$個ある．
+    分母が$k$桁である項の和を考える．このような項は，$8 \cdot 9^{k-1}$個ある．
 
-        また，このような項の分母の最小値は$10^{k-1}$であるから，
-        \begin{align*}
-            t_n = \sum_{k=1}^{n} \frac{8 \cdot 9^{k-1}}{10^{k-1}} & = 8 \sum_{k=1}^{n} \left(\frac{9}{10}\right)^{k-1}               \\
-                                                                  & = 8 \cdot \frac{1-\left(\dfrac{9}{10}\right)^n}{1-\dfrac{9}{10}} \\
-                                                                  & = 80 \left(1-\left(\frac{9}{10}\right)^n\right)
-        \end{align*}
-        となり，$t_n$は単調増加かつ上に有界である
+    また，このような項の分母の最小値は$10^{k-1}$であるから，
+    \begin{align*}
+        t_n = \sum_{k=1}^{n} \frac{8 \cdot 9^{k-1}}{10^{k-1}} & = 8 \sum_{k=1}^{n} \left(\frac{9}{10}\right)^{k-1}               \\
+                                                              & = 8 \cdot \frac{1-\left(\dfrac{9}{10}\right)^n}{1-\dfrac{9}{10}} \\
+                                                              & = 80 \left(1-\left(\frac{9}{10}\right)^n\right)
+    \end{align*}
+    となり，$t_n$は単調増加かつ上に有界である
 
-        よって，
-        \[
-            0 < s_n < t_n = 80 \left(1-\left(\frac{9}{10}\right)^n\right)
-        \]
-        であるから，
-        \[
-            \lim_{n \to \infty} s_n \leqq 80
-        \]
-        となり，これが証明すべきことであった．
-    \end{proof}
-\end{tleftbar}
+    よって，
+    \[
+        0 < s_n < t_n = 80 \left(1-\left(\frac{9}{10}\right)^n\right)
+    \]
+    であるから，
+    \[
+        \lim_{n \to \infty} s_n \leqq 80
+    \]
+    となり，これが証明すべきことであった．
+\end{tproof}
 
 
 \newpage
@@ -1715,7 +1639,7 @@ $n$を自然数とするとき，
 \subsection*{p63--64：1-(\romannumeral1)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p63--64：1-(\romannumeral1)}{p63--64：1-(\romannumeral1)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     $f(a)$を考えるため，$a \ne 0$としてよい．$\delta \le \frac{\abs{a}}{2}$とすると，$\abs{x-a}<\delta$より
     \[
         \abs{x} > \abs{a}-\delta \ge \frac{\abs{a}}{2}
@@ -1725,7 +1649,7 @@ $n$を自然数とするとき，
         \abs{\frac{1}{x}-\frac{1}{a}}=\frac{\abs{a-x}}{\abs{ax}} <\frac{2 \delta}{\abs{a}^2}
     \]
     であるから，$\delta = \min \{ \abs{a}/2,\abs{a}^2\varepsilon/2 \}$でよい．
-\end{tleftbar}
+\end{tanswer}
 
 
 
@@ -1733,7 +1657,7 @@ $n$を自然数とするとき，
 \addcontentsline{toc}{subsection}{\texorpdfstring{p63--64：1-(\romannumeral3)}{p63--64：1-(\romannumeral3)}}
 
 
-\begin{tleftbar}
+\begin{tanswer}
     $t \coloneqq \min \{x,a\}$とする．このとき，指数法則により，
     \[
         \abs{e^x-e^a}=e^t (e^{\abs{x-a}}-1)
@@ -1752,20 +1676,20 @@ $n$を自然数とするとき，
         \delta = \log (1+e^{-a}\varepsilon)
     \]
     である．
-\end{tleftbar}
+\end{tanswer}
 
 
 \subsection*{p63--64：1-(v)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p63--64：1-(v)}{p63--64：1-(v)}}
 
 
-\begin{leftbar}
+\begin{tanswer}
     任意の$\varepsilon > 0$に対し$\delta = \sqrt{\varepsilon}$とすると，$\sqrt{x^2 + y^2} < \delta$において
     \[
         \abs{x^2-y^2} \leq \abs{x}^2 + \abs{y}^2 < \delta^2 = \varepsilon
     \]
     が成り立つ．
-\end{leftbar}
+\end{tanswer}
 
 
 
@@ -1776,7 +1700,7 @@ $n$を自然数とするとき，
 \subsection*{p63--64：2-(\romannumeral1)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p63--64：2-(\romannumeral1)}{p63--64：2-(\romannumeral1)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     $\abs{\sin \frac{1}{x}} \le 1$，$\abs{\sin \frac{1}{y}} \le 1$であるから，
     \[
         \abs{(x+y) \sin \frac{1}{x} \sin \frac{1}{y}} \le \abs{(x+y)} \le \abs{x}+\abs{y} \to 0 \quad  \Bigl( (x,y) \to 0 \Bigl)
@@ -1786,12 +1710,12 @@ $n$を自然数とするとき，
         \lim_{(x,y)\to 0} (x+y) \sin \frac{1}{x} \sin \frac{1}{y} =0
     \]
     となる．
-\end{tleftbar}
+\end{tanswer}
 
 \subsection*{p63--64：2-(\romannumeral2)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p63--64：2-(\romannumeral2)}{p63--64：2-(\romannumeral2)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     $x^2,y^2 \leq x^2+y^2$であるから，
     \[
         1 \leq (1 + x^2 y^2)^{1/(x^2+y^2)} \leq (1 + (x^2+y^2)^2)^{1/(x^2+y^2)}
@@ -1801,13 +1725,13 @@ $n$を自然数とするとき，
         (1 + (x^2+y^2)^2)^{1/(x^2+y^2)} \to 1 \quad ((x,y) \to 0)
     \]
     となるから，求めるべき極限値は$1$である．
-\end{tleftbar}
+\end{tanswer}
 
 
 \subsection*{p63--64：2-(\romannumeral3)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p63--64：2-(\romannumeral3)}{p63--64：2-(\romannumeral3)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     まず，$\log x^x = x \log x$である．また，
     \[
         \lim_{x \to +0} x \log x  =\lim_{x \to +0} \frac{\log x}{1/x}
@@ -1824,12 +1748,12 @@ $n$を自然数とするとき，
                             & =e^0 =1
     \end{align*}
     となり，これが答である．
-\end{tleftbar}
+\end{tanswer}
 
 \subsection*{p63--64：2-(\romannumeral4)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p63--64：2-(\romannumeral4)}{p63--64：2-(\romannumeral4)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     $x=r \cos \theta,~y=r\sin \theta$とおくと，
     \begin{align*}
         \lim_{(x,y)\to 0} \frac{1-\cos (x^2+y^2)}{x^2+y^2} & = \lim_{r \to 0} \frac{1-\cos (r^2)}{r^2}                       \\
@@ -1838,12 +1762,12 @@ $n$を自然数とするとき，
                                                            & = 1^2 \cdot 0 =0
     \end{align*}
     を得て，これが答えである．
-\end{tleftbar}
+\end{tanswer}
 
 \subsection*{p63--64：2-(\romannumeral5)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p63--64：2-(\romannumeral5)}{p63--64：2-(\romannumeral5)}}
 
-\begin{leftbar}
+\begin{tanswer}
     \begin{align*}
         x(1-y^n)-y(1-x^n)-x^n+y^n
          & = x-y+xy^n+x^ny-x^n+y^n                                     \\
@@ -1863,7 +1787,7 @@ $n$を自然数とするとき，
         1+2+\ldots+(n-1) = \frac{n(n-1)}{2}
     \]
     となる．
-\end{leftbar}
+\end{tanswer}
 
 
 \section*{p63--64：3}
@@ -1873,7 +1797,7 @@ $n$を自然数とするとき，
 \subsection*{p63--64：3-(\romannumeral1)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p63--64：3-(\romannumeral1)}{p63--64：3-(\romannumeral1)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     以下，$\mathbb{Q}$の閉包は$\mathbb{R}$であることを示す．
 
     $a \in \mathbb{R}$に対して，
@@ -1898,7 +1822,7 @@ $n$を自然数とするとき，
         \overline{\mathbb{Q}}=\mathbb{R}
     \]
     である．
-\end{tleftbar}
+\end{tanswer}
 
 
 \section*{p63--64：4}
@@ -1908,23 +1832,21 @@ $n$を自然数とするとき，
 \subsection*{p63--64：4-(\romannumeral1)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p63--64：4-(\romannumeral1)}{p63--64：4-(\romannumeral1)}}
 
-\begin{tleftbar}
-    \begin{proof}
-        $d(x)=0$は$\inf_{y \in A} \abs{x-y} =0$ともかける．
-        \begin{align*}
-            \inf_{y \in A} \abs{x-y} =0 & \iff (\forall \varepsilon>0) \ (\exists y \in A)\ ( \abs{x-y}<\varepsilon ) \\
-                                        & \iff x \in \overline{A}
-        \end{align*}
-        これにより示された．
-    \end{proof}
-\end{tleftbar}
+\begin{tproof}
+    $d(x)=0$は$\inf_{y \in A} \abs{x-y} =0$ともかける．
+    \begin{align*}
+        \inf_{y \in A} \abs{x-y} =0 & \iff (\forall \varepsilon>0) \ (\exists y \in A)\ ( \abs{x-y}<\varepsilon ) \\
+                                    & \iff x \in \overline{A}
+    \end{align*}
+    これにより示された．
+\end{tproof}
 
 
 \subsection*{p63--64：4-(\romannumeral2)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p63--64：4-(\romannumeral2)}{p63--64：4-(\romannumeral2)}}
 
 
-\begin{leftbar}
+\begin{tanswer}
     $d(x)$の定義より，任意の$y \in \mathbb{R} ^n$に対して，
     \[
         d(x) \leq \abs{x-y} \leq \abs{x-a} + \abs{a-y}
@@ -1934,154 +1856,147 @@ $n$を自然数とするとき，
         d(x) - d(a) \leq \abs{x-a}.
     \]
     同様に$d(a) - d(x) \leq \abs{x-a}$も言えるので$\abs{d(x) - d(a)} \leq \abs{x-a}$である．これで示せた．
-\end{leftbar}
+\end{tanswer}
 
 \newpage
 \section*{p63--64：5}
-\addcontentsline{toc}{section}{\texorpdfstring{p63--64：5}{p63--64：5}}
-\begin{leftbar}
-    \begin{proof} \mbox{　}
-        \begin{enumerate}[(I)]
-            \item \mbox{} \\
-                  $f$が$U$上連続のとき，$\mathbb{R}^n$の開集合$W$をひとつとる．
-                  \begin{enumerate}[(i)]
-                      \item \mbox{} \\
-                            $ W \cap f(U) = \varnothing$のとき，$f(W) \ne \varnothing$より，$\mathbb{R}^n$上の開集合となる．
-                      \item \mbox{} \\
-                            $ W \cap f(U) \ne \varnothing$のとき，$f^{-1} (W)$の元$x$をひとつとる．
+\addcontentsline{toc}{section}{\texorpdfstring{p63--64：5}{p63--64：5}}\begin{tproof} \mbox{　}
+    \begin{enumerate}[(I)]
+        \item \mbox{} \\
+              $f$が$U$上連続のとき，$\mathbb{R}^n$の開集合$W$をひとつとる．
+              \begin{enumerate}[(i)]
+                  \item \mbox{} \\
+                        $ W \cap f(U) = \varnothing$のとき，$f(W) \ne \varnothing$より，$\mathbb{R}^n$上の開集合となる．
+                  \item \mbox{} \\
+                        $ W \cap f(U) \ne \varnothing$のとき，$f^{-1} (W)$の元$x$をひとつとる．
 
-                            $ f(x)=y$とすると，$U$は開集合なので，ある$\delta_0 >0$に対して$U(x,\delta_0) \subset U$となる．
-                            $f$の連続性より，任意の$\varnothing >0$に対して，ある$\delta >0$~（$\delta_0 >\delta >0$）が存在して，
-                            $f(U(x,\delta)) \subset U' (y,\varepsilon)$となる．
+                        $ f(x)=y$とすると，$U$は開集合なので，ある$\delta_0 >0$に対して$U(x,\delta_0) \subset U$となる．
+                        $f$の連続性より，任意の$\varnothing >0$に対して，ある$\delta >0$~（$\delta_0 >\delta >0$）が存在して，
+                        $f(U(x,\delta)) \subset U' (y,\varepsilon)$となる．
 
-                            また， $W$は開集合なので，$\varepsilon$を十分小さくとると
-                            \[
-                                U'(y,\varepsilon) \subset W,\quad f(U(x,\delta)) \subset U (x,\varepsilon) \subset W
-                            \]
-                            となる．
-                            ここで，$f^{-1} (f(U(x,\delta))) \supset U(x,\delta)$より，
-                            \[
-                                U(x,\delta) \subset f^{-1} (f(U(x,\delta))) \subset f^{-1} (W)
-                            \]
-                            となり，$f^{-1} (W)$は$\mathbb{R}^n$の開集合である．
-                  \end{enumerate}
-            \item \mbox{} \\
-                  $ \mathbb{R}^n$の開集合$W$に対して，$f^{-1} (W)$が$\mathbb{R}^n$の開集合となるとき，
-                  $U$の元$x$を1つとり，$f(x)=y$とする．
+                        また， $W$は開集合なので，$\varepsilon$を十分小さくとると
+                        \[
+                            U'(y,\varepsilon) \subset W,\quad f(U(x,\delta)) \subset U (x,\varepsilon) \subset W
+                        \]
+                        となる．
+                        ここで，$f^{-1} (f(U(x,\delta))) \supset U(x,\delta)$より，
+                        \[
+                            U(x,\delta) \subset f^{-1} (f(U(x,\delta))) \subset f^{-1} (W)
+                        \]
+                        となり，$f^{-1} (W)$は$\mathbb{R}^n$の開集合である．
+              \end{enumerate}
+        \item \mbox{} \\
+              $ \mathbb{R}^n$の開集合$W$に対して，$f^{-1} (W)$が$\mathbb{R}^n$の開集合となるとき，
+              $U$の元$x$を1つとり，$f(x)=y$とする．
 
-                  任意の$\varepsilon >0$に対して，$U(y,\varepsilon)$は$\mathbb{R}^n$の開集合なので，
-                  $f^{-1} (U'(y,\varepsilon))$も$\mathbb{R}^n$の開集合となる．
+              任意の$\varepsilon >0$に対して，$U(y,\varepsilon)$は$\mathbb{R}^n$の開集合なので，
+              $f^{-1} (U'(y,\varepsilon))$も$\mathbb{R}^n$の開集合となる．
 
-                  $x \in f^{-1} (U'(y,\varepsilon))$より，
-                  ある$\delta >0$が存在して，$U(x,\delta) \subset  f^{-1}(U'(y,\varepsilon)) \subset U$となり，
-                  $f(U(x,\delta)) \subset f(f^{-1}(U(y,\varepsilon))) \subset U'(y,\varepsilon)$であるから，$f$は$x$で連続となる．
-                  $x \in U$で任意に取れるので，$U$上連続である．
-        \end{enumerate}
-    \end{proof}
-\end{leftbar}
+              $x \in f^{-1} (U'(y,\varepsilon))$より，
+              ある$\delta >0$が存在して，$U(x,\delta) \subset  f^{-1}(U'(y,\varepsilon)) \subset U$となり，
+              $f(U(x,\delta)) \subset f(f^{-1}(U(y,\varepsilon))) \subset U'(y,\varepsilon)$であるから，$f$は$x$で連続となる．
+              $x \in U$で任意に取れるので，$U$上連続である．
+    \end{enumerate}
+\end{tproof}
 \newpage
 
 
 \section*{p63--64：6} \label{p63--64：6}
 \addcontentsline{toc}{section}{\texorpdfstring{p63--64：6}{p63--64：6}}
+\begin{tproof} \mbox{　}
+    \begin{enumerate}[(I)]
+        \item \mbox{} \\
+              $f$が$U$上連続であるとき，$\mathbb{R}^n$の開集合$W$をひとつとる．
+              \begin{enumerate}[(i)]
+                  \item \mbox{} \\
+                        $W \cap f(U) = \varnothing$のとき，$f^{-1} (W) = \varnothing$より，$\mathbb{R}^n$上の開集合となり，成立する．
+                  \item \mbox{} \\
+                        $W \cap f(U) \ne \varnothing$のとき，$f^{-1} (W)$の元$x$をひとつとり，$y=f(x)$とする．
 
-\begin{leftbar}
-    \begin{proof} \mbox{　}
-        \begin{enumerate}[(I)]
-            \item \mbox{} \\
-                  $f$が$U$上連続であるとき，$\mathbb{R}^n$の開集合$W$をひとつとる．
-                  \begin{enumerate}[(i)]
-                      \item \mbox{} \\
-                            $W \cap f(U) = \varnothing$のとき，$f^{-1} (W) = \varnothing$より，$\mathbb{R}^n$上の開集合となり，成立する．
-                      \item \mbox{} \\
-                            $W \cap f(U) \ne \varnothing$のとき，$f^{-1} (W)$の元$x$をひとつとり，$y=f(x)$とする．
+                        $W$は開集合なので，$U'(y,\varepsilon) \subset W$となる$\varepsilon >0$がとれる．
+                        $f$の連続性から，$\delta_0 >0$が存在して，
+                        \[
+                            f(U(x,\delta_0) \cap U) \subset U'(y,\varepsilon) \subset W.
+                        \]
+                        $f^{-1} (f(U(x,\delta_0) \cap U)) \supset U(x,\delta_0) \cap U$より，
+                        \[
+                            U(x,\delta_0) \cap U \subset f^{-1} (W).
+                        \]
+                        $V = \bigcup_{x \in f^{-1}(W)} U(x,\delta_0) \cap U$とすると，$V$は$\mathbb{R}^n$の開集合であり，
+                        \[
+                            V \cap U = \bigcup_{x \in f^{-1}(W)} (U(x,\delta_0) \cap U)  \subset f^{-1} (W).
+                        \]
+                        定義より$V \cap U \supset f^{-1} (W)$であるから，
+                        \[
+                            V \cap U = f^{-1} (W)
+                        \]
+                        となる．
+              \end{enumerate}
+        \item \mbox{} \\
+              $\mathbb{R}^n$の開集合$W$に対して，$f^{-1}(W)=V \cap U$となる開集合$V$が存在するとき，
+              $U$の元$x$を任意にひとつとり，$y=f(x)$とする．
 
-                            $W$は開集合なので，$U'(y,\varepsilon) \subset W$となる$\varepsilon >0$がとれる．
-                            $f$の連続性から，$\delta_0 >0$が存在して，
-                            \[
-                                f(U(x,\delta_0) \cap U) \subset U'(y,\varepsilon) \subset W.
-                            \]
-                            $f^{-1} (f(U(x,\delta_0) \cap U)) \supset U(x,\delta_0) \cap U$より，
-                            \[
-                                U(x,\delta_0) \cap U \subset f^{-1} (W).
-                            \]
-                            $V = \bigcup_{x \in f^{-1}(W)} U(x,\delta_0) \cap U$とすると，$V$は$\mathbb{R}^n$の開集合であり，
-                            \[
-                                V \cap U = \bigcup_{x \in f^{-1}(W)} (U(x,\delta_0) \cap U)  \subset f^{-1} (W).
-                            \]
-                            定義より$V \cap U \supset f^{-1} (W)$であるから，
-                            \[
-                                V \cap U = f^{-1} (W)
-                            \]
-                            となる．
-                  \end{enumerate}
-            \item \mbox{} \\
-                  $\mathbb{R}^n$の開集合$W$に対して，$f^{-1}(W)=V \cap U$となる開集合$V$が存在するとき，
-                  $U$の元$x$を任意にひとつとり，$y=f(x)$とする．
-
-                  任意の$\varepsilon >0$に対して，$U'(y,\varepsilon)$は$\mathbb{R}^n$の開集合なので，
-                  条件より，開集合$V$が存在して，
-                  \[
-                      f^{-1} (U'(y,\varepsilon)) = V \cap U
-                  \]
-                  となる．
-                  $V$は開集合であるから，$\delta >0$が存在して，
-                  \begin{align*}
-                       & U(x,\delta)  \subset V,                          \\
-                       & f(U(x,\delta) \cap U) \subset U'(y,\varepsilon).
-                  \end{align*}
-                  $x$は$U$上で任意にとれるので，$f$は$U$上連続である．
-        \end{enumerate}
-    \end{proof}
-\end{leftbar}
+              任意の$\varepsilon >0$に対して，$U'(y,\varepsilon)$は$\mathbb{R}^n$の開集合なので，
+              条件より，開集合$V$が存在して，
+              \[
+                  f^{-1} (U'(y,\varepsilon)) = V \cap U
+              \]
+              となる．
+              $V$は開集合であるから，$\delta >0$が存在して，
+              \begin{align*}
+                   & U(x,\delta)  \subset V,                          \\
+                   & f(U(x,\delta) \cap U) \subset U'(y,\varepsilon).
+              \end{align*}
+              $x$は$U$上で任意にとれるので，$f$は$U$上連続である．
+    \end{enumerate}
+\end{tproof}
 
 \section*{p63--64：7}
 \addcontentsline{toc}{section}{\texorpdfstring{p63--64：7}{p63--64：7}}
-\begin{leftbar}
-    \begin{proof} $f$が単調増加のときを示せば十分である．
 
-        任意の$ x_0 \in (a,b)$に対して，$f$は単調増加であるから，
-        \begin{align*}
-             & \lim_{x \to x_0} f(x)=f_{+} (x_0) , \\
-             & \lim_{x \to x_0} f(x)=f_{-} (x_0)
-        \end{align*}
-        がそれぞれ存在する．
+\begin{tproof} $f$が単調増加のときを示せば十分である．
 
-        \begin{align*}
-                 & \text{$f(x)$が$x_0$において不連続}  \\
-            \iff & f_{+} (x_0) \ne f_{-} (x_0) \\
-            \iff & f_{+} (x_0) - f_{-} (x_0)>0
-        \end{align*}
-        である．
-        \[
-            A_n =  \left \{ x \in (a,b) \mid f_{+} (x) - f_{-} (x) > \frac{f(b)-f(a)}{n} \right \}
-        \]
-        として．$\# (A_n) \geqq n$を仮定する．
-        $A_n$から適当に$a_1,a_2,\ldots,a_n$を取り出すと（$a<a_1 < a_2 < \cdots < a_n<b$），$f$の単調性により，
-        \[
-            f_{+} (a_i) \leqq f_{-} (a_{i+1}) \quad (1 \leqq \forall i \leqq n-1)
-        \]
-        なので，
-        \begin{align*}
-            f(b)-f(a) & = \sum_{i=1}^{n} \frac{f(b)-f(a)}{n}                                                         \\
-                      & < f_{+} (a_1) - f_{-} (a_1) + f_{+} (a_2) - f_{-} (a_2) + \cdots + f_{+} (a_n) - f_{-} (a_n) \\
-                      & \leqq f_{+} (a_n) - f_{-} (a_1)                                                              \\
-                      & \leqq f(b)-f(a)
-        \end{align*}
-        となり，矛盾する．
-        よって，$\# (A_n) < n$である．
+    任意の$ x_0 \in (a,b)$に対して，$f$は単調増加であるから，
+    \begin{align*}
+         & \lim_{x \to x_0} f(x)=f_{+} (x_0) , \\
+         & \lim_{x \to x_0} f(x)=f_{-} (x_0)
+    \end{align*}
+    がそれぞれ存在する．
 
-        $f$の不連続点全体の集合を$A$とすれば，
-        \[
-            A \subset \left ( \bigcup_{n \in \mathbb{N}}  A_n \right ) \cup \{ a, b \}
-        \]
-        右辺は高々加算なので，$A$も高々可算である．
-    \end{proof}
-\end{leftbar}
+    \begin{align*}
+             & \text{$f(x)$が$x_0$において不連続}  \\
+        \iff & f_{+} (x_0) \ne f_{-} (x_0) \\
+        \iff & f_{+} (x_0) - f_{-} (x_0)>0
+    \end{align*}
+    である．
+    \[
+        A_n =  \left \{ x \in (a,b) \mid f_{+} (x) - f_{-} (x) > \frac{f(b)-f(a)}{n} \right \}
+    \]
+    として．$\# (A_n) \geqq n$を仮定する．
+    $A_n$から適当に$a_1,a_2,\ldots,a_n$を取り出すと（$a<a_1 < a_2 < \cdots < a_n<b$），$f$の単調性により，
+    \[
+        f_{+} (a_i) \leqq f_{-} (a_{i+1}) \quad (1 \leqq \forall i \leqq n-1)
+    \]
+    なので，
+    \begin{align*}
+        f(b)-f(a) & = \sum_{i=1}^{n} \frac{f(b)-f(a)}{n}                                                         \\
+                  & < f_{+} (a_1) - f_{-} (a_1) + f_{+} (a_2) - f_{-} (a_2) + \cdots + f_{+} (a_n) - f_{-} (a_n) \\
+                  & \leqq f_{+} (a_n) - f_{-} (a_1)                                                              \\
+                  & \leqq f(b)-f(a)
+    \end{align*}
+    となり，矛盾する．
+    よって，$\# (A_n) < n$である．
+
+    $f$の不連続点全体の集合を$A$とすれば，
+    \[
+        A \subset \left ( \bigcup_{n \in \mathbb{N}}  A_n \right ) \cup \{ a, b \}
+    \]
+    右辺は高々加算なので，$A$も高々可算である．
+\end{tproof}
 
 \section*{p63--64：8}
 \addcontentsline{toc}{section}{\texorpdfstring{p63--64：8}{p63--64：8}}
-\begin{leftbar}
+\begin{tanswer}
     $ [0,1]$に対し，
     \[
         f(x)= \begin{cases}
@@ -2091,112 +2006,101 @@ $n$を自然数とするとき，
         ,\quad \left ( \because [0,1] = \{ 0 \} \cup \bigcup_{n=1}^{\infty} (1/(n+1),1/n] \right )
     \]
     とすれば，広義単調増加で$x=1/n$（$n \in \mathbb{N}$）で不連続である．
-\end{leftbar}
+\end{tanswer}
 \newpage
 
 \section*{p63--64：9}
 \addcontentsline{toc}{section}{\texorpdfstring{p63--64：9}{p63--64：9}}
 
 
-\begin{tleftbar}
-    \begin{proof}[\textup{\textbf{存在性の証明}}]
-        $\overline{[a,b] \cap \mathbb{Q}}=[a,b]$であるから，$I=[a,b] \cap \mathbb{Q}$として，
-        $[a,b] \cap (\mathbb{R}-\mathbb{Q})$の元$x$に対して，Th6.1(1)より，
-        $x$に収束する$I$の数列$(x_n)_{n \in \mathbb{N}}$が存在する．
+\begin{tproof}[\textup{\textbf{存在性の証明}}]
+    $\overline{[a,b] \cap \mathbb{Q}}=[a,b]$であるから，$I=[a,b] \cap \mathbb{Q}$として，
+    $[a,b] \cap (\mathbb{R}-\mathbb{Q})$の元$x$に対して，Th6.1(1)より，
+    $x$に収束する$I$の数列$(x_n)_{n \in \mathbb{N}}$が存在する．
 
-        その$(x_n)_{n \in \mathbb{N}}$に対して，
-        \[
-            F(x)\coloneqq \lim_{n \to \infty} f(x_n)
-        \]
-        とする\footnote{$x \in I$のときも同様に，$x$に収束する$I$上の数列$(x_n)_{n \in \mathbb{N}}$をとって$F(x)\coloneqq \lim_{n \to \infty} f(x_n)$とする．これはTh6.2により well--definedで$F(x)=f(x)$である．}．
+    その$(x_n)_{n \in \mathbb{N}}$に対して，
+    \[
+        F(x)\coloneqq \lim_{n \to \infty} f(x_n)
+    \]
+    とする\footnote{$x \in I$のときも同様に，$x$に収束する$I$上の数列$(x_n)_{n \in \mathbb{N}}$をとって$F(x)\coloneqq \lim_{n \to \infty} f(x_n)$とする．これはTh6.2により well--definedで$F(x)=f(x)$である．}．
 
-        次に，これがwell-definedであることを示す\footnote{$\lim_{n \to \infty} f(x_n)$が存在し，$(x_n)_{n \in \mathbb{N}}$の取り方に依らないこと．}．
-        $\varepsilon >0$に対して，$f$は一様連続であるから，ある$\delta >0$が存在して，
-        \[
-            \abs{x-y}<\delta \land x,y \in I \Rightarrow \abs{f(x)-f(y)}<\varepsilon
-        \]
-        となる．
+    次に，これがwell-definedであることを示す\footnote{$\lim_{n \to \infty} f(x_n)$が存在し，$(x_n)_{n \in \mathbb{N}}$の取り方に依らないこと．}．
+    $\varepsilon >0$に対して，$f$は一様連続であるから，ある$\delta >0$が存在して，
+    \[
+        \abs{x-y}<\delta \land x,y \in I \Rightarrow \abs{f(x)-f(y)}<\varepsilon
+    \]
+    となる．
 
-        また，$x_n \to x$（$n \to \infty$）であるので，ある$N \in \mathbb{N}$が存在して，
-        \begin{align*}
-            n, m > N & \Rightarrow \abs{x_n-x_m}<\delta \land x_n,x_m \in I \\
-                     & \abs{f(x_n)-f(x_m)}<\varepsilon
-        \end{align*}
-        となり，$(f(x_n))_{n \in \mathbb{N}}$はコーシー列となるので収束する．
+    また，$x_n \to x$（$n \to \infty$）であるので，ある$N \in \mathbb{N}$が存在して，
+    \begin{align*}
+        n, m > N & \Rightarrow \abs{x_n-x_m}<\delta \land x_n,x_m \in I \\
+                 & \abs{f(x_n)-f(x_m)}<\varepsilon
+    \end{align*}
+    となり，$(f(x_n))_{n \in \mathbb{N}}$はコーシー列となるので収束する．
 
-        $x$に収束する2つの数列$(x_n)_{n \in \mathbb{N}}$，$(y_n)_{n \in \mathbb{N}}$に対して，
-        $x_n$，$y_n$を交互にとった数列を$(z_n)_{n \in \mathbb{N}}$とすれば，
-        $z_n \to x$（$n \to \infty$）となり，$(f(z_n))_{n \in \mathbb{N}}$は収束する．
-        $(f(x_n))_{n \in \mathbb{N}}$，$(f(y_n))_{n \in \mathbb{N}}$は上の部分列であるので，
-        同じ収束値に収束し，$(x_n)_{n \in \mathbb{N}}$の取り方に依らない．
-    \end{proof}
-\end{tleftbar}
+    $x$に収束する2つの数列$(x_n)_{n \in \mathbb{N}}$，$(y_n)_{n \in \mathbb{N}}$に対して，
+    $x_n$，$y_n$を交互にとった数列を$(z_n)_{n \in \mathbb{N}}$とすれば，
+    $z_n \to x$（$n \to \infty$）となり，$(f(z_n))_{n \in \mathbb{N}}$は収束する．
+    $(f(x_n))_{n \in \mathbb{N}}$，$(f(y_n))_{n \in \mathbb{N}}$は上の部分列であるので，
+    同じ収束値に収束し，$(x_n)_{n \in \mathbb{N}}$の取り方に依らない．
+\end{tproof}
 
+\begin{tproof}[\textup{\textbf{連続性の証明1}}]
+    $F$の$[a,b]$における一様連続性を示す．(一様連続なら特に連続)
+    $\varepsilon >0$を任意に固定する．
+    $f$の一様連続性を使って，任意の$x,y \in [a,b] \cap \mathbb{Q}$に対し
+    \begin{align*}
+        \abs*{x-y} < \delta \implies \abs*{f(x) - f(y)} < \varepsilon/3
+    \end{align*}
+    となるように，$\delta > 0$を取る．
+    $\abs*{x-y} < \delta/3$，$x,y \in [a,b]$とし，$\abs*{F(x)-F(y)} < \varepsilon$であることを示す．
+    $x,y$にそれぞれ収束する$[a,b] \cap \mathbb{Q}$の数列$x_n,y_n$を取る．
+    $n$を十分大きく取って
+    \begin{align*}
+        \abs*{x_n-x}       & < \delta/3, \quad \abs*{y_n-y} < \delta/3,                \\
+        \abs*{F(x)-f(x_n)} & < \varepsilon/3, \quad \abs*{F(y)-f(y_n)} < \varepsilon/3
+    \end{align*}
+    となるようにする．
+    このとき
+    \begin{align*}
+        \abs*{x_n-y_n} \le \abs*{x_n-x} + \abs*{x-y} + \abs*{y-y_n} < \delta/3 + \delta/3 + \delta/3 = \delta
+    \end{align*}
+    が成り立つ．
+    すると$\delta$の取り方より，
+    \begin{align*}
+        \abs*{f(x_n)-f(y_n)} < \varepsilon/3
+    \end{align*}
+    となる．
+    したがって，
+    \begin{align*}
+        \abs*{F(x)-F(y)} \le \abs*{F(x)-f(x_n)} + \abs*{f(x_n)-f(y_n)} + \abs*{f(y_n)-F(y)}
+        < \varepsilon/3 + \varepsilon/3 + \varepsilon/3 = \varepsilon.
+    \end{align*}
+\end{tproof}
+\begin{tproof}[\textup{\textbf{連続性の証明2}}]
+    $\varepsilon>0$を任意に取り，$\delta$は上の証明と同じように取る．
+    $\abs*{x-y} < \delta$，$x,y \in [a,b]$とする．
+    $(x,y) \cap \mathbb{Q}$の数列$x_n,y_n$で$x,y$に収束するものを取る．
+    明らかに$\abs*{x_n-y_n}<\delta$．
+    $\delta$の取り方より$\abs*{f(x_n)-f(y_n)}<\varepsilon$．
+    $n \to \infty$として$\abs*{F(x)-F(y)} \le \varepsilon$を得る．
+\end{tproof}
 
-\begin{leftbar}
-    \begin{proof}[\textup{\textbf{連続性の証明1}}]
-        $F$の$[a,b]$における一様連続性を示す．(一様連続なら特に連続)
-        $\varepsilon >0$を任意に固定する．
-        $f$の一様連続性を使って，任意の$x,y \in [a,b] \cap \mathbb{Q}$に対し
-        \begin{align*}
-            \abs*{x-y} < \delta \implies \abs*{f(x) - f(y)} < \varepsilon/3
-        \end{align*}
-        となるように，$\delta > 0$を取る．
-        $\abs*{x-y} < \delta/3$，$x,y \in [a,b]$とし，$\abs*{F(x)-F(y)} < \varepsilon$であることを示す．
-        $x,y$にそれぞれ収束する$[a,b] \cap \mathbb{Q}$の数列$x_n,y_n$を取る．
-        $n$を十分大きく取って
-        \begin{align*}
-            \abs*{x_n-x}       & < \delta/3, \quad \abs*{y_n-y} < \delta/3,                \\
-            \abs*{F(x)-f(x_n)} & < \varepsilon/3, \quad \abs*{F(y)-f(y_n)} < \varepsilon/3
-        \end{align*}
-        となるようにする．
-        このとき
-        \begin{align*}
-            \abs*{x_n-y_n} \le \abs*{x_n-x} + \abs*{x-y} + \abs*{y-y_n} < \delta/3 + \delta/3 + \delta/3 = \delta
-        \end{align*}
-        が成り立つ．
-        すると$\delta$の取り方より，
-        \begin{align*}
-            \abs*{f(x_n)-f(y_n)} < \varepsilon/3
-        \end{align*}
-        となる．
-        したがって，
-        \begin{align*}
-            \abs*{F(x)-F(y)} \le \abs*{F(x)-f(x_n)} + \abs*{f(x_n)-f(y_n)} + \abs*{f(y_n)-F(y)}
-            < \varepsilon/3 + \varepsilon/3 + \varepsilon/3 = \varepsilon.
-        \end{align*}
-    \end{proof}
-\end{leftbar}
-
-\begin{leftbar}
-    \begin{proof}[\textup{\textbf{連続性の証明2}}]
-        $\varepsilon>0$を任意に取り，$\delta$は上の証明と同じように取る．
-        $\abs*{x-y} < \delta$，$x,y \in [a,b]$とする．
-        $(x,y) \cap \mathbb{Q}$の数列$x_n,y_n$で$x,y$に収束するものを取る．
-        明らかに$\abs*{x_n-y_n}<\delta$．
-        $\delta$の取り方より$\abs*{f(x_n)-f(y_n)}<\varepsilon$．
-        $n \to \infty$として$\abs*{F(x)-F(y)} \le \varepsilon$を得る．
-    \end{proof}
-\end{leftbar}
-
-
-\begin{leftbar}
-    \begin{proof}[\textup{\textbf{一意性の証明}}]
-        条件をみたす2つの関数$F_1 (x)$と$F_2(x)$に対して，ある$x$で$F_1(x) \ne F_2(x)$とすると，
-        $\varepsilon = \abs{F_1(x) - F_2(x)}/2$に対して，$F_1(x)$と$F_2(x)$の連続性により，
-        ある$\delta >0$が存在して，
-        \[
-            \abs{x-y}<\delta \land y \in [a,b] \Rightarrow \abs{F_1(y)-F_1(x)}<\varepsilon \land  \abs{F_2(y)-F_2(x)}<\varepsilon.
-        \]
-        特に$ U (x,\delta) \cap [a,b] \cap \mathbb{Q} \ne \varnothing$より，その元$y$に対して，
-        $F_1 (y)=F_2(y)~(=f(y))$となるが，
-        \begin{align*}
-            \abs{F_1(x)-F_2(x)} & \leqq \abs{F_1(x)-F_1(y)} + \abs{F_2(y)-F_2(x)}          \\
-                                & < \frac{\varepsilon}{2} \cdot 2  = \abs{F_1(x) - F_2(x)}
-        \end{align*}
-        となり矛盾する．よって示された．
-    \end{proof}
-\end{leftbar}
+\begin{tproof}[\textup{\textbf{一意性の証明}}]
+    条件をみたす2つの関数$F_1 (x)$と$F_2(x)$に対して，ある$x$で$F_1(x) \ne F_2(x)$とすると，
+    $\varepsilon = \abs{F_1(x) - F_2(x)}/2$に対して，$F_1(x)$と$F_2(x)$の連続性により，
+    ある$\delta >0$が存在して，
+    \[
+        \abs{x-y}<\delta \land y \in [a,b] \Rightarrow \abs{F_1(y)-F_1(x)}<\varepsilon \land  \abs{F_2(y)-F_2(x)}<\varepsilon.
+    \]
+    特に$ U (x,\delta) \cap [a,b] \cap \mathbb{Q} \ne \varnothing$より，その元$y$に対して，
+    $F_1 (y)=F_2(y)~(=f(y))$となるが，
+    \begin{align*}
+        \abs{F_1(x)-F_2(x)} & \leqq \abs{F_1(x)-F_1(y)} + \abs{F_2(y)-F_2(x)}          \\
+                            & < \frac{\varepsilon}{2} \cdot 2  = \abs{F_1(x) - F_2(x)}
+    \end{align*}
+    となり矛盾する．よって示された．
+\end{tproof}
 
 \newpage
 
@@ -2207,7 +2111,7 @@ $n$を自然数とするとき，
 \subsection*{p72--74：1-(\romannumeral1)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p72--74：1-(\romannumeral1)}{p72--74：1-(\romannumeral1)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     $ f\colon \mathbb{R}^3 \to \mathbb{R}$を$f(x,y,z)=3x^2 + 2y^2 + 5z^2 -1$とする．
     $f$は連続であり，$\mathbb{R} -\{ 0 \}$は$\mathbb{R}$の開集合であるので，\S 6 ：問3より，
     その逆像である$A^c$も開集合である．
@@ -2225,13 +2129,13 @@ $n$を自然数とするとき，
     同様に，$ \abs{y} \leqq 1/\sqrt{2}$，$\abs{z} \leqq 1/\sqrt{5}$となり，$A$は有界である．
 
     以上より，$A$はコンパクトである．
-\end{tleftbar}
+\end{tanswer}
 
 
 \subsection*{p72--74：1-(\romannumeral2)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p72--74：1-(\romannumeral2)}{p72--74：1-(\romannumeral2)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     $ x \in \mathbb{R}$に対して，$ (x,-x,1) \in A$であり，
     \[
         \norm{{}^t (x,-x,1)}=\sqrt{2x^2+1} \to \infty ~(x \to +\infty).
@@ -2239,13 +2143,13 @@ $n$を自然数とするとき，
     このことから，$B$は有界でない．
 
     よって，$B$はコンパクトでない．
-\end{tleftbar}
+\end{tanswer}
 
 
 \subsection*{p72--74：1-(\romannumeral3)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p72--74：1-(\romannumeral3)}{p72--74：1-(\romannumeral3)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     $(x,y,z) \in C$に対して，
     \[
         \varepsilon =\frac{1}{2}(1-\sqrt{x^2+y^2+z^2})
@@ -2253,27 +2157,27 @@ $n$を自然数とするとき，
     とすれば，$U(x,\varepsilon)\subset C$となり，$C$は開集合である．
 
     よって，$C$はコンパクトでない．
-\end{tleftbar}
+\end{tanswer}
 
 
 
 \subsection*{p72--74：1-(\romannumeral4)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p72--74：1-(\romannumeral4)}{p72--74：1-(\romannumeral4)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     $t>\sqrt{3}$に対して，$t^3 -3t >0$で，$(t,\sqrt{t^3-3t}/2) \in D$である．
     \begin{align*}
         \norm{{}^t (t,\sqrt{t^3-3t}/2)} & = \frac{1}{2}\sqrt{t^3+4t^2-3t} \\
                                         & \to  \infty ~(t \to \infty).
     \end{align*}
     より， $D$は有界でなく，コンパクトでない．
-\end{tleftbar}
+\end{tanswer}
 
 
 \subsection*{p72--74：1-(v)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p72--74：1-(v)}{p72--74：1-(v)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     $(0,0)~(\notin E)$が触点であることを示す．
 
     任意の$\varepsilon >0$に対して，アルキメデスの原理より，
@@ -2283,42 +2187,38 @@ $n$を自然数とするとき，
     となる$n \in \mathbb{N}$が存在するので，原点の任意の$\varepsilon$-近傍において$E$と交わりを持つ．
 
     よって，閉集合でなくコンパクトでない．
-\end{tleftbar}
+\end{tanswer}
 
 
 \newpage
 \section*{p72--74：3}
 \addcontentsline{toc}{section}{\texorpdfstring{p72--74：3}{p72--74：3}}
-
-\begin{leftbar}
-    \begin{proof}
-        対偶を示す．$\bigcap_{n \in \mathbb{N}}F_n = \varnothing$とする．
-        $\bigcup_{n \in \mathbb{N}}F_n^c = \mathbb{R}^m$であり，$F_n^c$は開集合であるから，$(F_n^c)_{n \in \mathbb{N}}$は$K$の開被覆である．
-        $K$はコンパクトであるから，$(F_n^c)_{n \in \mathbb{N}}$の有限個の開集合$F_{n_1}^c,\ldots,F_{n_k}^c$によって
-        \[
-            K \subset F_{n_1}^c \cup \ldots \cup F_{n_k}^c
-        \]
-        とできる．したがって，
-        \[
-            K \cap F_{n_1} \cap \ldots \cap F_{n_k} = \varnothing
-        \]
-        である．$K$は$F_{n_1},\ldots,F_{n_k}$をすべて含んでいるから，
-        \[
-            F_{n_1} \cap \ldots \cap F_{n_k} = \varnothing
-        \]
-        である．
-    \end{proof}
-\end{leftbar}
+\begin{tproof}
+    対偶を示す．$\bigcap_{n \in \mathbb{N}}F_n = \varnothing$とする．
+    $\bigcup_{n \in \mathbb{N}}F_n^c = \mathbb{R}^m$であり，$F_n^c$は開集合であるから，$(F_n^c)_{n \in \mathbb{N}}$は$K$の開被覆である．
+    $K$はコンパクトであるから，$(F_n^c)_{n \in \mathbb{N}}$の有限個の開集合$F_{n_1}^c,\ldots,F_{n_k}^c$によって
+    \[
+        K \subset F_{n_1}^c \cup \ldots \cup F_{n_k}^c
+    \]
+    とできる．したがって，
+    \[
+        K \cap F_{n_1} \cap \ldots \cap F_{n_k} = \varnothing
+    \]
+    である．$K$は$F_{n_1},\ldots,F_{n_k}$をすべて含んでいるから，
+    \[
+        F_{n_1} \cap \ldots \cap F_{n_k} = \varnothing
+    \]
+    である．
+\end{tproof}
 
 \newpage
 
 \section*{p72--74：4}
 \addcontentsline{toc}{section}{\texorpdfstring{p72--74：4}{p72--74：4}}
 
-\kakko{補題1}
-
-ノルムに関して, $\abs{\norm{ \bm{x}  }- \norm{ \bm{y} } } \leq \norm{ \bm{x} - \bm{y} }$ が成り立つ.
-
+\begin{lemma}{}{}
+    ノルムに関して, $\abs{\norm{ \bm{x}  }- \norm{ \bm{y} } } \leq \norm{ \bm{x} - \bm{y} }$ が成り立つ.
+\end{lemma}
 
 \begin{proof}
     絶対値の定義 ( $\abs{a} \coloneqq \max \{ a , -a \}$ ) に立ち返ると,
@@ -2336,15 +2236,15 @@ $n$を自然数とするとき，
     より示される.
 \end{proof}
 
-\kakko{補題2}
-
-$\norm{ \cdot }_1 : \mathbb{R}^n \ni ( x_1 , x_2 , \cdots , x_n ) \mapsto \sum_{j=1} ^ n \abs{x_j} \in \mathbb{R}$ とすると,
-%		
-\[
-    \exists M \in \mathbb{R} \ \mathrm{s.t.} \ \forall \bm x \in \mathbb{R}^n \text {に対して, } \norm{ \bm{x} }_1 \leq M \abs{ \bm{x} }
-\]
-%		
-が成り立つ.
+\begin{lemma}{}{}
+    $\norm{ \cdot }_1 : \mathbb{R}^n \ni ( x_1 , x_2 , \cdots , x_n ) \mapsto \sum_{j=1} ^ n \abs{x_j} \in \mathbb{R}$ とすると,
+    %		
+    \[
+        \exists M \in \mathbb{R} \ \mathrm{s.t.} \ \forall \bm x \in \mathbb{R}^n \text {に対して, } \norm{ \bm{x} }_1 \leq M \abs{ \bm{x} }
+    \]
+    %		
+    が成り立つ.
+\end{lemma}
 
 
 \begin{proof}
@@ -2362,62 +2262,59 @@ $\norm{ \cdot }_1 : \mathbb{R}^n \ni ( x_1 , x_2 , \cdots , x_n ) \mapsto \sum_{
     %		
     が成り立つ.
 \end{proof}
-
-\begin{leftbar}
-    \begin{proof}
-        まず,
-        %		
-        \[
-            \exists P \in \mathbb{R} \ \mathrm{s.t.} \ \forall \bm{x} \in \mathbb{R}^n \text {に対して, } \norm{ \bm{x} } \leq P \abs{ \bm{x} } \ \ \ \cdots ( \ast )
-        \]
-        %		
-        となることを示す. $\mathbb{R}^n$ の正規直交基底 を $\bm{e}_1 , \bm{e}_2 , \cdots , \bm{e}_n$ とする. $T \coloneqq  \max \{ \norm{ \bm{e}_j } \mid 1 \leq j \leq n \}$ とおき, $M$ を補題のものとして, $P \coloneqq TM$ とおく. . $\bm{x} \in \mathbb{R}^n$ を,
-        %		
-        \[
-            \bm{x} = ( x_1 , x_2 , \cdots , x_n )
-        \]
-        %		
-        とすると, $\bm{x} = \sum_{j=1} ^ n x_j \bm{e}_j$ とかける. これと, ノルムのi) , ii) の条件から,
-        %		
-        \[
-            \norm{ \bm{x} } = \norm{ \sum_{j=1} ^ n x_j \bm{e}_j } \leq \sum \abs{ x_j } \norm{\bm{e}_j } \leq T \sum \abs{ x_j } \leq T M \norm{ \bm{x} } = P \abs{ \bm{x} }
-        \]
-        %		
-        が成り立つ. 以上より $( \ast )$ は成り立つ. これより, 函数 $\norm{ \cdot }$ が 連続函数になる事を示す. $\bm{\alpha} \in \mathbb{R}^n$ とする. $\varepsilon > 0$ とする. $\delta < \frac{\varepsilon}{P}$ を満たすようにとる. このとき,
-        $\bm{x} \in \mathbb{R}^n$ かつ $\abs{ \bm{x} - \bm{\alpha} } < \delta$ とする.
-        %		
-        \[
-            \abs{ \norm{ \bm x } -\norm{ \bm{\alpha} } } \leq \norm{ \bm{x} - \bm{\alpha} } \leq P \abs{ \bm{x} - \bm{\alpha} } < \varepsilon
-        \]
-        %		
-        よって, 連続である.  $\mathbb{S}^{n-1} \coloneqq \{ \bm{x} \in \mathbb{R}^n \mid \abs{ \bm{x} } = 1 \}$ なるコンパクト集合上で, $\norm{ \cdot }$ を考える. ノルムが連続であったことから, コンパクト集合上で最小値をとる. これを $m$ とする. この
-        $m$ を用いると,
-        %		
-        \[
-            \forall x \in \mathbb{R}^n \text {に対して, } m \abs{ \bm{x} } \leq \norm{ \bm{x} }
-        \]
-        %		
-        が成り立つ事を示す. $\bm{x} \in \mathbb{R}^n$ とする. このとき, $\bm{x} / \abs{ \bm{x} } \in \mathbb{S}^{n-1}$ であることに注意すると, ( $\because \abs{ \bm{x} / \abs{ \bm{x} } } = \abs{ \bm{x} } / \abs{ \bm{x}} = 1 $ ) $m$ が最小値であることから,
-        %		
-        \[
-            m \leq  \norm{ \frac {\bm{x}} {\abs{ \bm{x} }}  }
-        \]
-        %		
-        を満たす.
-        %		
-        \[
-            \norm{ \frac {\bm{x}} {\abs{\bm{x} }} } = \frac {1} {\abs{ \bm{x} }} \norm{ \bm{x}}
-        \]
-        %		
-        に注意すると,
-        %		
-        \[
-            m \abs{ \bm{x} } \leq \norm{ \bm{x} }
-        \]
-        %		
-        となる. 以上より, 示すべき題意は満たされた.
-    \end{proof}
-\end{leftbar}
+\begin{tproof}
+    まず,
+    %		
+    \[
+        \exists P \in \mathbb{R} \ \mathrm{s.t.} \ \forall \bm{x} \in \mathbb{R}^n \text {に対して, } \norm{ \bm{x} } \leq P \abs{ \bm{x} } \ \ \ \cdots ( \ast )
+    \]
+    %		
+    となることを示す. $\mathbb{R}^n$ の正規直交基底 を $\bm{e}_1 , \bm{e}_2 , \cdots , \bm{e}_n$ とする. $T \coloneqq  \max \{ \norm{ \bm{e}_j } \mid 1 \leq j \leq n \}$ とおき, $M$ を補題のものとして, $P \coloneqq TM$ とおく. . $\bm{x} \in \mathbb{R}^n$ を,
+    %		
+    \[
+        \bm{x} = ( x_1 , x_2 , \cdots , x_n )
+    \]
+    %		
+    とすると, $\bm{x} = \sum_{j=1} ^ n x_j \bm{e}_j$ とかける. これと, ノルムのi) , ii) の条件から,
+    %		
+    \[
+        \norm{ \bm{x} } = \norm{ \sum_{j=1} ^ n x_j \bm{e}_j } \leq \sum \abs{ x_j } \norm{\bm{e}_j } \leq T \sum \abs{ x_j } \leq T M \norm{ \bm{x} } = P \abs{ \bm{x} }
+    \]
+    %		
+    が成り立つ. 以上より $( \ast )$ は成り立つ. これより, 函数 $\norm{ \cdot }$ が 連続函数になる事を示す. $\bm{\alpha} \in \mathbb{R}^n$ とする. $\varepsilon > 0$ とする. $\delta < \frac{\varepsilon}{P}$ を満たすようにとる. このとき,
+    $\bm{x} \in \mathbb{R}^n$ かつ $\abs{ \bm{x} - \bm{\alpha} } < \delta$ とする.
+    %		
+    \[
+        \abs{ \norm{ \bm x } -\norm{ \bm{\alpha} } } \leq \norm{ \bm{x} - \bm{\alpha} } \leq P \abs{ \bm{x} - \bm{\alpha} } < \varepsilon
+    \]
+    %		
+    よって, 連続である.  $\mathbb{S}^{n-1} \coloneqq \{ \bm{x} \in \mathbb{R}^n \mid \abs{ \bm{x} } = 1 \}$ なるコンパクト集合上で, $\norm{ \cdot }$ を考える. ノルムが連続であったことから, コンパクト集合上で最小値をとる. これを $m$ とする. この
+    $m$ を用いると,
+    %		
+    \[
+        \forall x \in \mathbb{R}^n \text {に対して, } m \abs{ \bm{x} } \leq \norm{ \bm{x} }
+    \]
+    %		
+    が成り立つ事を示す. $\bm{x} \in \mathbb{R}^n$ とする. このとき, $\bm{x} / \abs{ \bm{x} } \in \mathbb{S}^{n-1}$ であることに注意すると, ( $\because \abs{ \bm{x} / \abs{ \bm{x} } } = \abs{ \bm{x} } / \abs{ \bm{x}} = 1 $ ) $m$ が最小値であることから,
+    %		
+    \[
+        m \leq  \norm{ \frac {\bm{x}} {\abs{ \bm{x} }}  }
+    \]
+    %		
+    を満たす.
+    %		
+    \[
+        \norm{ \frac {\bm{x}} {\abs{\bm{x} }} } = \frac {1} {\abs{ \bm{x} }} \norm{ \bm{x}}
+    \]
+    %		
+    に注意すると,
+    %		
+    \[
+        m \abs{ \bm{x} } \leq \norm{ \bm{x} }
+    \]
+    %		
+    となる. 以上より, 示すべき題意は満たされた.
+\end{tproof}
 
 \begin{column}
     これは, なかなか背景を語るには, 奥深い問題です. まず, 注意しておくことは, この性質は有限次元の線型空間だからできる話だということです. 無限次元であれば, もう少し条件がないと無理です. ( そもそも一般にはユークリッド距離が入りません. ) 有限次元であれば, ノルムが定める位相というのが一意に定まるという事を言っています. それだけ有限次元の線型空間は「硬い」という風に定義づけることができるでしょう.
@@ -2430,31 +2327,28 @@ $\norm{ \cdot }_1 : \mathbb{R}^n \ni ( x_1 , x_2 , \cdots , x_n ) \mapsto \sum_{
 
 \section*{p72--74：5}
 \addcontentsline{toc}{section}{\texorpdfstring{p72--74：5}{p72--74：5}}
+\begin{tproof}
+    連続函数の定数倍, 連続函数の和が再び連続函数になることから, $C ( K )$ は線型空間になる. また, $K$ がcompactであるから, $f ( K )$ はcompactである. また, $\abs{ \cdot }$ も連続函数であるから, $\abs{ f ( K ) }$ も compactである. 従って最
+    大値を持つから, $\norm{ f }$ なる値が存在していることがわかる. ノルムの条件を満たすことを示す.
+    \begin{enumerate}
+        \item $\norm{ f } \geq 0$ であること
 
-\begin{leftbar}
-    \begin{proof}
-        連続函数の定数倍, 連続函数の和が再び連続函数になることから, $C ( K )$ は線型空間になる. また, $K$ がcompactであるから, $f ( K )$ はcompactである. また, $\abs{ \cdot }$ も連続函数であるから, $\abs{ f ( K ) }$ も compactである. 従って最
-        大値を持つから, $\norm{ f }$ なる値が存在していることがわかる. ノルムの条件を満たすことを示す.
-        \begin{enumerate}
-            \item $\norm{ f } \geq 0$ であること
+              \parindent=1\zw 各 $x \in K$ に対して, $\abs{f ( x ) } \geq 0$ である. 従って, $\norm{ f } = \max \{ \abs{ f ( x )} \mid x \in K \} \geq 0$
 
-                  \parindent=1\zw 各 $x \in K$ に対して, $\abs{f ( x ) } \geq 0$ である. 従って, $\norm{ f } = \max \{ \abs{ f ( x )} \mid x \in K \} \geq 0$
+        \item $\norm{ f } = 0 \iff  f = 0$ であること ( $f = 0$ は写像として定数函数 $0$ に等しいという意味です. )
 
-            \item $\norm{ f } = 0 \iff  f = 0$ であること ( $f = 0$ は写像として定数函数 $0$ に等しいという意味です. )
+              $f = 0$ であれば, 各 $x \in K$ に対して $\abs{ f ( x ) } = 0$ であるから, $\norm{ f } = 0$ は明らか. 逆を示す. $\norm{ f } = 0$ とする. 各 $x \in K$ に対して, $\abs{ f ( x ) } = 0$ である. つまり $f ( x ) = 0$ . よって $f = 0$
 
-                  $f = 0$ であれば, 各 $x \in K$ に対して $\abs{ f ( x ) } = 0$ であるから, $\norm{ f } = 0$ は明らか. 逆を示す. $\norm{ f } = 0$ とする. 各 $x \in K$ に対して, $\abs{ f ( x ) } = 0$ である. つまり $f ( x ) = 0$ . よって $f = 0$
+        \item $\norm{ f + g } \leq \norm{ f } + \norm{ g }$ であること
 
-            \item $\norm{ f + g } \leq \norm{ f } + \norm{ g }$ であること
-
-                  \begin{align*}
-                      \norm{ f + g } & =  \max \{ \abs{ f ( x ) + g ( x )} \mid x \in K \}                                                                   \\
-                                     & \leq  \max \{ \abs{ f ( x ) } + \abs{ g ( x ) } \mid x \in K \}                                                       \\
-                                     & \leqq   \max \{ \abs{ f ( x ) }  \mid x \in K \} + \max \{ \abs{ g ( x ) }  \mid x \in K \} = \norm{ f } + \norm{ g }
-                  \end{align*}
-        \end{enumerate}
-        よって, 確かにノルムである.
-    \end{proof}
-\end{leftbar}
+              \begin{align*}
+                  \norm{ f + g } & =  \max \{ \abs{ f ( x ) + g ( x )} \mid x \in K \}                                                                   \\
+                                 & \leq  \max \{ \abs{ f ( x ) } + \abs{ g ( x ) } \mid x \in K \}                                                       \\
+                                 & \leqq   \max \{ \abs{ f ( x ) }  \mid x \in K \} + \max \{ \abs{ g ( x ) }  \mid x \in K \} = \norm{ f } + \norm{ g }
+              \end{align*}
+    \end{enumerate}
+    よって, 確かにノルムである.
+\end{tproof}
 
 \begin{column}
     皆さんには, 冗長な指摘かもしれませんが, これ,
@@ -2469,90 +2363,87 @@ $\norm{ \cdot }_1 : \mathbb{R}^n \ni ( x_1 , x_2 , \cdots , x_n ) \mapsto \sum_{
 
 \section*{p72--74：6}
 \addcontentsline{toc}{section}{\texorpdfstring{p72--74：6}{p72--74：6}}
+\begin{tproof}
+    収束先となる函数 $f$ を構成し, i) 収束先であること ii) 連続であること  を示す.
 
-\begin{leftbar}
-    \begin{proof}
-        収束先となる函数 $f$ を構成し, i) 収束先であること ii) 連続であること  を示す.
+    各 $x \in K$ において, 実数列 $( f_n ( x ) ) _ {n \in \mathbb{N}}$ はCauchy列である. 実際,
+    %		
+    \[
+        \abs{ f _n ( x ) - f _m ( x ) } \leq \max \{ \abs{ f_n ( x ) - f_m ( x ) } \mid x \in K \} = \norm{f_n - f_m} \to 0 \ ( n , m \to N )
+    \]
+    %		
+    よりわかる. 実数の完備性から列 $( f_n ( x ) )$ は収束する. そこで,
+    %		
+    \[
+        f \colon K \ni x \mapsto \lim_{n \to \infty} f_n ( x ) \in \mathbb{R}
+    \]
+    %		
+    と定める. この $f$ が i ) , ii ) を満たすことを示す. \\
+    i) を満たすこと. すなわち,
+    %		
+    \[
+        \forall \varepsilon > 0 \text {に対して, } \exists N \in \mathbb{N} \ \mathrm{s.t.} \ \forall n > N \text {に対して, } \norm{ f_n - f } < \varepsilon
+    \]
+    %
+    を示す. ただし, $\norm{ \cdot }$ の定義から, $\norm{ f_n - f } < \varepsilon$ は,
+    %		
+    \[
+        \forall t \in K \text {に対して, } \abs{ f_n ( t ) - f ( t ) } < \varepsilon
+    \]
+    %		
+    を示せばよいことに注意する. $( f_n )$ が一様ノルムに関してCauchyの収束条件を満たすことに $\varepsilon / 2 > 0$ を適用すると, ある自然数 $N_1$ が存在して,
+    %		
+    \[
+        \forall n , m > N _1 \text {に対して, } \norm{ f_n - f_m } < \varepsilon / 2
+    \]
+    %		
+    を満たす. $N \coloneqq  N_1$ とおく. $n > N$ , $t \in K$ とする. 列 $( f_n ( t ) )$ は $f (t)$ に収束するから, ある自然数 $N_2$ が存在して,
+    %		
+    \[
+        \forall m > N_2 \text {に対して, }\abs{ f_{m} ( t ) - f ( t ) } < \varepsilon / 2
+    \]
+    %		
+    を満たす. そこで, $m > \max \{ N_1 , N_2 \}$ をとれば,
+    %		
+    \[
+        \abs{ f_n ( t ) - f ( t ) } \leq \abs{ f_n ( t ) - f_m ( t ) } + \abs{ f _m ( t ) - f ( t ) } \leq \norm{ f_n - f_m } + \abs{ f_m ( t ) - f ( t ) } < \varepsilon
+    \]
+    %		
+    となる. よって収束先である.
 
-        各 $x \in K$ において, 実数列 $( f_n ( x ) ) _ {n \in \mathbb{N}}$ はCauchy列である. 実際,
-        %		
-        \[
-            \abs{ f _n ( x ) - f _m ( x ) } \leq \max \{ \abs{ f_n ( x ) - f_m ( x ) } \mid x \in K \} = \norm{f_n - f_m} \to 0 \ ( n , m \to N )
-        \]
-        %		
-        よりわかる. 実数の完備性から列 $( f_n ( x ) )$ は収束する. そこで,
-        %		
-        \[
-            f \colon K \ni x \mapsto \lim_{n \to \infty} f_n ( x ) \in \mathbb{R}
-        \]
-        %		
-        と定める. この $f$ が i ) , ii ) を満たすことを示す. \\
-        i) を満たすこと. すなわち,
-        %		
-        \[
-            \forall \varepsilon > 0 \text {に対して, } \exists N \in \mathbb{N} \ \mathrm{s.t.} \ \forall n > N \text {に対して, } \norm{ f_n - f } < \varepsilon
-        \]
-        %
-        を示す. ただし, $\norm{ \cdot }$ の定義から, $\norm{ f_n - f } < \varepsilon$ は,
-        %		
-        \[
-            \forall t \in K \text {に対して, } \abs{ f_n ( t ) - f ( t ) } < \varepsilon
-        \]
-        %		
-        を示せばよいことに注意する. $( f_n )$ が一様ノルムに関してCauchyの収束条件を満たすことに $\varepsilon / 2 > 0$ を適用すると, ある自然数 $N_1$ が存在して,
-        %		
-        \[
-            \forall n , m > N _1 \text {に対して, } \norm{ f_n - f_m } < \varepsilon / 2
-        \]
-        %		
-        を満たす. $N \coloneqq  N_1$ とおく. $n > N$ , $t \in K$ とする. 列 $( f_n ( t ) )$ は $f (t)$ に収束するから, ある自然数 $N_2$ が存在して,
-        %		
-        \[
-            \forall m > N_2 \text {に対して, }\abs{ f_{m} ( t ) - f ( t ) } < \varepsilon / 2
-        \]
-        %		
-        を満たす. そこで, $m > \max \{ N_1 , N_2 \}$ をとれば,
-        %		
-        \[
-            \abs{ f_n ( t ) - f ( t ) } \leq \abs{ f_n ( t ) - f_m ( t ) } + \abs{ f _m ( t ) - f ( t ) } \leq \norm{ f_n - f_m } + \abs{ f_m ( t ) - f ( t ) } < \varepsilon
-        \]
-        %		
-        となる. よって収束先である.
+    ii) を満たすこと. すなわち, 各 $\alpha \in K$ において
+    %		
+    \[
+        \varepsilon > 0 \text {に対して, } \exists \delta > 0 \ \mathrm{s.t.} \ \forall x \in K \ \mathrm{s.t.} \ d ( \alpha , x ) < \delta \text {に対して, } \abs{ f ( x ) - f ( \alpha ) } < \varepsilon
+    \]
+    %		
+    を満たすことを示す. $\alpha \in K$ とする. $\varepsilon > 0$ とする. 列 $( f_n ( \alpha ) )$ が $f ( \alpha )$ に収束することから, ある自然数 $N_1$ が存在して,
+    %		
+    \[
+        \forall n > N_1 \text {に対して, } \abs{ f_n ( \alpha ) - f ( \alpha ) } < \varepsilon / 3
+    \]
+    %	
+    が成り立つ. また, $( f_n )$ がCauchyの収束条件を満たすことから, ある自然数 $N_2$ が存在して,
+    %		
+    \[
+        \forall n , m > N_2 \text {に対して, } \norm{ f_n - f_m } < \varepsilon / 3
+    \]
+    %		
+    が成り立つ. $N \coloneqq  \max \{ N_1 , N_2 \}$ とおく. $f_N$ は $K$ 上で連続であるから, $\alpha$ での連続性より, ある正数 $\delta'$ が存在して,
+    %		
+    \[
+        \forall x \in K \ \mathrm{s.t.} \ d ( \alpha , x ) < \delta' \text {に対して, } \abs{ f_N ( x ) - f_ N( \alpha ) } < \varepsilon / 3
+    \]
+    %	
+    が成り立つ. $\delta \coloneqq  \delta'$ とおく. $x \in K$ かつ $d ( \alpha , x ) < \delta$ とする.
+    %		
+    \[
+        \abs{ f ( x ) - f ( \alpha ) } \leq \abs{ f ( x ) - f_N ( x ) } + \abs{ f_N ( x ) - f_N ( \alpha ) } + \abs{ f_N ( \alpha ) - f ( \alpha ) } \leq \norm{ f - f_N } + \varepsilon / 3 + \norm{ f - f_N } < \varepsilon
+    \]
+    %		
+    より $f$ は連続である. つまり $f \in C ( K )$ である.
 
-        ii) を満たすこと. すなわち, 各 $\alpha \in K$ において
-        %		
-        \[
-            \varepsilon > 0 \text {に対して, } \exists \delta > 0 \ \mathrm{s.t.} \ \forall x \in K \ \mathrm{s.t.} \ d ( \alpha , x ) < \delta \text {に対して, } \abs{ f ( x ) - f ( \alpha ) } < \varepsilon
-        \]
-        %		
-        を満たすことを示す. $\alpha \in K$ とする. $\varepsilon > 0$ とする. 列 $( f_n ( \alpha ) )$ が $f ( \alpha )$ に収束することから, ある自然数 $N_1$ が存在して,
-        %		
-        \[
-            \forall n > N_1 \text {に対して, } \abs{ f_n ( \alpha ) - f ( \alpha ) } < \varepsilon / 3
-        \]
-        %	
-        が成り立つ. また, $( f_n )$ がCauchyの収束条件を満たすことから, ある自然数 $N_2$ が存在して,
-        %		
-        \[
-            \forall n , m > N_2 \text {に対して, } \norm{ f_n - f_m } < \varepsilon / 3
-        \]
-        %		
-        が成り立つ. $N \coloneqq  \max \{ N_1 , N_2 \}$ とおく. $f_N$ は $K$ 上で連続であるから, $\alpha$ での連続性より, ある正数 $\delta'$ が存在して,
-        %		
-        \[
-            \forall x \in K \ \mathrm{s.t.} \ d ( \alpha , x ) < \delta' \text {に対して, } \abs{ f_N ( x ) - f_ N( \alpha ) } < \varepsilon / 3
-        \]
-        %	
-        が成り立つ. $\delta \coloneqq  \delta'$ とおく. $x \in K$ かつ $d ( \alpha , x ) < \delta$ とする.
-        %		
-        \[
-            \abs{ f ( x ) - f ( \alpha ) } \leq \abs{ f ( x ) - f_N ( x ) } + \abs{ f_N ( x ) - f_N ( \alpha ) } + \abs{ f_N ( \alpha ) - f ( \alpha ) } \leq \norm{ f - f_N } + \varepsilon / 3 + \norm{ f - f_N } < \varepsilon
-        \]
-        %		
-        より $f$ は連続である. つまり $f \in C ( K )$ である.
-
-    \end{proof}
-\end{leftbar}
+\end{tproof}
 
 \begin{column}
     これ, Compact上の連続函数であることはほとんど本質的なことに影響しません. 定義域がCompactである条件を外す代わりに, 有界連続函数に対して適用すれば同様の議論が成り立ちます. ( ただし, その場合, 最大値ではなく上限でノルムを定義することになります. ) もしくは, 定義域上でCompact - support ( あるCompact集合上で値をもち, それ以外では恒等的に0 ) など他にも少し条件を変えて修正することでいくつかの応用が存在します. また, 詳しく調べてないのでわかりませんが ,定義域が距離空間であることもあまり影響しなかったと思います.
@@ -2571,22 +2462,20 @@ $\norm{ \cdot }_1 : \mathbb{R}^n \ni ( x_1 , x_2 , \cdots , x_n ) \mapsto \sum_{
 \section*{p72--74：7}
 \addcontentsline{toc}{section}{\texorpdfstring{p72--74：7}{p72--74：7}}
 
-\begin{tleftbar}
-    \begin{proof}
-        部分列$(f_{n(k)})_{k \in \mathbb{N}}$を任意にひとつとる．
-        \[
-            f(x)= \lim_{k \to \infty} f_{n(k)}(x)
-            \begin{cases}
-                0 \quad  & ( 0 \leqq x < 1) \\
-                1  \quad & ( x=1)
-            \end{cases}
-        \]
-        であり，$f$に各点収束する．
+\begin{tproof}
+    部分列$(f_{n(k)})_{k \in \mathbb{N}}$を任意にひとつとる．
+    \[
+        f(x)= \lim_{k \to \infty} f_{n(k)}(x)
+        \begin{cases}
+            0 \quad  & ( 0 \leqq x < 1) \\
+            1  \quad & ( x=1)
+        \end{cases}
+    \]
+    であり，$f$に各点収束する．
 
-        $(f_{n(k)})_{k \in \mathbb{N}}$は一様収束するとすれば$f$に収束するが，$f$は連続でなく
-        「連続関数列$(f_n)_{n \in \mathbb{N}}$が$f$に各点収束すれば，$f$は連続」の対偶を考えることにより矛盾する\footnote{IV.~Thm 13.2，Thm 13.3より．}．よって一様収束しない．
-    \end{proof}
-\end{tleftbar}
+    $(f_{n(k)})_{k \in \mathbb{N}}$は一様収束するとすれば$f$に収束するが，$f$は連続でなく
+    「連続関数列$(f_n)_{n \in \mathbb{N}}$が$f$に各点収束すれば，$f$は連続」の対偶を考えることにより矛盾する\footnote{IV.~Thm 13.2，Thm 13.3より．}．よって一様収束しない．
+\end{tproof}
 
 \newpage
 
@@ -2594,10 +2483,9 @@ $\norm{ \cdot }_1 : \mathbb{R}^n \ni ( x_1 , x_2 , \cdots , x_n ) \mapsto \sum_{
 \section*{p72--74：8}
 \addcontentsline{toc}{section}{\texorpdfstring{p72--74：8}{p72--74：8}}
 
-\kakko{補題}
-
-
-コンパクト集合$S$上の連続写像$g$について，その像$g(S)$はコンパクトである．
+\begin{lemma}{}{}
+    コンパクト集合$S$上の連続写像$g$について，その像$g(S)$はコンパクトである．
+\end{lemma}
 
 \begin{proof}[\textup{\textbf{補題の証明}}]
     $g(S)$の開被覆$(U_{\lambda})_{\lambda \in \Lambda}$を任意にとる．
@@ -2615,124 +2503,117 @@ $\norm{ \cdot }_1 : \mathbb{R}^n \ni ( x_1 , x_2 , \cdots , x_n ) \mapsto \sum_{
     となり， $S$もコンパクトである．
 \end{proof}
 
-\begin{tleftbar}
-    \begin{proof}
-        $f$は単射なので，$f^{-1} \colon f(K) \mapsto K$がとれる．$\mathbb{R}^n$の開集合$W$をひとつとる．
 
-        $W \cup K^c$は開集合であるから
-        \[
-            (W \cup K^c)^c = W^c \cap K~(\subset K)
-        \]
-        は開集合で特にコンパクトである．
+\begin{tproof}
+    $f$は単射なので，$f^{-1} \colon f(K) \mapsto K$がとれる．$\mathbb{R}^n$の開集合$W$をひとつとる．
 
-        補題より，$f(W^c \cap K)$もコンパクトであり，
-        $W$の$f^{-1}$による逆像$W$は
-        \[
-            W' = (f(W^c \cap K))^c \cap f(K)
-        \]
-        であり$(f(W^c \cap K))^c$は開集合であるから
-        \S 6 ：問６より$f^{-1}$は$f(K)$上で連続である．
-    \end{proof}
-\end{tleftbar}
+    $W \cup K^c$は開集合であるから
+    \[
+        (W \cup K^c)^c = W^c \cap K~(\subset K)
+    \]
+    は開集合で特にコンパクトである．
+
+    補題より，$f(W^c \cap K)$もコンパクトであり，
+    $W$の$f^{-1}$による逆像$W$は
+    \[
+        W' = (f(W^c \cap K))^c \cap f(K)
+    \]
+    であり$(f(W^c \cap K))^c$は開集合であるから
+    \S 6 ：問６より$f^{-1}$は$f(K)$上で連続である．
+\end{tproof}
 
 \newpage
 
 \section*{p72--74：9}
 \addcontentsline{toc}{section}{\texorpdfstring{p72--74：9}{p72--74：9}}
 
-\begin{tleftbar}
-    \begin{proof}
-        $g(x)$が下半連続であるとき，$-g(x)$は上半連続であるので，
-        $f(x)$が上半連続であることを示せば十分である．
+\begin{tproof}
+    $g(x)$が下半連続であるとき，$-g(x)$は上半連続であるので，
+    $f(x)$が上半連続であることを示せば十分である．
 
-        $\varepsilon >0$をひとつとる．$ x\in K$に対して，
-        \[
-            \abs{y-x} < \delta_{(x)} \land y \in K \Rightarrow f(y) < f(x) + \varepsilon
-        \]
-        となる$\delta_{(x)}$がとれる．
+    $\varepsilon >0$をひとつとる．$ x\in K$に対して，
+    \[
+        \abs{y-x} < \delta_{(x)} \land y \in K \Rightarrow f(y) < f(x) + \varepsilon
+    \]
+    となる$\delta_{(x)}$がとれる．
 
-        $(U(x,\delta_{(x)})_{x\in K}$は$K$の開被覆であるので，
-        $K$のコンパクト性より，
-        \[
-            x_1 , x_2, \ldots , x_m \in K , \quad x_1 < x_2 < \cdots < x_m
-        \]
-        となるようにうまくとると，
-        \[
-            K \subset \bigcup_{i=1}^m U(x_i,\delta_i) ,\quad f(K) \subset \bigcup_{i=1}^m f(U(x_i,\delta_i))
-        \]
-        となる．
+    $(U(x,\delta_{(x)})_{x\in K}$は$K$の開被覆であるので，
+    $K$のコンパクト性より，
+    \[
+        x_1 , x_2, \ldots , x_m \in K , \quad x_1 < x_2 < \cdots < x_m
+    \]
+    となるようにうまくとると，
+    \[
+        K \subset \bigcup_{i=1}^m U(x_i,\delta_i) ,\quad f(K) \subset \bigcup_{i=1}^m f(U(x_i,\delta_i))
+    \]
+    となる．
 
-        $f(x_i)$の$\mathrm{Max}$をとれば，$f(x_i)+\varepsilon$は$f(K)$の上界となるので，
-        $f(K)$は上に有界であり，特に$M = \sup f(K)$が存在する．
+    $f(x_i)$の$\mathrm{Max}$をとれば，$f(x_i)+\varepsilon$は$f(K)$の上界となるので，
+    $f(K)$は上に有界であり，特に$M = \sup f(K)$が存在する．
 
-        $n \geqq 1$に対して，$ M - 1/n < f(x_n) \leqq M$となる$x_n \in K$がとれて，
-        $\lim_{n \to \infty} f(x_n) = M$となる．
+    $n \geqq 1$に対して，$ M - 1/n < f(x_n) \leqq M$となる$x_n \in K$がとれて，
+    $\lim_{n \to \infty} f(x_n) = M$となる．
 
-        $K$は点列コンパクトなので，$(x_n)_{n \in \mathbb{N}}$の収束する部分列$(x_{n_k})_{k \in \mathbb{N}}$をとって
-        その極限値を$ x\in K$とする．
-        $\lim_{n \to \infty} f(x_{n(k)})=m$，$f$は上半連続であるから
-        $\varepsilon >0$に対して，十分大きい$k$で，
-        \[
-            \abs{M-f(x_{n(k)})} < \varepsilon,\quad f(x_{n(k)})<f(x)+\varepsilon
-        \]
-        となり，$M-2 \varepsilon < f(x) \leqq M $となる．
-        $\varepsilon$は任意にとれるので，$f(x) = M$となり，この$x$で$\mathrm{Max}$に達する．
-    \end{proof}
-\end{tleftbar}
+    $K$は点列コンパクトなので，$(x_n)_{n \in \mathbb{N}}$の収束する部分列$(x_{n_k})_{k \in \mathbb{N}}$をとって
+    その極限値を$ x\in K$とする．
+    $\lim_{n \to \infty} f(x_{n(k)})=m$，$f$は上半連続であるから
+    $\varepsilon >0$に対して，十分大きい$k$で，
+    \[
+        \abs{M-f(x_{n(k)})} < \varepsilon,\quad f(x_{n(k)})<f(x)+\varepsilon
+    \]
+    となり，$M-2 \varepsilon < f(x) \leqq M $となる．
+    $\varepsilon$は任意にとれるので，$f(x) = M$となり，この$x$で$\mathrm{Max}$に達する．
+\end{tproof}
 
 
 \section*{p72--74：10}
 \addcontentsline{toc}{section}{\texorpdfstring{p72--74：10}{p72--74：10}}
 
-\begin{tleftbar}
-    \begin{proof}
-        定義域上の任意の点$x$に対して，ある$ \lambda_x \in \Lambda$が存在して，
-        \[
-            f(x) \leqq f_{\lambda_x} (x) < f(x) + \varepsilon
-        \]
-        となる．
+\begin{tproof}
+    定義域上の任意の点$x$に対して，ある$ \lambda_x \in \Lambda$が存在して，
+    \[
+        f(x) \leqq f_{\lambda_x} (x) < f(x) + \varepsilon
+    \]
+    となる．
 
-        定義域上の点$a$を任意に一つ取ると，
-        $f_{\lambda_a}$は上半連続なので，適当な$\delta >0$に対して
-        \begin{align*}
-            \abs{x-a}<\delta & \Rightarrow f_{\lambda_a}(x) < f_{\lambda_a}(a)     \\
-                             & \Rightarrow  f_{\lambda_a}(x) < f (a) + \varepsilon \\
-                             & \Rightarrow f(x) < f(a) + \varepsilon
-        \end{align*}
-        となり，$f(x)$は$x=a$で上半連続である．
-    \end{proof}
-\end{tleftbar}
+    定義域上の点$a$を任意に一つ取ると，
+    $f_{\lambda_a}$は上半連続なので，適当な$\delta >0$に対して
+    \begin{align*}
+        \abs{x-a}<\delta & \Rightarrow f_{\lambda_a}(x) < f_{\lambda_a}(a)     \\
+                         & \Rightarrow  f_{\lambda_a}(x) < f (a) + \varepsilon \\
+                         & \Rightarrow f(x) < f(a) + \varepsilon
+    \end{align*}
+    となり，$f(x)$は$x=a$で上半連続である．
+\end{tproof}
 
 
 \section*{p72--74：11}
 \addcontentsline{toc}{section}{\texorpdfstring{p72--74：11}{p72--74：11}}
 
-\begin{tleftbar}
-    \begin{proof}
-        $K$，$L$がコンパクトであり，$f$の像は有界であるので，
-        $f(x,y)$を$L$を添字集合とする開集合$f_y (x)$とみなすと，
-        \[
-            f(x) =\inf_{y \in L} f_y (x)=\min_{y \in L} f(x,y)
-        \]
-        が定義できる．
+\begin{tproof}
+    $K$，$L$がコンパクトであり，$f$の像は有界であるので，
+    $f(x,y)$を$L$を添字集合とする開集合$f_y (x)$とみなすと，
+    \[
+        f(x) =\inf_{y \in L} f_y (x)=\min_{y \in L} f(x,y)
+    \]
+    が定義できる．
 
-        各$f_y$は上半連続であり，問9より特に$\max $を持つ．
-        よって，
-        \[
-            \max_{x \in K} f(x) = \max_{x \in K} \min_{y \in L} f(x,y)
-        \]
-        が存在する．同様に，$\min_{y \in L} \max_{x \in K} f(x,y)$も存在する．
+    各$f_y$は上半連続であり，問9より特に$\max $を持つ．
+    よって，
+    \[
+        \max_{x \in K} f(x) = \max_{x \in K} \min_{y \in L} f(x,y)
+    \]
+    が存在する．同様に，$\min_{y \in L} \max_{x \in K} f(x,y)$も存在する．
 
-        また，任意の$(x,y) \in K \times L$に対して，
-        \[
-            \min_{y \in L} \leqq f(x,y) \leqq \max_{x \in K} f(x,y)
-        \]
-        が成立するので，特に最左辺の$\max$を与える$x$と最右辺の$\min$を与える$y$に対して
-        \[
-            \max_{x \in K} \min_{y \in L} f(x,y) \leqq f(x,y) \leqq \min_{y \in L} \max_{x \in K} f(x,y).
-        \]
-    \end{proof}
-\end{tleftbar}
+    また，任意の$(x,y) \in K \times L$に対して，
+    \[
+        \min_{y \in L} \leqq f(x,y) \leqq \max_{x \in K} f(x,y)
+    \]
+    が成立するので，特に最左辺の$\max$を与える$x$と最右辺の$\min$を与える$y$に対して
+    \[
+        \max_{x \in K} \min_{y \in L} f(x,y) \leqq f(x,y) \leqq \min_{y \in L} \max_{x \in K} f(x,y).
+    \]
+\end{tproof}
 
 \newpage
 
@@ -2740,309 +2621,286 @@ $\norm{ \cdot }_1 : \mathbb{R}^n \ni ( x_1 , x_2 , \cdots , x_n ) \mapsto \sum_{
 \section*{p72--74：12}
 \addcontentsline{toc}{section}{\texorpdfstring{p72--74：12}{p72--74：12}}
 
-\begin{tleftbar}
-    \begin{proof}
-        $(a,b) \in K \times L$が$f$の鞍点であるとき，(\romannumeral1)，(\romannumeral2)より，
-        \[
-            f(a,b) = \max_{x \in K} f(x,b) = \min_{y \in L} f(a,y)
-        \]
-        が成立する．
+\begin{tproof}
+    $(a,b) \in K \times L$が$f$の鞍点であるとき，(\romannumeral1)，(\romannumeral2)より，
+    \[
+        f(a,b) = \max_{x \in K} f(x,b) = \min_{y \in L} f(a,y)
+    \]
+    が成立する．
 
-        また特に，
-        \[
-            \max_{x \in K} \min_{y \in L} f(x,y) \geqq \min_{y \in L} f(a,y) =f(a,b)= \max_{x \in K} f(x,b) \geqq \min_{y \in L} \max_{x \in K} f(x,y)
-        \]
-        であるので，問11 と併せて
-        \[
-            \max_{x \in K} \min_{y \in L} f(x,y) = \min_{y \in L} \max_{x \in K} f(x,y)
-        \]
-        を得る．
+    また特に，
+    \[
+        \max_{x \in K} \min_{y \in L} f(x,y) \geqq \min_{y \in L} f(a,y) =f(a,b)= \max_{x \in K} f(x,b) \geqq \min_{y \in L} \max_{x \in K} f(x,y)
+    \]
+    であるので，問11 と併せて
+    \[
+        \max_{x \in K} \min_{y \in L} f(x,y) = \min_{y \in L} \max_{x \in K} f(x,y)
+    \]
+    を得る．
 
-        逆に上をみたすとき，
-        $\min_{y \in L} f(x,y)$の$K$上での$\max$を与える点を$a$，
-        $\max_{x \in K} f(x,y)$の$L$上での$\min$を与える点を$b$とすると，$(a,b)$は(\romannumeral1)，(\romannumeral2)をみたし鞍点となる．
-    \end{proof}
-\end{tleftbar}
+    逆に上をみたすとき，
+    $\min_{y \in L} f(x,y)$の$K$上での$\max$を与える点を$a$，
+    $\max_{x \in K} f(x,y)$の$L$上での$\min$を与える点を$b$とすると，$(a,b)$は(\romannumeral1)，(\romannumeral2)をみたし鞍点となる．
+\end{tproof}
 \newpage
 
 
 \section*{p79--80：1}
 \addcontentsline{toc}{section}{\texorpdfstring{p79--80：1}{p79--80：1}}
-
-\begin{leftbar}
-    \begin{proof}
-        $C$ 上の点 $P$ をひとつとり，$C$ の中心とのある方向のなす角を考えることで，
-        $[0,2\pi]$ から $C$ への全射な連続写像 $\varphi$ を得る．
-        $[0,\pi]$ 上で定義された関数
-        \[
-            g(x) = f\circ \varphi(x) - f \circ \varphi(x+\pi)
-        \]
-        に対して，$g(0) = g(\pi) = 0$ ならば，$\varphi(0)$ と $\varphi(\pi)$ を通る直線は一致する．一方，$g(0) \ne 0$ の場合は
-        \[
-            g(0)g(\pi) < 0
-        \]
-        となり，$[0,\pi]$ 上で $g(x)$ は連続なので，中間値の定理より
-        \[
-            0 < c < \pi
-        \]
-        なるある $c$ で
-        \[
-            g(c) = 0
-        \]
-        となる．よって，$\varphi(c)$ と $\varphi(c+\pi)$ を通る直線が一致する．
-    \end{proof}
-\end{leftbar}
+\begin{tproof}
+    $C$ 上の点 $P$ をひとつとり，$C$ の中心とのある方向のなす角を考えることで，
+    $[0,2\pi]$ から $C$ への全射な連続写像 $\varphi$ を得る．
+    $[0,\pi]$ 上で定義された関数
+    \[
+        g(x) = f\circ \varphi(x) - f \circ \varphi(x+\pi)
+    \]
+    に対して，$g(0) = g(\pi) = 0$ ならば，$\varphi(0)$ と $\varphi(\pi)$ を通る直線は一致する．一方，$g(0) \ne 0$ の場合は
+    \[
+        g(0)g(\pi) < 0
+    \]
+    となり，$[0,\pi]$ 上で $g(x)$ は連続なので，中間値の定理より
+    \[
+        0 < c < \pi
+    \]
+    なるある $c$ で
+    \[
+        g(c) = 0
+    \]
+    となる．よって，$\varphi(c)$ と $\varphi(c+\pi)$ を通る直線が一致する．
+\end{tproof}
 
 
 \section*{p79--80：2}
 \addcontentsline{toc}{section}{\texorpdfstring{p79--80：2}{p79--80：2}}
-
-\begin{leftbar}
-    \begin{proof}
-        各$\lambda$に対して，$U_\lambda= A \cap U_\lambda '$となる$ U_\lambda ' \in \mathcal{O} (\mathbb{R}^n)$をとる．
-        \begin{enumerate}[(i)]
-            \item
-                  \begin{align*}
-                      \bigcup_{\lambda \in \Lambda} U_\lambda & = \bigcup_{\lambda \in \Lambda} (A \cap U_\lambda ')  \\
-                                                              & = A \cap (\bigcup_{\lambda \in \Lambda} U_\lambda ').
-                  \end{align*}
-                  ここで，定理8.3より
-                  \[
-                      \bigcup_{\lambda \in \Lambda} U_\lambda ' \in \mathcal{O} (\mathbb{R}^n)
-                  \]
-                  であるから
-                  \[
-                      \bigcup_{\lambda \in \Lambda} U_\lambda \in \mathcal{O} (A).
-                  \]
-            \item
-                  \begin{align*}
-                      U_1 \cap U_2 & = (U_1 ' \cap A) \cap (U_2 ' \cap A) \\
-                                   & = (U_1 ' \cap U_2 ') \cap A.
-                  \end{align*}
-                  ここで，定理8.3より
-                  \[
-                      U_1 ' \cap U_2 ' \in \mathcal{O} (\mathbb{R}^n)
-                  \]
-                  であるから
-                  \[
-                      U_1 \cap U_2 \in \mathcal{O} (A).
-                  \]
-            \item
-                  $\mathbb{R}^n, \varnothing \in \mathcal{O} (\mathbb{R}^n)$であり，
-                  \[
-                      A = A \cap \mathbb{R}^n, \quad \varnothing = A \cap \varnothing \in \mathcal{O} (A).
-                  \]
-        \end{enumerate}
-    \end{proof}
-\end{leftbar}
+\begin{tproof}
+    各$\lambda$に対して，$U_\lambda= A \cap U_\lambda '$となる$ U_\lambda ' \in \mathcal{O} (\mathbb{R}^n)$をとる．
+    \begin{enumerate}[(i)]
+        \item
+              \begin{align*}
+                  \bigcup_{\lambda \in \Lambda} U_\lambda & = \bigcup_{\lambda \in \Lambda} (A \cap U_\lambda ')  \\
+                                                          & = A \cap (\bigcup_{\lambda \in \Lambda} U_\lambda ').
+              \end{align*}
+              ここで，定理8.3より
+              \[
+                  \bigcup_{\lambda \in \Lambda} U_\lambda ' \in \mathcal{O} (\mathbb{R}^n)
+              \]
+              であるから
+              \[
+                  \bigcup_{\lambda \in \Lambda} U_\lambda \in \mathcal{O} (A).
+              \]
+        \item
+              \begin{align*}
+                  U_1 \cap U_2 & = (U_1 ' \cap A) \cap (U_2 ' \cap A) \\
+                               & = (U_1 ' \cap U_2 ') \cap A.
+              \end{align*}
+              ここで，定理8.3より
+              \[
+                  U_1 ' \cap U_2 ' \in \mathcal{O} (\mathbb{R}^n)
+              \]
+              であるから
+              \[
+                  U_1 \cap U_2 \in \mathcal{O} (A).
+              \]
+        \item
+              $\mathbb{R}^n, \varnothing \in \mathcal{O} (\mathbb{R}^n)$であり，
+              \[
+                  A = A \cap \mathbb{R}^n, \quad \varnothing = A \cap \varnothing \in \mathcal{O} (A).
+              \]
+    \end{enumerate}
+\end{tproof}
 
 
 \section*{p79--80：3} \label{p79--80：3}
 \addcontentsline{toc}{section}{\texorpdfstring{p79--80：3}{p79--80：3}}
+\begin{tproof}
+    $F_\alpha = F_{\alpha} ' \cap A$となる$F_{\alpha} ' \in \mathcal{F} (\mathbb{R}^n)$をとる．
+    \begin{enumerate}[(i)]
+        \item
+              \begin{align*}
+                  \bigcup_{\alpha \in A} F_\alpha & = \bigcup_{\alpha \in A} (F_{\alpha} ' \cap A)  \\
+                                                  & = A \cap (\bigcup_{\alpha \in A} F_{\alpha} ').
+              \end{align*}
+              ここで，定理8.3より
+              \[
+                  \bigcup_{\alpha \in A} F_{\alpha} ' \in \mathcal{F} (\mathbb{R}^n)
+              \]
+              であるから
+              \[
+                  \bigcup_{\alpha \in A} F_\alpha \in \mathcal{F} (A).
+              \]
+        \item
+              \begin{align*}
+                  F_1 \cap F_2 & = (F_1 ' \cap A) \cap (F_2 ' \cap A) \\
+                               & = (F_1 ' \cap F_2 ') \cap A.
+              \end{align*}
+              ここで，定理8.3より
+              \[
+                  F_1 ' \cap F_2 ' \in \mathcal{F} (\mathbb{R}^n)
+              \]
+              であるから
+              \[
+                  F_1 \cap F_2 \in \mathcal{F} (A).
+              \]
+        \item
+              $\mathbb{R}^n, \varnothing \in \mathcal{F} (\mathbb{R}^n)$であり，
+              \[
+                  A = A \cap \mathbb{R}^n, \quad \varnothing = A \cap \varnothing \in \mathcal{F} (A).
+              \]
+        \item $B \in \mathcal{F} (A)$とする．$B =  A \cap F$となる$F \in \mathcal{F} (\mathbb{R}^n)$に対して，
+              \[
+                  F^c\in \mathcal{O} (\mathbb{R}^n)
+              \]
+              であり，
+              \[
+                  C_A (B) = A \cap F^c \in \mathcal{O} (A)
+              \]
+              となる．
 
-\begin{leftbar}
-    \begin{proof}
-        $F_\alpha = F_{\alpha} ' \cap A$となる$F_{\alpha} ' \in \mathcal{F} (\mathbb{R}^n)$をとる．
-        \begin{enumerate}[(i)]
-            \item
-                  \begin{align*}
-                      \bigcup_{\alpha \in A} F_\alpha & = \bigcup_{\alpha \in A} (F_{\alpha} ' \cap A)  \\
-                                                      & = A \cap (\bigcup_{\alpha \in A} F_{\alpha} ').
-                  \end{align*}
-                  ここで，定理8.3より
-                  \[
-                      \bigcup_{\alpha \in A} F_{\alpha} ' \in \mathcal{F} (\mathbb{R}^n)
-                  \]
-                  であるから
-                  \[
-                      \bigcup_{\alpha \in A} F_\alpha \in \mathcal{F} (A).
-                  \]
-            \item
-                  \begin{align*}
-                      F_1 \cap F_2 & = (F_1 ' \cap A) \cap (F_2 ' \cap A) \\
-                                   & = (F_1 ' \cap F_2 ') \cap A.
-                  \end{align*}
-                  ここで，定理8.3より
-                  \[
-                      F_1 ' \cap F_2 ' \in \mathcal{F} (\mathbb{R}^n)
-                  \]
-                  であるから
-                  \[
-                      F_1 \cap F_2 \in \mathcal{F} (A).
-                  \]
-            \item
-                  $\mathbb{R}^n, \varnothing \in \mathcal{F} (\mathbb{R}^n)$であり，
-                  \[
-                      A = A \cap \mathbb{R}^n, \quad \varnothing = A \cap \varnothing \in \mathcal{F} (A).
-                  \]
-            \item $B \in \mathcal{F} (A)$とする．$B =  A \cap F$となる$F \in \mathcal{F} (\mathbb{R}^n)$に対して，
-                  \[
-                      F^c\in \mathcal{O} (\mathbb{R}^n)
-                  \]
-                  であり，
-                  \[
-                      C_A (B) = A \cap F^c \in \mathcal{O} (A)
-                  \]
-                  となる．
-
-                  $C_A (B) \in \mathcal{O}(A)$のとき，$C_A (B) = A \cap U$となる$U \in \mathcal{O} (\mathbb{R}^n)$に対して，
-                  \[
-                      U^c \in \mathcal{F} (\mathbb{R}^n)
-                  \]
-                  であるから，
-                  \[
-                      B = A \cap U^c \in \mathcal{F} (A).
-                  \]
-                  以上より，
-                  \[
-                      B \in \mathcal{F} (A) \iff C_A (B) \in \mathcal{O} (A).
-                  \]
-        \end{enumerate}
-    \end{proof}
-\end{leftbar}
+              $C_A (B) \in \mathcal{O}(A)$のとき，$C_A (B) = A \cap U$となる$U \in \mathcal{O} (\mathbb{R}^n)$に対して，
+              \[
+                  U^c \in \mathcal{F} (\mathbb{R}^n)
+              \]
+              であるから，
+              \[
+                  B = A \cap U^c \in \mathcal{F} (A).
+              \]
+              以上より，
+              \[
+                  B \in \mathcal{F} (A) \iff C_A (B) \in \mathcal{O} (A).
+              \]
+    \end{enumerate}
+\end{tproof}
 
 
 \section*{p79--80：4} \label{p79--80：4}
 \addcontentsline{toc}{section}{\texorpdfstring{p79--80：4}{p79--80：4}}
+\begin{tproof}
+    $(\text{a}) \iff (\text{b})$，$(\text{b}) \iff (\text{c})$を示す．
 
-\begin{leftbar}
-    \begin{proof}
-        $(\text{a}) \iff (\text{b})$，$(\text{b}) \iff (\text{c})$を示す．
+    \paragraph{(a) $\iff$ (b)について}
 
-        \paragraph{(a) $\iff$ (b)について}
+    \subparagraph{(a) $\Longrightarrow$ (b)}
+    区間の定義により明らか．
 
-        \subparagraph{(a) $\Longrightarrow$ (b)}
-        区間の定義により明らか．
+    \subparagraph{(b) $\Longrightarrow$ (a)}
+    $I \ne \varnothing$より，$M = \sup A$，$m = \inf A$が$\overline{\mathbb{R}}= \mathbb{R} \cup \{ \pm \infty \}$に存在する．
 
-        \subparagraph{(b) $\Longrightarrow$ (a)}
-        $I \ne \varnothing$より，$M = \sup A$，$m = \inf A$が$\overline{\mathbb{R}}= \mathbb{R} \cup \{ \pm \infty \}$に存在する．
+    このとき，$m$，$M$の任意の近傍 $U_m$，$U_M$ において，$I$ の元 $a$，$b$ が存在するので
+    （$M$（$m$）が $\infty$（$-\infty$）のときは近傍 $U$ を
+    \[
+        U = \{ x \mid x > R\}\quad (\text{あるいは}\quad U = \{ x \mid x < R\})
+    \]
+    とする），仮定より，$[a,b] \subset I$ となる．
 
-        このとき，$m$，$M$の任意の近傍 $U_m$，$U_M$ において，$I$ の元 $a$，$b$ が存在するので
-        （$M$（$m$）が $\infty$（$-\infty$）のときは近傍 $U$ を
-        \[
-            U = \{ x \mid x > R\}\quad (\text{あるいは}\quad U = \{ x \mid x < R\})
-        \]
-        とする），仮定より，$[a,b] \subset I$ となる．
+    近傍は任意にとれるから，$(m,M) \subset I$ となり，$\sup$，$\inf$の定義から
+    \[
+        I \supset [m,M] = A
+    \]
+    であるから，$I$ は区間となる．
 
-        近傍は任意にとれるから，$(m,M) \subset I$ となり，$\sup$，$\inf$の定義から
-        \[
-            I \supset [m,M] = A
-        \]
-        であるから，$I$ は区間となる．
+    よって，$(\text{a}) \iff (\text{b})$ が示された．
 
-        よって，$(\text{a}) \iff (\text{b})$ が示された．
+    \paragraph{(b) $\iff$ (c)について}
 
-        \paragraph{(b) $\iff$ (c)について}
+    \subparagraph{(b) $\Longrightarrow$ (c)}
+    $I$ が連結でない，つまり
+    \[
+        I = A \dotplus B,\quad A,B \ne \varnothing,\quad A , B \in \mathcal{O} (I)
+    \]
+    となっているとする．$A$，$B$ の元 $a_1$，$b_1$ が $a_1 < b_1$ であるとき，以下のように
+    $(a_n)_{n \in \mathbb{N}}$，$(b_n)_{n \in \mathbb{N}}$ がとれる：
 
-        \subparagraph{(b) $\Longrightarrow$ (c)}
-        $I$ が連結でない，つまり
-        \[
-            I = A \dotplus B,\quad A,B \ne \varnothing,\quad A , B \in \mathcal{O} (I)
-        \]
-        となっているとする．$A$，$B$ の元 $a_1$，$b_1$ が $a_1 < b_1$ であるとき，以下のように
-        $(a_n)_{n \in \mathbb{N}}$，$(b_n)_{n \in \mathbb{N}}$ がとれる：
+    \begin{itemize}
+        \item $d_n = (a_n + b_n)/2$ として，$d_n \in [a_n,b_n] \subset I$．
+        \item $I= A \dotplus B$ より，$d_n \in A$ または $d_n \in B$ が一方だけ必ず成立する．
+        \item $d_n \in A$ のときは，$a_{n+1} = d_n$，$b_{n+1} = b_n$．
+        \item $d_n \in B$ のときは，$a_{n+1} = a_n$，$b_{n+1} = d_n$．
+    \end{itemize}
 
-        \begin{itemize}
-            \item $d_n = (a_n + b_n)/2$ として，$d_n \in [a_n,b_n] \subset I$．
-            \item $I= A \dotplus B$ より，$d_n \in A$ または $d_n \in B$ が一方だけ必ず成立する．
-            \item $d_n \in A$ のときは，$a_{n+1} = d_n$，$b_{n+1} = b_n$．
-            \item $d_n \in B$ のときは，$a_{n+1} = a_n$，$b_{n+1} = d_n$．
-        \end{itemize}
+    いずれの場合も $a_{n+1}< b_{n+1}$ であるから，
+    とくに
+    \[
+        \abs{a_{n+1} - b_{n+1}} = \frac{\abs{a_n - b_n}}{2}
+    \]
+    より
+    \[
+        \lim_{n \to \infty} \abs{a_n - b_n} = 0
+    \]
+    である．さらに
+    \[
+        a_n \leqq a_{n+1} \leqq b_{n+1} \leqq b_n
+    \]
+    となるので
+    \[
+        \lim_{n \to \infty} a_n = \lim_{n \to \infty} b_n = \alpha
+    \]
+    を得る．
 
-        いずれの場合も $a_{n+1}< b_{n+1}$ であるから，
-        とくに
-        \[
-            \abs{a_{n+1} - b_{n+1}} = \frac{\abs{a_n - b_n}}{2}
-        \]
-        より
-        \[
-            \lim_{n \to \infty} \abs{a_n - b_n} = 0
-        \]
-        である．さらに
-        \[
-            a_n \leqq a_{n+1} \leqq b_{n+1} \leqq b_n
-        \]
-        となるので
-        \[
-            \lim_{n \to \infty} a_n = \lim_{n \to \infty} b_n = \alpha
-        \]
-        を得る．
+    $\alpha \in I$ であるから，$\alpha \in A$ または $\alpha \in B$ であるが，いずれの場合においても
+    $A , B \in \mathcal{O} (I)$ となることに矛盾する．
 
-        $\alpha \in I$ であるから，$\alpha \in A$ または $\alpha \in B$ であるが，いずれの場合においても
-        $A , B \in \mathcal{O} (I)$ となることに矛盾する．
+    \subparagraph{(c) $\Longrightarrow$ (b)}
+    対偶を示す．$a,b \in I$，$a < b$ となる $a$，$b$ に対して，
+    \[
+        a < x < b \quad \text{かつ}\quad x \notin I
+    \]
+    となる $x$ がとれるとする．
 
-        \subparagraph{(c) $\Longrightarrow$ (b)}
-        対偶を示す．$a,b \in I$，$a < b$ となる $a$，$b$ に対して，
-        \[
-            a < x < b \quad \text{かつ}\quad x \notin I
-        \]
-        となる $x$ がとれるとする．
+    このとき
+    \[
+        A = I \cap (x,\infty), \quad B = I \cap (-\infty,x)
+    \]
+    とおけば，
+    \[
+        I = A \dotplus B,\quad A , B \ne \varnothing,\quad A , B \in \mathcal{O} (I)
+    \]
+    となり，$I$ は連結でない．
 
-        このとき
-        \[
-            A = I \cap (x,\infty), \quad B = I \cap (-\infty,x)
-        \]
-        とおけば，
-        \[
-            I = A \dotplus B,\quad A , B \ne \varnothing,\quad A , B \in \mathcal{O} (I)
-        \]
-        となり，$I$ は連結でない．
+    よって，$(\text{b}) \iff (\text{c})$ が示された．
+    \bigskip
 
-        よって，$(\text{b}) \iff (\text{c})$ が示された．
-        \bigskip
-
-        以上により
-        \[
-            (\text{a}) \iff (\text{b}) \iff (\text{c})
-        \]
-        が示された．
-    \end{proof}
-\end{leftbar}
+    以上により
+    \[
+        (\text{a}) \iff (\text{b}) \iff (\text{c})
+    \]
+    が示された．
+\end{tproof}
 
 
 \section*{p79--80：5} \label{p79--80：5}
 \addcontentsline{toc}{section}{\texorpdfstring{p79--80：5}{p79--80：5}}
-
-\begin{leftbar}
-    \begin{proof}
-        $f(A)$が連結でないと仮定し，$f(A) = B \dotplus C$，$B,C \ne \varnothing$かつ$B,C \in \mathcal{O} (f(A))$とする．
-        $B = f(A) \cap B '$，$C = f(A) \cap C '$，$B ', C ' \in \mathcal{O} (\mathbb{R}^n)$となる$B'$，$C'$をとると，
-        p63--64：6より，$f^{-1} (B) = f^{-1}(B') \in \mathcal{O}(A)$，$f^{-1} (C) = f^{-1}(C') \in \mathcal{O}(A)$である．
-        また，$f^{-1}(B) \dotplus f^{-1}(C) =A$，$ f^{-1}(B), f^{-1}(C) \ne \varnothing$より，$A$が連結であることに矛盾する．
-    \end{proof}
-\end{leftbar}
+\begin{tproof}
+    $f(A)$が連結でないと仮定し，$f(A) = B \dotplus C$，$B,C \ne \varnothing$かつ$B,C \in \mathcal{O} (f(A))$とする．
+    $B = f(A) \cap B '$，$C = f(A) \cap C '$，$B ', C ' \in \mathcal{O} (\mathbb{R}^n)$となる$B'$，$C'$をとると，
+    p63--64：6より，$f^{-1} (B) = f^{-1}(B') \in \mathcal{O}(A)$，$f^{-1} (C) = f^{-1}(C') \in \mathcal{O}(A)$である．
+    また，$f^{-1}(B) \dotplus f^{-1}(C) =A$，$ f^{-1}(B), f^{-1}(C) \ne \varnothing$より，$A$が連結であることに矛盾する．
+\end{tproof}
 
 
 \section*{p79--80：6}
 \addcontentsline{toc}{section}{\texorpdfstring{p79--80：6}{p79--80：6}}
-
-\begin{leftbar}
-    \begin{proof}
-        $I = [a,b]$に対して，\hyperref[p79--80：4]{p79--80：4}，\hyperref[p79--80：5]{p79--80：5}より，$f(I)$も区間である．
-        \hyperref[p79--80：4]{p79--80：4}(b)より，$[f(a),f(b)]$または$[f(b),f(a)]$は$f(I)$の部分集合であるから，
-        その中間の値$\gamma$に対して，$f(c)=\gamma$となる$c \in I$が存在する．
-    \end{proof}
-\end{leftbar}
+\begin{tproof}
+    $I = [a,b]$に対して，\hyperref[p79--80：4]{p79--80：4}，\hyperref[p79--80：5]{p79--80：5}より，$f(I)$も区間である．
+    \hyperref[p79--80：4]{p79--80：4}(b)より，$[f(a),f(b)]$または$[f(b),f(a)]$は$f(I)$の部分集合であるから，
+    その中間の値$\gamma$に対して，$f(c)=\gamma$となる$c \in I$が存在する．
+\end{tproof}
 
 
 \section*{p79--80：7} \label{p79--80：7}
 \addcontentsline{toc}{section}{\texorpdfstring{p79--80：7}{p79--80：7}}
-
-\begin{leftbar}
-    \begin{proof}
-        $B$が連続でないと仮定し，$B=C\dotplus D$，$C, D \neq \varnothing$，$C,D\in \mathcal{O}(B)$とする．
-        $C=C'\cap B$，$D=D'\cap B$となる$C',D'\in \mathcal{O}(R^n)$をとると，
-        $C''=C'\cap A$，$D''=D'\cap A$とすることで$C'',D''\in \mathcal{O}(A)$となり，
-        $A=C''\dotplus D''$となる．
-        $c \subset C'$に対してその近傍$U$において$U\subset C'$とでき，
-        触点の定義により$A\cap U\neq \varnothing$で$C''\neq \varnothing$となる．
-        同様に$D''\neq \varnothing$より，$A$が連続であることに矛盾する．
-    \end{proof}
-\end{leftbar}
+\begin{tproof}
+    $B$が連続でないと仮定し，$B=C\dotplus D$，$C, D \neq \varnothing$，$C,D\in \mathcal{O}(B)$とする．
+    $C=C'\cap B$，$D=D'\cap B$となる$C',D'\in \mathcal{O}(R^n)$をとると，
+    $C''=C'\cap A$，$D''=D'\cap A$とすることで$C'',D''\in \mathcal{O}(A)$となり，
+    $A=C''\dotplus D''$となる．
+    $c \subset C'$に対してその近傍$U$において$U\subset C'$とでき，
+    触点の定義により$A\cap U\neq \varnothing$で$C''\neq \varnothing$となる．
+    同様に$D''\neq \varnothing$より，$A$が連続であることに矛盾する．
+\end{tproof}
 
 \section*{p79--80：8}
 \addcontentsline{toc}{section}{\texorpdfstring{p79--80：8}{p79--80：8}}
-\begin{leftbar}
+\begin{tanswer}
     \[
         D_n = \left\{(\frac{1}{n},y)\; \middle| \; 0\leqq y\leqq 1,\right\}, \quad E=\{(x,0)\mid 0<x\leqq 1\}
     \]
@@ -3051,67 +2909,58 @@ $\norm{ \cdot }_1 : \mathbb{R}^n \ni ( x_1 , x_2 , \cdots , x_n ) \mapsto \sum_{
     p79--80：11より，$E\cup D_n$，$C$も連結となる．
     $C\subset A\subset \overline{C}=A\cup\{(0,0)\}$より，\hyperref[p79--80：7]{p79--80：7}から$A$も連結となる．
     $(0,0)\notin A$であるから，$(0,1)\in B$と$(1,0)\in C$を弧によって結ぶことはできない．
-\end{leftbar}
+\end{tanswer}
 
 \section*{p79--80：9}
 \addcontentsline{toc}{section}{\texorpdfstring{p79--80：9}{p79--80：9}}
-
-\begin{leftbar}
-    \begin{proof}
-        $(\text{a})\iff (\text{b})$については\hyperref[p63--64：6]{p63--64：6}の言い換え．
-        $(\text{a})\iff  (\text{c})$については\hyperref[p79--80：3]{p79--80：3}による．
-    \end{proof}
-\end{leftbar}
+\begin{tproof}
+    $(\text{a})\iff (\text{b})$については\hyperref[p63--64：6]{p63--64：6}の言い換え．
+    $(\text{a})\iff  (\text{c})$については\hyperref[p79--80：3]{p79--80：3}による．
+\end{tproof}
 
 
 \section*{p79--80：10} \label{p79--80：10}
 \addcontentsline{toc}{section}{\texorpdfstring{p79--80：10}{p79--80：10}}
-
-\begin{leftbar}
-    \begin{proof}
-        $A = \bigcup_{\lambda \in L} A_\lambda$ が連結でないと仮定し，
-        $A =(B \cap A)\dotplus(C \cap A)$，$B \cap A ,C \cap A \neq \varnothing$，$B, C \in \mathcal{O}(\mathbb{R}^n)$とする．
-        とする．
-        $ B \cap A ,C \cap A \neq \varnothing$ より，$B \cap A_{\lambda_1}$，$C \cap A_{\lambda_2} \neq \varnothing$
-        となる $\lambda_1,\lambda_2 \in L$をとる．
-        ここで，$C \cap A_{\lambda_1} \neq \varnothing$ とすれば，
-        $A_{\lambda_1}$ が連結であることに矛盾し，
-        $C \cap A_{\lambda_1} = \varnothing$ となる．
-        同様に $B \cap A_{\lambda_2} = \varnothing$ となる．
-        \[
-            A_{\lambda_1} \cup A_{\lambda_2} \subset  A \subset B \cup C
-        \]
-        であるから，
-        \begin{align*}
-            A_{\lambda_1} \cup A_{\lambda_2} & =( B \cup C) \cap (A_{\lambda_1} \cup A_{\lambda_2})                                      \\
-                                             & =(B \cap A_{\lambda_2} \cap A_{\lambda_1}) \cup (C \cap A_{\lambda_1} \cap A_{\lambda_2}) \\
-                                             & =\varnothing
-        \end{align*}
-        であり，矛盾する．
-        よって，$A = \bigcup_{\lambda \in L} A_\lambda$ は連結である．
-    \end{proof}
-\end{leftbar}
+\begin{tproof}
+    $A = \bigcup_{\lambda \in L} A_\lambda$ が連結でないと仮定し，
+    $A =(B \cap A)\dotplus(C \cap A)$，$B \cap A ,C \cap A \neq \varnothing$，$B, C \in \mathcal{O}(\mathbb{R}^n)$とする．
+    とする．
+    $ B \cap A ,C \cap A \neq \varnothing$ より，$B \cap A_{\lambda_1}$，$C \cap A_{\lambda_2} \neq \varnothing$
+    となる $\lambda_1,\lambda_2 \in L$をとる．
+    ここで，$C \cap A_{\lambda_1} \neq \varnothing$ とすれば，
+    $A_{\lambda_1}$ が連結であることに矛盾し，
+    $C \cap A_{\lambda_1} = \varnothing$ となる．
+    同様に $B \cap A_{\lambda_2} = \varnothing$ となる．
+    \[
+        A_{\lambda_1} \cup A_{\lambda_2} \subset  A \subset B \cup C
+    \]
+    であるから，
+    \begin{align*}
+        A_{\lambda_1} \cup A_{\lambda_2} & =( B \cup C) \cap (A_{\lambda_1} \cup A_{\lambda_2})                                      \\
+                                         & =(B \cap A_{\lambda_2} \cap A_{\lambda_1}) \cup (C \cap A_{\lambda_1} \cap A_{\lambda_2}) \\
+                                         & =\varnothing
+    \end{align*}
+    であり，矛盾する．
+    よって，$A = \bigcup_{\lambda \in L} A_\lambda$ は連結である．
+\end{tproof}
 
 
 \section*{p79--80：11} \label{p79--80：11}
 \addcontentsline{toc}{section}{\texorpdfstring{p79--80：11}{p79--80：11}}
+\begin{tproof}
+    \hyperref[p79--80：10]{p79--80：10}より$C$ は連結集合であり，
+    定義どおり特に最大なものである．
 
-\begin{leftbar}
-    \begin{proof}
-        \hyperref[p79--80：10]{p79--80：10}より$C$ は連結集合であり，
-        定義どおり特に最大なものである．
+    $C \subset A$ より，
+    \[
+        C \subset (\overline{C} \cap A) \subset \overline{C}
+    \]
+    である，
 
-        $C \subset A$ より，
-        \[
-            C \subset (\overline{C} \cap A) \subset \overline{C}
-        \]
-        である，
-
-        \hyperref[p79--80：7]{p79--80：7}より，
-        $\overline{C} \cap A$も連結で，$c$は最大であるから，$\overline{C} \cap A \subset C$ となる．
-        よって，$ C = \overline{C} \cap A \in \mathcal{F}$ である．
-    \end{proof}
-\end{leftbar}
+    \hyperref[p79--80：7]{p79--80：7}より，
+    $\overline{C} \cap A$も連結で，$c$は最大であるから，$\overline{C} \cap A \subset C$ となる．
+    よって，$ C = \overline{C} \cap A \in \mathcal{F}$ である．
+\end{tproof}
 
 \begin{column}
     集合 $A \subset \mathbb{R}^n$ に対して，$2^A$ 上の同値関係を
@@ -3135,7 +2984,7 @@ $\norm{ \cdot }_1 : \mathbb{R}^n \ni ( x_1 , x_2 , \cdots , x_n ) \mapsto \sum_{
 \addcontentsline{toc}{subsection}{\texorpdfstring{p79--80：12-(\romannumeral3)}{p79--80：12-(\romannumeral3)}}
 
 
-\begin{leftbar}
+\begin{tanswer}
     $A = \{\,(x_1,\ldots,x_n) \in \mathbb{R}^n: x_1^2+\cdots+x_p^2-x_{p+1}^2-\cdots-x_n^2 = 1\,\}$とする．
 
     \paragraph{$p=1$のとき:}
@@ -3182,13 +3031,13 @@ $\norm{ \cdot }_1 : \mathbb{R}^n \ni ( x_1 , x_2 , \cdots , x_n ) \mapsto \sum_{
     $(0,1,0,0,\ldots,0) \in A^+ \cap A^-$だから10)より$A$も連結，つまり連結成分の個数は1個である．
 
     以上より,$p=1$のとき$2$個，$p \ne 1$のとき$1$個である．
-\end{leftbar}
+\end{tanswer}
 
 
 \subsection*{p79--80：12-(\romannumeral4)} \label{p79--80：12-(\romannumeral4)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p79--80：12-(\romannumeral4)}{p79--80：12-(\romannumeral4)}}
 
-\begin{leftbar}
+\begin{tanswer}
     \[
         A = \{ (x,y) \in \mathbb{R}^2 \mid y^2(x-a)=x^2(x+a) \}
     \]
@@ -3224,20 +3073,17 @@ $\norm{ \cdot }_1 : \mathbb{R}^n \ni ( x_1 , x_2 , \cdots , x_n ) \mapsto \sum_{
     はそれぞれ連結集合で，これは同じ連結成分になりえないことから，2個の連結成分を持つ．
 
     以上の考察により，連結成分の個数は3個である．
-\end{leftbar}
+\end{tanswer}
 
 
 \section*{p79--80：13} \label{p79--80：13}
 \addcontentsline{toc}{section}{\texorpdfstring{p79--80：13}{p79--80：13}}
-
-\begin{leftbar}
-    \begin{proof}
-        $ t \in [0,1]$に対して，$at +b(1-t) \in A$であるから，
-        $f(at +b(1-t))$は$[0,1] \longrightarrow \mathbb{R}$の連続関数である．
-        中間値の定理より，$f(a)$と$f(b)$の中間なる値$\gamma$に対して
-        \[
-            f(as +b(1-s)) = \gamma
-        \]
-        となる$s \in [0,1]$が存在する．$t=as+b(1-s)$とすればよい．
-    \end{proof}
-\end{leftbar}
+\begin{tproof}
+    $ t \in [0,1]$に対して，$at +b(1-t) \in A$であるから，
+    $f(at +b(1-t))$は$[0,1] \longrightarrow \mathbb{R}$の連続関数である．
+    中間値の定理より，$f(a)$と$f(b)$の中間なる値$\gamma$に対して
+    \[
+        f(as +b(1-s)) = \gamma
+    \]
+    となる$s \in [0,1]$が存在する．$t=as+b(1-s)$とすればよい．
+\end{tproof}

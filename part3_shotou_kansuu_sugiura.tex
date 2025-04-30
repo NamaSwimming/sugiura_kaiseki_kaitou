@@ -6,32 +6,30 @@
 
 ラプラシアン（ラプラス作用素）$\Laplacian$は$\sum_{i=1}^n \frac{\partial^2}{\partial x_i^2}$で定義されていたことを思い出そう（p135）．
 
-\begin{tleftbar}
-    \begin{proof}
-        以下定理1.1と同様に$z = x + iy$とし，$f(z) = u + iv$と書く．このとき定義より，
-        \[
-            \Laplacian u = u_{x, x} + u_{y, y},
-            \quad \Laplacian v = v_{x, x} + v_{y,y}
-        \]
-        となる%
-        \footnote{%
-            $f_{x_i, x_j} = \frac{\partial^2 f}{\partial x_i \partial x_j} = \frac{\partial}{\partial x_i} \left(\frac{\partial f}{\partial x_j} \right)$であったことに注意せよ．%
-        }%
-        ．コーシー・リーマンの関係式（定理1.1）より，
-        \[
-            u_{x, x} = v_{y, x}, \quad u_{y, y} = -v_{x, y}
-        \]
-        が成り立つ．ここで仮定より $u, v$ は $C^2$ 級であるから，定理II.3.3により，$v_{y, x} = v_{x, y}$ である．よって
-        \[
-            u_{x, x} + u_{y, y} = v_{y, x} - v_{x, y} = 0
-        \]
-        が成り立つ．同様に
-        \[
-            v_{x, x} + v_{y, y} = -u_{y, x} + u_{x, y} = 0
-        \]
-        も成立する．
-    \end{proof}
-\end{tleftbar}
+\begin{tproof}
+    以下定理1.1と同様に$z = x + iy$とし，$f(z) = u + iv$と書く．このとき定義より，
+    \[
+        \Laplacian u = u_{x, x} + u_{y, y},
+        \quad \Laplacian v = v_{x, x} + v_{y,y}
+    \]
+    となる%
+    \footnote{%
+        $f_{x_i, x_j} = \frac{\partial^2 f}{\partial x_i \partial x_j} = \frac{\partial}{\partial x_i} \left(\frac{\partial f}{\partial x_j} \right)$であったことに注意せよ．%
+    }%
+    ．コーシー・リーマンの関係式（定理1.1）より，
+    \[
+        u_{x, x} = v_{y, x}, \quad u_{y, y} = -v_{x, y}
+    \]
+    が成り立つ．ここで仮定より $u, v$ は $C^2$ 級であるから，定理II.3.3により，$v_{y, x} = v_{x, y}$ である．よって
+    \[
+        u_{x, x} + u_{y, y} = v_{y, x} - v_{x, y} = 0
+    \]
+    が成り立つ．同様に
+    \[
+        v_{x, x} + v_{y, y} = -u_{y, x} + u_{x, y} = 0
+    \]
+    も成立する．
+\end{tproof}
 
 問題文において言及されているように，$u, v$の$C^2$級との仮定は実際には不要である．定理IX.3.1系2を参照せよ．
 
@@ -39,49 +37,45 @@
 \section*{p166--167：2}\label{p166--167：2}
 \addcontentsline{toc}{section}{\texorpdfstring{p166--167：2}{p166--167：2}}
 
-\begin{tleftbar}
-    \begin{proof}
-        以下定理1.1と同様に$f(x + iy) = u + iv$と書く．
-        このとき\hyperref[p166--167：1]{p166--167：1}より$\Laplacian u = \Laplacian v = 0$が（$C^2$級の仮定なしに）成立することを用いて%
-        \footnote{%
-            $\Laplacian u, \Laplacian v$延いては$\Laplacian\abs{f}^2$が定義できることが保証されるのは，これに拠るものである．問題文において（不親切にも）言及されていないので注意．
-        }%
-        ，
-        \begin{align*}
-            \Laplacian\abs{f}^2 ={} & \Laplacian\abs{u + iv}^2                                                                                       \\
-            ={}                     & \Laplacian (u^2 + v^2)                                                                                         \\
-            ={}                     & u\Laplacian u + 2(u_x^2 + u_y^2) + v\Laplacian v + 2(v_x^2 + v_y^2)                                            \\
-            ={}                     & 4(u_x^2 + v_y^2) \quad                                              & (\because\ \text{コーシー・リーマンの関係式（定理1.1）}).
-        \end{align*}
-        これと$\abs{f'(x)}^2 = \abs{u_x + iv_y}^2 = u_x^2 + v_y^2$（定理1.1）を合わせて，題意が示される．
-    \end{proof}
-\end{tleftbar}
+\begin{tproof}
+    以下定理1.1と同様に$f(x + iy) = u + iv$と書く．
+    このとき\hyperref[p166--167：1]{p166--167：1}より$\Laplacian u = \Laplacian v = 0$が（$C^2$級の仮定なしに）成立することを用いて%
+    \footnote{%
+        $\Laplacian u, \Laplacian v$延いては$\Laplacian\abs{f}^2$が定義できることが保証されるのは，これに拠るものである．問題文において（不親切にも）言及されていないので注意．
+    }%
+    ，
+    \begin{align*}
+        \Laplacian\abs{f}^2 ={} & \Laplacian\abs{u + iv}^2                                                                                       \\
+        ={}                     & \Laplacian (u^2 + v^2)                                                                                         \\
+        ={}                     & u\Laplacian u + 2(u_x^2 + u_y^2) + v\Laplacian v + 2(v_x^2 + v_y^2)                                            \\
+        ={}                     & 4(u_x^2 + v_y^2) \quad                                              & (\because\ \text{コーシー・リーマンの関係式（定理1.1）}).
+    \end{align*}
+    これと$\abs{f'(x)}^2 = \abs{u_x + iv_y}^2 = u_x^2 + v_y^2$（定理1.1）を合わせて，題意が示される．
+\end{tproof}
 
 
 \section*{p166--167：3}
 \addcontentsline{toc}{section}{\texorpdfstring{p166--167：3}{p166--167：3}}
 
-\begin{tleftbar}
-    \begin{proof}
-        以下$z = x + iy$と書く．まず$\abs{z}$について示す．実部を$u$，虚部を$v$と置けば$u = \abs{x + iy},\ v = 0$．
-        ここで，$u$は$(x, y) = (0, 0)$で微分可能ではないから，$\abs{z}$も$0$において複素微分可能でない．
-        以下$(x, y) \neq (0, 0)$であったとする．$x \neq 0$のとき，
-        \begin{align*}
-            u_x ={} & \frac{\partial}{\partial x}\sqrt{x^2 + y^2} \\
-            ={}     & \frac{x}{\sqrt{x^2 + y^2}}                  \\
-            \neq{}  & 0                                           \\
-            ={}     & v_y(x, y).
-        \end{align*}
-        $y \neq 0$の時も同様に $u_y \neq -v_x$．
-        従ってコーシー・リーマンの関係式（定理1.1）が満されないから，$\abs{z}$は$\mathbb{C}$上至る所複素微分可能でない．
+\begin{tproof}
+    以下$z = x + iy$と書く．まず$\abs{z}$について示す．実部を$u$，虚部を$v$と置けば$u = \abs{x + iy},\ v = 0$．
+    ここで，$u$は$(x, y) = (0, 0)$で微分可能ではないから，$\abs{z}$も$0$において複素微分可能でない．
+    以下$(x, y) \neq (0, 0)$であったとする．$x \neq 0$のとき，
+    \begin{align*}
+        u_x ={} & \frac{\partial}{\partial x}\sqrt{x^2 + y^2} \\
+        ={}     & \frac{x}{\sqrt{x^2 + y^2}}                  \\
+        \neq{}  & 0                                           \\
+        ={}     & v_y(x, y).
+    \end{align*}
+    $y \neq 0$の時も同様に $u_y \neq -v_x$．
+    従ってコーシー・リーマンの関係式（定理1.1）が満されないから，$\abs{z}$は$\mathbb{C}$上至る所複素微分可能でない．
 
-        次に$\bar{z}$について示す．同様に実部を$u$，虚部を$v$と置けば$u = x,\ v = -y$．ここで
-        \[
-            u_x = 1,\quad v_y = -1.
-        \]
-        よって$u_x(x, y) \neq v_y(x, y)$よりコーシー・リーマンの関係式（定理1.1）が満されず，$\bar{z}$は$\mathbb{C}$上至る所複素微分可能でない．
-    \end{proof}
-\end{tleftbar}
+    次に$\bar{z}$について示す．同様に実部を$u$，虚部を$v$と置けば$u = x,\ v = -y$．ここで
+    \[
+        u_x = 1,\quad v_y = -1.
+    \]
+    よって$u_x(x, y) \neq v_y(x, y)$よりコーシー・リーマンの関係式（定理1.1）が満されず，$\bar{z}$は$\mathbb{C}$上至る所複素微分可能でない．
+\end{tproof}
 
 別解として$\abs{z}^2$の微分可能性に帰着させることもできる．実際$z_0 \in \mathbb{C}$において$\abs{z}$あるいは$\bar{z}$の少なくとも一方が複素微分可能であったならば，命題1.2より$\abs{z}^2 = z\bar{z}$も$z_0$で複素微分可能となるが，$z \neq 0$のときこれは成立しない．ただし$z = 0$の場合のみ別で証明する必要がある%
 \footnote{$\abs{z}$ の方については平方根を回避できるメリットはあるが，おそらく普通に示した方が楽であろう．}%
@@ -91,34 +85,30 @@
 \section*{p166--167：4}
 \addcontentsline{toc}{section}{\texorpdfstring{p166--167：4}{p166--167：4}}
 
-\begin{tleftbar}
-    \begin{proof}
-        $U$上正則な函数$f$が実数値のみを取るとき，$f$が定数であることを示せば十分．以下定理1.1と同様に$f(x + iy) = u + iv$と書く．このとき$U$上至る所$v = 0$であるから$v_x = v_y = 0$．これとコーシー・リーマンの関係式（定理1.1）から$u_x = u_y = 0$．再び定理1.1より$f'(z) = u_x + iv_x = 0$．命題1.4と合わせて$f$が定数であることが導かれる．
-    \end{proof}
-\end{tleftbar}
+\begin{tproof}
+    $U$上正則な函数$f$が実数値のみを取るとき，$f$が定数であることを示せば十分．以下定理1.1と同様に$f(x + iy) = u + iv$と書く．このとき$U$上至る所$v = 0$であるから$v_x = v_y = 0$．これとコーシー・リーマンの関係式（定理1.1）から$u_x = u_y = 0$．再び定理1.1より$f'(z) = u_x + iv_x = 0$．命題1.4と合わせて$f$が定数であることが導かれる．
+\end{tproof}
 
 \section*{p191--193：1}
 \addcontentsline{toc}{section}{\texorpdfstring{p191--193：1}{p191--193：1}}
 
 
-\begin{tleftbar}
-    \begin{proof}
-        $m，n \in \mathbb{N},~n >0$とし，$e=\frac{m}{n}$と表される，すなわち$e$が有理数だと仮定する．このとき，与えられた式を変形して，
-        \[
-            \frac{e^\theta}{(n+1)!} = e-\sum_{k=0}^{n} \frac{1}{k!} =\frac{m}{n}-\sum_{k=0}^{n} \frac{1}{k!}
-        \]
-        とする．これにより．
-        \[
-            \frac{e^{\theta}}{n+1} = m \cdot n! - \sum_{k=0}^{n} \frac{n!}{k!}
-        \]
-        であり，$m \cdot n! - \sum_{k=0}^{n} \frac{n!}{k!} \in \mathbb{Z}$であるから，$\frac{e^{\theta}}{n+1} \in \mathbb{Z}$である．
-        よって，$0< \theta <1,~2<e<3$とあわせて，
-        \[
-            1 \le \frac{e^{\theta}}{n+1} < \frac{3}{n+1}
-        \]
-        であり，$\frac{e^{\theta}}{n+1} \in \mathbb{Z}$であるから$n=1$となる．ゆえに$e=m$となり，$e$は整数である．しかし$2<e<3$であるから，これは矛盾である．よって先の仮定が誤りであり，$e$は無理数である．
-    \end{proof}
-\end{tleftbar}
+\begin{tproof}
+    $m，n \in \mathbb{N},~n >0$とし，$e=\frac{m}{n}$と表される，すなわち$e$が有理数だと仮定する．このとき，与えられた式を変形して，
+    \[
+        \frac{e^\theta}{(n+1)!} = e-\sum_{k=0}^{n} \frac{1}{k!} =\frac{m}{n}-\sum_{k=0}^{n} \frac{1}{k!}
+    \]
+    とする．これにより．
+    \[
+        \frac{e^{\theta}}{n+1} = m \cdot n! - \sum_{k=0}^{n} \frac{n!}{k!}
+    \]
+    であり，$m \cdot n! - \sum_{k=0}^{n} \frac{n!}{k!} \in \mathbb{Z}$であるから，$\frac{e^{\theta}}{n+1} \in \mathbb{Z}$である．
+    よって，$0< \theta <1,~2<e<3$とあわせて，
+    \[
+        1 \le \frac{e^{\theta}}{n+1} < \frac{3}{n+1}
+    \]
+    であり，$\frac{e^{\theta}}{n+1} \in \mathbb{Z}$であるから$n=1$となる．ゆえに$e=m$となり，$e$は整数である．しかし$2<e<3$であるから，これは矛盾である．よって先の仮定が誤りであり，$e$は無理数である．
+\end{tproof}
 
 
 
@@ -128,72 +118,66 @@
 \subsection*{p191--193：2-(\romannumeral1)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p191--193：2-(\romannumeral1)}{p191--193：2-(\romannumeral1)}}
 
-\begin{tleftbar}
-    \begin{proof}
-        $k = 0$のとき$f(0) = f(\pi) = 0$より明らかに成立．$1 \leq k \leq 2\pi$とする．
-        $t = x(p - qx)$ と置くと，
-        \[
-            t' = p - 2qx, \quad t'' = -2q, \quad t^{(3)} = 0
-        \]
-        より$t^{(n)}$は$x=0,\pi$で整数．ここで$T_k = \frac{1}{n!}\frac{d^kt^n}{dt^k}$と置けば，$T_k' = t' \cdot T_{k+1}$である．従って$f^{(k)}(x)$は
-        \begin{align*}
-            f'(x) ={}      & t' \cdot T_1,                       \\
-            f''(x) ={}     & t'' \cdot T_1 + (t')^2 \cdot T_2,   \\
-            f^{(3)}(x) ={} & 3t't'' \cdot T_2 + (t')^3 \cdot T_3 \\
-        \end{align*}
-        のように$t', t''$と$T_k$の積の和で表わされる．よって$T_k$が$x = 0, \pi$において整数であることを示せば十分．$1 \leq k \leq n$ のとき
-        \[
-            T_k = \frac{n(n-1)\dotsm(n-k+1)}{n!}t^{n-k}
-        \]
-        である．特に$k < n$のとき$t$を因数に持つから，$t = 0$より$0$となり整数．
-        また$k = n$のときも$T_k = \frac{n!}{n!} = 1$となり整数である．
-        更に$k > n$のとき，$T_k$は多項式として$0$となるから整数．
-        よって題意は示された．
-    \end{proof}
-\end{tleftbar}
+\begin{tproof}
+    $k = 0$のとき$f(0) = f(\pi) = 0$より明らかに成立．$1 \leq k \leq 2\pi$とする．
+    $t = x(p - qx)$ と置くと，
+    \[
+        t' = p - 2qx, \quad t'' = -2q, \quad t^{(3)} = 0
+    \]
+    より$t^{(n)}$は$x=0,\pi$で整数．ここで$T_k = \frac{1}{n!}\frac{d^kt^n}{dt^k}$と置けば，$T_k' = t' \cdot T_{k+1}$である．従って$f^{(k)}(x)$は
+    \begin{align*}
+        f'(x) ={}      & t' \cdot T_1,                       \\
+        f''(x) ={}     & t'' \cdot T_1 + (t')^2 \cdot T_2,   \\
+        f^{(3)}(x) ={} & 3t't'' \cdot T_2 + (t')^3 \cdot T_3 \\
+    \end{align*}
+    のように$t', t''$と$T_k$の積の和で表わされる．よって$T_k$が$x = 0, \pi$において整数であることを示せば十分．$1 \leq k \leq n$ のとき
+    \[
+        T_k = \frac{n(n-1)\dotsm(n-k+1)}{n!}t^{n-k}
+    \]
+    である．特に$k < n$のとき$t$を因数に持つから，$t = 0$より$0$となり整数．
+    また$k = n$のときも$T_k = \frac{n!}{n!} = 1$となり整数である．
+    更に$k > n$のとき，$T_k$は多項式として$0$となるから整数．
+    よって題意は示された．
+\end{tproof}
 
 \subsection*{p191--193：2-(\romannumeral2)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p191--193：2-(\romannumeral2)}{p191--193：2-(\romannumeral2)}}
 
-\begin{tleftbar}
-    \begin{proof}
-        定理IV.5.7の部分積分法を用いれば，
-        \begin{align*}
-                & \int_0^\pi f(x)\sin x\, dx                                                                             \\
-            ={} & - \Bigl[f(x) \cos x \Bigr]_0^\pi + \int_0^\pi f'(x)\cos x\, dx                         & (\text{部分積分}) \\
-            ={} & (f(0) + f(\pi)) + \Bigl[f'(x) \sin x \Bigr]_0^\pi - \int_0^\pi f''(x)\sin x\, dx \quad & (\text{部分積分}) \\
-            ={} & (f(0) + f(\pi)) - \int_0^\pi f''(x)\sin x\, dx.
-        \end{align*}
-        これと同様の操作を $\int_0^\pi f^{(2n+2)}(x)\sin x\, dx = 0$ の項が出てくるまで繰り返すことにより，
-        \[
-            I = \int_0^\pi f(x)\sin x\, dx = \sum_{k = 0}^n (-1)^k (f^{2k}(0) + f^{(2k)}(\pi)).
-        \]
-        よって(\romannumeral1)と合わせて$I$は整数．
-    \end{proof}
-\end{tleftbar}
+\begin{tproof}
+    定理IV.5.7の部分積分法を用いれば，
+    \begin{align*}
+            & \int_0^\pi f(x)\sin x\, dx                                                                             \\
+        ={} & - \Bigl[f(x) \cos x \Bigr]_0^\pi + \int_0^\pi f'(x)\cos x\, dx                         & (\text{部分積分}) \\
+        ={} & (f(0) + f(\pi)) + \Bigl[f'(x) \sin x \Bigr]_0^\pi - \int_0^\pi f''(x)\sin x\, dx \quad & (\text{部分積分}) \\
+        ={} & (f(0) + f(\pi)) - \int_0^\pi f''(x)\sin x\, dx.
+    \end{align*}
+    これと同様の操作を $\int_0^\pi f^{(2n+2)}(x)\sin x\, dx = 0$ の項が出てくるまで繰り返すことにより，
+    \[
+        I = \int_0^\pi f(x)\sin x\, dx = \sum_{k = 0}^n (-1)^k (f^{2k}(0) + f^{(2k)}(\pi)).
+    \]
+    よって(\romannumeral1)と合わせて$I$は整数．
+\end{tproof}
 
 \subsection*{p191--193：2-(\romannumeral3)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p191--193：2-(\romannumeral3)}{p191--193：2-(\romannumeral3)}}
 
-\begin{tleftbar}
-    \begin{proof}
-        $0 < x < \pi = \frac{p}{q}$のとき$0 < p - qx < p$．この範囲で$0 < \sin x \leq 1$であることと合わせて，
-        \[
-            0 < \frac{x^n(p - qx)^n}{n!}\sin x \leq \frac{x^np^n}{n!}.
-        \]
-        従って，積分することにより
-        \[
-            0 < I \leq \int_{0}^{\pi} \frac{x^np^n}{n!}\, dx = \frac{(p\pi)^{n+1}}{p(n+1)!}
-        \]
-        を得る．$(\text{最右辺}) \to 0\ (n \to \infty)$であるから，特に十分大きな$n$に対して
-        \[
-            0 < I < \frac{(p\pi)^{n+1}}{p(n+1)!} < 1
-        \]
-        が導かれる．
+\begin{tproof}
+    $0 < x < \pi = \frac{p}{q}$のとき$0 < p - qx < p$．この範囲で$0 < \sin x \leq 1$であることと合わせて，
+    \[
+        0 < \frac{x^n(p - qx)^n}{n!}\sin x \leq \frac{x^np^n}{n!}.
+    \]
+    従って，積分することにより
+    \[
+        0 < I \leq \int_{0}^{\pi} \frac{x^np^n}{n!}\, dx = \frac{(p\pi)^{n+1}}{p(n+1)!}
+    \]
+    を得る．$(\text{最右辺}) \to 0\ (n \to \infty)$であるから，特に十分大きな$n$に対して
+    \[
+        0 < I < \frac{(p\pi)^{n+1}}{p(n+1)!} < 1
+    \]
+    が導かれる．
 
-        これは(\romannumeral2)の結果と矛盾するから，最初の仮定が誤っていたことが分かる．よって$\pi$は無理数であることが示され，証明は完結した．
-    \end{proof}
-\end{tleftbar}
+    これは(\romannumeral2)の結果と矛盾するから，最初の仮定が誤っていたことが分かる．よって$\pi$は無理数であることが示され，証明は完結した．
+\end{tproof}
 
 
 \section*{p191--193：6}
@@ -210,11 +194,9 @@ $M \times N$行列の列$\{A_i\}$が$A$に収束するとは$\norm{A_i - A} \to 
 
 行列の級数$\sum_{i=0}^\infty A_i$が絶対収束するとは$\sum_{i=0}^\infty \norm{A_i}$が有限の値に収束することを意味する．絶対収束する級数は収束する．まず題意の級数が絶対収束することから示そう．
 
-\begin{tleftbar}
-    \begin{proof}
-        $\norm{A^n} \leq \norm{A}^n$より，$\sum_{n = 0}^\infty \norm{\frac{A^n}{n!}}$の各項は$\frac{\norm{A}^n}{n!}$で上から抑えられる．また，$\sum_{n=0}^\infty \frac{\norm{A}^n}{n!}$は$\exp \norm{A}$に収束する．従って$\sum_{n = 0} \frac{A^n}{n!}$は絶対収束する．
-    \end{proof}
-\end{tleftbar}
+\begin{tproof}
+    $\norm{A^n} \leq \norm{A}^n$より，$\sum_{n = 0}^\infty \norm{\frac{A^n}{n!}}$の各項は$\frac{\norm{A}^n}{n!}$で上から抑えられる．また，$\sum_{n=0}^\infty \frac{\norm{A}^n}{n!}$は$\exp \norm{A}$に収束する．従って$\sum_{n = 0} \frac{A^n}{n!}$は絶対収束する．
+\end{tproof}
 
 
 \subsection*{p191--193：6-(\romannumeral1)}
@@ -222,13 +204,13 @@ $M \times N$行列の列$\{A_i\}$が$A$に収束するとは$\norm{A_i - A} \to 
 
 $\exp(z + w) = \exp z \exp w$と全く同様に示される．まず定理I.5.8の行列に対する対応物を示そう．
 
-\kakko{補題}
-
-$\sum_{n=0}^\infty A_n, \sum_{n=0}^\infty B_n$ がそれぞれ$L \times M$行列，$M \times N$行列の級数で$A, B$に絶対収束するものとする．このとき
-\[
-    C_n = \sum_{k=0}^n A_kB_{n-k}
-\]
-と置けば$\sum_{n=0}^\infty C_n$は絶対収束し，その和を$C$と置けば$C = AB$が成立する．
+\begin{lemma}{}{}
+    $\sum_{n=0}^\infty A_n, \sum_{n=0}^\infty B_n$ がそれぞれ$L \times M$行列，$M \times N$行列の級数で$A, B$に絶対収束するものとする．このとき
+    \[
+        C_n = \sum_{k=0}^n A_kB_{n-k}
+    \]
+    と置けば$\sum_{n=0}^\infty C_n$は絶対収束し，その和を$C$と置けば$C = AB$が成立する．
+\end{lemma}
 
 \begin{proof}
     証明も定理I.5.8と全く同様である．
@@ -252,70 +234,64 @@ $\sum_{n=0}^\infty A_n, \sum_{n=0}^\infty B_n$ がそれぞれ$L \times M$行列
     ここで最右辺は$m \to \infty$で$0$に収束するから，$\norm{C - AB} = 0$，つまり$C = AB$が成り立つ．
 \end{proof}
 
-\begin{tleftbar}
-    \begin{proof}
-        $\exp A = \sum_{n=0}^\infty \frac{A^n}{n!},\ \exp B = \sum_{n=0}^\infty \frac{B^n}{n!}$である．
-        \[
-            C_n = \sum_{k = 0}^n \frac{A^k}{k!} \frac{B^{n-k}}{(n-k)!}
-            = \frac{1}{n!} \sum_{k=0}^n \binom{n}{k} A^k B^{n-k}
-        \]
-        と置けば，$AB = BA$と二項定理より$C_n = \frac{(A + B)^n}{n!}$．ここで補題を適用すれば，
-        \[
-            \exp A \exp B = \sum_{n=0}^\infty C_n = \exp(A + B).
-        \]
-    \end{proof}
-\end{tleftbar}
+\begin{tproof}
+    $\exp A = \sum_{n=0}^\infty \frac{A^n}{n!},\ \exp B = \sum_{n=0}^\infty \frac{B^n}{n!}$である．
+    \[
+        C_n = \sum_{k = 0}^n \frac{A^k}{k!} \frac{B^{n-k}}{(n-k)!}
+        = \frac{1}{n!} \sum_{k=0}^n \binom{n}{k} A^k B^{n-k}
+    \]
+    と置けば，$AB = BA$と二項定理より$C_n = \frac{(A + B)^n}{n!}$．ここで補題を適用すれば，
+    \[
+        \exp A \exp B = \sum_{n=0}^\infty C_n = \exp(A + B).
+    \]
+\end{tproof}
 
 
 \subsection*{p191--193：6-(\romannumeral2)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p191--193：6-(\romannumeral2)}{p191--193：6-(\romannumeral2)}}
-\begin{tleftbar}
-    \begin{proof}
-        \[
-            A =
-            \begin{pmatrix}
-                0 & 1 \\
-                0 & 0
-            \end{pmatrix}, \quad
-            B =
-            \begin{pmatrix}
-                0 & 0 \\
-                1 & 0
-            \end{pmatrix}
-        \]
-        と置けば$AB \neq BA$．この時単位行列を$I$と書けば
-        \begin{align*}
-            \exp A \exp B ={} & (I + A) (I + B) \\
-            ={}               &
-            \begin{pmatrix}
-                2 & 1 \\
-                1 & 1
-            \end{pmatrix}.
-        \end{align*}
-        また，
-        \begin{align*}
-            \exp(A + B) ={} & \sum_{n=0}^\infty \frac{1}{n!} \begin{pmatrix} 0 & 1 \\ 1 & 0\end{pmatrix}^n \\
-            ={}             &
-            \begin{pmatrix}
-                \cosh 1 & \sinh 1 \\
-                \sinh 1 & \cosh 1 \\
-            \end{pmatrix}.
-        \end{align*}
-        従って$\exp(A + B) \neq \exp A \exp B$．二次行列以外の場合も同様に反例が構成される．
-    \end{proof}
-\end{tleftbar}
+\begin{tproof}
+    \[
+        A =
+        \begin{pmatrix}
+            0 & 1 \\
+            0 & 0
+        \end{pmatrix}, \quad
+        B =
+        \begin{pmatrix}
+            0 & 0 \\
+            1 & 0
+        \end{pmatrix}
+    \]
+    と置けば$AB \neq BA$．この時単位行列を$I$と書けば
+    \begin{align*}
+        \exp A \exp B ={} & (I + A) (I + B) \\
+        ={}               &
+        \begin{pmatrix}
+            2 & 1 \\
+            1 & 1
+        \end{pmatrix}.
+    \end{align*}
+    また，
+    \begin{align*}
+        \exp(A + B) ={} & \sum_{n=0}^\infty \frac{1}{n!} \begin{pmatrix} 0 & 1 \\ 1 & 0\end{pmatrix}^n \\
+        ={}             &
+        \begin{pmatrix}
+            \cosh 1 & \sinh 1 \\
+            \sinh 1 & \cosh 1 \\
+        \end{pmatrix}.
+    \end{align*}
+    従って$\exp(A + B) \neq \exp A \exp B$．二次行列以外の場合も同様に反例が構成される．
+\end{tproof}
 
 
 \subsection*{p191--193：6-(\romannumeral3)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p191--193：6-(\romannumeral3)}{p191--193：6-(\romannumeral3)}}
 
-\begin{tleftbar}
-    \begin{proof}
-        \begin{align*}
-            P (\exp A)P^{-1} ={} & P\left(\sum_{n = 0}^\infty \frac{A^n}{n!}\right) P^{-1} \\
-            ={}                  & \sum_{n = 0}^\infty P \frac{A^n}{n!} P^{-1}             \\
-            ={}                  & \sum_{n = 0}^\infty \frac{(PAP^{-1})^n}{n!}             \\
-            ={}                  & \exp(PAP^{-1}).
-        \end{align*}
-    \end{proof}
-\end{tleftbar}
+\begin{tproof}
+    \begin{align*}
+        P (\exp A)P^{-1} ={} & P\left(\sum_{n = 0}^\infty \frac{A^n}{n!}\right) P^{-1} \\
+        ={}                  & \sum_{n = 0}^\infty P \frac{A^n}{n!} P^{-1}             \\
+        ={}                  & \sum_{n = 0}^\infty \frac{(PAP^{-1})^n}{n!}             \\
+        ={}                  & \exp(PAP^{-1}).
+    \end{align*}
+\end{tproof}

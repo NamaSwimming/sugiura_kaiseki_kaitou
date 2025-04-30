@@ -6,177 +6,170 @@
 \section*{p366：1}
 \addcontentsline{toc}{section}{\texorpdfstring{p366：1}{p366：1}}
 
-\kakko{補題}
+\begin{lemma}{}{}
+    $a_{2n} \to \alpha$，$a_{2n+1} \to \beta$$\quad (\alpha,\beta \in [-\infty,\infty])$ならば，集積値全体の集合は$\{\alpha,\beta\}$である．
+\end{lemma}
+\begin{proof}
+    $a_n$の収束部分列$a_{n(k)}$を任意にとる．
+    $\{n(k):k \in \mathbb{N}\}$は偶数，奇数の少なくとも一方を無限個含む．
+    偶数がそうであったとして，$n(k)$から奇数を取り除いて小さい順に並べた列の$l$番目の項を$a_{n(k(l))}$とする．
+    $a_{n(k(l))}$は$a_{2n}$の部分列であるから，仮定より$a_{n(k(l))} \to \alpha \quad (l \to \infty)$である．
+    $a_{n(k)}$は収束するから，$a_{n(k)} \to \alpha \quad (k \to \infty)$である．
+    奇数が無限個含まれる場合も同様に考えて，$a_{n(k)} \to \beta \quad (k \to \infty)$である．
+    $a_{n(k)}$の取り方は任意だったから，集積値は$\alpha$と$\beta$のみである．
+\end{proof}
 
-$a_{2n} \to \alpha$，$a_{2n+1} \to \beta$$\quad (\alpha,\beta \in [-\infty,\infty])$ならば，集積値全体の集合は$\{\alpha,\beta\}$である．
+\subsection*{p366：1-(\romannumeral1)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p366：1-(\romannumeral1)}{p366：1-(\romannumeral1)}}
 
-    \begin{proof}
-        $a_n$の収束部分列$a_{n(k)}$を任意にとる．
-        $\{n(k):k \in \mathbb{N}\}$は偶数，奇数の少なくとも一方を無限個含む．
-        偶数がそうであったとして，$n(k)$から奇数を取り除いて小さい順に並べた列の$l$番目の項を$a_{n(k(l))}$とする．
-        $a_{n(k(l))}$は$a_{2n}$の部分列であるから，仮定より$a_{n(k(l))} \to \alpha \quad (l \to \infty)$である．
-        $a_{n(k)}$は収束するから，$a_{n(k)} \to \alpha \quad (k \to \infty)$である．
-        奇数が無限個含まれる場合も同様に考えて，$a_{n(k)} \to \beta \quad (k \to \infty)$である．
-        $a_{n(k)}$の取り方は任意だったから，集積値は$\alpha$と$\beta$のみである．
-    \end{proof}
+\begin{tanswer}
+    \[
+        \lim_{m \to \infty} a_{2m} = 1 , \quad \lim_{m \to \infty} a_{2m-1} = -1
+    \]
+    であり，$(a_n)_{n \in \mathbb{N}}$の集積値全体の集合は補題により$\{ -1 , 1 \}$である．
 
-    \subsection*{p366：1-(\romannumeral1)}
-    \addcontentsline{toc}{subsection}{\texorpdfstring{p366：1-(\romannumeral1)}{p366：1-(\romannumeral1)}}
-
-    \begin{tleftbar}
-        \[
-            \lim_{m \to \infty} a_{2m} = 1 , \quad \lim_{m \to \infty} a_{2m-1} = -1
-        \]
-        であり，$(a_n)_{n \in \mathbb{N}}$の集積値全体の集合は補題により$\{ -1 , 1 \}$である．
-
-        ゆえに，
-        \[
-            \varlimsup_{n \to \infty} a_n = 1 , \quad \varliminf_{n \to \infty} a_n =-1
-        \]
-        である．
-    \end{tleftbar}
-
-
-    \subsection*{p366：1-(\romannumeral2)}
-    \addcontentsline{toc}{subsection}{\texorpdfstring{p366：1-(\romannumeral2)}{p366：1-(\romannumeral2)}}
-
-    \begin{tleftbar}
-        \[
-            \lim_{m \to \infty} a_{2m} = \infty , \quad \lim_{m \to \infty} a_{2m-1} = -\infty
-        \]
-        であり，$(a_n)_{n \in \mathbb{N}}$の集積値全体の集合は補題により$\{ -\infty , \infty \}$である\footnote{補完数直線を考えているため，これでよい．}．
-
-        ゆえに，
-        \[
-            \varlimsup_{n \to \infty} a_n = \infty , \quad \varliminf_{n \to \infty} a_n =-\infty
-        \]
-        である．
-    \end{tleftbar}
-
-    \subsection*{p366：1-(\romannumeral3)}
-    \addcontentsline{toc}{subsection}{\texorpdfstring{p366：1-(\romannumeral3)}{p366：1-(\romannumeral3)}}
-
-    \begin{tleftbar}
-        $ a_{n} = a_{n+6}$であることを考慮すると，$(a_n)_{n \in \mathbb{N}}$の集積値全体の集合は$\{ 0 , \pm \frac{\sqrt{3}}{2} \}$である．
-        ゆえに，
-        \[
-            \varlimsup_{n \to \infty} a_n = \frac{\sqrt{3}}{2} , \quad \varliminf_{n \to \infty} a_n =-\frac{\sqrt{3}}{2}
-        \]
-        である．
-    \end{tleftbar}
-
-    \newpage
+    ゆえに，
+    \[
+        \varlimsup_{n \to \infty} a_n = 1 , \quad \varliminf_{n \to \infty} a_n =-1
+    \]
+    である．
+\end{tanswer}
 
 
-    証明の前に，$\pm \infty$について演算を定義しておく．
-    \begin{align*}
-        a + \infty           & = \infty + a = \infty \qquad \text{if $a \in (-\infty,\infty]$},                   \\
-        a - \infty           & = a + (-\infty) = -\infty + a = -\infty \qquad \text{if $a \in [-\infty,\infty)$}, \\
-        a \cdot (\pm \infty) & = (\pm \infty) \cdot a =
-        \begin{cases*}
-            \pm \infty \quad & if $a \in (0,\infty]$,  \\
-            \mp \infty \quad & if $a \in [-\infty,0)$.
-        \end{cases*}
-    \end{align*}
+\subsection*{p366：1-(\romannumeral2)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p366：1-(\romannumeral2)}{p366：1-(\romannumeral2)}}
+
+\begin{tanswer}
+    \[
+        \lim_{m \to \infty} a_{2m} = \infty , \quad \lim_{m \to \infty} a_{2m-1} = -\infty
+    \]
+    であり，$(a_n)_{n \in \mathbb{N}}$の集積値全体の集合は補題により$\{ -\infty , \infty \}$である\footnote{補完数直線を考えているため，これでよい．}．
+
+    ゆえに，
+    \[
+        \varlimsup_{n \to \infty} a_n = \infty , \quad \varliminf_{n \to \infty} a_n =-\infty
+    \]
+    である．
+\end{tanswer}
+
+\subsection*{p366：1-(\romannumeral3)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p366：1-(\romannumeral3)}{p366：1-(\romannumeral3)}}
+
+\begin{tanswer}
+    $ a_{n} = a_{n+6}$であることを考慮すると，$(a_n)_{n \in \mathbb{N}}$の集積値全体の集合は$\{ 0 , \pm \frac{\sqrt{3}}{2} \}$である．
+    ゆえに，
+    \[
+        \varlimsup_{n \to \infty} a_n = \frac{\sqrt{3}}{2} , \quad \varliminf_{n \to \infty} a_n =-\frac{\sqrt{3}}{2}
+    \]
+    である．
+\end{tanswer}
+
+\newpage
+
+
+証明の前に，$\pm \infty$について演算を定義しておく．
+\begin{align*}
+    a + \infty           & = \infty + a = \infty \qquad \text{if $a \in (-\infty,\infty]$},                   \\
+    a - \infty           & = a + (-\infty) = -\infty + a = -\infty \qquad \text{if $a \in [-\infty,\infty)$}, \\
+    a \cdot (\pm \infty) & = (\pm \infty) \cdot a =
+    \begin{cases*}
+        \pm \infty \quad & if $a \in (0,\infty]$,  \\
+        \mp \infty \quad & if $a \in [-\infty,0)$.
+    \end{cases*}
+\end{align*}
 $0 \cdot \infty$や$\infty - \infty$などは定義しない．
 このとき，補完数直線において次の命題が成り立つ．
-\begin{lemm*}
+\begin{lemma}{}{}
     実数列$\{a_n\}$，$\{b_n\}$が$a_n \xrightarrow{n \to \infty} a$，$b_n \xrightarrow{n \to \infty} b$を満たしており，$a+b$，$ab$が定義されるとき，それぞれ$a_n + b_n \xrightarrow{n \to \infty} a+b$，$a_n b_n \xrightarrow{n \to \infty} ab$が成り立つ．
-\end{lemm*}
+\end{lemma}
 問題2)，3)において，演算が定義されないような場合は除外したものを証明する．
 
 
 \section*{p366：2}
 \addcontentsline{toc}{section}{\texorpdfstring{p366：2}{p366：2}}
 
-\begin{proof}
-    \begin{leftbar}
-        \[
-            \limsup _{n \to \infty} a_n + \liminf _{n \to \infty} b_n \leq \limsup _{n \to \infty} (a_n + b_n) \leq \limsup _{n \to \infty} a_n + \limsup _{n \to \infty} b_n
-        \]
-        を示す．その他の不等式についても同様である．
-        $n \in \mathbb{N}$を任意に取って固定する．上限の定義より，$m \geq n$に対して，
-        \begin{align*}
-            a_m & \leq \sup _{k \geq n} a_k, \\
-            b_m & \leq \sup _{k \geq n} b_k
-        \end{align*}
-        であるから，
-        \[
-            a_m + b_m \leq \sup _{k \geq n} a_k + \sup _{k \geq n} b_k
-        \]
-        が成り立つ．左辺でmについての上限を取ると，
-        \[
-            \sup _{k \geq n} (a_k + b_k) \leq \sup _{k \geq n} a_k + \sup _{k \geq n} b_k
-        \]
-        となる．（右辺は$\{a_m + b_m; m \geq n\}$の上界であり，$\sup$は最小上界であるからこの操作は正当．）$n \to \infty$とすれば，
-        \[
-            \limsup _{n \to \infty} (a_n + b_n) \leq \limsup _{n \to \infty} a_n + \limsup _{n \to \infty} b_n
-        \]
-        となって右側の不等式が示される．
-        また，$m \geq n$に対し，
-        \[
-            a_m + \inf _{k \geq n} b_k \leq a_m + b_m \leq \sup _{k \geq n} (a_k + b_k)
-        \]
-        であるから，左辺の上限を取って，
-        \[
-            \sup _{k \geq n} a_k + \inf _{k \geq n} b_k \leq \sup _{k \geq n} (a_k + b_k)
-        \]
-        となる．$n \to \infty$とすれば左側の不等式も示される．
-    \end{leftbar}
-\end{proof}
+\begin{tproof}
+    \[
+        \limsup _{n \to \infty} a_n + \liminf _{n \to \infty} b_n \leq \limsup _{n \to \infty} (a_n + b_n) \leq \limsup _{n \to \infty} a_n + \limsup _{n \to \infty} b_n
+    \]
+    を示す．その他の不等式についても同様である．
+    $n \in \mathbb{N}$を任意に取って固定する．上限の定義より，$m \geq n$に対して，
+    \begin{align*}
+        a_m & \leq \sup _{k \geq n} a_k, \\
+        b_m & \leq \sup _{k \geq n} b_k
+    \end{align*}
+    であるから，
+    \[
+        a_m + b_m \leq \sup _{k \geq n} a_k + \sup _{k \geq n} b_k
+    \]
+    が成り立つ．左辺でmについての上限を取ると，
+    \[
+        \sup _{k \geq n} (a_k + b_k) \leq \sup _{k \geq n} a_k + \sup _{k \geq n} b_k
+    \]
+    となる．（右辺は$\{a_m + b_m; m \geq n\}$の上界であり，$\sup$は最小上界であるからこの操作は正当．）$n \to \infty$とすれば，
+    \[
+        \limsup _{n \to \infty} (a_n + b_n) \leq \limsup _{n \to \infty} a_n + \limsup _{n \to \infty} b_n
+    \]
+    となって右側の不等式が示される．
+    また，$m \geq n$に対し，
+    \[
+        a_m + \inf _{k \geq n} b_k \leq a_m + b_m \leq \sup _{k \geq n} (a_k + b_k)
+    \]
+    であるから，左辺の上限を取って，
+    \[
+        \sup _{k \geq n} a_k + \inf _{k \geq n} b_k \leq \sup _{k \geq n} (a_k + b_k)
+    \]
+    となる．$n \to \infty$とすれば左側の不等式も示される．
+\end{tproof}
 
 \section*{p366：3}
 \addcontentsline{toc}{section}{\texorpdfstring{p366：3}{p366：3}}
 
-\begin{leftbar}
-    \begin{proof}
-        $\limsup$についてのみ示す．$\liminf$についても同様である．
-        $\limsup_{n \to \infty} a_n = 0$の場合，$\limsup_{n \to \infty} b_n < \infty$であるから$\sup_{k \geq n} b_k < \infty$となり$\left(\sup _{k \geq n} a_k\right) \left(\sup _{k \geq n} b_k\right)$が定義されることに注意する．$a_n, b_n \geq 0$であるから，$m \geq n$に対して，
-        \[
-            a_m b_m \leq \left(\sup _{k \geq n} a_k\right) \left(\sup _{k \geq n} b_k\right)
-        \]
-        が成り立つ．左辺で$m$について上限を取ってから$n \to \infty$とすると，
-        \[
-            \limsup_{n \to \infty} (a_n b_n) \leq \left(\limsup _{n \to \infty} a_n\right) \left(\limsup_{n \to \infty} b_n\right)
-        \]
-        となる．また，第I章の命題1.4，1.6より，
-        \begin{align*}
-            \sup_{k \geq n} (c a_k) & = c\sup_{k \geq n} a_k \quad (c > 0),                             \\
-            \sup_{k \geq n} (c a_k) & = -\inf_{k \geq n} (-c a_k) = c\inf_{k \geq n} a_k \quad (c < 0),
-        \end{align*}
-        が成り立つ．$n \to \infty$とすれば残りの等式が得られる．
-    \end{proof}
-\end{leftbar}
+\begin{tproof}
+    $\limsup$についてのみ示す．$\liminf$についても同様である．
+    $\limsup_{n \to \infty} a_n = 0$の場合，$\limsup_{n \to \infty} b_n < \infty$であるから$\sup_{k \geq n} b_k < \infty$となり$\left(\sup _{k \geq n} a_k\right) \left(\sup _{k \geq n} b_k\right)$が定義されることに注意する．$a_n, b_n \geq 0$であるから，$m \geq n$に対して，
+    \[
+        a_m b_m \leq \left(\sup _{k \geq n} a_k\right) \left(\sup _{k \geq n} b_k\right)
+    \]
+    が成り立つ．左辺で$m$について上限を取ってから$n \to \infty$とすると，
+    \[
+        \limsup_{n \to \infty} (a_n b_n) \leq \left(\limsup _{n \to \infty} a_n\right) \left(\limsup_{n \to \infty} b_n\right)
+    \]
+    となる．また，第I章の命題1.4，1.6より，
+    \begin{align*}
+        \sup_{k \geq n} (c a_k) & = c\sup_{k \geq n} a_k \quad (c > 0),                             \\
+        \sup_{k \geq n} (c a_k) & = -\inf_{k \geq n} (-c a_k) = c\inf_{k \geq n} a_k \quad (c < 0),
+    \end{align*}
+    が成り立つ．$n \to \infty$とすれば残りの等式が得られる．
+\end{tproof}
 
 \section*{p366：4}
 \addcontentsline{toc}{section}{\texorpdfstring{p366：4}{p366：4}}
 
-\begin{leftbar}
-    \begin{proof}
-        p16の問題4)の一般化である．右側の不等式のみ示す．
-        $\alpha = \limsup _{n \to \infty} \frac{a_{n+1}}{a_{n}}$とする．$\alpha = \infty$ならば明らかであるから$\alpha \neq \infty$の場合を考える．$\varepsilon > 0$を任意に取ると，定理1.4より，
-        \[
-            \frac{a_{n+1}}{a_{n}} < \alpha + \varepsilon \quad (n \geq N)
-        \]
-        となるような$N$が取れる．この不等式を繰り返し用いて，
-        \begin{align*}
-            a_n
-             & < (\alpha + \varepsilon) a_{n-1}   \\
-             & < (\alpha + \varepsilon)^2 a_{n-2} \\
-             & < \ldots                           \\
-             & < (\alpha + \varepsilon)^{n-N} a_N
-        \end{align*}
-        がわかる．両側の式を$1/n$乗してから$\limsup$を取ると，
-        \[
-            \limsup _{n \to \infty} \sqrt[n]{a_n} < \lim _{n \to \infty} (\alpha + \varepsilon)^{1-N/n} \sqrt[n]{a_N} = \alpha + \varepsilon
-        \]
-        となる．$\varepsilon \to +0$とすると，
-        \[
-            \limsup _{n \to \infty} \sqrt[n]{a_n} \leq \alpha
-        \]
-        である．これが証明すべきことであった．
-    \end{proof}
-\end{leftbar}
+\begin{tproof}
+    p16の問題4)の一般化である．右側の不等式のみ示す．
+    $\alpha = \limsup _{n \to \infty} \frac{a_{n+1}}{a_{n}}$とする．$\alpha = \infty$ならば明らかであるから$\alpha \neq \infty$の場合を考える．$\varepsilon > 0$を任意に取ると，定理1.4より，
+    \[
+        \frac{a_{n+1}}{a_{n}} < \alpha + \varepsilon \quad (n \geq N)
+    \]
+    となるような$N$が取れる．この不等式を繰り返し用いて，
+    \begin{align*}
+        a_n
+         & < (\alpha + \varepsilon) a_{n-1}   \\
+         & < (\alpha + \varepsilon)^2 a_{n-2} \\
+         & < \ldots                           \\
+         & < (\alpha + \varepsilon)^{n-N} a_N
+    \end{align*}
+    がわかる．両側の式を$1/n$乗してから$\limsup$を取ると，
+    \[
+        \limsup _{n \to \infty} \sqrt[n]{a_n} < \lim _{n \to \infty} (\alpha + \varepsilon)^{1-N/n} \sqrt[n]{a_N} = \alpha + \varepsilon
+    \]
+    となる．$\varepsilon \to +0$とすると，
+    \[
+        \limsup _{n \to \infty} \sqrt[n]{a_n} \leq \alpha
+    \]
+    である．これが証明すべきことであった．
+\end{tproof}
 
 \newpage
 
@@ -187,7 +180,7 @@ $0 \cdot \infty$や$\infty - \infty$などは定義しない．
 \subsection*{p371：1-(\romannumeral1)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p371：1-(\romannumeral1)}{p371：1-(\romannumeral1)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     $n =0$のとき，$\sqrt{1+n^2}-n =1-0= 1$であり，この項は有限なので級数の収束・発散に影響しない．
 
     $n \geq 1$のとき，
@@ -202,13 +195,13 @@ $0 \cdot \infty$や$\infty - \infty$などは定義しない．
         \sum_{n=1}^{\infty} \frac{1}{(\sqrt{2}+1)n} =\infty
     \]
     であるから，比較判定法により，$ \sum_{n=0}^{\infty} ( \sqrt{1+n^2}-n )$は発散する．
-\end{tleftbar}
+\end{tanswer}
 
 
 \subsection*{p371：1-(\romannumeral3)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p371：1-(\romannumeral3)}{p371：1-(\romannumeral3)}}
 
-\begin{tleftbar}
+\begin{tanswer}
     $n \in \mathbb{N}$に対して，$ \sqrt[n]{n} \leqq n$であるから，
 
     \[
@@ -217,7 +210,7 @@ $0 \cdot \infty$や$\infty - \infty$などは定義しない．
     となる．
 
     $ \sum_{n=1}^{\infty} \frac{1}{n}$は発散するから，比較判定法により，$ \sum_{n=1}^{\infty} \frac{1}{\sqrt[n]{n}}$も発散する．
-\end{tleftbar}
+\end{tanswer}
 
 
 \subsection*{p371：1-(\romannumeral4)}
