@@ -100,9 +100,16 @@
 \newtcolorbox{hosoibox}[1]{colframe=black,colback=white,coltitle=black,colbacktitle=white,boxrule=0.5pt,arc=0mm,enhanced,attach boxed title to top left={xshift=10mm,yshift=-3mm},boxed title style={frame hidden},title=#1}
 
 %leftbar環境に注釈が入れられないことを解消する環境．名前は，tcolorboxの[t]とleftbarの組み合わせ
-\newtcolorbox{tbleftline}{blanker,left=5mm,borderline west={1.1mm}{0pt}{mydarkgray}}
-\newenvironment{tleftbar}{\begin{tbleftline}\setlength{\parindent}{1\zw}}{\end{tbleftline}}
-
+\newtcolorbox{tbleftline}[1][]{%
+  blanker,
+  left=5mm,
+  borderline west={1.1mm}{0pt}{mydarkgray},
+  before skip=\dimexpr\topsep\relax, % ← 追加
+  after skip=\dimexpr\topsep\relax,  % ← 追加
+  #1}
+\newenvironment{tleftbar}
+{\begin{tbleftline}\setlength{\parindent}{1\zw}}
+    {\end{tbleftline}}
 
 \usepackage{framed,color}
 
