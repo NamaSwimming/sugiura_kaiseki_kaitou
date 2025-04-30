@@ -247,13 +247,9 @@
 \begin{tproof}
     $a<0$かつ$a^{-1} \leqq 0$であると仮定する．このとき，
     \[
-        \left( \frac{1}{a} \right) a < 0a
+        \left( \frac{1}{a} \right) a < 0a \quad \therefore ~ 1 < 0.
     \]
-    なので，
-    \[
-        1<0
-    \]
-    となるが，これは$1>0$に矛盾．
+    これは$1>0$に矛盾．
 
     よって，仮定したことが誤りであり，$a>0$のとき$a^{-1} >0$である．
 \end{tproof}
@@ -282,7 +278,7 @@
     \]
     が得られ，これが証明すべきことであった．
 \end{tproof}
-%
+
 \section*{p16--17：1}
 \addcontentsline{toc}{section}{\texorpdfstring{p16--17：1}{p16--17：1}}
 
@@ -290,22 +286,19 @@
 \addcontentsline{toc}{subsection}{\texorpdfstring{p16--17：1-(\romannumeral1)}{p16--17：1-(\romannumeral1)}}
 
 \begin{tanswer}
-    $a=0$のときは明らかに$0$に収束するので，$a \ne 0$とする．$2\abs{a} \le N$となる$N \in \mathbb{N}$をとる．このとき，
-    \begin{align*}
-        0 & < \abs{ \frac{a^n}{n!} }                                                                              \\
-          & \le \frac{\abs{a}^n}{n!}                                                                              \\
-          & = \frac{\abs{a}^{N}}{N!} \cdot \frac{\abs{a}}{N+1} \cdot \frac{\abs{a}}{N+2} \dotsm \frac{\abs{a}}{n} \\
-          & \le  \frac{\abs{a}^{N}}{N!} \left(\frac{1}{2} \right)^{n-N}
-    \end{align*}
+    $a=0$のときは明らかに$0$に収束するので，$a \ne 0$とする．
+    $2\abs{a} \le N$となる$N \in \mathbb{N}$をとる．このとき，
+    \[
+        0  < \abs{ \frac{a^n}{n!} } \le \frac{\abs{a}^n}{n!}= \frac{\abs{a}^{N}}{N!} \cdot \frac{\abs{a}}{N+1} \cdot \frac{\abs{a}}{N+2} \dotsm \frac{\abs{a}}{n} \le  \frac{\abs{a}^{N}}{N!} \left(\frac{1}{2} \right)^{n-N}
+    \]
     であるから，
     \[
         - \frac{\abs{a}^{N}}{N!} \left(\frac{1}{2} \right)^{n-N} \le  \frac{a^n}{n!} \le \frac{\abs{a}^{N}}{N!} \left(\frac{1}{2} \right)^{n-N}
     \]
     となり，はさみうちの原理により，
     \[
-        \lim_{n \to \infty} \frac{a^n}{n!} =0
+        \lim_{n \to \infty} \frac{a^n}{n!} =0.
     \]
-    である
 \end{tanswer}
 
 \subsection*{p16--17：1-(\romannumeral2)}
@@ -328,9 +321,8 @@
     \]
     となる．$a<1$のときは，$a^{\frac{1}{n}}=\left(\left(\frac{1}{a}\right)^{\frac{1}{n}}\right)^{-1}$を使えば同じ結果が得られ，以上の議論により，
     \[
-        \lim_{n \to \infty} \sqrt[n]{a} =1
+        \lim_{n \to \infty} \sqrt[n]{a} =1.
     \]
-    となる．
 \end{tanswer}
 
 \subsection*{p16--17：1-(\romannumeral3)}
@@ -351,17 +343,16 @@
     \]
     である．$n \to \infty$のとき$m \to \infty$なので，はさみうちの原理により，
     \[
-        \lim_{n \to \infty}\frac{n!}{n^n} =0
+        \lim_{n \to \infty}\frac{n!}{n^n} =0.
     \]
-    である．
 \end{tanswer}
 \subsection*{p16--17：1-(\romannumeral4)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p16--17：1-(\romannumeral4)}{p16--17：1-(\romannumeral4)}}
 \begin{tanswer}
     のちに$n \to \infty$の極限を考えることを考慮すると，
     \begin{align*}
-        2^n & = (1+1)^n                            \\
-        =   & 1+n +\frac{1}{2} n(n-1)+ \cdots +n+1 \\
+        2^n & = (1+1)^n                             \\
+            & =1+n +\frac{1}{2} n(n-1)+ \cdots +n+1 \\
             & > \frac{1}{2} n(n-1)
     \end{align*}
     となり，この不等式から，
@@ -370,9 +361,8 @@
     \]
     を得る．ここで，はさみうちの原理により，
     \[
-        \lim_{n \to \infty} \frac{n}{2^n}=0
+        \lim_{n \to \infty} \frac{n}{2^n}=0.
     \]
-    である．
 \end{tanswer}
 
 \subsection*{p16--17：1-(\romannumeral5)}
@@ -384,17 +374,12 @@
     \]
     である．ここで，のちに$n \to \infty$の極限を考えることを考慮すると，
     \[
-        \frac{1}{\sqrt{n+1} + \sqrt{n}} < \frac{1}{\sqrt{n}}
+        0< \frac{1}{\sqrt{n+1} + \sqrt{n}} < \frac{1}{\sqrt{n}} \quad  \therefore ~ 0< \sqrt{n+1} - \sqrt{n} <\frac{1}{\sqrt{n}}.
     \]
-    であり，
+    ここで，はさみうちの原理を用いると，
     \[
-        0< \sqrt{n+1} - \sqrt{n} <\frac{1}{\sqrt{n}}
+        \lim_{n \to \infty} (\sqrt{n+1} - \sqrt{n} )=0.
     \]
-    を得る．ここで，はさみうちの原理を用いると，
-    \[
-        \lim_{n \to \infty} (\sqrt{n+1} - \sqrt{n} )=0
-    \]
-    である．
 \end{tanswer}
 
 \section*{p16--17：2}
@@ -475,23 +460,21 @@
     $\lim_{n \to \infty} a_n =a$であるから，
     任意の$\varepsilon >0$に対して，ある$N_1 \in \mathbb{N}$が存在して，任意の$n \in \mathbb{N}$に対して，
     \[
-        n \ge N_1 \Longrightarrow \abs{a_n -a}<\varepsilon
+        n \ge N_1 \Longrightarrow \abs{a_n -a}<\varepsilon.
     \]
-    となる．
-
     また，
     \[
         \abs{\frac{a_1+a_2+\cdots+a_n}{n}-a}= \abs{\frac{(a_1-a)+(a_2-a)+\cdots+(a_n-a)}{n}}
     \]
     と変形する．この右辺に補題を適用し，
     \[
-        \abs{\frac{(a_1-a)+(a_2-a)+\cdots+(a_n-a)}{n}} \leqq \frac{\abs{a_1-a}+\abs{a_2-a}+\cdots+\abs{a_n-a}}{n}
+        \abs{\frac{(a_1-a)+(a_2-a)+\cdots+(a_n-a)}{n}} \leqq \frac{\abs{a_1-a}+\abs{a_2-a}+\cdots+\abs{a_n-a}}{n}.
     \]
-    を得る．これにより，
+    これにより，
     \[
-        n \ge N_1 \Longrightarrow \frac{\abs{a_1-a}+\abs{a_2-a}+\cdots+\abs{a_{N_1-1}-a}}{n} +\left( \frac{n-N_1+1}{n} \right ) \varepsilon
+        n \ge N_1 \Longrightarrow \frac{\abs{a_1-a}+\abs{a_2-a}+\cdots+\abs{a_{N_1-1}-a}}{n} +\left( \frac{n-N_1+1}{n} \right ) \varepsilon.
     \]
-    となる．ここで$N_2 \coloneqq N_1 +1$とすると，$n \ge N_2$であるとき$\left( \frac{n-N_1+1}{n} \right ) \varepsilon < \varepsilon$となることに注意する．
+    ここで$N_2 \coloneqq N_1 +1$とすると，$n \ge N_2$であるとき$\left( \frac{n-N_1+1}{n} \right ) \varepsilon < \varepsilon$となることに注意する．
 
     さて，
     \[
@@ -503,13 +486,12 @@
     \]
     であり，これより
     \[
-        n \ge N \Longrightarrow \abs{\frac{a_1+a_2+\cdots+a_n}{n}-a} < 2 \varepsilon
+        n \ge N \Longrightarrow \abs{\frac{a_1+a_2+\cdots+a_n}{n}-a} < 2 \varepsilon.
     \]
-    となる．書き換えると．
+    書き換えると．
     \[
-        \lim_{n \to \infty} \frac{a_1+a_2+\cdots+a_n}{n}=a
+        \lim_{n \to \infty} \frac{a_1+a_2+\cdots+a_n}{n}=a.
     \]
-    となり，これが証明すべきことであった．
 \end{tproof}
 
 
@@ -543,17 +525,17 @@
     つまり，$\mathbb{N} =  \{0,1,\dots,m-1\} \cup \{n \in \mathbb{N} \mid n \geqq m \}$であることと，
     $H$の定義により，
     \[
-        \{0,1,\dots,m-1\} \cup \{n \in \mathbb{N} \mid n \geqq m \} \subset \{0,1，,\dots,m-1\} \cup A
+        \{0,1,\dots,m-1\} \cup \{n \in \mathbb{N} \mid n \geqq m \} \subset \{0,1，,\dots,m-1\} \cup A.
     \]
-    となる．よって，
+    よって，
     \[
         \{n \in \mathbb{N}\mid n \geqq m \} \subset A
     \]
     となる．これと$ A \subset \{n \in \mathbb{N} \mid n \geqq m\}$であることを併せると，
     \[
-        A=\{n \in \mathbb{N} \mid n \geqq m \}
+        A=\{n \in \mathbb{N} \mid n \geqq m \}.
     \]
-    となり，これが証明すべきことであった．
+    これが証明すべきことであった．
 \end{tproof}
 
 
@@ -744,11 +726,10 @@
         \lim_{n \to \infty} \frac{n^2}{a^n}
         =
         \begin{cases}
-            \infty & (0<a \le 1) \\
-            0      & (a>1)
+            \infty & (0<a \le 1), \\
+            0      & (a>1).
         \end{cases}
     \end{align*}
-    となる．
 \end{tanswer}
 \subsection*{p31--33：1-(\romannumeral3)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p31--33：1-(\romannumeral3)}{p31--33：1-(\romannumeral3)}}
@@ -764,13 +745,12 @@
     \end{align*}
     となり，この不等式から，
     \[
-        0<\delta_n < \sqrt{\frac{2}{n-1}}
+        0<\delta_n < \sqrt{\frac{2}{n-1}}.
     \]
-    を得る．ここで，はさみうちの原理により，$\lim_{n \to \infty} \delta_n =0$であるから，
+    $\lim_{n \to \infty} \delta_n =0$であるから，はさみうちの原理により，
     \[
         \lim_{n \to \infty} \sqrt[n]{n} =1
     \]
-    である．
 \end{tanswer}
 
 \subsection*{p31--33：1-(\romannumeral4)}
@@ -778,13 +758,12 @@
 \begin{tanswer}
     $a_n= n^k e^{-n}$とおく．このとき，
     \[
-        \lim_{n \to \infty} \frac{a_{n+1}}{a_n} =  \lim_{n \to \infty} \frac{\left(1+\dfrac{1}{n}\right)^k}{e} =\frac{1}{e} <1
+        \lim_{n \to \infty} \frac{a_{n+1}}{a_n} =  \lim_{n \to \infty} \frac{\left(1+\dfrac{1}{n}\right)^k}{e} =\frac{1}{e} <1.
     \]
     ゆえに，補題により，
     \[
-        \lim_{n \to \infty} n^k e^{-n}=0
+        \lim_{n \to \infty} n^k e^{-n}=0.
     \]
-    である．
 \end{tanswer}
 
 \subsection*{p31--33：1-(v)}
@@ -841,13 +820,12 @@
     \end{align*}
     このことから，$0<\frac{1}{c^n} <\frac{1}{1+n\delta}$であるから，はさみうちの原理により，
     \[
-        \lim_{n \to \infty} \frac{1}{c^n} = 0~(c>1)
+        \lim_{n \to \infty} \frac{1}{c^n} = 0~(c>1).
     \]
-    である．
 \end{proof}
 
 \begin{tanswer}
-    $a_n = (c^n +c^{-n})^{-1}$とおく．$c=1$のときは明らかに$\lim_{n \to \infty} a_n =\frac{1}{2}$である．
+    $a_n = (c^n +c^{-n})^{-1}$とおく．$c=1$のときは明らかに$\lim_{n \to \infty} a_n =1/2$である．
 
     $c>1$のとき，2つの補題により，
     \[
@@ -859,11 +837,10 @@
     \begin{align*}
         \lim_{n \to \infty} (c^n +c^{-n})^{-1} =
         \begin{cases}
-            \frac{1}{2} & (c=1)     \\
-            0           & (c \ne 1)
+            \frac{1}{2} & (c=1)  ,   \\
+            0           & (c \ne 1).
         \end{cases}
     \end{align*}
-    である．
 \end{tanswer}
 
 
@@ -881,10 +858,7 @@
         \frac{1}{r!} \cdot  \left(1 - \frac{1}{n} \right) \dots \left (1-\frac{r-1}{n} \right) < \frac{1}{r!} \cdot  \left(1 - \frac{1}{n+1} \right) \dots \left (1-\frac{r-1}{n+1} \right)
     \]
     が成立する．これと，$a_{n+1}$の展開式のほうが，正の項を一つ多く含むことから，任意の$n \in \mathbb{N}$に対して，
-    \[
-        a_{n} < a_{n+1}
-    \]
-    が成立し，$(a_n)_{n \in \mathbb{N}}$は単調増加数列である．また，
+    $a_{n} < a_{n+1}$が成立し，$(a_n)_{n \in \mathbb{N}}$は単調増加数列である．また，
     \begin{align*}
         a_n
          & < 1 + \frac{1}{1!} + \frac{1}{2!} + \cdots + \frac{1}{n!}                                                         \\
@@ -898,13 +872,12 @@
 
     また，$(a_n)_{n \in \mathbb{N}}$が単調増加数列であることから，任意の$n \in \mathbb{N} \setminus \{0,1\}$に対して，
     \[
-        a_n > a_1 = \left(1+\frac{1}{1}\right)^1 =2
+        a_n > a_1 = \left(1+\frac{1}{1}\right)^1 =2.
     \]
-    であるから，
+    よって，
     \[
-        2<e<3
+        2<e<3.
     \]
-    を得る．これが証明すべきことであった．
 \end{tproof}
 
 
@@ -1855,7 +1828,8 @@
 
 
 \section*{p63--64：5}
-\addcontentsline{toc}{section}{\texorpdfstring{p63--64：5}{p63--64：5}}\begin{tproof} \mbox{　}
+\addcontentsline{toc}{section}{\texorpdfstring{p63--64：5}{p63--64：5}}
+\begin{tproof}
     \begin{enumerate}[(I)]
         \item
               $f$が$U$上連続のとき，$\mathbb{R}^n$の開集合$W$をひとつとる．
@@ -2711,10 +2685,9 @@
     $F_\alpha = F_{\alpha} ' \cap A$となる$F_{\alpha} ' \in \mathcal{F} (\mathbb{R}^n)$をとる．
     \begin{enumerate}[(i)]
         \item
-              \begin{align*}
-                  \bigcup_{\alpha \in A} F_\alpha & = \bigcup_{\alpha \in A} (F_{\alpha} ' \cap A)  \\
-                                                  & = A \cap (\bigcup_{\alpha \in A} F_{\alpha} ').
-              \end{align*}
+              \[
+                  \bigcup_{\alpha \in A} F_\alpha  = \bigcup_{\alpha \in A} (F_{\alpha} ' \cap A) = A \cap (\bigcup_{\alpha \in A} F_{\alpha} ').
+              \]
               ここで，定理8.3より
               \[
                   \bigcup_{\alpha \in A} F_{\alpha} ' \in \mathcal{F} (\mathbb{R}^n)
@@ -2724,10 +2697,9 @@
                   \bigcup_{\alpha \in A} F_\alpha \in \mathcal{F} (A).
               \]
         \item
-              \begin{align*}
-                  F_1 \cap F_2 & = (F_1 ' \cap A) \cap (F_2 ' \cap A) \\
-                               & = (F_1 ' \cap F_2 ') \cap A.
-              \end{align*}
+              \[
+                  F_1 \cap F_2  = (F_1 ' \cap A) \cap (F_2 ' \cap A) = (F_1 ' \cap F_2 ') \cap A.
+              \]
               ここで，定理8.3より
               \[
                   F_1 ' \cap F_2 ' \in \mathcal{F} (\mathbb{R}^n)
@@ -2747,10 +2719,8 @@
               \]
               であり，
               \[
-                  C_A (B) = A \cap F^c \in \mathcal{O} (A)
+                  C_A (B) = A \cap F^c \in \mathcal{O} (A).
               \]
-              となる．
-
               $C_A (B) \in \mathcal{O}(A)$のとき，$C_A (B) = A \cap U$となる$U \in \mathcal{O} (\mathbb{R}^n)$に対して，
               \[
                   U^c \in \mathcal{F} (\mathbb{R}^n)
