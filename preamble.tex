@@ -54,9 +54,6 @@
 \renewcommand{\familydefault}{\sfdefault}
 
 
-% xcolorをロード
-\usepackage{titletoc}
-
 % 色を定義
 
 \AtEndPreamble{
@@ -273,7 +270,16 @@
 \usepackage{tikz}
 \usetikzlibrary{intersections,calc,arrows.meta}
 \usepackage{tikz-3dplot}
-\usepackage[marginparwidth=0pt,margin=25truemm]{geometry}
+\usepackage[
+  % ---- 共通 ----
+  marginparwidth = 0pt,
+  % ---- 上下左右 ----
+  top    = 25truemm,   %  ← ここは現状維持
+  bottom = 25truemm,   %  ← 欲しい下余白に調整
+  left   = 25truemm,
+  right  = 25truemm
+]{geometry}
+
 \usepackage{bxpapersize}
 \usepackage[absolute,overlay]{textpos} %図の配置を好きにする
 
@@ -315,7 +321,7 @@
 \renewcommand{\labelenumi}{(\arabic{enumi})}%itemを(数字)に変更
 \newcommand{\two}{I\hspace{-1.2pt}I}
 \newcommand{\three}{I\hspace{-1.2pt}I\hspace{-1.2pt}I}
-\renewcommand{\proofname}{{\noindent{\setlength{\fboxsep}{3.5pt}\colorbox{gray!25}{\textbf{証明}}}}}
+\renewcommand{\proofname}{証明}
 \renewcommand{\qed}{\unskip\nobreak\quad\qedsymbol}
 \DeclareMathOperator{\Ker}{Ker}
 \DeclareMathOperator{\sgn}{sgn}
@@ -355,22 +361,23 @@
 % ── 「証明」を左バー付きボックスに包む環境 ──────────────────
 % 使い方：  \begin{tproof}[任意の見出し] ... \end{tproof}
 %          見出しを省略すると従来の \proofname（灰色ラベル「証明」）になる
-
 \newenvironment{tproof}[1][\proofname]{%
-  % --- begin code executed at \begin{tproof} ---
-  \begin{tleftbar}%   ← 左バー付きボックス
-    \begin{proof}[#1]%  ← amsthm の proof（見出しは #1）
+  \begin{tleftbar}% 左バー付きボックス
+    \begin{proof}[{%
+            \normalfont                 %  ← ここでイタリックを解除
+            \noindent
+            \setlength{\fboxsep}{3.5pt}%
+            \colorbox{gray!25}{\sffamily\bfseries #1}%
+          }]%
       }{%
-      % --- begin code executed at \end{tproof} ---
-    \end{proof}%       ← □ マークを出して proof 終了
-  \end{tleftbar}%    ← ボックスを閉じる
+    \end{proof}% □ を出力
+  \end{tleftbar}%
 }
+
 
 % ──────────────────────────────────────────────
 % 「解答」ラベル（tanswer 用）
-\newcommand{\answername}{%
-  {\noindent\setlength{\fboxsep}{3.5pt}\colorbox{gray!25}{\textbf{解答}}}%
-}
+\newcommand{\answername}{解答}
 
 % ── 左バー付き「解答」環境 ─────────────────────
 % 使い方：\begin{tanswer}[任意の見出し] ... \end{tanswer}
@@ -379,7 +386,12 @@
   \begin{tleftbar}% ← 左バー付きボックス開始
     \begingroup
     \renewcommand{\qed}{}%  □ マークを無効化
-    \begin{proof}[#1]%    ← proof 環境を流用（見出しは #1）
+    \begin{proof}[{%
+            \normalfont                 %  ← ここでイタリックを解除
+            \noindent
+            \setlength{\fboxsep}{3.5pt}%
+            \colorbox{gray!25}{\sffamily\bfseries #1}%
+          }]%
       }{%
     \end{proof}%          ← proof 終了（□ は出ない）
     \endgroup

@@ -586,6 +586,61 @@
 \end{tanswer}
 
 
+\section*{p106--107：9} \label{p106--107：9}
+\addcontentsline{toc}{section}{\texorpdfstring{p106--107：9}{p106--107：9}}
+
+
+\begin{lemma}{}{}
+    $\sin  x$は$0$を中心として$I=[0,\pi/2]$でテイラー展開できる．
+\end{lemma}
+
+\begin{proof}
+    \[
+        (\sin x)^{(n)} =\sin(x + n\pi/2)
+    \]
+    であるから， $ \abs{\sin (x+n\pi/2)}  \leqq 1$であることと定理 2.11：2)より主張が従う．
+\end{proof}
+
+\begin{tproof}
+    $m \geqq 1$のとき，
+    \[
+        S_{2m} = S_{2m-2} +a_{2m-1} + a_{2m} = S_{2m-2} + \frac{(-1)^{2m-1}}{(2(2m-1)+1)!} x^{2(2m-1)+1} + \frac{(-1)^{2m}}{(2(2m)+1)!} x^{2(2m)+1}.
+    \]
+    $ 0< x \leqq \pi /2$のとき，
+    \[
+        \frac{1}{(2(2m-1)+1)!} x^{2(2m-1)+1} > \frac{1}{(2(2m)+1)!} x^{2(2m)+1}
+    \]
+    であり，なおかつ$(-1)^{2m-1} =-1$，$(-1)^{2m} =1$であることをふまえると
+    \[
+        \frac{(-1)^{2m-1}}{(2(2m-1)+1)!} x^{2(2m-1)+1} + \frac{(-1)^{2m}}{(2(2m)+1)!} x^{2(2m)+1} <0.
+    \]
+    よって
+    \[
+        S_{2m} -S_{2m-2}  = \frac{(-1)^{2m-1}}{(2(2m-1)+1)!} x^{2(2m-1)+1} + \frac{(-1)^{2m}}{(2(2m)+1)!} x^{2(2m)+1} <0 \quad S_{2m}<S_{2m-2}.
+    \]
+    よって，$(S_{2m})_{m \in \mathbb{N}}$は$0 < x \leqq \pi /2$で狭義単調減少である．
+
+    $S_{2m-1}$についても同様に考え，
+    \[
+        S_{2m+1}=S_{2m-1} + a_{2m-1} +a_{2m}= S_{2m-1} + \frac{(-1)^{2m-1}}{(2(2m-1)+1)!} x^{2(2m-1)+1} + \frac{(-1)^{2m}}{(2(2m)+1)!} x^{2(2m)+1}.
+    \]
+    などから，$ S_{2m+1}-S_{2m-1} >0$が成り立ち，$m \leqq 1$のとき$S_{2m+1}>S_{2m-1}$である．
+    よって，$(S_{2m+1})_{m \in \mathbb{N}}$は$0 < x \leqq \pi /2$で狭義単調増加である．
+    そして，補題により$\sin x $は$0 < x \leqq \pi /2$でテイラー展開できるので，そのことをふまえると
+    \[
+        \lim_{m \to \infty} S_{2m} =\lim_{m \to \infty} S_{2m+1} =\sin x
+    \]
+    であるから，
+    \[
+        S_0 > S_2 > S_4 > \cdots > S_{2m} > \sin x > S_{2m+1} > S_{2m-1} > \cdots > S_3 > S_1
+    \]
+    となり\footnote{$S_n=\sin x$となる$n \in \mathbb{N}$が存在すると，$ \sin x=S_n  > S_{n+1}\geqq \sin x$となり矛盾する．}，
+    \[
+        S_{2m} > \sin x > S_{2m+1} \quad ( 0 < x \leqq \frac{\pi}{2} )
+    \]
+    が示された．
+\end{tproof}
+
 
 \section*{p106--107：10}
 \addcontentsline{toc}{section}{\texorpdfstring{p106--107：10}{p106--107：10}}
