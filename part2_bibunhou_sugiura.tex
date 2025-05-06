@@ -12,103 +12,103 @@
 
 
 \begin{minipage}[c]{0.60\textwidth}
-    楕円
-    \[
-        \left\{ (x,y) \in \mathbb{R}^2 \; \middle| \; \frac{x^2}{4} + y^2 = 1 \right\}
-    \]
-    を描写すればよく，図のようになる．
+  楕円
+  \[
+    \left\{ (x,y) \in \mathbb{R}^2 \; \middle| \; \frac{x^2}{4} + y^2 = 1 \right\}
+  \]
+  を描写すればよく，図のようになる．
 \end{minipage}
 \hfill
 \begin{minipage}[c]{0.35\textwidth}
-    \begin{tikzpicture}[scale=0.8]
-        \draw[->] (-3,0) -- (3,0) node[below] {$x$};
-        \draw[->] (0,-3) -- (0,3) node[left]  {$y$};
-        \draw (0,0) node[below left] {$\mathrm{O}$} coordinate (O);
-        \draw (0,1) node [above left] {$1$};
-        \draw (0,-1) node [below left] {$-1$};
-        \draw (2,0) node [above left] { $2$};
-        \draw (-2,0) node [above left] { $-2$};
-        \draw plot[domain=0:{2*pi}, variable=\theta, smooth] ({2*cos (\theta r)},{sin (\theta r)});
-    \end{tikzpicture}
+  \begin{tikzpicture}[scale=0.8]
+    \draw[->] (-3,0) -- (3,0) node[below] {$x$};
+    \draw[->] (0,-3) -- (0,3) node[left]  {$y$};
+    \draw (0,0) node[below left] {$\mathrm{O}$} coordinate (O);
+    \draw (0,1) node [above left] {$1$};
+    \draw (0,-1) node [below left] {$-1$};
+    \draw (2,0) node [above left] { $2$};
+    \draw (-2,0) node [above left] { $-2$};
+    \draw plot[domain=0:{2*pi}, variable=\theta, smooth] ({2*cos (\theta r)},{sin (\theta r)});
+  \end{tikzpicture}
 \end{minipage}
 
 \subsection*{p90--91：1-(\romannumeral2)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p90--91：1-(\romannumeral2)}{p90--91：1-(\romannumeral2)}}
 
 \begin{minipage}[c]{0.60\textwidth}
-    \renewcommand{\arraystretch}{1.6}
-    \begin{tabular}{|c||cccccccccc|}
-        \hline
-        $t$
-         & $0$
-         & $\cdots$
-         & $\tfrac{\pi}{2}$
-         & $\cdots$
-         & $\pi$
-         & $\cdots$
-         & $\tfrac{3\pi}{2}$
-         & $\cdots$
-         & $2\pi$
-         & $\cdots$
-        \\ \hline
-        $\frac{dx}{dt}$
-         & $0$
-         & $-$
-         & $0$
-         & $+$
-         & $0$
-         & $-$
-         & $0$
-         & $+$
-         & $0$
-         &
-        \\ \hline
-        $x(t)$
-         & $1$
-         & $\searrow$
-         & $-1$
-         & $\nearrow$
-         & $1$
-         & $\searrow$
-         & $-1$
-         & $\nearrow$
-         & $1$
-         &
-        \\ \hline
-        $\frac{dy}{dt}$
-         & $+$
-         & $+$
-         & $0$
-         & $-$
-         & $-$
-         & $-$
-         & $0$
-         & $+$
-         & $+$
-         &
-        \\ \hline
-        $ y(t)$
-         & $0$
-         & $\nearrow$
-         & $1$
-         & $\searrow$
-         & $0$
-         & $\searrow$
-         & $-1$
-         & $\nearrow$
-         & $0$
-         &
-        \\ \hline
-    \end{tabular}
+  \renewcommand{\arraystretch}{1.6}
+  \begin{tabular}{|c||cccccccccc|}
+    \hline
+    $t$
+     & $0$
+     & $\cdots$
+     & $\tfrac{\pi}{2}$
+     & $\cdots$
+     & $\pi$
+     & $\cdots$
+     & $\tfrac{3\pi}{2}$
+     & $\cdots$
+     & $2\pi$
+     & $\cdots$
+    \\ \hline
+    $\frac{dx}{dt}$
+     & $0$
+     & $-$
+     & $0$
+     & $+$
+     & $0$
+     & $-$
+     & $0$
+     & $+$
+     & $0$
+     &
+    \\ \hline
+    $x(t)$
+     & $1$
+     & $\searrow$
+     & $-1$
+     & $\nearrow$
+     & $1$
+     & $\searrow$
+     & $-1$
+     & $\nearrow$
+     & $1$
+     &
+    \\ \hline
+    $\frac{dy}{dt}$
+     & $+$
+     & $+$
+     & $0$
+     & $-$
+     & $-$
+     & $-$
+     & $0$
+     & $+$
+     & $+$
+     &
+    \\ \hline
+    $ y(t)$
+     & $0$
+     & $\nearrow$
+     & $1$
+     & $\searrow$
+     & $0$
+     & $\searrow$
+     & $-1$
+     & $\nearrow$
+     & $0$
+     &
+    \\ \hline
+  \end{tabular}
 \end{minipage}
 \hfill
 \begin{minipage}[c]{0.35\textwidth}
-    \begin{tikzpicture}[scale=0.8]
-        \draw[->] (-3,0) -- (3,0) node[below] {$x$};
-        \draw[->] (0,-3) -- (0,3) node[left]  {$y$};
-        \draw (0,0) node[below left] {$\mathrm{O}$} coordinate (O);
-        \draw plot[domain=0:{2*pi}, variable=\theta, smooth] ({cos (2*\theta r)},{sin (\theta r)});
-    \end{tikzpicture}
+  \begin{tikzpicture}[scale=0.8]
+    \draw[->] (-3,0) -- (3,0) node[below] {$x$};
+    \draw[->] (0,-3) -- (0,3) node[left]  {$y$};
+    \draw (0,0) node[below left] {$\mathrm{O}$} coordinate (O);
+    \draw plot[domain=0:{2*pi}, variable=\theta, smooth] ({cos (2*\theta r)},{sin (\theta r)});
+  \end{tikzpicture}
 \end{minipage}
 
 
@@ -118,10 +118,10 @@
 
 
 \begin{tikzpicture}
-    \draw[->] (-3,0) -- (3,0) node[below] {$x$};
-    \draw[->] (0,-3) -- (0,3) node[left]  {$y$};
-    \draw (0,0) node[below left] {$\mathrm{O}$} coordinate (O);
-    \draw plot[domain=0:{2*pi}, variable=\theta, smooth] ({cos (3*\theta r)},{sin (\theta r)});
+  \draw[->] (-3,0) -- (3,0) node[below] {$x$};
+  \draw[->] (0,-3) -- (0,3) node[left]  {$y$};
+  \draw (0,0) node[below left] {$\mathrm{O}$} coordinate (O);
+  \draw plot[domain=0:{2*pi}, variable=\theta, smooth] ({cos (3*\theta r)},{sin (\theta r)});
 \end{tikzpicture}
 
 
@@ -132,42 +132,42 @@
 \addcontentsline{toc}{subsection}{\texorpdfstring{p90--91：9-(\romannumeral1)}{p90--91：9-(\romannumeral1)}}
 
 \begin{tanswer}
-    \[
-        ( \log x )^{(1)}= 1/x , \quad (\log x)^{(2)} = - 1/x^2 , \quad (\log x)^{(3)} = 2/x^3,\quad (\log x)^{(4)} = - 6 /x^4
-    \]
-    であるから，
-    \[
-        (\log x)^{(n)} = \frac{(-1)^{n-1}  (n-1)!}{x^n}
-    \]
-    と推測できる．この推測が正しいことを数学的帰納法により証明する．
-    \begin{enumerate}
-        \item $n=1$のとき，$(\log x)^{(1)} = 1/x$であり，
-              \[
-                  \frac{(-1)^{1-1}  (1-1)!}{x^1}=1/x
-              \]
-              であるから，この場合に推測は正しい．
-        \item $n=k$のときに，この推測が正しいと仮定すると，
-              \[
-                  (\log x)^{(k)} = \frac{(-1)^{k-1}  (k-1)!}{x^k}
-              \]
-              である．ここで．
-              \begin{align*}
-                  (\log x)^{(k+1)} & = \left (\frac{(-1)^{k-1}  (k-1)!}{x^k} \right ) ' \\
-                                   & = \frac{(-1)^k  k!}{x^{k+1}}
-              \end{align*}
-              であるから，$n=k+1$のときも推測は正しい．
-    \end{enumerate}
-    (1),(2)より，
-    \[
-        (\log x)^{(n)} = \frac{(-1)^{n-1}  (n-1)!}{x^n}
-    \]
-    である．
+  \[
+    ( \log x )^{(1)}= 1/x , \quad (\log x)^{(2)} = - 1/x^2 , \quad (\log x)^{(3)} = 2/x^3,\quad (\log x)^{(4)} = - 6 /x^4
+  \]
+  であるから，
+  \[
+    (\log x)^{(n)} = \frac{(-1)^{n-1}  (n-1)!}{x^n}
+  \]
+  と推測できる．この推測が正しいことを数学的帰納法により証明する．
+  \begin{enumerate}
+    \item $n=1$のとき，$(\log x)^{(1)} = 1/x$であり，
+          \[
+            \frac{(-1)^{1-1}  (1-1)!}{x^1}=1/x
+          \]
+          であるから，この場合に推測は正しい．
+    \item $n=k$のときに，この推測が正しいと仮定すると，
+          \[
+            (\log x)^{(k)} = \frac{(-1)^{k-1}  (k-1)!}{x^k}
+          \]
+          である．ここで．
+          \begin{align*}
+            (\log x)^{(k+1)} & = \left (\frac{(-1)^{k-1}  (k-1)!}{x^k} \right ) ' \\
+                             & = \frac{(-1)^k  k!}{x^{k+1}}
+          \end{align*}
+          であるから，$n=k+1$のときも推測は正しい．
+  \end{enumerate}
+  (1),(2)より，
+  \[
+    (\log x)^{(n)} = \frac{(-1)^{n-1}  (n-1)!}{x^n}
+  \]
+  である．
 \end{tanswer}
 
 \begin{tanswer}
-    \[
-        \left(   \frac{1}{x^2+3x+2} \right)^{(n)} = (-1)^n n! \{ (x+1)^{-n-1} - (x+2)^{-n-1} \}
-    \]
+  \[
+    \left(   \frac{1}{x^2+3x+2} \right)^{(n)} = (-1)^n n! \{ (x+1)^{-n-1} - (x+2)^{-n-1} \}
+  \]
 \end{tanswer}
 
 
@@ -176,24 +176,24 @@
 \addcontentsline{toc}{section}{\texorpdfstring{p90--91：10}{p90--91：10}}
 
 \begin{tproof}
-    $u(x)= (x^2-1)^n$とおく，このとき，
-    \[
-        U'(x)= 2x n(x^2-1)^{n-1}
-    \]
-    だから，
-    \[
-        (x^2-1) u'(x)=2nx \cdot u(x)
-    \]
-    この両辺を$(n+1)$回微分して，
-    \begin{align*}
-         & (x^2-1)u^{(n+2)}(x)+2(n+1)x u^{(n+1)} x + \frac{(n+1)n}{2} \cdot u^{(n)} (x) = 2nx u^{(n+1)}(x) + 2(n+1) n u^{(n)}(x) \\
-         & \therefore ~(x^2-1)u^{(n+2)}(x) + 2n u^{(n+1)}(x)-(n+1)n u^{(n)}(x)=0
-    \end{align*}
-    ここで，$ u^{(n)} (x)= 2^n n! P_n (x)$なので，
-    \begin{align*}
-         & (x^2 -1) \{ 2^n n! P_n ''(x) \} +2x \{ 2^n n! P_n (x) \} -n(n+1) \{ 2^n n P_n(x) \} =0 \\
-         & \therefore ~ (x^2-1) P_n ''(x)+2x P_n '(x) -n(n+1) P_n (x)=0
-    \end{align*}
+  $u(x)= (x^2-1)^n$とおく，このとき，
+  \[
+    U'(x)= 2x n(x^2-1)^{n-1}
+  \]
+  だから，
+  \[
+    (x^2-1) u'(x)=2nx \cdot u(x)
+  \]
+  この両辺を$(n+1)$回微分して，
+  \begin{align*}
+     & (x^2-1)u^{(n+2)}(x)+2(n+1)x u^{(n+1)} x + \frac{(n+1)n}{2} \cdot u^{(n)} (x) = 2nx u^{(n+1)}(x) + 2(n+1) n u^{(n)}(x) \\
+     & \therefore ~(x^2-1)u^{(n+2)}(x) + 2n u^{(n+1)}(x)-(n+1)n u^{(n)}(x)=0
+  \end{align*}
+  ここで，$ u^{(n)} (x)= 2^n n! P_n (x)$なので，
+  \begin{align*}
+     & (x^2 -1) \{ 2^n n! P_n ''(x) \} +2x \{ 2^n n! P_n (x) \} -n(n+1) \{ 2^n n P_n(x) \} =0 \\
+     & \therefore ~ (x^2-1) P_n ''(x)+2x P_n '(x) -n(n+1) P_n (x)=0
+  \end{align*}
 \end{tproof}
 
 
@@ -201,62 +201,62 @@
 \addcontentsline{toc}{section}{\texorpdfstring{p106--107：1}{p106--107：1}}
 
 \begin{lemma}{}{}
-    \[
-        Q_k (x)= (n! 2^n)^{-1} \frac{d^k}{dx^k} (x^2-1)^n \quad (0 \leqq k \leqq n)
-    \]
-    とおく．$0 \leqq k <n$のとき，$Q_k (x)$は$(x^2-1)^{n-k}$で割り切られ．
-    \[
-        Q_k (1)= Q_k(-1)=0
-    \]
-    である．
+  \[
+    Q_k (x)= (n! 2^n)^{-1} \frac{d^k}{dx^k} (x^2-1)^n \quad (0 \leqq k \leqq n)
+  \]
+  とおく．$0 \leqq k <n$のとき，$Q_k (x)$は$(x^2-1)^{n-k}$で割り切られ．
+  \[
+    Q_k (1)= Q_k(-1)=0
+  \]
+  である．
 \end{lemma}
 
 \begin{proof}
-    $k$に関する帰納法により示す．$k=0$のときは
-    \[
-        Q_0(x)= (n! 2^n)^{-1} (x^2-1)^n
-    \]
-    であり，$Q_o(X)$は$(x^2-1)^n$で割り切れ，$Q_0(1)=Q_0(-1)=0$である．
+  $k$に関する帰納法により示す．$k=0$のときは
+  \[
+    Q_0(x)= (n! 2^n)^{-1} (x^2-1)^n
+  \]
+  であり，$Q_o(X)$は$(x^2-1)^n$で割り切れ，$Q_0(1)=Q_0(-1)=0$である．
 
-    $k>0$として，$k-1$の場合の主張の成立を仮定すると，$Q_{k-1}(x)$は$x$についての式$g(x)$を用いて，
-    \[
-        Q_{k-1} = g(x)(x^2-1)^{n-k+1}
-    \]
-    と表せ，
-    \begin{align*}
-        Q_k (x) & =Q_{k-1}' (x)                                        \\
-                & = g'(x)(x^2-1)^{n-k+1} + g(x) (x^2-1)^{n-k} \cdot 2x \\
-                & =(g'(x)(x^2-1)+g(x) \cdot 2x) (x^2-1)^{n-k}
-    \end{align*}
-    したがって，$Q_k(x)$は$(x^2-1)^{n-k}$で割り切れ，$n-k >0$より，
-    \[
-        Q_k (1)= Q_k(-1)=0
-    \]
-    となり，これが証明すべきことであった．
+  $k>0$として，$k-1$の場合の主張の成立を仮定すると，$Q_{k-1}(x)$は$x$についての式$g(x)$を用いて，
+  \[
+    Q_{k-1} = g(x)(x^2-1)^{n-k+1}
+  \]
+  と表せ，
+  \begin{align*}
+    Q_k (x) & =Q_{k-1}' (x)                                        \\
+            & = g'(x)(x^2-1)^{n-k+1} + g(x) (x^2-1)^{n-k} \cdot 2x \\
+            & =(g'(x)(x^2-1)+g(x) \cdot 2x) (x^2-1)^{n-k}
+  \end{align*}
+  したがって，$Q_k(x)$は$(x^2-1)^{n-k}$で割り切れ，$n-k >0$より，
+  \[
+    Q_k (1)= Q_k(-1)=0
+  \]
+  となり，これが証明すべきことであった．
 \end{proof}
 
 \begin{tproof}
-    $Q_k (x)$が$(-1,1)$上に$k$個の相異なる根を持つことを，$k$に関する数学的帰納法で示す．
-    \begin{enumerate}[(i)]
-        \item $k=0$の場合
-              \[
-                  Q_0(x)= (n! 2^n)^{-1} (x^2-1)^n
-              \]
-              なので，$(-1,1)$に根を持たない．
-        \item $k>0$として，$k-1$の場合の主張の成立を仮定すると，$Q_{k-1}(x)$は$(-1,1)$に$k-1$個の相異なる根を持つから，
-              それらを
-              \[
-                  x_1,x_2,\dots,x_{k-1}\quad (-1<x_1<x_2<\dots <x_{k-1}<1)
-              \]とおく．
-              ここで，$Q_{k-1} (x)$は閉区間$[-1,1]$で微分可能なので，
-              各区間$[-1,x_1],[x_1,x_2],\dots,[x_{k-1},1]$においても微分可能であり，補題により，
-              \[
-                  Q_{k-1} (-1) = Q_{k-1}(x_1)=\dots = Q_{k-1}(x_{k-1})=Q_{k-1}(1)=0
-              \]
-              である．したがって各小区間においてロルの定理が適用できて，$Q_{k-1}' (x)=Q_k(x)$は$(-1,x_1),(x_1,x_2),\dots,(x_{k-1},1)$において根をもつ．
-    \end{enumerate}
-    以上(\romannumeral1)，(\romannumeral2)の議論により，$Q_k (x)$は$(-1,1)$において相異なる$k$個の根をもつ．
-    特に$k=n$のとき，$Q_n (x)=P_n(x)$で$P_n (x)$は$(-1,1)$において相異なる$n$個の根をもつ．
+  $Q_k (x)$が$(-1,1)$上に$k$個の相異なる根を持つことを，$k$に関する数学的帰納法で示す．
+  \begin{enumerate}[(i)]
+    \item $k=0$の場合
+          \[
+            Q_0(x)= (n! 2^n)^{-1} (x^2-1)^n
+          \]
+          なので，$(-1,1)$に根を持たない．
+    \item $k>0$として，$k-1$の場合の主張の成立を仮定すると，$Q_{k-1}(x)$は$(-1,1)$に$k-1$個の相異なる根を持つから，
+          それらを
+          \[
+            x_1,x_2,\dots,x_{k-1}\quad (-1<x_1<x_2<\dots <x_{k-1}<1)
+          \]とおく．
+          ここで，$Q_{k-1} (x)$は閉区間$[-1,1]$で微分可能なので，
+          各区間$[-1,x_1],[x_1,x_2],\dots,[x_{k-1},1]$においても微分可能であり，補題により，
+          \[
+            Q_{k-1} (-1) = Q_{k-1}(x_1)=\dots = Q_{k-1}(x_{k-1})=Q_{k-1}(1)=0
+          \]
+          である．したがって各小区間においてロルの定理が適用できて，$Q_{k-1}' (x)=Q_k(x)$は$(-1,x_1),(x_1,x_2),\dots,(x_{k-1},1)$において根をもつ．
+  \end{enumerate}
+  以上(\romannumeral1)，(\romannumeral2)の議論により，$Q_k (x)$は$(-1,1)$において相異なる$k$個の根をもつ．
+  特に$k=n$のとき，$Q_n (x)=P_n(x)$で$P_n (x)$は$(-1,1)$において相異なる$n$個の根をもつ．
 \end{tproof}
 
 
@@ -266,206 +266,206 @@
 
 
 \begin{lemma}{}{}
-    $H_n(x)$は$n$次多項式で，$n$個の相異なる実根を持つとする．
+  $H_n(x)$は$n$次多項式で，$n$個の相異なる実根を持つとする．
 
-    このとき，$H_n (x)$の隣り合う$2$根を$a < b$とすると，
-    \[
-        H_n'(a) H_n'(b)<0.
-    \]
+  このとき，$H_n (x)$の隣り合う$2$根を$a < b$とすると，
+  \[
+    H_n'(a) H_n'(b)<0.
+  \]
 \end{lemma}
 
 \begin{proof}
-    $H_n (x)$は$n$次多項式だから，$x_1 < x_2 < \dots <x_n$として以下のようにかける：
-    \[
-        H_n (x) = c \prod_{k=1}^{n} (x-x_k).
-    \]
-    これを$x$について微分すると，
-    \begin{align*}
-        H_n '(x) & = c \sum_{j=1}^{n} \left[ \frac{d}{dx} (x-x_j) \times  \prod_{\substack{1 \leqq k \leqq n \\ k \ne j}} (x-x_k) \right] \\
-                 & = c \sum_{j=1}^{n} \prod_{\substack{1 \leqq k \leqq n                                     \\ k \ne j}} (x-x_k).
-    \end{align*}
-    とくに$x = x_j$とすると
-    \[
-        H_n '(x_j) = c \prod_{\substack{1 \leqq k \leqq n \\ k \ne j}} (x_j-x_k).
-    \]
-    したがって，$k <j$のとき，$x_k < x_j$であり，$k > j$のとき，$x_k > x_j$であるから，
-    $\prod_{\substack{1 \leqq k \leqq n \\ k \ne j}} (x_j-x_k)$の符号は$(-1)^{n-j}$である．
-    よって，隣り合う$2$根$a < b$について，
-    \[
-        H_n '(a) H_n ' (b)<0.
-    \]
+  $H_n (x)$は$n$次多項式だから，$x_1 < x_2 < \dots <x_n$として以下のようにかける：
+  \[
+    H_n (x) = c \prod_{k=1}^{n} (x-x_k).
+  \]
+  これを$x$について微分すると，
+  \begin{align*}
+    H_n '(x) & = c \sum_{j=1}^{n} \left[ \frac{d}{dx} (x-x_j) \times  \prod_{\substack{1 \leqq k \leqq n \\ k \ne j}} (x-x_k) \right] \\
+             & = c \sum_{j=1}^{n} \prod_{\substack{1 \leqq k \leqq n                                     \\ k \ne j}} (x-x_k).
+  \end{align*}
+  とくに$x = x_j$とすると
+  \[
+    H_n '(x_j) = c \prod_{\substack{1 \leqq k \leqq n \\ k \ne j}} (x_j-x_k).
+  \]
+  したがって，$k <j$のとき，$x_k < x_j$であり，$k > j$のとき，$x_k > x_j$であるから，
+  $\prod_{\substack{1 \leqq k \leqq n \\ k \ne j}} (x_j-x_k)$の符号は$(-1)^{n-j}$である．
+  よって，隣り合う$2$根$a < b$について，
+  \[
+    H_n '(a) H_n ' (b)<0.
+  \]
 \end{proof}
 
 補題をふまえた上で，いくつかの命題に分けて証明していく．
 
 \begin{proposition}{}{}
-    テキストの(i)，(ii)が成り立つ．
+  テキストの(i)，(ii)が成り立つ．
 \end{proposition}
 
 
 \begin{tproof}
-    (i)について，
-    \begin{align*}
-          & \frac{d}{dx} \left[ e^{x^2} \frac{d^n}{dx^n} (e^{-x^2} )\right]                      \\
-        = & 2x e^{x^2} \frac{d^n}{dx^n} (e^{-x^2}) + e^{x^2} \frac{d^{n+1}}{dx^{n+1}} (e^{-x^2})
-    \end{align*}
-    であるから，この式に$(-1)^n$をかけて整理すると，
-    \begin{align*}
-        (-1)^n \frac{d}{dx} \left[ e^{x^2} \frac{d^n}{dx^n} (e^{-x^2} )\right] & = 2x(-1)^n e^{x^2} \frac{d^n}{dx^n} (e^{-x^2}) -(-1)^{n+1} e^{x^2} \frac{d^{n+1}}{dx^{n+1}} (e^{-x^2}) \\
-        \therefore ~ H_n ' (x)                                                 & = 2x H_n(x) - H_{n+1}(x).
-    \end{align*}
-    整理すると
-    \[
-        H_{n+1}(x) =  2x H_n(x)-H_n'(x).
-    \]
-    (ii)について，
-    $ (e^{-x^2})^{(n+1)} = \{ (-2x)e^{-x^2} \}^{(n)}$であるから，
-    \begin{align*}
-        (e^{-x^2})^{(n+1)} & = (-2xe^{-x^2})^{(n)}                                                                                                                                  \\
-                           & = -2 (xe^{-x^2})^{(n)}                                                                                                                                 \\
-                           & = -2 \sum_{r=0}^{n} \binom{n}{r} x^{(n)} (e^{-x^2})^{(n-r)}                                                                                            \\
-                           & = -2 \left ( \binom{n}{0} x^{(0)} (e^{-x^2})^{(n-0)} + \binom{n}{1} x^{(1)} (e^{-x^2})^{(n-1)} + \dots + \binom{n}{n} x^{(n)} (e^{-x^2})^{(0)} \right) \\
-                           & = -2 \left(  x (e^{-x^2})^{(n)} + n x^{(1)} (e^{-x^2})^{(n-1)} \right)                                                                                 \\
-                           & = -2 \left ( x \frac{d^n}{dx^n} (e^{-x^2}) + n \frac{d^{n-1}}{dx^{n-1}} (e^{-x^2}) \right).
-    \end{align*}
-    よって，
-    \begin{align*}
-        (-1)^{n+1} e^{x^2} \frac{d^{n+1}}{d x^{n+1}} (e^{-x^2}) & = 2 (-1)^n e^{x^2} x \frac{d^n}{dx^n} (e^{-x^2}) -2 n (-1)^{n-1} e^{x^2}\frac{d^{n-1}}{dx^{n-1}} (e^{-x^2}) \\
-        \therefore ~ H_{n+1} (x)                                & = 2x H_n(x) - 2nH_{n-1}(x).
-    \end{align*}
-    これと(i)の結果を比較すると，
-    \[
-        H '' (x) - 2x H_n' (x) + 2nH_n (x)=0.
-    \]
+  (i)について，
+  \begin{align*}
+      & \frac{d}{dx} \left[ e^{x^2} \frac{d^n}{dx^n} (e^{-x^2} )\right]                      \\
+    = & 2x e^{x^2} \frac{d^n}{dx^n} (e^{-x^2}) + e^{x^2} \frac{d^{n+1}}{dx^{n+1}} (e^{-x^2})
+  \end{align*}
+  であるから，この式に$(-1)^n$をかけて整理すると，
+  \begin{align*}
+    (-1)^n \frac{d}{dx} \left[ e^{x^2} \frac{d^n}{dx^n} (e^{-x^2} )\right] & = 2x(-1)^n e^{x^2} \frac{d^n}{dx^n} (e^{-x^2}) -(-1)^{n+1} e^{x^2} \frac{d^{n+1}}{dx^{n+1}} (e^{-x^2}) \\
+    \therefore ~ H_n ' (x)                                                 & = 2x H_n(x) - H_{n+1}(x).
+  \end{align*}
+  整理すると
+  \[
+    H_{n+1}(x) =  2x H_n(x)-H_n'(x).
+  \]
+  (ii)について，
+  $ (e^{-x^2})^{(n+1)} = \{ (-2x)e^{-x^2} \}^{(n)}$であるから，
+  \begin{align*}
+    (e^{-x^2})^{(n+1)} & = (-2xe^{-x^2})^{(n)}                                                                                                                                  \\
+                       & = -2 (xe^{-x^2})^{(n)}                                                                                                                                 \\
+                       & = -2 \sum_{r=0}^{n} \binom{n}{r} x^{(n)} (e^{-x^2})^{(n-r)}                                                                                            \\
+                       & = -2 \left ( \binom{n}{0} x^{(0)} (e^{-x^2})^{(n-0)} + \binom{n}{1} x^{(1)} (e^{-x^2})^{(n-1)} + \dots + \binom{n}{n} x^{(n)} (e^{-x^2})^{(0)} \right) \\
+                       & = -2 \left(  x (e^{-x^2})^{(n)} + n x^{(1)} (e^{-x^2})^{(n-1)} \right)                                                                                 \\
+                       & = -2 \left ( x \frac{d^n}{dx^n} (e^{-x^2}) + n \frac{d^{n-1}}{dx^{n-1}} (e^{-x^2}) \right).
+  \end{align*}
+  よって，
+  \begin{align*}
+    (-1)^{n+1} e^{x^2} \frac{d^{n+1}}{d x^{n+1}} (e^{-x^2}) & = 2 (-1)^n e^{x^2} x \frac{d^n}{dx^n} (e^{-x^2}) -2 n (-1)^{n-1} e^{x^2}\frac{d^{n-1}}{dx^{n-1}} (e^{-x^2}) \\
+    \therefore ~ H_{n+1} (x)                                & = 2x H_n(x) - 2nH_{n-1}(x).
+  \end{align*}
+  これと(i)の結果を比較すると，
+  \[
+    H '' (x) - 2x H_n' (x) + 2nH_n (x)=0.
+  \]
 \end{tproof}
 
 \begin{proposition}{}{}
-    $H_n (x)$は$n$次多項式である．
+  $H_n (x)$は$n$次多項式である．
 \end{proposition}
 
 \begin{tproof}
-    $n$についての数学的帰納法により示す．
-    \begin{enumerate}[(I)]
-        \item $n =0, 1$のとき，
-              \begin{align*}
-                  H_0 (x) & = 1,  \\
-                  H_1 (x) & = 2x,
-              \end{align*}
-              であるから，$n=0, 1 $のとき成立する．
-        \item $k \in \mathbb{N}$を任意に取り，$H_k (x)$が$k$次多項式であると仮定する．
-              $ H_{k+1}(x) =  2x H_k(x)-H_k'(x)$であるから，
-              帰納法の仮定により，$ 2 x H_k (x)$が$k+1$次多項式であることと，$H_k'(x)$が$k-1$次多項式であることが従い，$H_{k+1}(x)$も$k+1$次多項式である．
-    \end{enumerate}
-    よって数学的帰納法により，$H_n (x)$は任意の$n$について$n$次多項式である．
+  $n$についての数学的帰納法により示す．
+  \begin{enumerate}[(I)]
+    \item $n =0, 1$のとき，
+          \begin{align*}
+            H_0 (x) & = 1,  \\
+            H_1 (x) & = 2x,
+          \end{align*}
+          であるから，$n=0, 1 $のとき成立する．
+    \item $k \in \mathbb{N}$を任意に取り，$H_k (x)$が$k$次多項式であると仮定する．
+          $ H_{k+1}(x) =  2x H_k(x)-H_k'(x)$であるから，
+          帰納法の仮定により，$ 2 x H_k (x)$が$k+1$次多項式であることと，$H_k'(x)$が$k-1$次多項式であることが従い，$H_{k+1}(x)$も$k+1$次多項式である．
+  \end{enumerate}
+  よって数学的帰納法により，$H_n (x)$は任意の$n$について$n$次多項式である．
 \end{tproof}
 
 \begin{proposition}{}{}
-    $H_n(x)$ は，任意の $n \in \mathbb{N}$ に対して $n$ 個の相異なる実根をもつ．
+  $H_n(x)$ は，任意の $n \in \mathbb{N}$ に対して $n$ 個の相異なる実根をもつ．
 \end{proposition}
 
 \begin{tproof}
-    数学的帰納法およびRolleの定理を用いて示す．
-    \noindent
-    \begin{enumerate}[(I)]
-        \item \mbox{}
-              \[
-                  H_0(x) = 1, \quad H_1(x) = 2x, \quad H_2(x) = 2x^2-1.
-              \]
-              $H_0(x)$ は定数多項式で実根を持たない(ただし「$n=0$個」の根と解釈)，
-              $H_1(x) = 2x$ は $x=0$ に $1$つの実根をもつ．
-              $H_2(x)$ は相異なる$2$つの実根をもつ．
-              したがって，$n=0,1,2$のときに成立する．
-        \item
-              $k \geqq 2$ について，
-              $H_k(x)$は$k$個の相異なる実根をもつ
-              と仮定する．$H_k(x)$ の実根を
-              \[
-                  \alpha_1 < \alpha_2 < \dots < \alpha_k
-              \]
-              と表す．
+  数学的帰納法およびRolleの定理を用いて示す．
+  \noindent
+  \begin{enumerate}[(I)]
+    \item \mbox{}
+          \[
+            H_0(x) = 1, \quad H_1(x) = 2x, \quad H_2(x) = 2x^2-1.
+          \]
+          $H_0(x)$ は定数多項式で実根を持たない(ただし「$n=0$個」の根と解釈)，
+          $H_1(x) = 2x$ は $x=0$ に $1$つの実根をもつ．
+          $H_2(x)$ は相異なる$2$つの実根をもつ．
+          したがって，$n=0,1,2$のときに成立する．
+    \item
+          $k \geqq 2$ について，
+          $H_k(x)$は$k$個の相異なる実根をもつ
+          と仮定する．$H_k(x)$ の実根を
+          \[
+            \alpha_1 < \alpha_2 < \dots < \alpha_k
+          \]
+          と表す．
 
-              Hermite多項式の基本的性質として，以下の関係式が成り立つ：
-              \[
-                  H_{k+1}(x)  = 2xH_k(x)-H_k'(x).
-              \]
-              まず，Rolleの定理により，開区間 $(\alpha_i,\alpha_{i+1})$ に対して少なくとも1つの $\beta_i$ が存在し，
-              \[
-                  \alpha_i < \beta_i < \alpha_{i+1},\quad
-                  H_k'(\beta_i) = 0
-                  \quad (i=1,2,\dots,k-1)
-              \]
-              が成り立つ．
-              $H_k '(x)$は$k-1$次多項式であるから，そのような点は$\beta_i$のみである．
-              よって$i = 0,1,\dots,k-1$に対し，$(\beta_i,\beta_{i+1})$においては$H_k '(x) \ne 0$であり，
-              かつ$H_k '(x)$の符号は一定である（ただし，$ \beta_0 =-\infty$，$\beta_k = \infty$とする）．
+          Hermite多項式の基本的性質として，以下の関係式が成り立つ：
+          \[
+            H_{k+1}(x)  = 2xH_k(x)-H_k'(x).
+          \]
+          まず，Rolleの定理により，開区間 $(\alpha_i,\alpha_{i+1})$ に対して少なくとも1つの $\beta_i$ が存在し，
+          \[
+            \alpha_i < \beta_i < \alpha_{i+1},\quad
+            H_k'(\beta_i) = 0
+            \quad (i=1,2,\dots,k-1)
+          \]
+          が成り立つ．
+          $H_k '(x)$は$k-1$次多項式であるから，そのような点は$\beta_i$のみである．
+          よって$i = 0,1,\dots,k-1$に対し，$(\beta_i,\beta_{i+1})$においては$H_k '(x) \ne 0$であり，
+          かつ$H_k '(x)$の符号は一定である（ただし，$ \beta_0 =-\infty$，$\beta_k = \infty$とする）．
 
-              特に，$(\beta_{k-1},\beta_k)$で$H_k (x)$は単調増加または単調減少であり，
-              $\lim_{x \to \infty} H_k (x) =\infty$だから消去法で単調増加である．
-              つまり$H_k ' (\alpha_k) > 0$である．
+          特に，$(\beta_{k-1},\beta_k)$で$H_k (x)$は単調増加または単調減少であり，
+          $\lim_{x \to \infty} H_k (x) =\infty$だから消去法で単調増加である．
+          つまり$H_k ' (\alpha_k) > 0$である．
 
-              (i)の結果により$H_{n+1} (\alpha_i) =-H_k'(\alpha_i)$であるから，
-              補題により，$H_{n+1}(\alpha_i)$の符号は交互に変わり，
-              かつ$H_{k+1}(\alpha_k) < 0$である．
+          (i)の結果により$H_{n+1} (\alpha_i) =-H_k'(\alpha_i)$であるから，
+          補題により，$H_{n+1}(\alpha_i)$の符号は交互に変わり，
+          かつ$H_{k+1}(\alpha_k) < 0$である．
 
-              以上の議論から，$k$ が偶数のときは $\alpha_1$ での値が正となり，以降交互に符号が変化して最後 $\alpha_k$ では負になる．
-              一方，$k$ が奇数のときは $\alpha_1$ での値が負となり，以降交互に符号が変化して最後 $\alpha_k$ ではやはり負になる．
+          以上の議論から，$k$ が偶数のときは $\alpha_1$ での値が正となり，以降交互に符号が変化して最後 $\alpha_k$ では負になる．
+          一方，$k$ が奇数のときは $\alpha_1$ での値が負となり，以降交互に符号が変化して最後 $\alpha_k$ ではやはり負になる．
 
-              ここで中間値の定理を適用すると，
-              \[
-                  (\alpha_1,\alpha_2),~(\alpha_2,\alpha_3),~\dots,~(\alpha_{k-1},\alpha_k)
-              \]
-              の各区間内で $H_{k+1}(x)$ は符号を変えるため，少なくとも1つずつ実根をもつ．
-              よってここまでで合計 $(k-1)$ 個の相異なる根が存在する．
+          ここで中間値の定理を適用すると，
+          \[
+            (\alpha_1,\alpha_2),~(\alpha_2,\alpha_3),~\dots,~(\alpha_{k-1},\alpha_k)
+          \]
+          の各区間内で $H_{k+1}(x)$ は符号を変えるため，少なくとも1つずつ実根をもつ．
+          よってここまでで合計 $(k-1)$ 個の相異なる根が存在する．
 
-              最後に，$H_{k+1}(x)$ の最高次項は $2^{k+1} x^{k+1}$ であり，
-              \[
-                  \lim_{x \to +\infty} H_{k+1}(x) =
-                  \begin{cases}
-                      +\infty & (k \text{が偶数}) \\
-                      +\infty & (k \text{が奇数})
-                  \end{cases},
-                  \quad
-                  \lim_{x \to -\infty} H_{k+1}(x) =
-                  \begin{cases}
-                      -\infty & (k \text{が偶数}) \\
-                      +\infty & (k \text{が奇数})
-                  \end{cases}.
-              \]
-              したがって，$\alpha_1$ より左側と $\alpha_k$ より右側に
-              もう1つずつ根が必ず存在する．
+          最後に，$H_{k+1}(x)$ の最高次項は $2^{k+1} x^{k+1}$ であり，
+          \[
+            \lim_{x \to +\infty} H_{k+1}(x) =
+            \begin{cases}
+              +\infty & (k \text{が偶数}) \\
+              +\infty & (k \text{が奇数})
+            \end{cases},
+            \quad
+            \lim_{x \to -\infty} H_{k+1}(x) =
+            \begin{cases}
+              -\infty & (k \text{が偶数}) \\
+              +\infty & (k \text{が奇数})
+            \end{cases}.
+          \]
+          したがって，$\alpha_1$ より左側と $\alpha_k$ より右側に
+          もう1つずつ根が必ず存在する．
 
-              以上をまとめると，
-              \[
-                  (\alpha_j,\alpha_{j+1}) \text{ に } (k-1)\text{ 個}, \quad
-                  (-\infty,\alpha_1) \text{ または } (\alpha_k,\infty) \text{ に } 2\text{ 個}
-              \]
-              の相異なる実根が存在するので，合計で $k+1$ 個の実根が存在する．
+          以上をまとめると，
+          \[
+            (\alpha_j,\alpha_{j+1}) \text{ に } (k-1)\text{ 個}, \quad
+            (-\infty,\alpha_1) \text{ または } (\alpha_k,\infty) \text{ に } 2\text{ 個}
+          \]
+          の相異なる実根が存在するので，合計で $k+1$ 個の実根が存在する．
 
-              以上により，$H_k(x)$ が $k$ 個の実根をもつとき，$H_{k+1}(x)$ は
-              $k+1$ 個の相異なる実根をもつことが示された．
-    \end{enumerate}
-    よって数学的帰納法により，すべての $n \in \mathbb{N}$（あるいは $n \ge 0$）に対し
-    $H_n(x)$ は $n$ 個の相異なる実根をもつことが証明された．
+          以上により，$H_k(x)$ が $k$ 個の実根をもつとき，$H_{k+1}(x)$ は
+          $k+1$ 個の相異なる実根をもつことが示された．
+  \end{enumerate}
+  よって数学的帰納法により，すべての $n \in \mathbb{N}$（あるいは $n \ge 0$）に対し
+  $H_n(x)$ は $n$ 個の相異なる実根をもつことが証明された．
 \end{tproof}
 
 \begin{proposition}{}{}
-    $H_n(x)$の隣り合う二根の間に$H_{n-1}(x)$の根が一つある．
+  $H_n(x)$の隣り合う二根の間に$H_{n-1}(x)$の根が一つある．
 \end{proposition}
 
 
 \begin{tproof}
-    $H_n(x)$の隣り合う$2$根を$a$，$b$とすると
-    補題より，
-    \[
-        H_n '(a) H_n '(b)<0
-    \]
-    である．
+  $H_n(x)$の隣り合う$2$根を$a$，$b$とすると
+  補題より，
+  \[
+    H_n '(a) H_n '(b)<0
+  \]
+  である．
 
-    $ H_n '(x)=2n H_{n-1}(x)$より，
-    \[
-        H_{n-1}(a) H_{n-1}(b) < 0
-    \]
-    このことから，$a$と$b$の間に$H_{n-1}(x)$の根が存在することがわかった．
+  $ H_n '(x)=2n H_{n-1}(x)$より，
+  \[
+    H_{n-1}(a) H_{n-1}(b) < 0
+  \]
+  このことから，$a$と$b$の間に$H_{n-1}(x)$の根が存在することがわかった．
 \end{tproof}
 以上のことから，全ての事柄が証明された．\qed
 
@@ -474,25 +474,25 @@
 \addcontentsline{toc}{section}{\texorpdfstring{p106--107：3}{p106--107：3}}
 
 \begin{tproof}
-    まず，$f(a)=0$， $g(a)=0$と定義しておく．$0<\delta <b-a$を満たす$\delta$をとると，$f$と$g$は$[a,a+\delta]$で連続であり，
-    $(a,a+\delta)$で微分可能である．いま$g(x) \ne 0$~($ x \in (a,a+\delta)$)であるから，
-    コーシーの平均値の定理により，
-    \[
-        \frac{f(x)-f(a)}{g(x)-g(a)} = \frac{f'(c)}{g'(c)}
-    \]
-    を満たす$c \in (a,x)$が存在する．いま$f(a)=0$，$g(a)=0$と定義したので，
-    \[
-        \frac{f(x)}{g(x)} = \frac{f'(c)}{g'(c)}
-    \]
-    である．$ x \to a+0$のとき，$c \to a+0$であるから，仮定により，
-    \[
-        \lim_{x \to a+0} \frac{f(x)}{g(x)} = \lim_{c \to a+0} \frac{f'(c)}{g'(c)} =l
-    \]
-    である．$ x \to a-0$のときは同様にすればよく，$ x \to a$の場合はこれら二つの考察により結果が従う．
+  まず，$f(a)=0$， $g(a)=0$と定義しておく．$0<\delta <b-a$を満たす$\delta$をとると，$f$と$g$は$[a,a+\delta]$で連続であり，
+  $(a,a+\delta)$で微分可能である．いま$g(x) \ne 0$~($ x \in (a,a+\delta)$)であるから，
+  コーシーの平均値の定理により，
+  \[
+    \frac{f(x)-f(a)}{g(x)-g(a)} = \frac{f'(c)}{g'(c)}
+  \]
+  を満たす$c \in (a,x)$が存在する．いま$f(a)=0$，$g(a)=0$と定義したので，
+  \[
+    \frac{f(x)}{g(x)} = \frac{f'(c)}{g'(c)}
+  \]
+  である．$ x \to a+0$のとき，$c \to a+0$であるから，仮定により，
+  \[
+    \lim_{x \to a+0} \frac{f(x)}{g(x)} = \lim_{c \to a+0} \frac{f'(c)}{g'(c)} =l
+  \]
+  である．$ x \to a-0$のときは同様にすればよく，$ x \to a$の場合はこれら二つの考察により結果が従う．
 
-    $ x \to +\infty$のときは$ t=1/x$として$f(t)$と$g(t)$の極限を考えれば同じ結論に帰着する．
+  $ x \to +\infty$のときは$ t=1/x$として$f(t)$と$g(t)$の極限を考えれば同じ結論に帰着する．
 
-    以上の議論により証明された．
+  以上の議論により証明された．
 \end{tproof}
 
 
@@ -507,38 +507,38 @@
 \addcontentsline{toc}{subsection}{\texorpdfstring{p106--107：8-(\romannumeral1)}{p106--107：8-(\romannumeral1)}}
 
 \begin{tanswer}
-    \[
-        f(x)=3x^4 -8x^3+6x^2
-    \]
-    とおくと，
-    \begin{align*}
-         & f'(x) =12x^3 -24x^2+12x = 12x(x-1)^2, \\
-         & f''(x)=36x^2-48x+12 = 12(3x-1)(x-1)
-    \end{align*}
-    であるから，増減表は以下のようになる．
+  \[
+    f(x)=3x^4 -8x^3+6x^2
+  \]
+  とおくと，
+  \begin{align*}
+     & f'(x) =12x^3 -24x^2+12x = 12x(x-1)^2, \\
+     & f''(x)=36x^2-48x+12 = 12(3x-1)(x-1)
+  \end{align*}
+  であるから，増減表は以下のようになる．
 
-    \vspace{2mm}
+  \vspace{2mm}
 
-    \begin{tabular}{|c||ccccccc|}
-        \hline
-        $x$      & $\cdots$ & $0$ & $\cdots$ & $1/3$ & $\cdots$ & $1$ & $\cdots$ \\
-        \hline
-        $f'(x)$  & $-$      & $0$ & $+$      & $+$   & $+$      & $0$ & $+$      \\
-        \hline
-        $f''(x)$ & $+$      & $+$ & $+$      & $0$   & $-$      & $0$ & $+$      \\
-        \hline
-        $f(x)$   & \ser     &     & \ner     &       & \nel     &     & \ner     \\
-        \hline
-    \end{tabular}
+  \begin{tabular}{|c||ccccccc|}
+    \hline
+    $x$      & $\cdots$ & $0$ & $\cdots$ & $1/3$ & $\cdots$ & $1$ & $\cdots$ \\
+    \hline
+    $f'(x)$  & $-$      & $0$ & $+$      & $+$   & $+$      & $0$ & $+$      \\
+    \hline
+    $f''(x)$ & $+$      & $+$ & $+$      & $0$   & $-$      & $0$ & $+$      \\
+    \hline
+    $f(x)$   & \ser     &     & \ner     &       & \nel     &     & \ner     \\
+    \hline
+  \end{tabular}
 
-    \vspace{2mm}
+  \vspace{2mm}
 
-    \begin{tikzpicture}[scale = 3]
-        \draw[->,>=stealth,semithick](-0.3,0)--(1.3,0)node[above]{$x$};%x軸
-        \draw[->,>=stealth,semithick](0,-0.2)--(0,1.1)node[right]{$y$};%y軸
-        \draw(0,0)node[below right]{O};%原点
-        \draw[domain=-0.2:1.3,samples=100]plot(\x,{3*pow(\x,4)-8*pow(\x,3)+6*pow(\x,2)})node[right]{$y=3x^4-8x^3+6x^2$};
-    \end{tikzpicture}
+  \begin{tikzpicture}[scale = 3]
+    \draw[->,>=stealth,semithick](-0.3,0)--(1.3,0)node[above]{$x$};%x軸
+    \draw[->,>=stealth,semithick](0,-0.2)--(0,1.1)node[right]{$y$};%y軸
+    \draw(0,0)node[below right]{O};%原点
+    \draw[domain=-0.2:1.3,samples=100]plot(\x,{3*pow(\x,4)-8*pow(\x,3)+6*pow(\x,2)})node[right]{$y=3x^4-8x^3+6x^2$};
+  \end{tikzpicture}
 \end{tanswer}
 
 
@@ -547,42 +547,42 @@
 \addcontentsline{toc}{subsection}{\texorpdfstring{p106--107：8-(\romannumeral2)}{p106--107：8-(\romannumeral2)}}
 
 \begin{tanswer}
-    $x>0$のもとで，
-    \[
-        f(x)=x^\frac{1}{x}
-    \]
-    とおく．ここで，
-    \[
-        f(x)=\exp(\log x^{1/x}) = \exp (\log x/x)
-    \]
-    と変形できるので，
-    \begin{align*}
-         & f'(x) = \exp (\log x /x) \left (\frac{1-\log x}{x^2} \right) ,                  \\
-         & f''(x) = \exp (\log x /x) \left (\frac{(\log x -1)^2 -3x+2x\log x}{x^4} \right)
-    \end{align*}
-    であり，増減表は以下のようになる．ただし$\alpha$，$\beta$は$(\log x -1)^2 -3x+2x\log x =0$の$2$解である．
-    \vspace{2mm}
+  $x>0$のもとで，
+  \[
+    f(x)=x^\frac{1}{x}
+  \]
+  とおく．ここで，
+  \[
+    f(x)=\exp(\log x^{1/x}) = \exp (\log x/x)
+  \]
+  と変形できるので，
+  \begin{align*}
+     & f'(x) = \exp (\log x /x) \left (\frac{1-\log x}{x^2} \right) ,                  \\
+     & f''(x) = \exp (\log x /x) \left (\frac{(\log x -1)^2 -3x+2x\log x}{x^4} \right)
+  \end{align*}
+  であり，増減表は以下のようになる．ただし$\alpha$，$\beta$は$(\log x -1)^2 -3x+2x\log x =0$の$2$解である．
+  \vspace{2mm}
 
-    \begin{tabular}{|c||cccccccc|}
-        \hline
-        $x$      & $0$ & $\cdots$ & $\alpha$ & $\cdots$ & $e$ & $\cdots$ & $\beta $ & $\cdots$ \\
-        \hline
-        $f'(x)$  &     & $+$      &          & $+$      & $0$ & $-$      &          & $-$      \\
-        \hline
-        $f''(x)$ &     & $+$      & $0$      & $-$      &     & $-$      & $0$      & $+$      \\
-        \hline
-        $f(x)$   &     & \ner     &          & \nel     &     & \sel     &          & \ser     \\
-        \hline
-    \end{tabular}
+  \begin{tabular}{|c||cccccccc|}
+    \hline
+    $x$      & $0$ & $\cdots$ & $\alpha$ & $\cdots$ & $e$ & $\cdots$ & $\beta $ & $\cdots$ \\
+    \hline
+    $f'(x)$  &     & $+$      &          & $+$      & $0$ & $-$      &          & $-$      \\
+    \hline
+    $f''(x)$ &     & $+$      & $0$      & $-$      &     & $-$      & $0$      & $+$      \\
+    \hline
+    $f(x)$   &     & \ner     &          & \nel     &     & \sel     &          & \ser     \\
+    \hline
+  \end{tabular}
 
-    \vspace{2mm}
+  \vspace{2mm}
 
-    \begin{tikzpicture}[scale = 2]
-        \draw[->,>=stealth,semithick](-0.1,0)--(3,0)node[above]{$x$};%x軸
-        \draw[->,>=stealth,semithick](0,-0.1)--(0,3)node[right]{$y$};%y軸
-        \draw(0,0)node[below right]{O};%原点
-        \draw[domain=0.1:4,samples=100]plot(\x,{pow(\x,1/\x)}) node[right]{$y=x^{1/x}$};
-    \end{tikzpicture}
+  \begin{tikzpicture}[scale = 2]
+    \draw[->,>=stealth,semithick](-0.1,0)--(3,0)node[above]{$x$};%x軸
+    \draw[->,>=stealth,semithick](0,-0.1)--(0,3)node[right]{$y$};%y軸
+    \draw(0,0)node[below right]{O};%原点
+    \draw[domain=0.1:4,samples=100]plot(\x,{pow(\x,1/\x)}) node[right]{$y=x^{1/x}$};
+  \end{tikzpicture}
 \end{tanswer}
 
 
@@ -591,54 +591,54 @@
 
 
 \begin{lemma}{}{}
-    $\sin  x$は$0$を中心として$I=[0,\pi/2]$でテイラー展開できる．
+  $\sin  x$は$0$を中心として$I=[0,\pi/2]$でテイラー展開できる．
 \end{lemma}
 
 \begin{proof}
-    \[
-        (\sin x)^{(n)} =\sin(x + n\pi/2)
-    \]
-    であるから， $ \abs{\sin (x+n\pi/2)}  \leqq 1$であることと定理 2.11：2)より主張が従う．
+  \[
+    (\sin x)^{(n)} =\sin(x + n\pi/2)
+  \]
+  であるから， $ \abs{\sin (x+n\pi/2)}  \leqq 1$であることと定理 2.11：2)より主張が従う．
 \end{proof}
 
 \begin{tproof}
-    $m \geqq 1$のとき，
-    \[
-        S_{2m} = S_{2m-2} +a_{2m-1} + a_{2m} = S_{2m-2} + \frac{(-1)^{2m-1}}{(2(2m-1)+1)!} x^{2(2m-1)+1} + \frac{(-1)^{2m}}{(2(2m)+1)!} x^{2(2m)+1}.
-    \]
-    $ 0< x \leqq \pi /2$のとき，
-    \[
-        \frac{1}{(2(2m-1)+1)!} x^{2(2m-1)+1} > \frac{1}{(2(2m)+1)!} x^{2(2m)+1}
-    \]
-    であり，なおかつ$(-1)^{2m-1} =-1$，$(-1)^{2m} =1$であることをふまえると
-    \[
-        \frac{(-1)^{2m-1}}{(2(2m-1)+1)!} x^{2(2m-1)+1} + \frac{(-1)^{2m}}{(2(2m)+1)!} x^{2(2m)+1} <0.
-    \]
-    よって
-    \[
-        S_{2m} -S_{2m-2}  = \frac{(-1)^{2m-1}}{(2(2m-1)+1)!} x^{2(2m-1)+1} + \frac{(-1)^{2m}}{(2(2m)+1)!} x^{2(2m)+1} <0 \quad S_{2m}<S_{2m-2}.
-    \]
-    よって，$(S_{2m})_{m \in \mathbb{N}}$は$0 < x \leqq \pi /2$で狭義単調減少である．
+  $m \geqq 1$のとき，
+  \[
+    S_{2m} = S_{2m-2} +a_{2m-1} + a_{2m} = S_{2m-2} + \frac{(-1)^{2m-1}}{(2(2m-1)+1)!} x^{2(2m-1)+1} + \frac{(-1)^{2m}}{(2(2m)+1)!} x^{2(2m)+1}.
+  \]
+  $ 0< x \leqq \pi /2$のとき，
+  \[
+    \frac{1}{(2(2m-1)+1)!} x^{2(2m-1)+1} > \frac{1}{(2(2m)+1)!} x^{2(2m)+1}
+  \]
+  であり，なおかつ$(-1)^{2m-1} =-1$，$(-1)^{2m} =1$であることをふまえると
+  \[
+    \frac{(-1)^{2m-1}}{(2(2m-1)+1)!} x^{2(2m-1)+1} + \frac{(-1)^{2m}}{(2(2m)+1)!} x^{2(2m)+1} <0.
+  \]
+  よって
+  \[
+    S_{2m} -S_{2m-2}  = \frac{(-1)^{2m-1}}{(2(2m-1)+1)!} x^{2(2m-1)+1} + \frac{(-1)^{2m}}{(2(2m)+1)!} x^{2(2m)+1} <0 \quad S_{2m}<S_{2m-2}.
+  \]
+  よって，$(S_{2m})_{m \in \mathbb{N}}$は$0 < x \leqq \pi /2$で狭義単調減少である．
 
-    $S_{2m-1}$についても同様に考え，
-    \[
-        S_{2m+1}=S_{2m-1} + a_{2m-1} +a_{2m}= S_{2m-1} + \frac{(-1)^{2m-1}}{(2(2m-1)+1)!} x^{2(2m-1)+1} + \frac{(-1)^{2m}}{(2(2m)+1)!} x^{2(2m)+1}.
-    \]
-    などから，$ S_{2m+1}-S_{2m-1} >0$が成り立ち，$m \leqq 1$のとき$S_{2m+1}>S_{2m-1}$である．
-    よって，$(S_{2m+1})_{m \in \mathbb{N}}$は$0 < x \leqq \pi /2$で狭義単調増加である．
-    そして，補題により$\sin x $は$0 < x \leqq \pi /2$でテイラー展開できるので，そのことをふまえると
-    \[
-        \lim_{m \to \infty} S_{2m} =\lim_{m \to \infty} S_{2m+1} =\sin x
-    \]
-    であるから，
-    \[
-        S_0 > S_2 > S_4 > \cdots > S_{2m} > \sin x > S_{2m+1} > S_{2m-1} > \cdots > S_3 > S_1
-    \]
-    となり\footnote{$S_n=\sin x$となる$n \in \mathbb{N}$が存在すると，$ \sin x=S_n  > S_{n+1}\geqq \sin x$となり矛盾する．}，
-    \[
-        S_{2m} > \sin x > S_{2m+1} \quad ( 0 < x \leqq \frac{\pi}{2} )
-    \]
-    が示された．
+  $S_{2m-1}$についても同様に考え，
+  \[
+    S_{2m+1}=S_{2m-1} + a_{2m-1} +a_{2m}= S_{2m-1} + \frac{(-1)^{2m-1}}{(2(2m-1)+1)!} x^{2(2m-1)+1} + \frac{(-1)^{2m}}{(2(2m)+1)!} x^{2(2m)+1}.
+  \]
+  などから，$ S_{2m+1}-S_{2m-1} >0$が成り立ち，$m \leqq 1$のとき$S_{2m+1}>S_{2m-1}$である．
+  よって，$(S_{2m+1})_{m \in \mathbb{N}}$は$0 < x \leqq \pi /2$で狭義単調増加である．
+  そして，補題により$\sin x $は$0 < x \leqq \pi /2$でテイラー展開できるので，そのことをふまえると
+  \[
+    \lim_{m \to \infty} S_{2m} =\lim_{m \to \infty} S_{2m+1} =\sin x
+  \]
+  であるから，
+  \[
+    S_0 > S_2 > S_4 > \cdots > S_{2m} > \sin x > S_{2m+1} > S_{2m-1} > \cdots > S_3 > S_1
+  \]
+  となり\footnote{$S_n=\sin x$となる$n \in \mathbb{N}$が存在すると，$ \sin x=S_n  > S_{n+1}\geqq \sin x$となり矛盾する．}，
+  \[
+    S_{2m} > \sin x > S_{2m+1} \quad ( 0 < x \leqq \frac{\pi}{2} )
+  \]
+  が示された．
 \end{tproof}
 
 
@@ -648,53 +648,53 @@
 
 
 \begin{tproof}
-    3つのことを証明する．
-    \begin{description}
-        \item[a)とb)が同値であること] \mbox{} \par
-              $a < x \leqq y$または$y \leqq x <a$に対して，$0 \leqq t < 1$を用いて，
-              \[
-                  x=ta+(1-t)y
-              \]
-              とおく．$a < x \leqq y$とする．このとき，
-              \begin{equation}
-                  \label{eq:p107 10) 1}
-                  t = \frac{x-y}{a-y}
-              \end{equation}
-              と表せることはよい．
+  3つのことを証明する．
+  \begin{description}
+    \item[a)とb)が同値であること] \mbox{} \par
+          $a < x \leqq y$または$y \leqq x <a$に対して，$0 \leqq t < 1$を用いて，
+          \[
+            x=ta+(1-t)y
+          \]
+          とおく．$a < x \leqq y$とする．このとき，
+          \begin{equation}
+            \label{eq:p107 10) 1}
+            t = \frac{x-y}{a-y}
+          \end{equation}
+          と表せることはよい．
 
-              また，$f$は$I$で凸であり，これは
-              \begin{equation}
-                  \label{eq:p107 10) 2}
-                  f(x)=tf(x)+(1-t)f(x) < tf(a)+(1-t)f(y)
-              \end{equation}
-              と同値である．$x<y$のとき\eqref{eq:p107 10) 2}に\eqref{eq:p107 10) 1}の$t$の値を代入すれば，
-              \begin{equation}
-                  \label{eq:p107 10) 3}
-                  \frac{f(x)-f(a)}{x-a} < \frac{f(y)-f(x)}{y-x}
-              \end{equation}
-              を得る．$x=y$のときは明らか．
-        \item [a)とc)が同値であること] \mbox{} \par
-              c)を仮定する．\eqref{eq:p107 10) 3}の左辺について，平均値の定理により，
-              \[
-                  \frac{f(x)-f(a)}{x-a}=f'(\xi)
-              \]
-              をみたす$\xi ~(a<\xi <x)$が存在する．同様に，\eqref{eq:p107 10) 3}の右辺について，平均値の定理により，
-              \[
-                  \frac{f(y)-f(x)}{y-x}=f'(\eta)
-              \]
-              をみたす$\eta~ (x<\eta < y)$が存在する．仮定により，$f'(\xi)\leqq f'(\eta)$だから，\eqref{eq:p107 10) 3}が成り立ち，a)が従う．
+          また，$f$は$I$で凸であり，これは
+          \begin{equation}
+            \label{eq:p107 10) 2}
+            f(x)=tf(x)+(1-t)f(x) < tf(a)+(1-t)f(y)
+          \end{equation}
+          と同値である．$x<y$のとき\eqref{eq:p107 10) 2}に\eqref{eq:p107 10) 1}の$t$の値を代入すれば，
+          \begin{equation}
+            \label{eq:p107 10) 3}
+            \frac{f(x)-f(a)}{x-a} < \frac{f(y)-f(x)}{y-x}
+          \end{equation}
+          を得る．$x=y$のときは明らか．
+    \item [a)とc)が同値であること] \mbox{} \par
+          c)を仮定する．\eqref{eq:p107 10) 3}の左辺について，平均値の定理により，
+          \[
+            \frac{f(x)-f(a)}{x-a}=f'(\xi)
+          \]
+          をみたす$\xi ~(a<\xi <x)$が存在する．同様に，\eqref{eq:p107 10) 3}の右辺について，平均値の定理により，
+          \[
+            \frac{f(y)-f(x)}{y-x}=f'(\eta)
+          \]
+          をみたす$\eta~ (x<\eta < y)$が存在する．仮定により，$f'(\xi)\leqq f'(\eta)$だから，\eqref{eq:p107 10) 3}が成り立ち，a)が従う．
 
-              a)，すなわち\eqref{eq:p107 10) 3}を仮定する．
-              左辺について，$x \to + a$とすれば，これは$f'(a)$に収束し，右辺は，
-              これは$(f(y)-f(a))/(y-a)$に収束する（これを$\alpha$とおく．）．$f'(a) \leqq \alpha$となることはよい．
-              また，$x \to - y$とすれば，左辺は$\alpha$に，右辺は$f'(y)$に収束する．$\alpha \leqq f'(y)$となることもよい．
+          a)，すなわち\eqref{eq:p107 10) 3}を仮定する．
+          左辺について，$x \to + a$とすれば，これは$f'(a)$に収束し，右辺は，
+          これは$(f(y)-f(a))/(y-a)$に収束する（これを$\alpha$とおく．）．$f'(a) \leqq \alpha$となることはよい．
+          また，$x \to - y$とすれば，左辺は$\alpha$に，右辺は$f'(y)$に収束する．$\alpha \leqq f'(y)$となることもよい．
 
-              よって，a)とc)は同値である．
+          よって，a)とc)は同値である．
 
-        \item[a)とd)が同値であること] \mbox{} \par
-              d)を仮定する．これは$f'(x)$は$I$上で単調増加であることと同値である．
-    \end{description}
-    以上の議論により，示された．
+    \item[a)とd)が同値であること] \mbox{} \par
+          d)を仮定する．これは$f'(x)$は$I$上で単調増加であることと同値である．
+  \end{description}
+  以上の議論により，示された．
 \end{tproof}
 
 
@@ -703,56 +703,108 @@
 
 
 \begin{tproof}
-    \begin{description}
-        \item[必要条件であること]
-              $ f $ が $ x=0 $ で微分可能であると仮定する．この条件は次のように書ける：
-              \[
-                  f(x) - f(0) = c \cdot x + \varepsilon(x)
-              \]
-              ここで，$ c = (c_1, \ldots, c_n) $ は $ f $ の $ x=0 $ における勾配ベクトルであり，$ \varepsilon(x) $ は
-              $\lim_{x \to 0} \varepsilon(x)/\abs{x} = 0$をみたす関数である．このとき，各 $ i $ について次のように $ g_i(x) $ を定義する：
-              \[
-                  g_i(x) =
-                  \begin{cases}
-                      c_i + (\varepsilon(x) x_i)/\abs{x}^2 & (x \ne 0) \\
-                      c_i                                  & (x = 0)
-                  \end{cases}
-              \]
+  \begin{description}
+    \item[必要条件であること]
+          $ f $ が $ x=0 $ で微分可能であると仮定する．この条件は次のように書ける：
+          \[
+            f(x) - f(0) = c \cdot x + \varepsilon(x)
+          \]
+          ここで，$ c = (c_1, \ldots, c_n) $ は $ f $ の $ x=0 $ における勾配ベクトルであり，$ \varepsilon(x) $ は
+          $\lim_{x \to 0} \varepsilon(x)/\abs{x} = 0$をみたす関数である．このとき，各 $ i $ について次のように $ g_i(x) $ を定義する：
+          \[
+            g_i(x) =
+            \begin{cases}
+              c_i + (\varepsilon(x) x_i)/\abs{x}^2 & (x \ne 0) \\
+              c_i                                  & (x = 0)
+            \end{cases}
+          \]
 
-              この $ g_i(x) $ が $ x=0 $ で連続であることを示すために，$ x \to 0 $ の極限を考える．$ x \ne 0 $ のとき，
-              \[
-                  \lim_{x \to 0} g_i(x) = \lim_{x \to 0} \left( c_i + \frac{\varepsilon(x) x_i}{|x|^2} \right) = c_i + \lim_{x \to 0} \frac{\varepsilon(x) x_i}{|x|^2}.
-              \]
-              ここで，$\varepsilon(x)/\abs{x} \to 0 $ なので，
-              \[
-                  \abs{\frac{\varepsilon(x) x_i}{\abs{x}^2}} = \abs{\frac{\varepsilon(x)}{\abs{x}} \cdot \frac{x_i}{|x|}} \leqq  \abs{\frac{\varepsilon(x)}{\abs{x}} \cdot 1} = \abs{\frac{\varepsilon(x)}{\abs{x}}} \to 0 \quad (x \to 0).
-              \]
-              したがって，$\lim_{x \to 0} g_i(x) = c_i$なので，$ g_i(x) $ は $ x=0 $ で連続である．よって
-              \[
-                  f(x) = f(0) + \sum_{i=1}^n x_i g_i(x).
-              \]
-        \item [十分条件であること]
-              ある連続な関数 $ g_i \colon \mathbb{R}^n \to \mathbb{R} $ が存在して，次のように表されるとする：
-              \[
-                  f(x) = f(0) + \sum_{i=1}^n x_i g_i(x)
-              \]
-              このとき，$ g_i(x) $ が $ x=0 $ で連続であるため，各 $ i $ について $ g_i(0) $ が存在し，次が成り立つ：
-              \[
-                  f(x) - f(0) = \sum_{i=1}^n x_i g_i(0) + \sum_{i=1}^n x_i (g_i(x) - g_i(0)).
-              \]
-              ここで，$ \varepsilon(x) = \sum_{i=1}^n x_i (g_i(x) - g_i(0)) $ とおくと，
-              \[
-                  \lim_{x \to 0} \frac{\varepsilon(x)}{\abs{x}} = \lim_{x \to 0} \frac{\sum_{i=1}^n x_i (g_i(x) - g_i(0))}{\abs{x}}.
-              \]
-              三角不等式を用いると，
-              \[
-                  \abs{ \frac{\varepsilon(x)}{\abs{x}} } \leqq \sum_{i=1}^n \abs{ \frac{x_i(g_i(x) - g_i(0))}{\abs{x}} }.
-              \]
+          この $ g_i(x) $ が $ x=0 $ で連続であることを示すために，$ x \to 0 $ の極限を考える．$ x \ne 0 $ のとき，
+          \[
+            \lim_{x \to 0} g_i(x) = \lim_{x \to 0} \left( c_i + \frac{\varepsilon(x) x_i}{|x|^2} \right) = c_i + \lim_{x \to 0} \frac{\varepsilon(x) x_i}{|x|^2}.
+          \]
+          ここで，$\varepsilon(x)/\abs{x} \to 0 $ なので，
+          \[
+            \abs{\frac{\varepsilon(x) x_i}{\abs{x}^2}} = \abs{\frac{\varepsilon(x)}{\abs{x}} \cdot \frac{x_i}{|x|}} \leqq  \abs{\frac{\varepsilon(x)}{\abs{x}} \cdot 1} = \abs{\frac{\varepsilon(x)}{\abs{x}}} \to 0 \quad (x \to 0).
+          \]
+          したがって，$\lim_{x \to 0} g_i(x) = c_i$なので，$ g_i(x) $ は $ x=0 $ で連続である．よって
+          \[
+            f(x) = f(0) + \sum_{i=1}^n x_i g_i(x).
+          \]
+    \item [十分条件であること]
+          ある連続な関数 $ g_i \colon \mathbb{R}^n \to \mathbb{R} $ が存在して，次のように表されるとする：
+          \[
+            f(x) = f(0) + \sum_{i=1}^n x_i g_i(x)
+          \]
+          このとき，$ g_i(x) $ が $ x=0 $ で連続であるため，各 $ i $ について $ g_i(0) $ が存在し，次が成り立つ：
+          \[
+            f(x) - f(0) = \sum_{i=1}^n x_i g_i(0) + \sum_{i=1}^n x_i (g_i(x) - g_i(0)).
+          \]
+          ここで，$ \varepsilon(x) = \sum_{i=1}^n x_i (g_i(x) - g_i(0)) $ とおくと，
+          \[
+            \lim_{x \to 0} \frac{\varepsilon(x)}{\abs{x}} = \lim_{x \to 0} \frac{\sum_{i=1}^n x_i (g_i(x) - g_i(0))}{\abs{x}}.
+          \]
+          三角不等式を用いると，
+          \[
+            \abs{ \frac{\varepsilon(x)}{\abs{x}} } \leqq \sum_{i=1}^n \abs{ \frac{x_i(g_i(x) - g_i(0))}{\abs{x}} }.
+          \]
 
-              $ g_i(x) $ が $ x=0 $ で連続であるため，$ g_i(x) \to g_i(0) $ となる．したがって，各$ i $について
-              \[
-                  \abs{ \frac{g_i(x) - g_i(0)}{\abs{x}} } \to 0 \quad (x \to 0).
-              \]
-              ゆえに，$\lim_{x \to 0} \varepsilon(x)/\abs{x} = 0$となり，$ f $ は $ x=0 $ で微分可能である．
-    \end{description}
+          $ g_i(x) $ が $ x=0 $ で連続であるため，$ g_i(x) \to g_i(0) $ となる．したがって，各$ i $について
+          \[
+            \abs{ \frac{g_i(x) - g_i(0)}{\abs{x}} } \to 0 \quad (x \to 0).
+          \]
+          ゆえに，$\lim_{x \to 0} \varepsilon(x)/\abs{x} = 0$となり，$ f $ は $ x=0 $ で微分可能である．
+  \end{description}
 \end{tproof}
+
+\section*{p148--149：1} \label{p148--149：1}
+\addcontentsline{toc}{section}{\texorpdfstring{p148--149：1}{p148--149：1}}
+
+\begin{tanswer}
+  $x$を$(r,\theta)$の関数
+  \[
+    x = x(r,\theta) \colon \mathbb{R}^2 \ni (r,\theta) \mapsto r \cos \theta \in\mathbb{R}
+  \]
+  とみる．このとき (7.4) から$ z\in \mathbb{R}^2$であり，
+  \begin{align*}
+    dx_{(r,\theta)} \, (z) & = \frac{\partial x}{\partial r} (r,\theta) z_1 + \frac{\partial x}{\partial \theta} (r,\theta) z_2 \\
+                           & = \cos \theta z_1 - r \sin \theta z_2.
+  \end{align*}
+  一方，$r$，$\theta$を射影
+  \begin{align*}
+     & r \colon \mathbb{R}^2 \ni (r,\theta) \mapsto r \in \mathbb{R} ,         \\
+     & \theta \colon \mathbb{R}^2 \ni (r,\theta) \mapsto \theta \in \mathbb{R}
+  \end{align*}
+  とみると，
+  \begin{align*}
+    dr_{(r,\theta)} \, (z)      & = z_1, \\
+    d\theta_{(r,\theta)} \, (z) & = z_2,
+  \end{align*}
+  であるから,
+  \begin{align*}
+    dx_{(r,\theta)} \, (z) & = \cos \theta \, d r_{(r,\theta)} \, (z) - r \sin \theta \, d \theta_{(r,\theta)} \, (z) \\
+                           & = (\cos \theta \, d r_{(r,\theta)} - r \sin \theta \, d \theta_{(r,\theta)}) \, (z).
+  \end{align*}
+  よって，写像として
+  \[
+    dx_{(r,\theta)} = \cos \theta \,dr_{(r,\theta)} - r \sin \theta \,d \theta_{(r,\theta)}.
+  \]
+  略記すると
+  \[
+    dx = \cos \theta \,dr - r \sin \theta \,d \theta.
+  \]
+  同様にして，
+  \[
+    dy = \sin \theta \,dr + r \cos \theta \,d \theta.
+  \]
+  以上から，
+  \begin{align*}
+      & x \, dx +y \, dy                                                                                                          \\
+    = & r \cos \theta(\cos \theta \, dr - r \sin \theta \, d \theta)+r \sin \theta(\sin \theta \, dr + r \cos \theta \, d \theta) \\
+    = & r \, dr,                                                                                                                  \\
+      & -y \, dx + x \, dy                                                                                                        \\
+    = & -r \sin \theta (\cos \theta  \, dr -r\sin \theta \, d\theta)+r \cos \theta (\sin \theta \, dr + r \cos \theta \, d\theta) \\
+    = & r^2 \, d \theta.
+  \end{align*}
+  以上より，$x \, dx +y \, dy = r \, dr$，$-y \, dx + x \, dy  = r^2 \, d \theta$が成り立つ.
+\end{tanswer}
