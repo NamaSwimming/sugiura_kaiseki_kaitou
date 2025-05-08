@@ -91,25 +91,30 @@
 \setlist[description]{font={\bfseries\sffamily}}
 
 
-%tcolorbox系
+
 \usepackage[many]{tcolorbox}
 \tcbuselibrary{breakable,skins}
 \newtcolorbox{hosoibox}[1]{colframe=black,colback=white,coltitle=black,colbacktitle=white,boxrule=0.5pt,arc=0mm,enhanced,attach boxed title to top left={xshift=10mm,yshift=-3mm},boxed title style={frame hidden},title=#1}
 
 \usepackage{framed}                 % ← leftbar と同系列の空きを得る
 \newtcolorbox{tbleftline}[1][]{%
-  breakable,                        % ← これを追加
-  blanker,
+  breakable,
+  enhanced,            % 内部計算を精密化
+  blanker,             % 背景塗りつぶし無し
   left=5mm,
   borderline west={1.1mm}{0pt}{mydarkgray},
-  before skip=\dimexpr\topsep\relax,
-  after skip=\dimexpr\topsep\relax,
+  lines before break=0,% ← ここが最重要
+  pad at break*=0mm,   % 分割前後余白をゼロ
+  toprule at break=0pt,
+  bottomrule at break=0pt,
+  enlargepage flexible=\baselineskip,
+  ignore nobreak=false,% 見出し直後の孤立を防ぐ
+  before skip=\topsep,
+  after skip=\topsep,
   #1}
 
-\newenvironment{tleftbar}
-{\begin{tbleftline}\setlength{\parindent}{1\zw}}
+\newenvironment{tleftbar}{\begin{tbleftline}\setlength{\parindent}{1\zw}}%
     {\end{tbleftline}}
-
 
 
 % leftbar環境の色を変更
@@ -124,6 +129,22 @@
   \endMakeFramed%
 }
 \makeatother
+
+\usepackage{needspace}   % ← 既に読み込んでいなければ追加
+
+
+% tproof / tanswer が始まる直前に最低行数を確保
+%   7～8行 ≒ 見出し行 + 空行 + tcolorbox 1行目 + α
+\AtBeginEnvironment{tproof}{\Needspace{8\baselineskip}}
+\AtBeginEnvironment{tanswer}{\Needspace{8\baselineskip}}
+
+% さらに proof 環境内の固定 6pt を “伸縮 6pt±2pt” にする
+\newlength{\elasticproofsep}
+\setlength{\elasticproofsep}{6pt plus 2pt minus 2pt}
+\pretocmd{\tproof}{\setlength{\topsep}{\elasticproofsep}}{}{}
+\pretocmd{\tanswer}{\setlength{\topsep}{\elasticproofsep}}{}{}
+
+
 
 
 \definecolor{mypurple}{HTML}{9900FF}
