@@ -133,10 +133,12 @@
 \usepackage{needspace}   % ← 既に読み込んでいなければ追加
 
 
-% tproof / tanswer が始まる直前に最低行数を確保
-%   7～8行 ≒ 見出し行 + 空行 + tcolorbox 1行目 + α
-\AtBeginEnvironment{tproof}{\Needspace{8\baselineskip}}
-\AtBeginEnvironment{tanswer}{\Needspace{8\baselineskip}}
+%% ---- ここだけ差し替え ----
+%   見出し行 + tproof 先頭行 = 2 行確保で十分
+\AtBeginEnvironment{tproof}{\Needspace{2\baselineskip}}
+\AtBeginEnvironment{tanswer}{\Needspace{2\baselineskip}}
+%% --------------------------
+
 
 % さらに proof 環境内の固定 6pt を “伸縮 6pt±2pt” にする
 \newlength{\elasticproofsep}
