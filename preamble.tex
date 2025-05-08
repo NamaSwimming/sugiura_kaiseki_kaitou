@@ -129,16 +129,27 @@
   \endMakeFramed%
 }
 \makeatother
-
 \usepackage{needspace}   % ← 既に読み込んでいなければ追加
+% ---------- preamble.tex に追記 ----------
+\usepackage{etoolbox}
+
+% -------- 見出しをパッチする --------
+\makeatletter
+% ① 見出しがはみ出さない程度だけ前もって確保
+\pretocmd{\section}{\Needspace{3\baselineskip}}{}{}
+\pretocmd{\subsection}{\Needspace{2\baselineskip}}{}{}
+
+% ② 見出し後に 0 幅の空行を入れて \@afterheading を発火させる
+\pretocmd{\section}{\leavevmode\par}{}{}
+\pretocmd{\subsection}{\leavevmode\par}{}{}
+\makeatother
 
 
 %% ---- ここだけ差し替え ----
 %   見出し行 + tproof 先頭行 = 2 行確保で十分
-\AtBeginEnvironment{tproof}{\Needspace{2\baselineskip}}
-\AtBeginEnvironment{tanswer}{\Needspace{2\baselineskip}}
+\AtBeginEnvironment{tproof}{\Needspace{1\baselineskip}}
+\AtBeginEnvironment{tanswer}{\Needspace{1\baselineskip}}
 %% --------------------------
-
 
 % さらに proof 環境内の固定 6pt を “伸縮 6pt±2pt” にする
 \newlength{\elasticproofsep}
@@ -146,8 +157,16 @@
 \pretocmd{\tproof}{\setlength{\topsep}{\elasticproofsep}}{}{}
 \pretocmd{\tanswer}{\setlength{\topsep}{\elasticproofsep}}{}{}
 
+\makeatletter
+% ---- \part の後スキップを 1.8 行・非伸縮に ----
+\patchcmd{\@endpart}%
+{3.5ex plus 1ex minus .2ex}{1.8\baselineskip}{}{}
 
-
+% ---- 「上位→下位」のダブルスキップを防ぐ ----------------
+% \@afterheading の \addvspace<伸縮グルー> を 0.8行固定に
+\patchcmd{\@afterheading}{\addvspace\@tempskipa}{%
+  \vspace{.8\baselineskip}}{}{}
+\makeatother
 
 \definecolor{mypurple}{HTML}{9900FF}
 
