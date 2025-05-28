@@ -124,6 +124,98 @@
   \draw plot[domain=0:{2*pi}, variable=\theta, smooth] ({cos (3*\theta r)},{sin (\theta r)});
 \end{tikzpicture}
 
+\section*{p90--91：3} \label{p90--91：3}
+\addcontentsline{toc}{section}{\texorpdfstring{p90--91：3}{p90--91：3}}
+
+以下では，
+\[
+  \bm{a}=(a_{11},a_{12},a_{13}),\quad \bm{b}=(a_{21},a_{22},a_{23}),\quad \bm{c}=(a_{31},a_{32},a_{33})
+\]とする．
+必要に応じて，
+\[
+  \bm{a}=(a_1,a_2,a_3),\quad \bm{b}=(b_1,b_2,b_3) ,\quad \bm{c}=(c_1,c_2,c_3)
+\]
+とも表記する．
+
+\subsection*{p90--91：3-(\romannumeral1)} \label{p90--91：3-(\romannumeral1)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90--91：3-(\romannumeral1)}{p90--91：3-(\romannumeral1)}}
+
+\begin{tproof}
+  \begin{align*}
+    \det (a,b,c) & = \sum_{\sigma \in S_3} \sgn(\sigma) a_{1\sigma(1)} a_{2\sigma(2)} a_{3\sigma(3)}                                                         \\
+                 & = a_{11} a_{22} a_{33} + a_{12} a_{23} a_{31} + a_{13} a_{21} a_{32} - a_{13} a_{22} a_{31} - a_{12} a_{21} a_{33} - a_{11} a_{23} a_{32} \\
+                 & = (a_{12} a_{23}-a_{13} a_{22})  a_{31} + (a_{13} a_{21}-a_{11} a_{23}) a_{32} + (a_{11} a_{22}-a_{12} a_{21}) a_{33}                     \\
+                 & = (a \times b \, | \,  c).
+  \end{align*}
+  以上より，$\det (a,b,c) = (a \times b \, | \,  c)$が成り立つ．
+\end{tproof}
+
+\subsection*{p90--91：3-(\romannumeral2)} \label{p90--91：3-(\romannumeral2)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90--91：3-(\romannumeral2)}{p90--91：3-(\romannumeral2)} }
+
+\begin{tproof}
+  \begin{align*}
+    (a \, | \, a \times b) & = a_{11} (a_{12} a_{23}-a_{13} a_{22})+ a_{12} (a_{13} a_{21}-a_{11} a_{23}) + a_{13} (a_{11} a_{22}-a_{12} a_{21}) \\
+                           & =0.
+  \end{align*}
+  また，
+  \begin{align*}
+    (b\, | \, a \times b) & = a_{21} (a_{12} a_{23}-a_{13} a_{22})+ a_{22} (a_{13} a_{21}-a_{11} a_{23}) + a_{23} (a_{11} a_{22}-a_{12} a_{21}) \\
+                          & =0.
+  \end{align*}
+  ゆえに，$(a \, | \, a \times b) = (b \, | \, a \times b) = 0$が成り立つ．
+\end{tproof}
+
+\subsection*{p90--91：3-(\romannumeral3)} \label{p90--91：3-(\romannumeral3)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90--91：3-(\romannumeral3)}{p90--91：3-(\romannumeral3)}}
+
+\begin{tproof}
+  \begin{alignat*}{2}
+    \det (a,b, a \times b) & = (a \times b \, | \, a \times b) & \quad & \text{（\hyperref[p90--91：3-(\romannumeral1)]{p90--91：3-(\romannumeral1)}より）} \\
+                           & = \abs{a \times b}^2              &       &
+  \end{alignat*}
+\end{tproof}
+
+\subsection*{p90--91：3-(\romannumeral4)} \label{p90--91：3-(\romannumeral4)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90--91：3-(\romannumeral4)}{p90--91：3-(\romannumeral4)}}
+
+\begin{tproof}
+  \begin{align*}
+    a \times b + b \times a & = (a_2 b_3 - a_3 b_2, a_3 b_1 - a_1 b_3, a_1 b_2 - a_2 b_1) + (b_2 a_3 - b_3 a_2, b_3 a_1 - b_1 a_3, b_1 a_2 - b_2 a_1) \\
+                            & = (0, 0, 0)                                                                                                             \\
+                            & = 0.
+  \end{align*}
+  ゆえに
+  \[
+    a \times b = - b \times a.
+  \]
+\end{tproof}
+
+\subsection*{p90--91：3-(\romannumeral4)} \label{p90--91：3-(\romannumeral4)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90--91：3-(\romannumeral4)}{p90--91：3-(\romannumeral4)}}
+
+\begin{tproof}
+  \begin{align*}
+    a \times b + b \times a & = (a_2 b_3 - a_3 b_2, a_3 b_1 - a_1 b_3, a_1 b_2 - a_2 b_1) + (b_2 a_3 - b_3 a_2, b_3 a_1 - b_1 a_3, b_1 a_2 - b_2 a_1) \\
+                            & = (0, 0, 0)                                                                                                             \\
+                            & = 0.
+  \end{align*}
+  ゆえに
+  \[
+    a \times b = - b \times a.
+  \]
+\end{tproof}
+
+\subsection*{p90--91：3-(\romannumeral5)} \label{p90--91：3-(\romannumeral5)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90--91：3-(\romannumeral5)}{p90--91：3-(\romannumeral5)}}
+
+\begin{tproof}
+  \begin{align*}
+    (a + b) \times c & = ( (a_2 + b_2) c_3 - (a_3 + b_3) c_2, (a_3 + b_3) c_1 - (a_1 + b_1) c_3, (a_1 + b_1) c_2 - (a_2 + b_2) c_1 ) \\
+                     & =(a_2 c_3-a_3 c_2, a_3 c_1-a_1 c_3, a_1 c_2-a_2 c_1) + (b_2 c_3-b_3 c_2, b_3 c_1-b_1 c_3, b_1 c_2-b_2 c_1)    \\
+                     & = a \times c + b \times c.
+  \end{align*}
+\end{tproof}
 
 \section*{p90--91：9}
 \addcontentsline{toc}{section}{\texorpdfstring{p90--91：9}{p90--91：9}}
