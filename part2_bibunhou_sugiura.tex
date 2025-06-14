@@ -150,6 +150,19 @@
   以上より，$\det (a,b,c) = (a \times b \, | \,  c)$が成り立つ．
 \end{tproof}
 
+\begin{tproof}[別解]
+  $\det(a,b,c)$ を第3行について余因子展開すると，
+  \begin{align*}
+    \det (a,b,c) & = a_{31} \begin{vmatrix} a_{12} & a_{13} \\ a_{22} & a_{23} \end{vmatrix}
+    - a_{32} \begin{vmatrix} a_{11} & a_{13} \\ a_{21} & a_{23} \end{vmatrix}
+    + a_{33} \begin{vmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{vmatrix}                                                        \\
+                 & = a_{31}(a_{12}a_{23} - a_{13}a_{22}) + a_{32}(a_{13}a_{21} - a_{11}a_{23}) + a_{33}(a_{11}a_{22} - a_{12}a_{21}) \\
+                 & = (a_{12}a_{23} - a_{13}a_{22})a_{31} + (a_{13}a_{21} - a_{11}a_{23})a_{32} + (a_{11}a_{22} - a_{12}a_{21})a_{33} \\
+                 & = (a \times b \mid c).
+  \end{align*}
+  以上より，$\det (a,b,c) = (a \times b \mid c)$が成り立つ．
+\end{tproof}
+
 \subsection*{p90--91：3-(\romannumeral2)} \label{p90--91：3-(\romannumeral2)}
 \addcontentsline{toc}{subsection}{\texorpdfstring{p90--91：3-(\romannumeral2)}{p90--91：3-(\romannumeral2)} }
 
@@ -215,6 +228,80 @@
                      & =(a_2 c_3-a_3 c_2, a_3 c_1-a_1 c_3, a_1 c_2-a_2 c_1) + (b_2 c_3-b_3 c_2, b_3 c_1-b_1 c_3, b_1 c_2-b_2 c_1)    \\
                      & = a \times c + b \times c.
   \end{align*}
+\end{tproof}
+
+\subsection*{p90--91：3-(\romannumeral6)} \label{p90--91：3-(\romannumeral6)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90--91：3-(\romannumeral6)}{p90--91：3-(\romannumeral6)}}
+
+\begin{tproof}
+  \begin{align*}
+    a \times (b \times c)
+     & = a \times (b_2 c_3 - b_3 c_2, \, b_3 c_1 - b_1 c_3, \, b_1 c_2 - b_2 c_1)      \\
+     & = \begin{pmatrix}
+           a_2 (b_1 c_2 - b_2 c_1) - a_3 (b_3 c_1 - b_1 c_3) \\
+           a_3 (b_2 c_3 - b_3 c_2) - a_1 (b_1 c_2 - b_2 c_1) \\
+           a_1 (b_3 c_1 - b_1 c_3) - a_2 (b_2 c_3 - b_3 c_2)
+         \end{pmatrix}                             \\
+     & = \begin{pmatrix}
+           a_2 b_1 c_2 - a_2 b_2 c_1 - a_3 b_3 c_1 + a_3 b_1 c_3 \\
+           a_3 b_2 c_3 - a_3 b_3 c_2 - a_1 b_1 c_2 + a_1 b_2 c_1 \\
+           a_1 b_3 c_1 - a_1 b_1 c_3 - a_2 b_2 c_3 + a_2 b_3 c_2
+         \end{pmatrix}                         \\
+     & = \begin{pmatrix}
+           (a_1 c_1 + a_2 c_2 + a_3 c_3)b_1 - (a_1 b_1 + a_2 b_2 + a_3 b_3)c_1 \\
+           (a_1 c_1 + a_2 c_2 + a_3 c_3)b_2 - (a_1 b_1 + a_2 b_2 + a_3 b_3)c_2 \\
+           (a_1 c_1 + a_2 c_2 + a_3 c_3)b_3 - (a_1 b_1 + a_2 b_2 + a_3 b_3)c_3
+         \end{pmatrix}           \\
+     & = (a_1 c_1 + a_2 c_2 + a_3 c_3) \begin{pmatrix} b_1 \\ b_2 \\ b_3 \end{pmatrix}
+    - (a_1 b_1 + a_2 b_2 + a_3 b_3) \begin{pmatrix} c_1 \\ c_2 \\ c_3 \end{pmatrix}    \\
+     & = (a \,| \, c) b - (a \,| \, b) c.
+  \end{align*}
+  以上より，$a \times (b \times c) = (a \,| \, c) b - (a \,| \, b) c$ が示された．
+\end{tproof}
+
+\subsection*{p90--91：3-(\romannumeral7)} \label{p90--91：3-(\romannumeral7)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90--91：3-(\romannumeral7)}{p90--91：3-(\romannumeral7)}}
+
+\begin{tproof}
+  \begin{alignat*}{2}
+    (a \times b \,| \, c \times d)
+     & = (a \,| \, b \times (c \times d))                    & \quad & (\text{\hyperref[p90--91：3-(\romannumeral2)]{p90--91：3-(\romannumeral2)}より}) \\
+     & = (a \,| \, (b \,| \, d)c - (b \,| \, c)d)            & \quad & (\text{\hyperref[p90--91：3-(\romannumeral6)]{p90--91：3-(\romannumeral6)}より}) \\
+     & = (b \,| \, d)(a \,| \, c) - (b \,| \, c)(a \,| \, d) & \quad &                                                                              \\
+     & = (a \,| \, c)(b \,| \, d) - (a \,| \, d)(b \,| \, c) & \quad                                                                                \\
+     & = \begin{vmatrix}
+           (a \,| \, c) & (a \,| \, d) \\
+           (b \,| \, c) & (b \,| \, d)
+         \end{vmatrix}.
+     &                                                       &
+  \end{alignat*}
+  以上より，この等式は示された．
+\end{tproof}
+
+\subsection*{p90--91：3-(\romannumeral8)} \label{p90--91：3-(\romannumeral8)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90--91：3-(\romannumeral8)}{p90--91：3-(\romannumeral8)}}
+
+\begin{tproof}
+  \[
+    (a \times b \,| \, c \times d) = (a \,| \, c)(b \,| \, d) - (a \,| \, d)(b \,| \, c)
+  \]
+  において，$c=a$, $d=b$すると，
+  \begin{align*}
+    (a \times b \mid a \times b) & = (a \,| \, a)(b \,| \, b) - (a \,| \, b)(b \,| \, a) \\
+    \abs{a \times b}^2           & = \abs{a}^2 \abs{b}^2 - (a \,| \, b)^2.
+  \end{align*}
+  ここで、$a$ と $b$ のなす角を $\theta$ とすると，内積の定義は $(a \,| \, b) = \abs{a}\abs{b}\cos\theta$ である．これを代入すると，
+  \begin{align*}
+    \abs{a \times b}^2 & = \abs{a}^2 \abs{b}^2 - (\abs{a}\abs{b}\cos\theta)^2     \\
+                       & = \abs{a}^2 \abs{b}^2 - \abs{a}^2 \abs{b}^2 \cos^2\theta \\
+                       & = \abs{a}^2 \abs{b}^2 (1-\cos^2\theta)                   \\
+                       & = \abs{a}^2 \abs{b}^2 \sin^2\theta
+  \end{align*}
+  $\theta$が$a$と$b$のなす角であることに注意し，両辺の正の平方根をとると，
+  \[
+    \abs{a \times b} = \abs{a}\abs{b}\sin\theta
+  \]
+  が得られる．これが証明すべきことであった．
 \end{tproof}
 
 \section*{p90--91：9}
