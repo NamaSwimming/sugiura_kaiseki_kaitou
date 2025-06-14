@@ -304,6 +304,23 @@
   が得られる．これが証明すべきことであった．
 \end{tproof}
 
+\subsection*{p90--91：3-(\romannumeral9)} \label{p90--91：3-(\romannumeral9)}
+\addcontentsline{toc}{subsection}{\texorpdfstring{p90--91：3-(\romannumeral9)}{p90--91：3-(\romannumeral9)}}
+
+\begin{tproof}
+  スカラー値関数の積の微分法則$(d/dt)(fg)=(df/dt)g+f(dg/dt)$を各成分に適用し，
+  \begin{align*}
+    \frac{d}{dt} (a \times b)
+     & = \frac{d}{dt} \begin{pmatrix} a_2 b_3 - a_3 b_2 \\ a_3 b_1 - a_1 b_3 \\ a_1 b_2 - a_2 b_1 \end{pmatrix}                                                                                                                                            \\
+     & = \begin{pmatrix} (d/dt)(a_2 b_3) - (d/dt)(a_3 b_2) \\ (d/dt)(a_3 b_1) - (d/dt)(a_1 b_3) \\ (d/dt)(a_1 b_2) - (d/dt)(a_2 b_1) \end{pmatrix}                                                                                                         \\
+     & = \begin{pmatrix} ( (da_2/dt)b_3 + a_2(db_3/dt) ) - ( (da_3/dt)b_2 + a_3(db_2/dt) ) \\ ( (da_3/dt)b_1 + a_3(db_1/dt) ) - ( (da_1/dt)b_3 + a_1(db_3/dt) ) \\ ( (da_1/dt)b_2 + a_1(db_2/dt) ) - ( (da_2/dt)b_1 + a_2(db_1/dt) ) \end{pmatrix}         \\
+     & = \begin{pmatrix} ( (da_2/dt)b_3 - (da_3/dt)b_2 ) + ( a_2(db_3/dt) - a_3(db_2/dt) ) \\ ( (da_3/dt)b_1 - (da_1/dt)b_3 ) + ( a_3(db_1/dt) - a_1(db_3/dt) ) \\ ( (da_1/dt)b_2 - (da_2/dt)b_1 ) + ( a_1(db_2/dt) - a_2(db_1/dt) ) \end{pmatrix}         \\
+     & = \begin{pmatrix} (da_2/dt)b_3 - (da_3/dt)b_2 \\ (da_3/dt)b_1 - (da_1/dt)b_3 \\ (da_1/dt)b_2 - (da_2/dt)b_1 \end{pmatrix} + \begin{pmatrix} a_2(db_3/dt) - a_3(db_2/dt) \\ a_3(db_1/dt) - a_1(db_3/dt) \\ a_1(db_2/dt) - a_2(db_1/dt) \end{pmatrix} \\
+     & = \frac{da}{dt} \times b + a \times \frac{db}{dt}.
+  \end{align*}
+  これが証明すべきことであった．
+\end{tproof}
+
 \section*{p90--91：9}
 \addcontentsline{toc}{section}{\texorpdfstring{p90--91：9}{p90--91：9}}
 
