@@ -90,33 +90,71 @@
 \usepackage[shortlabels]{enumitem}
 \setlist[description]{font={\bfseries\sffamily}}
 
-
+\usepackage{xparse} % ラッパー環境作成のために追加
 
 \usepackage[many]{tcolorbox}
-\tcbuselibrary{breakable,skins}
+\tcbuselibrary{breakable,skins,theorems}
 \newtcolorbox{hosoibox}[1]{colframe=black,colback=white,coltitle=black,colbacktitle=white,boxrule=0.5pt,arc=0mm,enhanced,attach boxed title to top left={xshift=10mm,yshift=-3mm},boxed title style={frame hidden},title=#1}
 
-\usepackage{framed}                 % ← leftbar と同系列の空きを得る
-\newtcolorbox{tbleftline}[1][]{%
+\usepackage{framed}
+
+\usepackage{etoolbox}
+\usepackage{needspace}
+
+% 共通のボックススタイルを定義
+\newtcolorbox{leftbarbox}[1]{%
+  enhanced,
   breakable,
-  enhanced,            % 内部計算を精密化
-  blanker,             % 背景塗りつぶし無し
-  left=5mm,
-  borderline west={1.1mm}{0pt}{mydarkgray},
-  lines before break=0,% ← ここが最重要
-  pad at break*=0mm,   % 分割前後余白をゼロ
-  toprule at break=0pt,
-  bottomrule at break=0pt,
-  enlargepage flexible=\baselineskip,
-  ignore nobreak=false,% 見出し直後の孤立を防ぐ
-  before skip=\topsep,
-  after skip=\topsep,
-  #1}
+  frame hidden,
+  boxrule=0pt,
+  borderline west={1.1mm}{0pt}{gray!70}, % 左のバー
+  colback=white,
+  left=5mm, right=2mm, top=2mm, bottom=2mm,
+  pad at break=1mm,
+  before skip=\topsep, after skip=\topsep,
+  %--- タイトル設定 ---
+  attach boxed title to top left={xshift=0.5\zw, yshift*=-\fboxsep, yshift*=-0.5pt},
+  fonttitle=\sffamily\bfseries,
+  coltitle=black,
+  boxed title style={
+      frame hidden,
+      colback=gray!25,
+      left=3.5pt,
+      right=3.5pt,
+      top=0pt,
+      bottom=0pt,
+    },
+  title={#1} % 環境の引数からタイトルを直接設定
+}
 
-\newenvironment{tleftbar}{\begin{tbleftline}\setlength{\parindent}{1\zw}}%
-    {\end{tbleftline}}
+%--- ユーザーが使うための環境定義 ---
 
+% \begin{tproof}[見出し] ... \end{tproof}
+% amsthmのQED機能と連携
+\NewDocumentEnvironment{tproof}{ O{証明} }{%
+  \pushQED{\qed}% amsthmのQEDスタックを開始
+  \begin{leftbarbox}{#1}%
+    }{%
+    \popQED% QED記号を配置
+  \end{leftbarbox}%
+}
 
+% \begin{tanswer}[見出し] ... \end{tanswer}
+% QEDなしのバージョン
+\NewDocumentEnvironment{tanswer}{ O{解答} }{%
+  \begin{leftbarbox}{#1}%
+    }{%
+  \end{leftbarbox}%
+}
+
+%--- 見出し後の改ページ制御 ---
+\makeatletter
+\pretocmd{\section}{\Needspace{3\baselineskip}}{}{}
+\pretocmd{\subsection}{\Needspace{2\baselineskip}}{}{}
+\pretocmd{\section}{\leavevmode\par}{}{}
+\pretocmd{\subsection}{\leavevmode\par}{}{}
+\makeatother
+%========== 新しい定義（ここまで） ==========
 % leftbar環境の色を変更
 \makeatletter
 \renewenvironment{leftbar}{%
@@ -129,44 +167,7 @@
   \endMakeFramed%
 }
 \makeatother
-\usepackage{needspace}   % ← 既に読み込んでいなければ追加
-% ---------- preamble.tex に追記 ----------
-\usepackage{etoolbox}
 
-% -------- 見出しをパッチする --------
-\makeatletter
-% ① 見出しがはみ出さない程度だけ前もって確保
-\pretocmd{\section}{\Needspace{3\baselineskip}}{}{}
-\pretocmd{\subsection}{\Needspace{2\baselineskip}}{}{}
-
-% ② 見出し後に 0 幅の空行を入れて \@afterheading を発火させる
-\pretocmd{\section}{\leavevmode\par}{}{}
-\pretocmd{\subsection}{\leavevmode\par}{}{}
-\makeatother
-
-
-%% ---- ここだけ差し替え ----
-%   見出し行 + tproof 先頭行 = 2 行確保で十分
-\AtBeginEnvironment{tproof}{\Needspace{1\baselineskip}}
-\AtBeginEnvironment{tanswer}{\Needspace{1\baselineskip}}
-%% --------------------------
-
-% さらに proof 環境内の固定 6pt を “伸縮 6pt±2pt” にする
-\newlength{\elasticproofsep}
-\setlength{\elasticproofsep}{6pt plus 2pt minus 2pt}
-\pretocmd{\tproof}{\setlength{\topsep}{\elasticproofsep}}{}{}
-\pretocmd{\tanswer}{\setlength{\topsep}{\elasticproofsep}}{}{}
-
-\makeatletter
-% ---- \part の後スキップを 1.8 行・非伸縮に ----
-\patchcmd{\@endpart}%
-{3.5ex plus 1ex minus .2ex}{1.8\baselineskip}{}{}
-
-% ---- 「上位→下位」のダブルスキップを防ぐ ----------------
-% \@afterheading の \addvspace<伸縮グルー> を 0.8行固定に
-\patchcmd{\@afterheading}{\addvspace\@tempskipa}{%
-  \vspace{.8\baselineskip}}{}{}
-\makeatother
 
 \definecolor{mypurple}{HTML}{9900FF}
 
@@ -385,59 +386,6 @@
 \newlength{\proofindent}
 \setlength{\proofindent}{1\zw}   % 好きな字下げ幅
 
-\renewenvironment{proof}[1][\proofname]{%
-  \par\pushQED{\qed}%
-  \normalfont
-  \topsep6\p@\@plus6\p@      % 見出し前後の間隔
-  \trivlist
-  %── 見出し「証明」（ピリオド無し） ──
-  \item[\hskip\labelsep\itshape #1]%
-  \setlength{\parindent}{\proofindent}% 本文の字下げ量
-  \leavevmode\par                  % ★空の 1 段落を作る
-  \ignorespaces                    %   → 次行から本文
-}{%
-  \popQED\endtrivlist\@endpefalse
-}
-\makeatother
-% ── 「証明」を左バー付きボックスに包む環境 ──────────────────
-% 使い方：  \begin{tproof}[任意の見出し] ... \end{tproof}
-%          見出しを省略すると従来の \proofname（灰色ラベル「証明」）になる
-\newenvironment{tproof}[1][\proofname]{%
-  \begin{tleftbar}% 左バー付きボックス
-    \begin{proof}[{%
-            \normalfont                 %  ← ここでイタリックを解除
-            \noindent
-            \setlength{\fboxsep}{3.5pt}%
-            \colorbox{gray!25}{\sffamily\bfseries #1}%
-          }]%
-      }{%
-    \end{proof}% □ を出力
-  \end{tleftbar}%
-}
-
-
-% ──────────────────────────────────────────────
-% 「解答」ラベル（tanswer 用）
-\newcommand{\answername}{解答}
-
-% ── 左バー付き「解答」環境 ─────────────────────
-% 使い方：\begin{tanswer}[任意の見出し] ... \end{tanswer}
-%        見出し省略時は \answername（灰色ラベル「解答」）
-\newenvironment{tanswer}[1][\answername]{%
-  \begin{tleftbar}% ← 左バー付きボックス開始
-    \begingroup
-    \renewcommand{\qed}{}%  □ マークを無効化
-    \begin{proof}[{%
-            \normalfont                 %  ← ここでイタリックを解除
-            \noindent
-            \setlength{\fboxsep}{3.5pt}%
-            \colorbox{gray!25}{\sffamily\bfseries #1}%
-          }]%
-      }{%
-    \end{proof}%          ← proof 終了（□ は出ない）
-    \endgroup
-  \end{tleftbar}%        ← ボックスを閉じる
-}
 %増減表関連
 \newcommand{\ner}{
   \begin{tikzpicture}[scale=0.3,baseline=0.3]
