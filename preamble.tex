@@ -60,7 +60,6 @@
   %ハイパーリンク用
   \usepackage{url}
   \usepackage{hyperref}
-  \usepackage{xcolor}
   \definecolor{BlueViolet}{RGB}{105,39,255}
   \definecolor{mylightgray}{HTML}{DDDDDD}
   \definecolor{mydarkgray}{HTML}{777777}
@@ -101,73 +100,53 @@
 \usepackage{etoolbox}
 \usepackage{needspace}
 
-% 共通のボックススタイルを定義
-\newtcolorbox{leftbarbox}[1]{%
-  enhanced,
-  breakable,
-  frame hidden,
-  boxrule=0pt,
-  borderline west={1.1mm}{0pt}{gray!70}, % 左のバー
-  colback=white,
-  left=5mm, right=2mm, top=2mm, bottom=2mm,
-  pad at break=1mm,
-  before skip=\topsep, after skip=\topsep,
-  %--- タイトル設定 ---
-  attach boxed title to top left={xshift=0.5\zw, yshift*=-\fboxsep, yshift*=-0.5pt},
-  fonttitle=\sffamily\bfseries,
-  coltitle=black,
-  boxed title style={
-      frame hidden,
-      colback=gray!25,
-      left=3.5pt,
-      right=3.5pt,
-      top=0pt,
-      bottom=0pt,
-    },
-  title={#1} % 環境の引数からタイトルを直接設定
-}
+%======================================================================
+% ★★★ レイアウト問題解決・最終調整版 ★★★
+%======================================================================
 
-%--- ユーザーが使うための環境定義 ---
+% --- 1. 必要なパッケージ ---
+\usepackage{xcolor}
+\usepackage[framemethod=default]{mdframed}
 
-% \begin{tproof}[見出し] ... \end{tproof}
-% amsthmのQED機能と連携
-\NewDocumentEnvironment{tproof}{ O{証明} }{%
-  \pushQED{\qed}% amsthmのQEDスタックを開始
-  \begin{leftbarbox}{#1}%
+% --- 2. 基本的なレイアウト設定（変更なし） ---
+\raggedbottom
+\widowpenalty=10000
+\clubpenalty=10000
+\displaywidowpenalty=10000
+
+% --- 3. leftbar の「見た目」を定義 ---
+\newmdenv[
+  linecolor=gray!70,
+  linewidth=3pt,
+  topline=false,
+  bottomline=false,
+  rightline=false,
+  skipabove=\smallskipamount,   % ★変更：環境上のスペースを詰めて、改ページを抑制
+  skipbelow=\smallskipamount,   % ★変更：環境下のスペースも同様に
+  leftmargin=10pt,
+  rightmargin=0pt,
+  innerleftmargin=10pt,
+  innerrightmargin=0pt,
+  innertopmargin=0pt,
+  innerbottommargin=0pt,
+]{leftbarstyle}
+
+\newenvironment{tproof}[1][証明]{%
+  \begin{leftbarstyle}
+    % \hspace と \strut を削除し、\kakko と同じ見た目に
+    {\setlength{\fboxsep}{3.5pt}\noindent\colorbox{gray!25}{\sffamily\bfseries #1}\par}\medskip
     }{%
-    \popQED% QED記号を配置
-  \end{leftbarbox}%
+    \par\nopagebreak\hfill\qed
+  \end{leftbarstyle}
 }
 
-% \begin{tanswer}[見出し] ... \end{tanswer}
-% QEDなしのバージョン
-\NewDocumentEnvironment{tanswer}{ O{解答} }{%
-  \begin{leftbarbox}{#1}%
+\newenvironment{tanswer}[1][解答]{%
+  \begin{leftbarstyle}
+    % こちらも見出しスタイルを統一
+    {\setlength{\fboxsep}{3.5pt}\noindent\colorbox{gray!25}{\sffamily\bfseries #1}\par}\medskip
     }{%
-  \end{leftbarbox}%
+  \end{leftbarstyle}
 }
-
-%--- 見出し後の改ページ制御 ---
-\makeatletter
-\pretocmd{\section}{\Needspace{3\baselineskip}}{}{}
-\pretocmd{\subsection}{\Needspace{2\baselineskip}}{}{}
-\pretocmd{\section}{\leavevmode\par}{}{}
-\pretocmd{\subsection}{\leavevmode\par}{}{}
-\makeatother
-%========== 新しい定義（ここまで） ==========
-% leftbar環境の色を変更
-\makeatletter
-\renewenvironment{leftbar}{%
-  \def\FrameCommand{%
-    {\color{mydarkgray}\vrule width 3pt}%
-    \hspace{10pt}%
-    \fboxsep=\FrameSep\colorbox{white}}%
-  \MakeFramed{\hsize\hsize\advance\hsize-\width\FrameRestore}%
-}{%
-  \endMakeFramed%
-}
-\makeatother
-
 
 \definecolor{mypurple}{HTML}{9900FF}
 
