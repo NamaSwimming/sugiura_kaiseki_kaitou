@@ -114,15 +114,25 @@
 \clubpenalty=10000
 \displaywidowpenalty=10000
 
-% --- 3. leftbar の「見た目」を定義 ---
+%======================================================================
+% ★★★ レイアウト問題解決・改訂版 ★★★
+%======================================================================
+
+
+%======================================================================
+% ★★★ レイアウト問題解決・最終確定版 Ver.4 ★★★
+% ユーザー様ご提供の情報を元にtrivlistの実装を完成
+%======================================================================
+
+% --- 1. leftbar の「見た目」を定義（変更なし） ---
 \newmdenv[
   linecolor=gray!70,
   linewidth=3pt,
   topline=false,
   bottomline=false,
   rightline=false,
-  skipabove=\smallskipamount,   % ★変更：環境上のスペースを詰めて、改ページを抑制
-  skipbelow=\smallskipamount,   % ★変更：環境下のスペースも同様に
+  skipabove=\smallskipamount,
+  skipbelow=\smallskipamount,
   leftmargin=10pt,
   rightmargin=0pt,
   innerleftmargin=10pt,
@@ -131,20 +141,33 @@
   innerbottommargin=0pt,
 ]{leftbarstyle}
 
+
+% --- 2. 堅牢なtrivlistベースの環境定義 ---
+
 \newenvironment{tproof}[1][証明]{%
-  \begin{leftbarstyle}
-    % \hspace と \strut を削除し、\kakko と同じ見た目に
-    {\setlength{\fboxsep}{3.5pt}\noindent\colorbox{gray!25}{\sffamily\bfseries #1}\par}\medskip
-    }{%
-    \par\nopagebreak\hfill\qed
+  \begin{leftbarstyle} % 左の縦線を開始
+    \begin{trivlist}
+      % (1) \item[...] で見出しを描画
+      \item[\hskip\labelsep{\setlength{\fboxsep}{3.5pt}\colorbox{gray!25}{\sffamily\bfseries #1}}]
+      % (2) ★★★\leavevmode\par で強制的に改行し、新しい段落を開始する★★★
+      \leavevmode\par
+      % (3) \ignorespaces で、ユーザーが入力した不要なスペースを無視
+      \ignorespaces
+      }{%
+      % 環境の終了処理
+      \par\nopagebreak\hfill\qed % 証明終記号
+    \end{trivlist}
   \end{leftbarstyle}
 }
 
 \newenvironment{tanswer}[1][解答]{%
   \begin{leftbarstyle}
-    % こちらも見出しスタイルを統一
-    {\setlength{\fboxsep}{3.5pt}\noindent\colorbox{gray!25}{\sffamily\bfseries #1}\par}\medskip
-    }{%
+    \begin{trivlist}
+      \item[\hskip\labelsep{\setlength{\fboxsep}{3.5pt}\colorbox{gray!25}{\sffamily\bfseries #1}}]
+      \leavevmode\par
+      \ignorespaces
+      }{%
+    \end{trivlist}
   \end{leftbarstyle}
 }
 
