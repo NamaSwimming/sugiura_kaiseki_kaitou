@@ -15,7 +15,6 @@
 \usepackage{multicol}
 \setlength{\columnseprule}{.5pt} %中央の線
 
-
 % ヘッダーフォントの設定
 \renewcommand{\headfont}{\sffamily\bfseries}
 \renewcommand{\familydefault}{\sfdefault}
@@ -427,4 +426,128 @@
 \newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
 
 
+
+% addpart, problem, problemtodo, subproblem マクロ
+
+% [key = value] 型のオプション引数を使用するためのパッケージ
+% `texdoc keyval` 参照
+\usepackage{keyval}
+
+% Lua の読みこみ，\luaprogressfalse の場合は代わりに \luadirect を何もしないコマンドとする
+\ifluaprogress
+    \usepackage{luacode}
+\else
+    \newcommand{\luadirect}[1]{}
+\fi
+
+% Lua の進捗集計の本体のコード（lib.lua）を読みこむ
+\luadirect{
+dofile("lib.lua")
+}
+
+\newcommand*{\addpart}[1]{%
+  \addcontentsline{toc}{part}{\texorpdfstring{#1}{#1}}%
+  % 章を Lua 側で記録
+  \luadirect{
+    chapter = Chapter.new(\luastring{#1})
+    table.insert(chapters, chapter)
+  }%
+}
+
+\makeatletter
+
+\newif\ifkaitou@problem@done
+\newif\ifkaitou@problem@countitself
+
+\define@key{problem}{label}[abc]{\def\kaitou@problem@label{\label{#1}}}
+\define@key{problem}{subproblems}[0]{\def\kaitou@problem@subproblems{#1}}
+\define@key{problem}{done}[0]{\kaitou@problem@donetrue}
+\define@key{problem}{undone}[0]{\kaitou@problem@donefalse}
+\define@key{problem}{count-itself}[0]{\kaitou@problem@countitselftrue}
+\def\KV@problem@label@default{\def\kaitou@problem@label{\relax}}
+
+\newcommand*{\kaitou@problem@internal}[3][]{%
+  \kaitou@problem@countitselffalse
+  \setkeys{problem}{subproblems = 0, label}%
+  \setkeys{problem}{#1}%
+  \def\ProblemName{#2：#3}%
+  % 問題を Lua 側で記録
+  \luadirect{
+    --[[ 小問の個数 --]]
+    local subproblems = tonumber(\luastring{\kaitou@problem@subproblems})
+
+    --[[ 小問を持つか --]]
+    local haveSubproblems = false
+    if subproblems ~= 0 then
+      haveSubproblems = true
+    end
+
+    --[[ 自身をカウントするか判断 --]]
+    local countitself = false
+    if subproblems == 0 then
+      countitself = true
+    elseif \luastring{\ifkaitou@problem@countitself true\else false\fi} == "true" then
+      countitself = true
+    end
+    if countitself then
+      subproblems = subproblems + 1
+    end
+
+    --[[ problem インスタンスを作成 --]]
+    local page = Page.fromString(\luastring{#2})
+    local problemName = tostring(page) .. "：" .. \luastring{#3}
+    problem = Problem.new(page, problemName, subproblems, haveSubproblems)
+    chapter:addProblem(problem)
+
+    --[[ 自身をカウントする場合，done ならば incrementDone() --]]
+    if countitself == true and \luastring{\ifkaitou@problem@done true\else false\fi} == "true" then
+      problem:incrementDone()
+    end
+  }%
+}
+
+\newcommand*{\problem}[3][]{%
+  \kaitou@problem@donetrue% done がデフォルト
+  \kaitou@problem@internal[#1]{#2}{#3}%
+  \section*{\ProblemName} \kaitou@problem@label%
+  \addcontentsline{toc}{section}{\texorpdfstring{#2：#3}{#2：#3}}%
+}
+
+\newcommand*{\problemtodo}[3][]{%
+  \kaitou@problem@donefalse% undone がデフォルト
+  \kaitou@problem@internal[#1]{#2}{#3}%
+}
+
+
+\newif\ifkaitou@subproblem@done
+
+\define@key{subproblem}{label}{\def\kaitou@subproblem@label{\label{#1}}}
+\define@key{subproblem}{done}[0]{\kaitou@subproblem@donetrue}
+\define@key{subproblem}{undone}[0]{\kaitou@subproblem@donefalse}
+
+\def\KV@subproblem@label@default{\def\kaitou@subproblem@label{\relax}}
+
+\newcommand*{\subproblem}[2][]{%
+  % default
+  \kaitou@subproblem@donetrue% done がデフォルト
+  \setkeys{subproblem}{label}%
+  \setkeys{subproblem}{#1}%
+  \subsection*{\ProblemName-(\romannumeral#2)}\kaitou@subproblem@label
+  \addcontentsline{toc}{subsection}{\texorpdfstring{\ProblemName-(\romannumeral#2)}{\ProblemName-(\romannumeral#2)}}
+  % 小問を Lua 側で記録
+  \luadirect{
+    if \luastring{\ifkaitou@subproblem@done true\else false\fi} == "true" then
+      problem:incrementDone()
+    end
+  }%
+}
+\makeatother
+
 \AtBeginDocument{\RenewCommandCopy\qty\SI}
+
+% ドキュメントの最後で progress.md を出力する
+\AtEndDocument{\luadirect{
+  local file = io.open("progress.md", "w")
+  outputProgress(file, chapters)
+  }%
+}

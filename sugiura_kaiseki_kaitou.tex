@@ -1,6 +1,11 @@
 \documentclass[a4paper,10pt,fleqn]{ltjsarticle}
 
 
+\newif\ifluaprogress
+% true を false に変えることで Lua の進捗マクロをオフにする（Lua のエラーでコンパイルできない時に使用）
+\luaprogresstrue
+
+
 \input{preamble.tex}
 
 \usepackage{autobreak}

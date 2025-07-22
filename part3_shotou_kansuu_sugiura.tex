@@ -1,8 +1,7 @@
 \part*{第3章：初等函数}
-\addcontentsline{toc}{part}{\texorpdfstring{第3章：初等函数}{第3章：初等函数}}
+\addpart{第3章：初等函数}
 
-\section*{p166--167：1}\label{p166--167：1}
-\addcontentsline{toc}{section}{\texorpdfstring{p166--167：1}{p166--167：1}}
+\problem{p166--167}{1}
 
 ラプラシアン（ラプラス作用素）$\Laplacian$は$\sum_{i=1}^n \frac{\partial^2}{\partial x_i^2}$で定義されていたことを思い出そう（p135）．
 
@@ -33,10 +32,7 @@
 
 問題文において言及されているように，$u, v$の$C^2$級との仮定は実際には不要である．定理IX.3.1系2を参照せよ．
 
-
-\section*{p166--167：2}\label{p166--167：2}
-\addcontentsline{toc}{section}{\texorpdfstring{p166--167：2}{p166--167：2}}
-
+\problem{p166--167}{2}
 \begin{tproof}
     以下定理1.1と同様に$f(x + iy) = u + iv$と書く．
     このとき\hyperref[p166--167：1]{p166--167：1}より$\Laplacian u = \Laplacian v = 0$が（$C^2$級の仮定なしに）成立することを用いて%
@@ -53,10 +49,7 @@
     これと$\abs{f'(x)}^2 = \abs{u_x + iv_y}^2 = u_x^2 + v_y^2$（定理1.1）を合わせて，題意が示される．
 \end{tproof}
 
-
-\section*{p166--167：3}
-\addcontentsline{toc}{section}{\texorpdfstring{p166--167：3}{p166--167：3}}
-
+\problem{p166--167}{3}
 \begin{tproof}
     以下$z = x + iy$と書く．まず$\abs{z}$について示す．実部を$u$，虚部を$v$と置けば$u = \abs{x + iy},\ v = 0$．
     ここで，$u$は$(x, y) = (0, 0)$で微分可能ではないから，$\abs{z}$も$0$において複素微分可能でない．
@@ -81,18 +74,19 @@
 \footnote{$\abs{z}$ の方については平方根を回避できるメリットはあるが，おそらく普通に示した方が楽であろう．}%
 ．
 
-
-\section*{p166--167：4}
-\addcontentsline{toc}{section}{\texorpdfstring{p166--167：4}{p166--167：4}}
+\problem{p166--167}{4}
 
 \begin{tproof}
     $U$上正則な函数$f$が実数値のみを取るとき，$f$が定数であることを示せば十分．以下定理1.1と同様に$f(x + iy) = u + iv$と書く．このとき$U$上至る所$v = 0$であるから$v_x = v_y = 0$．これとコーシー・リーマンの関係式（定理1.1）から$u_x = u_y = 0$．再び定理1.1より$f'(z) = u_x + iv_x = 0$．命題1.4と合わせて$f$が定数であることが導かれる．
 \end{tproof}
 
-\section*{p191--193：1}
-\addcontentsline{toc}{section}{\texorpdfstring{p191--193：1}{p191--193：1}}
+\problemtodo{p166--167}{5}
+\problemtodo{p166--167}{6}
+\problemtodo{p166--167}{7}
+\problemtodo{p166--167}{8}
+\problemtodo{p166--167}{9}
 
-
+\problem{p191--193}{1}
 \begin{tproof}
     $m，n \in \mathbb{N},~n >0$とし，$e=\frac{m}{n}$と表される，すなわち$e$が有理数だと仮定する．このとき，与えられた式を変形して，
     \[
@@ -110,13 +104,9 @@
     であり，$\frac{e^{\theta}}{n+1} \in \mathbb{Z}$であるから$n=1$となる．ゆえに$e=m$となり，$e$は整数である．しかし$2<e<3$であるから，これは矛盾である．よって先の仮定が誤りであり，$e$は無理数である．
 \end{tproof}
 
+\problem{subproblems = 3}{p191--193}{2}
 
-
-\section*{p191--193：2}
-\addcontentsline{toc}{section}{\texorpdfstring{p191--193：2}{p191--193：2}}
-
-\subsection*{p191--193：2-(\romannumeral1)}
-\addcontentsline{toc}{subsection}{\texorpdfstring{p191--193：2-(\romannumeral1)}{p191--193：2-(\romannumeral1)}}
+\subproblem{1}
 
 \begin{tproof}
     $k = 0$のとき$f(0) = f(\pi) = 0$より明らかに成立．$1 \leq k \leq 2\pi$とする．
@@ -140,9 +130,7 @@
     よって題意は示された．
 \end{tproof}
 
-\subsection*{p191--193：2-(\romannumeral2)}
-\addcontentsline{toc}{subsection}{\texorpdfstring{p191--193：2-(\romannumeral2)}{p191--193：2-(\romannumeral2)}}
-
+\subproblem{2}
 \begin{tproof}
     定理IV.5.7の部分積分法を用いれば，
     \begin{align*}
@@ -158,8 +146,7 @@
     よって(\romannumeral1)と合わせて$I$は整数．
 \end{tproof}
 
-\subsection*{p191--193：2-(\romannumeral3)}
-\addcontentsline{toc}{subsection}{\texorpdfstring{p191--193：2-(\romannumeral3)}{p191--193：2-(\romannumeral3)}}
+\subproblem{3}
 
 \begin{tproof}
     $0 < x < \pi = \frac{p}{q}$のとき$0 < p - qx < p$．この範囲で$0 < \sin x \leq 1$であることと合わせて，
@@ -179,10 +166,11 @@
     これは(\romannumeral2)の結果と矛盾するから，最初の仮定が誤っていたことが分かる．よって$\pi$は無理数であることが示され，証明は完結した．
 \end{tproof}
 
+\problemtodo{p191--193}{3}
+\problemtodo{p191--193}{4}
+\problemtodo{p191--193}{5}
 
-\section*{p191--193：6}
-\addcontentsline{toc}{section}{\texorpdfstring{p191--193：2}{p191--193：2}}
-
+\problemtodo[subproblems=5]{p191--193}{6}
 $M \times N$行列の列$\{A_i\}$が$A$に収束するとは$\norm{A_i - A} \to 0$で定義されるのであった．ここで$\norm{B}$は
 \[
     \norm{B} = \sup_{x \in \mathbf{C}^n,\ \abs{x} \leqq 1}\abs{Bx}
@@ -198,10 +186,7 @@ $M \times N$行列の列$\{A_i\}$が$A$に収束するとは$\norm{A_i - A} \to 
     $\norm{A^n} \leq \norm{A}^n$より，$\sum_{n = 0}^\infty \norm{\frac{A^n}{n!}}$の各項は$\frac{\norm{A}^n}{n!}$で上から抑えられる．また，$\sum_{n=0}^\infty \frac{\norm{A}^n}{n!}$は$\exp \norm{A}$に収束する．従って$\sum_{n = 0} \frac{A^n}{n!}$は絶対収束する．
 \end{tproof}
 
-
-\subsection*{p191--193：6-(\romannumeral1)}
-\addcontentsline{toc}{subsection}{\texorpdfstring{p191--193：6-(\romannumeral1)}{p191--193：6-(\romannumeral1)}}
-
+\subproblem{1}
 $\exp(z + w) = \exp z \exp w$と全く同様に示される．まず定理I.5.8の行列に対する対応物を示そう．
 
 \begin{lemma}{}{}
@@ -247,8 +232,7 @@ $\exp(z + w) = \exp z \exp w$と全く同様に示される．まず定理I.5.8�
 \end{tproof}
 
 
-\subsection*{p191--193：6-(\romannumeral2)}
-\addcontentsline{toc}{subsection}{\texorpdfstring{p191--193：6-(\romannumeral2)}{p191--193：6-(\romannumeral2)}}
+\subproblem{2}
 \begin{tproof}
     \[
         A =
@@ -284,8 +268,7 @@ $\exp(z + w) = \exp z \exp w$と全く同様に示される．まず定理I.5.8�
 \end{tproof}
 
 
-\subsection*{p191--193：6-(\romannumeral3)}
-\addcontentsline{toc}{subsection}{\texorpdfstring{p191--193：6-(\romannumeral3)}{p191--193：6-(\romannumeral3)}}
+\subproblem{3}
 
 \begin{tproof}
     \begin{align*}
@@ -295,3 +278,14 @@ $\exp(z + w) = \exp z \exp w$と全く同様に示される．まず定理I.5.8�
         ={}                  & \exp(PAP^{-1}).
     \end{align*}
 \end{tproof}
+
+
+\problemtodo{p191--193}{7}
+\problemtodo{p191--193}{8}
+\problemtodo{p191--193}{9}
+\problemtodo{p191--193}{10}
+\problemtodo{p191--193}{11}
+\problemtodo{p191--193}{12}
+\problemtodo{p191--193}{13}
+\problemtodo{p191--193}{14}
+\problemtodo{p191--193}{15}
