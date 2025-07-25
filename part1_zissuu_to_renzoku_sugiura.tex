@@ -397,7 +397,7 @@
 \end{tanswer}
 
 
-\problem{p16--17}{3}
+\problem[label=problem:p16--17:3]{p16--17}{3}
 
 \begin{lemma}{}{}
     任意の$a_1 , a_2 , \dots, a_n \in \mathbb{R}$について，
@@ -471,8 +471,43 @@
 
 
 
-\problemtodo{p16--17}{3}
-\problemtodo{p16--17}{4}
+\problem{p16--17}{4}
+
+\begin{lemma}{}{}
+    正数列$(k_n)_{k \in \mathbb{N}}$について，$k_n$が$a$に収束するならば，
+    \[
+    \lim_{n \to \infty} \sqrt[n]{k_1 k_2 \dotsm k_n} = a.
+    \]
+\end{lemma}
+
+\begin{proof}
+  \hyperref[problem:p16--17:3]{p16--17:3}より，$\log k_n$が$\log a$に収束するとき，$\log \sqrt[n]{k_1 k_2 \dotsm k_n}$が$\log a$に収束することがわかり，
+  そのことからただちに従う．
+\end{proof}
+
+\begin{tproof}
+\[
+k_n =\frac{a_n}{a_{n-1}}
+\]
+とすると，
+\[
+k_1 k_2 \dotsm k_n = \frac{a_n}{a_0}.
+\]
+両辺の$n$乗根をとると，
+\[
+\sqrt[n]{k_1 k_2 \dotsm k_n} = \sqrt[n]{\frac{a_n}{a_0}}.
+\]
+$\lim_{n \to \infty} \sqrt[n]{a_0}  =1$であるから，補題により
+\begin{align*}
+\lim_{n \to \infty} \sqrt[n]{k_1 k_2 \dotsm k_n} &= \lim_{n \to \infty} \sqrt[n]{\frac{a_n}{a_0}} \\
+&= \lim_{n \to \infty} \frac{\sqrt[n]{a_n}}{\sqrt[n]{a_0}} \\
+& = \frac{a}{1} = a.
+\end{align*}
+ゆえにこのとき，
+\[
+\lim_{n \to \infty} \sqrt[n]{a_n}=a.
+\]
+\end{tproof}
 
 \problem{p16--17}{5}
 
