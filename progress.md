@@ -409,14 +409,14 @@
 - [x] <picture><source media="(prefers-color-scheme: dark)" alt="100%"  srcset="https://img.shields.io/badge/100%25-1f9b03"><source media="(prefers-color-scheme: light)" alt="100%"  srcset="https://img.shields.io/badge/100%25-46c12a"><img alt="100%" src="https://img.shields.io/badge/100%25-46c12a"></picture>&nbsp; **p366：4**
 </details>
 
-### <picture><source media="(prefers-color-scheme: dark)" alt="50%"  srcset="https://img.shields.io/badge/50%25-8c8e02"><source media="(prefers-color-scheme: light)" alt="50%"  srcset="https://img.shields.io/badge/50%25-e5e833"><img alt="50%" src="https://img.shields.io/badge/50%25-e5e833"></picture>&nbsp; p371（0 問 / 1 問 / 1 問）
+### <picture><source media="(prefers-color-scheme: dark)" alt="80%"  srcset="https://img.shields.io/badge/80%25-039b96"><source media="(prefers-color-scheme: light)" alt="80%"  srcset="https://img.shields.io/badge/80%25-2dcec9"><img alt="80%" src="https://img.shields.io/badge/80%25-2dcec9"></picture>&nbsp; p371（0 問 / 1 問 / 1 問）
 
 <details>
 <summary>内訳</summary>
 
 <br/>
 
-- [ ] <picture><source media="(prefers-color-scheme: dark)" alt="50%"  srcset="https://img.shields.io/badge/50%25-8c8e02"><source media="(prefers-color-scheme: light)" alt="50%"  srcset="https://img.shields.io/badge/50%25-e5e833"><img alt="50%" src="https://img.shields.io/badge/50%25-e5e833"></picture>&nbsp; **p371：1**（3 / 6）
+- [ ] <picture><source media="(prefers-color-scheme: dark)" alt="80%"  srcset="https://img.shields.io/badge/80%25-039b96"><source media="(prefers-color-scheme: light)" alt="80%"  srcset="https://img.shields.io/badge/80%25-2dcec9"><img alt="80%" src="https://img.shields.io/badge/80%25-2dcec9"></picture>&nbsp; **p371：1**（5 / 6）
 </details>
 
 

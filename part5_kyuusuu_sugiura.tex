@@ -176,6 +176,18 @@ $0 \cdot \infty$や$\infty - \infty$などは定義しない．
     であるから，比較判定法により，$ \sum_{n=0}^{\infty} ( \sqrt{1+n^2}-n )$は発散する．
 \end{tanswer}
 
+\subproblem{2}
+
+\begin{tanswer}
+\begin{align*}
+\lim_{n \to \infty} \frac{1}{n \log \left(1+\dfrac{1}{n}\right)} &= \lim_{n \to \infty} \frac{1}{\log \left(1+\dfrac{1}{n}\right)^n}\\
+&=\frac{1}{\log e} \\
+& = 1.
+\end{align*}
+であり，なおかつ$ 1 \ne 0$であるから，p45. 定理5.1 系の対偶により，この級数は発散する．
+\end{tanswer}
+
+
 
 \subproblem{3}
 \begin{tanswer}
@@ -192,3 +204,13 @@ $0 \cdot \infty$や$\infty - \infty$などは定義しない．
 \subproblem{4}
 
 \hyperref[p49--50：2-(x)]{p49--50：2-(x)}と重複している．
+
+\subproblem{5}
+
+\begin{tanswer}
+  $a_n = (n !)^2 / (2n)!$とすると，
+    \[
+        \frac{a_{n+1}}{a_n} = \frac{(n+1)^2}{(2n+2)(2n+1)} \to \frac{1}{4} \quad (n \to \infty)
+    \]
+    であり，なおかつ$1/4 < 1$であるから，p47.定理5.7 によりこの級数は収束する．
+\end{tanswer}
