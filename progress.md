@@ -159,7 +159,7 @@
 </details>
 
 
-## <picture><source media="(prefers-color-scheme: dark)" alt="30%"  srcset="https://img.shields.io/badge/30%25-b55003"><source media="(prefers-color-scheme: light)" alt="30%"  srcset="https://img.shields.io/badge/30%25-e88133"><img alt="30%" src="https://img.shields.io/badge/30%25-e88133"></picture>&nbsp; 第2章：微分法（10 問 / 3 問 / 61 問）
+## <picture><source media="(prefers-color-scheme: dark)" alt="30%"  srcset="https://img.shields.io/badge/30%25-b55003"><source media="(prefers-color-scheme: light)" alt="30%"  srcset="https://img.shields.io/badge/30%25-e88133"><img alt="30%" src="https://img.shields.io/badge/30%25-e88133"></picture>&nbsp; 第2章：微分法（11 問 / 3 問 / 61 問）
 
 ### <picture><source media="(prefers-color-scheme: dark)" alt="30%"  srcset="https://img.shields.io/badge/30%25-b55003"><source media="(prefers-color-scheme: light)" alt="30%"  srcset="https://img.shields.io/badge/30%25-e88133"><img alt="30%" src="https://img.shields.io/badge/30%25-e88133"></picture>&nbsp; p90–91（2 問 / 2 問 / 10 問）
 
@@ -199,7 +199,7 @@
 - [x] <picture><source media="(prefers-color-scheme: dark)" alt="100%"  srcset="https://img.shields.io/badge/100%25-1f9b03"><source media="(prefers-color-scheme: light)" alt="100%"  srcset="https://img.shields.io/badge/100%25-46c12a"><img alt="100%" src="https://img.shields.io/badge/100%25-46c12a"></picture>&nbsp; **p106–107：10**
 </details>
 
-### <picture><source media="(prefers-color-scheme: dark)" alt="90%"  srcset="https://img.shields.io/badge/90%25-039b96"><source media="(prefers-color-scheme: light)" alt="90%"  srcset="https://img.shields.io/badge/90%25-2dcec9"><img alt="90%" src="https://img.shields.io/badge/90%25-2dcec9"></picture>&nbsp; p112–113（0 問 / 1 問 / 7 問）
+### <picture><source media="(prefers-color-scheme: dark)" alt="90%"  srcset="https://img.shields.io/badge/90%25-039b96"><source media="(prefers-color-scheme: light)" alt="90%"  srcset="https://img.shields.io/badge/90%25-2dcec9"><img alt="90%" src="https://img.shields.io/badge/90%25-2dcec9"></picture>&nbsp; p112–113（1 問 / 1 問 / 7 問）
 
 <details>
 <summary>内訳</summary>
@@ -209,7 +209,7 @@
 - [ ] <picture><source media="(prefers-color-scheme: dark)" alt="90%"  srcset="https://img.shields.io/badge/90%25-039b96"><source media="(prefers-color-scheme: light)" alt="90%"  srcset="https://img.shields.io/badge/90%25-2dcec9"><img alt="90%" src="https://img.shields.io/badge/90%25-2dcec9"></picture>&nbsp; **p112–113：1**
 - [ ] <picture><source media="(prefers-color-scheme: dark)" alt="0%"  srcset="https://img.shields.io/badge/0%25-a80319"><source media="(prefers-color-scheme: light)" alt="0%"  srcset="https://img.shields.io/badge/0%25-db3047"><img alt="0%" src="https://img.shields.io/badge/0%25-db3047"></picture>&nbsp; **p112–113：2**
 - [ ] <picture><source media="(prefers-color-scheme: dark)" alt="0%"  srcset="https://img.shields.io/badge/0%25-a80319"><source media="(prefers-color-scheme: light)" alt="0%"  srcset="https://img.shields.io/badge/0%25-db3047"><img alt="0%" src="https://img.shields.io/badge/0%25-db3047"></picture>&nbsp; **p112–113：3**
-- [ ] <picture><source media="(prefers-color-scheme: dark)" alt="0%"  srcset="https://img.shields.io/badge/0%25-a80319"><source media="(prefers-color-scheme: light)" alt="0%"  srcset="https://img.shields.io/badge/0%25-db3047"><img alt="0%" src="https://img.shields.io/badge/0%25-db3047"></picture>&nbsp; **p112–113：4**
+- [x] <picture><source media="(prefers-color-scheme: dark)" alt="100%"  srcset="https://img.shields.io/badge/100%25-1f9b03"><source media="(prefers-color-scheme: light)" alt="100%"  srcset="https://img.shields.io/badge/100%25-46c12a"><img alt="100%" src="https://img.shields.io/badge/100%25-46c12a"></picture>&nbsp; **p112–113：4**
 - [ ] <picture><source media="(prefers-color-scheme: dark)" alt="0%"  srcset="https://img.shields.io/badge/0%25-a80319"><source media="(prefers-color-scheme: light)" alt="0%"  srcset="https://img.shields.io/badge/0%25-db3047"><img alt="0%" src="https://img.shields.io/badge/0%25-db3047"></picture>&nbsp; **p112–113：5**
 - [ ] <picture><source media="(prefers-color-scheme: dark)" alt="0%"  srcset="https://img.shields.io/badge/0%25-a80319"><source media="(prefers-color-scheme: light)" alt="0%"  srcset="https://img.shields.io/badge/0%25-db3047"><img alt="0%" src="https://img.shields.io/badge/0%25-db3047"></picture>&nbsp; **p112–113：6**
 - [ ] <picture><source media="(prefers-color-scheme: dark)" alt="0%"  srcset="https://img.shields.io/badge/0%25-a80319"><source media="(prefers-color-scheme: light)" alt="0%"  srcset="https://img.shields.io/badge/0%25-db3047"><img alt="0%" src="https://img.shields.io/badge/0%25-db3047"></picture>&nbsp; **p112–113：7**

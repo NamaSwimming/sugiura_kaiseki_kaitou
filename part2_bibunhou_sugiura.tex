@@ -919,7 +919,6 @@
     \frac{\partial f}{\partial x} &= \frac{2x}{x^2+y^2} \\
     \frac{\partial f}{\partial y} &= \frac{2y}{x^2+y^2}
 \end{align*}
-
 \begin{align*}
     \frac{\partial^2 f}{\partial x^2} &= \frac{2(y^2-x^2)}{(x^2+y^2)^2} \\
     \frac{\partial^2 f}{\partial y^2} &= \frac{2(x^2-y^2)}{(x^2+y^2)^2} \\
@@ -934,7 +933,6 @@
     \frac{\partial f}{\partial y} &= \frac{y}{\sqrt{x^2+y^2+z^2}} \\
     \frac{\partial f}{\partial z} &= \frac{z}{\sqrt{x^2+y^2+z^2}}
 \end{align*}
-
 \begin{align*}
     \frac{\partial^2 f}{\partial x^2} &= \frac{y^2+z^2}{(x^2+y^2+z^2)^{3/2}} \\
     \frac{\partial^2 f}{\partial y^2} &= \frac{x^2+z^2}{(x^2+y^2+z^2)^{3/2}} \\
@@ -947,7 +945,59 @@
 
 \problemtodo{p112--113}{2}
 \problemtodo{p112--113}{3}
-\problemtodo{p112--113}{4}
+
+\problem{p112--113}{4}
+
+\begin{tanswer}
+原点 $(0,0)$ における$f(x,y)$の一階偏導関数を計算すると，次のようになる：
+\[
+\frac{\partial f}{\partial x}(0,0) = \lim_{\substack{h \to 0 \\ h \ne 0}}\frac{f(h,0)-f(0,0)}{h} = \lim_{\substack{h \to 0 \\ h \ne 0}}\frac{0-0}{h} = 0.
+\]
+\[
+\frac{\partial f}{\partial y}(0,0) = \lim_{\substack{k \to 0 \\ k \ne 0}}\frac{f(0,k)-f(0,0)}{k} = \lim_{\substack{k \to 0 \\ k \ne 0}}\frac{0-0}{k} = 0.
+\]
+
+これをふまえると，$f(x,y)$の二階偏導関数は次のように計算できる：
+\begin{align*}
+\frac{\partial^2 f}{\partial y \partial x}(0,0) &= \frac{\partial}{\partial y}\left(\dfrac{\partial f}{\partial x}\right)\Biggr|_{(0,0)}\\
+&= \lim_{\substack{k \to 0 \\ k \ne 0}}\frac{\dfrac{\partial f}{\partial x}(0,k) - \dfrac{\partial f}{\partial x}(0,0)}{k}.
+\end{align*}
+ここで，
+\begin{align*}
+\frac{\partial f}{\partial x}(0,k) &= \lim_{\substack{h \to 0 \\ h \ne 0}}\frac{f(h,k) - f(0,k)}{h} \\
+&= \lim_{\substack{h \to 0 \\ h \ne 0}}\frac{\dfrac{hk(h^2-k^2)}{h^2+k^2} - 0}{h} \\
+&= \lim_{\substack{h \to 0 \\ h \ne 0}} k \frac{h^2-k^2}{h^2+k^2} \\
+&= k \frac{-k^2}{k^2} = -k.
+\end{align*}
+したがって，
+\[
+\frac{\partial^2 f}{\partial y \partial x}(0,0) = \lim_{\substack{k \to 0 \\ k \ne 0}}\frac{-k - 0}{k} = -1.
+\]
+
+同様に，
+\begin{align*}
+\frac{\partial^2 f}{\partial x \partial y}(0,0) &= \frac{\partial}{\partial x}\left(\dfrac{\partial f}{\partial y}\right)\Biggr|_{(0,0)} \\
+&= \lim_{\substack{h \to 0 \\ h \ne 0}}\frac{\dfrac{\partial f}{\partial y}(h,0) - \frac{\partial f}{\partial y}(0,0)}{h}.
+\end{align*}
+ここで，
+\begin{align*}
+\frac{\partial f}{\partial y}(h,0) &= \lim_{\substack{k \to 0 \\ k \ne 0}}\frac{f(h,k) - f(h,0)}{k} \\
+&= \lim_{\substack{k \to 0 \\ k \ne 0}}\frac{\frac{hk(h^2-k^2)}{h^2+k^2} - 0}{k} \\
+&= \lim_{\substack{k \to 0 \\ k \ne 0}} h \frac{h^2-k^2}{h^2+k^2} \\
+&= h \frac{h^2}{h^2} = h.
+\end{align*}
+したがって，
+\[
+\frac{\partial^2 f}{\partial x \partial y}(0,0) = \lim_{\substack{h \to 0 \\ h \ne 0}}\frac{h - 0}{h} = 1.
+\]
+
+以上のことをまとめると，原点における$f(x,y)$の二階偏導関数は
+\[
+\frac{\partial^2 f}{\partial y \partial x}(0,0) = -1  ,\quad    \frac{\partial^2 f}{\partial x \partial y}(0,0)=1
+\]
+である\footnote{偏微分の順序によって値が異なることに注意する．}．
+\end{tanswer}
+
 \problemtodo{p112--113}{5}
 \problemtodo{p112--113}{6}
 \problemtodo{p112--113}{7}
