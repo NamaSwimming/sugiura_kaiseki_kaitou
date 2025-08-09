@@ -998,7 +998,84 @@
 である\footnote{偏微分の順序によって値が異なることに注意する．}．
 \end{tanswer}
 
-\problemtodo{p112--113}{5}
+\problem{p112--113}{5}
+
+\begin{tanswer}
+$(x,y) \ne 0$ において $r \coloneqq \sqrt{x^2+y^2}>0$ とおくと，
+\[
+f(x,y)=xy \sin \left(\frac{1}{r}\right).
+\]
+これより，一階の偏導関数は次のように求まる：
+\begin{align*}
+\frac{\partial}{\partial x}\left(\sin\frac{1}{r}\right)
+&= \cos\frac{1}{r}\cdot\frac{\partial}{\partial x}\left(\frac{1}{r}\right)
+= \cos\frac{1}{r}\cdot\left(-\frac{x}{r^3}\right),\\
+\frac{\partial f}{\partial x}(x,y)
+&= y\sin \left( \frac{1}{r} \right) + xy \cdot \cos \left( \frac{1}{r} \right) \cdot \left(-\frac{x}{r^3}\right)\\
+&= y\sin \left( \frac{1}{r} \right) - \frac{x^2y}{r^3} \cos \left(\frac{1}{r}\right).
+\end{align*}
+同様に，
+\begin{align*}
+\frac{\partial f}{\partial y}(x,y)
+&= x\sin \left( \frac{1}{r} \right) - \frac{xy^2}{r^3}\cos \left( \frac{1}{r} \right).
+\end{align*}
+
+$0$ における偏導関数は，定義から以下のようになる：
+\[
+\frac{\partial f}{\partial x}(0,0) = \lim_{\substack{h \to 0\\ h \ne 0}}\frac{f(h,0)-f(0,0)}{h} = \lim_{\substack{h \to 0\\ h \ne 0}}\frac{h \cdot 0\cdot\sin(1/\abs{h})-0}{h}=0,
+\]
+\[
+\frac{\partial f}{\partial y}(0,0) = \lim_{\substack{k \to 0\\ k \ne 0}}\frac{f(0,k)-f(0,0)}{k} = \lim_{\substack{k \to 0\\ k \ne 0}}\frac{0\cdot k\cdot\sin(1/\abs{k})-0}{k}=0.
+\]
+
+したがって，偏導関数はまとめて
+\[
+\frac{\partial f}{\partial x}(x,y)=
+\begin{cases}
+y \sin \left( \frac{1}{\sqrt{x^2+y^2}} \right)-\frac{x^2y}{(x^2+y^2)^{3/2}} \cos \left(\frac{1}{\sqrt{x^2+y^2}}\right)
+& (x,y)\ne(0,0),\\
+0&(x,y)=(0,0),
+\end{cases}
+\]
+\[
+\frac{\partial f}{\partial y}(x,y)=
+\begin{cases}
+x\sin \left( \frac{1}{\sqrt{x^2+y^2}}\right)-\frac{xy^2}{(x^2+y^2)^{3/2}}\cos \left(\frac{1}{\sqrt{x^2+y^2}}\right)
+& (x,y)\ne(0,0),\\
+0 & (x,y)=(0,0).
+\end{cases}
+\]
+
+最後に，$\frac{\partial f}{\partial x},\frac{\partial f}{\partial y}$ の$(0,0)$での連続性を調べる．
+$t >0$として，$(x,y)=(t \cos \theta,t \sin \theta)$ とおく．このとき，
+\[
+\frac{\partial f}{\partial x}(t \cos \theta,t \sin \theta) = t\sin\theta\sin \left(\frac{1}{t}\right) - \cos^2 \theta \sin \theta \cos \left(\frac{1}{t}\right).
+\]
+ここで $t_n \coloneqq \frac{1}{2\pi n}~(n\in\mathbb{N})$ とすれば， $\cos(1/t_n)=\cos(2\pi n)=1$かつ$\sin(1/t_n)=0$ であるから，
+\[
+\frac{\partial f}{\partial x}(t_n\cos\theta,t_n\sin\theta) \longrightarrow -\cos^2\theta\sin\theta \quad (n\to\infty).
+\]
+右辺が $\theta$ に依存して変化する一方， $\frac{\partial f}{\partial x}(0,0)=0$ なので，
+$\frac{\partial f}{\partial x}(x,y)$ は$(0,0)$において連続ではない．
+
+同様に
+\[
+\frac{\partial f}{\partial y}(t \cos \theta,t \sin \theta) = t \cos \theta \sin\left(\frac{1}{t}\right) - \cos\theta\sin^2\theta\;\cos\!\left(\frac{1}{t}\right),
+\]
+を $t=t_n$ に沿って見ると，
+\[
+\frac{\partial f}{\partial y}(t_n\cos\theta,t_n\sin\theta)\longrightarrow -\cos\theta\sin^2\theta,
+\]
+となり，これも角度に依存して変化し，一般に $0$ へ収束しないため， $\frac{\partial f}{\partial y}$ も$(0,0)$で連続ではない．
+
+以上の考察により，
+\[
+\frac{\partial f}{\partial x}(0,0)=\frac{\partial f}{\partial y}(0,0)=0.
+\]
+なおかつ，$\frac{\partial f}{\partial x}$ および $\frac{\partial f}{\partial y}$ はいずれも$(0,0)$で連続ではない．
+
+\end{tanswer}
+
 \problemtodo{p112--113}{6}
 \problemtodo{p112--113}{7}
 
